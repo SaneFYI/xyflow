@@ -68,7 +68,7 @@ export const umdConfig = defineConfig({
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
-    terser(),
+    // terser(),
   ],
 });
 
