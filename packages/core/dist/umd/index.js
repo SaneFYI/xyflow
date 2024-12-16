@@ -6583,6 +6583,7 @@
           const onDoubleClickHandler = getMouseHandler(id, store.getState, onDoubleClick);
           const onSelectNodeHandler = (event) => {
               const { nodeDragThreshold, preventNodeClick } = store.getState();
+              console.log("internal node click", preventNodeClick);
               if (preventNodeClick) {
                   return;
               }

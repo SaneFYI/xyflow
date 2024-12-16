@@ -72,6 +72,7 @@ export default (NodeComponent: ComponentType<NodeProps>) => {
     const onDoubleClickHandler = getMouseHandler(id, store.getState, onDoubleClick);
     const onSelectNodeHandler = (event: MouseEvent) => {
       const { nodeDragThreshold, preventNodeClick } = store.getState();
+      console.log("internal node click", preventNodeClick)
 
       if (preventNodeClick) {
         return;
