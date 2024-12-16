@@ -44,7 +44,7 @@
     "directory": "packages/background"
   },
   "dependencies": {
-    "@reactflow/core": "workspace:*",
+    "@reactflow/core": "https://gitpkg.vercel.app/SaneFYI/xyflow/packages/core?v11",
     "classcat": "^5.0.3",
     "zustand": "^4.4.1"
   },

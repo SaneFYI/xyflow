@@ -1,5 +1,84 @@
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("react"),require("react-dom")):"function"==typeof define&&define.amd?define(["exports","react","react-dom"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).ReactFlowNodeToolbar={},e.React,e.ReactDOM)}(this,(function(e,t,n){"use strict";function o(e){if("string"==typeof e||"number"==typeof e)return""+e;let t="";if(Array.isArray(e))for(let n,r=0;r<e.length;r++)""!==(n=o(e[r]))&&(t+=(t&&" ")+n);else for(let n in e)e[n]&&(t+=(t&&" ")+n);return t}function r(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var i,a,s,l={},c={},u={},d={get exports(){return u},set exports(e){u=e}},h={};function f(){return a||(a=1,function(e){e.exports=function(){if(i)return h;i=1;var e=t,n="function"==typeof Object.is?Object.is:function(e,t){return e===t&&(0!==e||1/e==1/t)||e!=e&&t!=t},o=e.useState,r=e.useEffect,a=e.useLayoutEffect,s=e.useDebugValue;function l(e){var t=e.getSnapshot;e=e.value;try{var o=t();return!n(e,o)}catch(e){return!0}}var c="undefined"==typeof window||void 0===window.document||void 0===window.document.createElement?function(e,t){return t()}:function(e,t){var n=t(),i=o({inst:{value:n,getSnapshot:t}}),c=i[0].inst,u=i[1];return a((function(){c.value=n,c.getSnapshot=t,l(c)&&u({inst:c})}),[e,n,t]),r((function(){return l(c)&&u({inst:c}),e((function(){l(c)&&u({inst:c})}))}),[e]),s(n),n};return h.useSyncExternalStore=void 0!==e.useSyncExternalStore?e.useSyncExternalStore:c,h}()}(d)),u}
-/**
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-dom')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-dom'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ReactFlowNodeToolbar = {}, global.React, global.ReactDOM));
+})(this, (function (exports, React, reactDom) { 'use strict';
+
+  function cc(names) {
+    if (typeof names === "string" || typeof names === "number") return "" + names
+
+    let out = "";
+
+    if (Array.isArray(names)) {
+      for (let i = 0, tmp; i < names.length; i++) {
+        if ((tmp = cc(names[i])) !== "") {
+          out += (out && " ") + tmp;
+        }
+      }
+    } else {
+      for (let k in names) {
+        if (names[k]) out += (out && " ") + k;
+      }
+    }
+
+    return out
+  }
+
+  function getDefaultExportFromCjs (x) {
+  	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+  }
+
+  var withSelectorExports = {};
+  var withSelector = {
+    get exports(){ return withSelectorExports; },
+    set exports(v){ withSelectorExports = v; },
+  };
+
+  var withSelector_production_min = {};
+
+  var shimExports = {};
+  var shim = {
+    get exports(){ return shimExports; },
+    set exports(v){ shimExports = v; },
+  };
+
+  var useSyncExternalStoreShim_production_min = {};
+
+  /**
+   * @license React
+   * use-sync-external-store-shim.production.min.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  var hasRequiredUseSyncExternalStoreShim_production_min;
+
+  function requireUseSyncExternalStoreShim_production_min () {
+  	if (hasRequiredUseSyncExternalStoreShim_production_min) return useSyncExternalStoreShim_production_min;
+  	hasRequiredUseSyncExternalStoreShim_production_min = 1;
+  var e=React;function h(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var k="function"===typeof Object.is?Object.is:h,l=e.useState,m=e.useEffect,n=e.useLayoutEffect,p=e.useDebugValue;function q(a,b){var d=b(),f=l({inst:{value:d,getSnapshot:b}}),c=f[0].inst,g=f[1];n(function(){c.value=d;c.getSnapshot=b;r(c)&&g({inst:c});},[a,d,b]);m(function(){r(c)&&g({inst:c});return a(function(){r(c)&&g({inst:c});})},[a]);p(d);return d}
+  	function r(a){var b=a.getSnapshot;a=a.value;try{var d=b();return !k(a,d)}catch(f){return !0}}function t(a,b){return b()}var u="undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement?t:q;useSyncExternalStoreShim_production_min.useSyncExternalStore=void 0!==e.useSyncExternalStore?e.useSyncExternalStore:u;
+  	return useSyncExternalStoreShim_production_min;
+  }
+
+  var hasRequiredShim;
+
+  function requireShim () {
+  	if (hasRequiredShim) return shimExports;
+  	hasRequiredShim = 1;
+  	(function (module) {
+
+  		{
+  		  module.exports = requireUseSyncExternalStoreShim_production_min();
+  		}
+  } (shim));
+  	return shimExports;
+  }
+
+  /**
    * @license React
    * use-sync-external-store-shim/with-selector.production.min.js
    *
@@ -7,4 +86,7723 @@
    *
    * This source code is licensed under the MIT license found in the
    * LICENSE file in the root directory of this source tree.
-   */!function(e){e.exports=function(){if(s)return c;s=1;var e=t,n=f(),o="function"==typeof Object.is?Object.is:function(e,t){return e===t&&(0!==e||1/e==1/t)||e!=e&&t!=t},r=n.useSyncExternalStore,i=e.useRef,a=e.useEffect,l=e.useMemo,u=e.useDebugValue;return c.useSyncExternalStoreWithSelector=function(e,t,n,s,c){var d=i(null);if(null===d.current){var h={hasValue:!1,value:null};d.current=h}else h=d.current;d=l((function(){function e(e){if(!a){if(a=!0,r=e,e=s(e),void 0!==c&&h.hasValue){var t=h.value;if(c(t,e))return i=t}return i=e}if(t=i,o(r,e))return t;var n=s(e);return void 0!==c&&c(t,n)?t:(r=e,i=n)}var r,i,a=!1,l=void 0===n?null:n;return[function(){return e(t())},null===l?void 0:function(){return e(l())}]}),[t,n,s,c]);var f=r(e,d[0],d[1]);return a((function(){h.hasValue=!0,h.value=f}),[f]),u(f),f},c}()}({get exports(){return l},set exports(e){l=e}});var g=r(l);const p=e=>{let t;const n=new Set,o=(e,o)=>{const r="function"==typeof e?e(t):e;if(!Object.is(r,t)){const e=t;t=(null!=o?o:"object"!=typeof r)?r:Object.assign({},t,r),n.forEach((n=>n(t,e)))}},r=()=>t,i={setState:o,getState:r,subscribe:e=>(n.add(e),()=>n.delete(e)),destroy:()=>{console.warn("[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."),n.clear()}};return t=e(o,r,i),i},{useSyncExternalStoreWithSelector:m}=g;function y(e,n=e.getState,o){const r=m(e.subscribe,e.getState,e.getServerState||e.getState,n,o);return t.useDebugValue(r),r}const v=(e,t)=>{const n=(e=>e?p(e):p)(e),o=(e,o=t)=>y(n,e,o);return Object.assign(o,n),o};function b(e,t){if(Object.is(e,t))return!0;if("object"!=typeof e||null===e||"object"!=typeof t||null===t)return!1;if(e instanceof Map&&t instanceof Map){if(e.size!==t.size)return!1;for(const[n,o]of e)if(!Object.is(o,t.get(n)))return!1;return!0}if(e instanceof Set&&t instanceof Set){if(e.size!==t.size)return!1;for(const n of e)if(!t.has(n))return!1;return!0}const n=Object.keys(e);if(n.length!==Object.keys(t).length)return!1;for(let o=0;o<n.length;o++)if(!Object.prototype.hasOwnProperty.call(t,n[o])||!Object.is(e[n[o]],t[n[o]]))return!1;return!0}var x={value:()=>{}};function w(){for(var e,t=0,n=arguments.length,o={};t<n;++t){if(!(e=arguments[t]+"")||e in o||/[\s.]/.test(e))throw new Error("illegal type: "+e);o[e]=[]}return new S(o)}function S(e){this._=e}function E(e,t){return e.trim().split(/^|\s+/).map((function(e){var n="",o=e.indexOf(".");if(o>=0&&(n=e.slice(o+1),e=e.slice(0,o)),e&&!t.hasOwnProperty(e))throw new Error("unknown type: "+e);return{type:e,name:n}}))}function _(e,t){for(var n,o=0,r=e.length;o<r;++o)if((n=e[o]).name===t)return n.value}function C(e,t,n){for(var o=0,r=e.length;o<r;++o)if(e[o].name===t){e[o]=x,e=e.slice(0,o).concat(e.slice(o+1));break}return null!=n&&e.push({name:t,value:n}),e}S.prototype=w.prototype={constructor:S,on:function(e,t){var n,o=this._,r=E(e+"",o),i=-1,a=r.length;if(!(arguments.length<2)){if(null!=t&&"function"!=typeof t)throw new Error("invalid callback: "+t);for(;++i<a;)if(n=(e=r[i]).type)o[n]=C(o[n],e.name,t);else if(null==t)for(n in o)o[n]=C(o[n],e.name,null);return this}for(;++i<a;)if((n=(e=r[i]).type)&&(n=_(o[n],e.name)))return n},copy:function(){var e={},t=this._;for(var n in t)e[n]=t[n].slice();return new S(e)},call:function(e,t){if((n=arguments.length-2)>0)for(var n,o,r=new Array(n),i=0;i<n;++i)r[i]=arguments[i+2];if(!this._.hasOwnProperty(e))throw new Error("unknown type: "+e);for(i=0,n=(o=this._[e]).length;i<n;++i)o[i].value.apply(t,r)},apply:function(e,t,n){if(!this._.hasOwnProperty(e))throw new Error("unknown type: "+e);for(var o=this._[e],r=0,i=o.length;r<i;++r)o[r].value.apply(t,n)}};var N="http://www.w3.org/1999/xhtml",M={svg:"http://www.w3.org/2000/svg",xhtml:N,xlink:"http://www.w3.org/1999/xlink",xml:"http://www.w3.org/XML/1998/namespace",xmlns:"http://www.w3.org/2000/xmlns/"};function k(e){var t=e+="",n=t.indexOf(":");return n>=0&&"xmlns"!==(t=e.slice(0,n))&&(e=e.slice(n+1)),M.hasOwnProperty(t)?{space:M[t],local:e}:e}function P(e){return function(){var t=this.ownerDocument,n=this.namespaceURI;return n===N&&t.documentElement.namespaceURI===N?t.createElement(e):t.createElementNS(n,e)}}function A(e){return function(){return this.ownerDocument.createElementNS(e.space,e.local)}}function O(e){var t=k(e);return(t.local?A:P)(t)}function I(){}function D(e){return null==e?I:function(){return this.querySelector(e)}}function R(e){return null==e?[]:Array.isArray(e)?e:Array.from(e)}function z(){return[]}function $(e){return null==e?z:function(){return this.querySelectorAll(e)}}function T(e){return function(){return this.matches(e)}}function B(e){return function(t){return t.matches(e)}}var L=Array.prototype.find;function X(){return this.firstElementChild}var Y=Array.prototype.filter;function H(){return Array.from(this.children)}function V(e){return new Array(e.length)}function K(e,t){this.ownerDocument=e.ownerDocument,this.namespaceURI=e.namespaceURI,this._next=null,this._parent=e,this.__data__=t}function F(e){return function(){return e}}function Z(e,t,n,o,r,i){for(var a,s=0,l=t.length,c=i.length;s<c;++s)(a=t[s])?(a.__data__=i[s],o[s]=a):n[s]=new K(e,i[s]);for(;s<l;++s)(a=t[s])&&(r[s]=a)}function j(e,t,n,o,r,i,a){var s,l,c,u=new Map,d=t.length,h=i.length,f=new Array(d);for(s=0;s<d;++s)(l=t[s])&&(f[s]=c=a.call(l,l.__data__,s,t)+"",u.has(c)?r[s]=l:u.set(c,l));for(s=0;s<h;++s)c=a.call(e,i[s],s,i)+"",(l=u.get(c))?(o[s]=l,l.__data__=i[s],u.delete(c)):n[s]=new K(e,i[s]);for(s=0;s<d;++s)(l=t[s])&&u.get(f[s])===l&&(r[s]=l)}function W(e){return e.__data__}function q(e){return"object"==typeof e&&"length"in e?e:Array.from(e)}function U(e,t){return e<t?-1:e>t?1:e>=t?0:NaN}function G(e){return function(){this.removeAttribute(e)}}function Q(e){return function(){this.removeAttributeNS(e.space,e.local)}}function J(e,t){return function(){this.setAttribute(e,t)}}function ee(e,t){return function(){this.setAttributeNS(e.space,e.local,t)}}function te(e,t){return function(){var n=t.apply(this,arguments);null==n?this.removeAttribute(e):this.setAttribute(e,n)}}function ne(e,t){return function(){var n=t.apply(this,arguments);null==n?this.removeAttributeNS(e.space,e.local):this.setAttributeNS(e.space,e.local,n)}}function oe(e){return e.ownerDocument&&e.ownerDocument.defaultView||e.document&&e||e.defaultView}function re(e){return function(){this.style.removeProperty(e)}}function ie(e,t,n){return function(){this.style.setProperty(e,t,n)}}function ae(e,t,n){return function(){var o=t.apply(this,arguments);null==o?this.style.removeProperty(e):this.style.setProperty(e,o,n)}}function se(e,t){return e.style.getPropertyValue(t)||oe(e).getComputedStyle(e,null).getPropertyValue(t)}function le(e){return function(){delete this[e]}}function ce(e,t){return function(){this[e]=t}}function ue(e,t){return function(){var n=t.apply(this,arguments);null==n?delete this[e]:this[e]=n}}function de(e){return e.trim().split(/^|\s+/)}function he(e){return e.classList||new fe(e)}function fe(e){this._node=e,this._names=de(e.getAttribute("class")||"")}function ge(e,t){for(var n=he(e),o=-1,r=t.length;++o<r;)n.add(t[o])}function pe(e,t){for(var n=he(e),o=-1,r=t.length;++o<r;)n.remove(t[o])}function me(e){return function(){ge(this,e)}}function ye(e){return function(){pe(this,e)}}function ve(e,t){return function(){(t.apply(this,arguments)?ge:pe)(this,e)}}function be(){this.textContent=""}function xe(e){return function(){this.textContent=e}}function we(e){return function(){var t=e.apply(this,arguments);this.textContent=null==t?"":t}}function Se(){this.innerHTML=""}function Ee(e){return function(){this.innerHTML=e}}function _e(e){return function(){var t=e.apply(this,arguments);this.innerHTML=null==t?"":t}}function Ce(){this.nextSibling&&this.parentNode.appendChild(this)}function Ne(){this.previousSibling&&this.parentNode.insertBefore(this,this.parentNode.firstChild)}function Me(){return null}function ke(){var e=this.parentNode;e&&e.removeChild(this)}function Pe(){var e=this.cloneNode(!1),t=this.parentNode;return t?t.insertBefore(e,this.nextSibling):e}function Ae(){var e=this.cloneNode(!0),t=this.parentNode;return t?t.insertBefore(e,this.nextSibling):e}function Oe(e){return e.trim().split(/^|\s+/).map((function(e){var t="",n=e.indexOf(".");return n>=0&&(t=e.slice(n+1),e=e.slice(0,n)),{type:e,name:t}}))}function Ie(e){return function(){var t=this.__on;if(t){for(var n,o=0,r=-1,i=t.length;o<i;++o)n=t[o],e.type&&n.type!==e.type||n.name!==e.name?t[++r]=n:this.removeEventListener(n.type,n.listener,n.options);++r?t.length=r:delete this.__on}}}function De(e,t,n){return function(){var o,r=this.__on,i=function(e){return function(t){e.call(this,t,this.__data__)}}(t);if(r)for(var a=0,s=r.length;a<s;++a)if((o=r[a]).type===e.type&&o.name===e.name)return this.removeEventListener(o.type,o.listener,o.options),this.addEventListener(o.type,o.listener=i,o.options=n),void(o.value=t);this.addEventListener(e.type,i,n),o={type:e.type,name:e.name,value:t,listener:i,options:n},r?r.push(o):this.__on=[o]}}function Re(e,t,n){var o=oe(e),r=o.CustomEvent;"function"==typeof r?r=new r(t,n):(r=o.document.createEvent("Event"),n?(r.initEvent(t,n.bubbles,n.cancelable),r.detail=n.detail):r.initEvent(t,!1,!1)),e.dispatchEvent(r)}function ze(e,t){return function(){return Re(this,e,t)}}function $e(e,t){return function(){return Re(this,e,t.apply(this,arguments))}}K.prototype={constructor:K,appendChild:function(e){return this._parent.insertBefore(e,this._next)},insertBefore:function(e,t){return this._parent.insertBefore(e,t)},querySelector:function(e){return this._parent.querySelector(e)},querySelectorAll:function(e){return this._parent.querySelectorAll(e)}},fe.prototype={add:function(e){this._names.indexOf(e)<0&&(this._names.push(e),this._node.setAttribute("class",this._names.join(" ")))},remove:function(e){var t=this._names.indexOf(e);t>=0&&(this._names.splice(t,1),this._node.setAttribute("class",this._names.join(" ")))},contains:function(e){return this._names.indexOf(e)>=0}};var Te=[null];function Be(e,t){this._groups=e,this._parents=t}function Le(){return new Be([[document.documentElement]],Te)}function Xe(e){return"string"==typeof e?new Be([[document.querySelector(e)]],[document.documentElement]):new Be([[e]],Te)}function Ye(e,t){if(e=function(e){let t;for(;t=e.sourceEvent;)e=t;return e}(e),void 0===t&&(t=e.currentTarget),t){var n=t.ownerSVGElement||t;if(n.createSVGPoint){var o=n.createSVGPoint();return o.x=e.clientX,o.y=e.clientY,[(o=o.matrixTransform(t.getScreenCTM().inverse())).x,o.y]}if(t.getBoundingClientRect){var r=t.getBoundingClientRect();return[e.clientX-r.left-t.clientLeft,e.clientY-r.top-t.clientTop]}}return[e.pageX,e.pageY]}Be.prototype=Le.prototype={constructor:Be,select:function(e){"function"!=typeof e&&(e=D(e));for(var t=this._groups,n=t.length,o=new Array(n),r=0;r<n;++r)for(var i,a,s=t[r],l=s.length,c=o[r]=new Array(l),u=0;u<l;++u)(i=s[u])&&(a=e.call(i,i.__data__,u,s))&&("__data__"in i&&(a.__data__=i.__data__),c[u]=a);return new Be(o,this._parents)},selectAll:function(e){e="function"==typeof e?function(e){return function(){return R(e.apply(this,arguments))}}(e):$(e);for(var t=this._groups,n=t.length,o=[],r=[],i=0;i<n;++i)for(var a,s=t[i],l=s.length,c=0;c<l;++c)(a=s[c])&&(o.push(e.call(a,a.__data__,c,s)),r.push(a));return new Be(o,r)},selectChild:function(e){return this.select(null==e?X:function(e){return function(){return L.call(this.children,e)}}("function"==typeof e?e:B(e)))},selectChildren:function(e){return this.selectAll(null==e?H:function(e){return function(){return Y.call(this.children,e)}}("function"==typeof e?e:B(e)))},filter:function(e){"function"!=typeof e&&(e=T(e));for(var t=this._groups,n=t.length,o=new Array(n),r=0;r<n;++r)for(var i,a=t[r],s=a.length,l=o[r]=[],c=0;c<s;++c)(i=a[c])&&e.call(i,i.__data__,c,a)&&l.push(i);return new Be(o,this._parents)},data:function(e,t){if(!arguments.length)return Array.from(this,W);var n=t?j:Z,o=this._parents,r=this._groups;"function"!=typeof e&&(e=F(e));for(var i=r.length,a=new Array(i),s=new Array(i),l=new Array(i),c=0;c<i;++c){var u=o[c],d=r[c],h=d.length,f=q(e.call(u,u&&u.__data__,c,o)),g=f.length,p=s[c]=new Array(g),m=a[c]=new Array(g),y=l[c]=new Array(h);n(u,d,p,m,y,f,t);for(var v,b,x=0,w=0;x<g;++x)if(v=p[x]){for(x>=w&&(w=x+1);!(b=m[w])&&++w<g;);v._next=b||null}}return(a=new Be(a,o))._enter=s,a._exit=l,a},enter:function(){return new Be(this._enter||this._groups.map(V),this._parents)},exit:function(){return new Be(this._exit||this._groups.map(V),this._parents)},join:function(e,t,n){var o=this.enter(),r=this,i=this.exit();return"function"==typeof e?(o=e(o))&&(o=o.selection()):o=o.append(e+""),null!=t&&(r=t(r))&&(r=r.selection()),null==n?i.remove():n(i),o&&r?o.merge(r).order():r},merge:function(e){for(var t=e.selection?e.selection():e,n=this._groups,o=t._groups,r=n.length,i=o.length,a=Math.min(r,i),s=new Array(r),l=0;l<a;++l)for(var c,u=n[l],d=o[l],h=u.length,f=s[l]=new Array(h),g=0;g<h;++g)(c=u[g]||d[g])&&(f[g]=c);for(;l<r;++l)s[l]=n[l];return new Be(s,this._parents)},selection:function(){return this},order:function(){for(var e=this._groups,t=-1,n=e.length;++t<n;)for(var o,r=e[t],i=r.length-1,a=r[i];--i>=0;)(o=r[i])&&(a&&4^o.compareDocumentPosition(a)&&a.parentNode.insertBefore(o,a),a=o);return this},sort:function(e){function t(t,n){return t&&n?e(t.__data__,n.__data__):!t-!n}e||(e=U);for(var n=this._groups,o=n.length,r=new Array(o),i=0;i<o;++i){for(var a,s=n[i],l=s.length,c=r[i]=new Array(l),u=0;u<l;++u)(a=s[u])&&(c[u]=a);c.sort(t)}return new Be(r,this._parents).order()},call:function(){var e=arguments[0];return arguments[0]=this,e.apply(null,arguments),this},nodes:function(){return Array.from(this)},node:function(){for(var e=this._groups,t=0,n=e.length;t<n;++t)for(var o=e[t],r=0,i=o.length;r<i;++r){var a=o[r];if(a)return a}return null},size:function(){let e=0;for(const t of this)++e;return e},empty:function(){return!this.node()},each:function(e){for(var t=this._groups,n=0,o=t.length;n<o;++n)for(var r,i=t[n],a=0,s=i.length;a<s;++a)(r=i[a])&&e.call(r,r.__data__,a,i);return this},attr:function(e,t){var n=k(e);if(arguments.length<2){var o=this.node();return n.local?o.getAttributeNS(n.space,n.local):o.getAttribute(n)}return this.each((null==t?n.local?Q:G:"function"==typeof t?n.local?ne:te:n.local?ee:J)(n,t))},style:function(e,t,n){return arguments.length>1?this.each((null==t?re:"function"==typeof t?ae:ie)(e,t,null==n?"":n)):se(this.node(),e)},property:function(e,t){return arguments.length>1?this.each((null==t?le:"function"==typeof t?ue:ce)(e,t)):this.node()[e]},classed:function(e,t){var n=de(e+"");if(arguments.length<2){for(var o=he(this.node()),r=-1,i=n.length;++r<i;)if(!o.contains(n[r]))return!1;return!0}return this.each(("function"==typeof t?ve:t?me:ye)(n,t))},text:function(e){return arguments.length?this.each(null==e?be:("function"==typeof e?we:xe)(e)):this.node().textContent},html:function(e){return arguments.length?this.each(null==e?Se:("function"==typeof e?_e:Ee)(e)):this.node().innerHTML},raise:function(){return this.each(Ce)},lower:function(){return this.each(Ne)},append:function(e){var t="function"==typeof e?e:O(e);return this.select((function(){return this.appendChild(t.apply(this,arguments))}))},insert:function(e,t){var n="function"==typeof e?e:O(e),o=null==t?Me:"function"==typeof t?t:D(t);return this.select((function(){return this.insertBefore(n.apply(this,arguments),o.apply(this,arguments)||null)}))},remove:function(){return this.each(ke)},clone:function(e){return this.select(e?Ae:Pe)},datum:function(e){return arguments.length?this.property("__data__",e):this.node().__data__},on:function(e,t,n){var o,r,i=Oe(e+""),a=i.length;if(!(arguments.length<2)){for(s=t?De:Ie,o=0;o<a;++o)this.each(s(i[o],t,n));return this}var s=this.node().__on;if(s)for(var l,c=0,u=s.length;c<u;++c)for(o=0,l=s[c];o<a;++o)if((r=i[o]).type===l.type&&r.name===l.name)return l.value},dispatch:function(e,t){return this.each(("function"==typeof t?$e:ze)(e,t))},[Symbol.iterator]:function*(){for(var e=this._groups,t=0,n=e.length;t<n;++t)for(var o,r=e[t],i=0,a=r.length;i<a;++i)(o=r[i])&&(yield o)}};const He={passive:!1},Ve={capture:!0,passive:!1};function Ke(e){e.stopImmediatePropagation()}function Fe(e){e.preventDefault(),e.stopImmediatePropagation()}function Ze(e){var t=e.document.documentElement,n=Xe(e).on("dragstart.drag",Fe,Ve);"onselectstart"in t?n.on("selectstart.drag",Fe,Ve):(t.__noselect=t.style.MozUserSelect,t.style.MozUserSelect="none")}function je(e,t){var n=e.document.documentElement,o=Xe(e).on("dragstart.drag",null);t&&(o.on("click.drag",Fe,Ve),setTimeout((function(){o.on("click.drag",null)}),0)),"onselectstart"in n?o.on("selectstart.drag",null):(n.style.MozUserSelect=n.__noselect,delete n.__noselect)}var We=e=>()=>e;function qe(e,{sourceEvent:t,subject:n,target:o,identifier:r,active:i,x:a,y:s,dx:l,dy:c,dispatch:u}){Object.defineProperties(this,{type:{value:e,enumerable:!0,configurable:!0},sourceEvent:{value:t,enumerable:!0,configurable:!0},subject:{value:n,enumerable:!0,configurable:!0},target:{value:o,enumerable:!0,configurable:!0},identifier:{value:r,enumerable:!0,configurable:!0},active:{value:i,enumerable:!0,configurable:!0},x:{value:a,enumerable:!0,configurable:!0},y:{value:s,enumerable:!0,configurable:!0},dx:{value:l,enumerable:!0,configurable:!0},dy:{value:c,enumerable:!0,configurable:!0},_:{value:u}})}function Ue(e){return!e.ctrlKey&&!e.button}function Ge(){return this.parentNode}function Qe(e,t){return null==t?{x:e.x,y:e.y}:t}function Je(){return navigator.maxTouchPoints||"ontouchstart"in this}function et(e,t,n){e.prototype=t.prototype=n,n.constructor=e}function tt(e,t){var n=Object.create(e.prototype);for(var o in t)n[o]=t[o];return n}function nt(){}qe.prototype.on=function(){var e=this._.on.apply(this._,arguments);return e===this._?this:e};var ot=.7,rt=1/ot,it="\\s*([+-]?\\d+)\\s*",at="\\s*([+-]?(?:\\d*\\.)?\\d+(?:[eE][+-]?\\d+)?)\\s*",st="\\s*([+-]?(?:\\d*\\.)?\\d+(?:[eE][+-]?\\d+)?)%\\s*",lt=/^#([0-9a-f]{3,8})$/,ct=new RegExp(`^rgb\\(${it},${it},${it}\\)$`),ut=new RegExp(`^rgb\\(${st},${st},${st}\\)$`),dt=new RegExp(`^rgba\\(${it},${it},${it},${at}\\)$`),ht=new RegExp(`^rgba\\(${st},${st},${st},${at}\\)$`),ft=new RegExp(`^hsl\\(${at},${st},${st}\\)$`),gt=new RegExp(`^hsla\\(${at},${st},${st},${at}\\)$`),pt={aliceblue:15792383,antiquewhite:16444375,aqua:65535,aquamarine:8388564,azure:15794175,beige:16119260,bisque:16770244,black:0,blanchedalmond:16772045,blue:255,blueviolet:9055202,brown:10824234,burlywood:14596231,cadetblue:6266528,chartreuse:8388352,chocolate:13789470,coral:16744272,cornflowerblue:6591981,cornsilk:16775388,crimson:14423100,cyan:65535,darkblue:139,darkcyan:35723,darkgoldenrod:12092939,darkgray:11119017,darkgreen:25600,darkgrey:11119017,darkkhaki:12433259,darkmagenta:9109643,darkolivegreen:5597999,darkorange:16747520,darkorchid:10040012,darkred:9109504,darksalmon:15308410,darkseagreen:9419919,darkslateblue:4734347,darkslategray:3100495,darkslategrey:3100495,darkturquoise:52945,darkviolet:9699539,deeppink:16716947,deepskyblue:49151,dimgray:6908265,dimgrey:6908265,dodgerblue:2003199,firebrick:11674146,floralwhite:16775920,forestgreen:2263842,fuchsia:16711935,gainsboro:14474460,ghostwhite:16316671,gold:16766720,goldenrod:14329120,gray:8421504,green:32768,greenyellow:11403055,grey:8421504,honeydew:15794160,hotpink:16738740,indianred:13458524,indigo:4915330,ivory:16777200,khaki:15787660,lavender:15132410,lavenderblush:16773365,lawngreen:8190976,lemonchiffon:16775885,lightblue:11393254,lightcoral:15761536,lightcyan:14745599,lightgoldenrodyellow:16448210,lightgray:13882323,lightgreen:9498256,lightgrey:13882323,lightpink:16758465,lightsalmon:16752762,lightseagreen:2142890,lightskyblue:8900346,lightslategray:7833753,lightslategrey:7833753,lightsteelblue:11584734,lightyellow:16777184,lime:65280,limegreen:3329330,linen:16445670,magenta:16711935,maroon:8388608,mediumaquamarine:6737322,mediumblue:205,mediumorchid:12211667,mediumpurple:9662683,mediumseagreen:3978097,mediumslateblue:8087790,mediumspringgreen:64154,mediumturquoise:4772300,mediumvioletred:13047173,midnightblue:1644912,mintcream:16121850,mistyrose:16770273,moccasin:16770229,navajowhite:16768685,navy:128,oldlace:16643558,olive:8421376,olivedrab:7048739,orange:16753920,orangered:16729344,orchid:14315734,palegoldenrod:15657130,palegreen:10025880,paleturquoise:11529966,palevioletred:14381203,papayawhip:16773077,peachpuff:16767673,peru:13468991,pink:16761035,plum:14524637,powderblue:11591910,purple:8388736,rebeccapurple:6697881,red:16711680,rosybrown:12357519,royalblue:4286945,saddlebrown:9127187,salmon:16416882,sandybrown:16032864,seagreen:3050327,seashell:16774638,sienna:10506797,silver:12632256,skyblue:8900331,slateblue:6970061,slategray:7372944,slategrey:7372944,snow:16775930,springgreen:65407,steelblue:4620980,tan:13808780,teal:32896,thistle:14204888,tomato:16737095,turquoise:4251856,violet:15631086,wheat:16113331,white:16777215,whitesmoke:16119285,yellow:16776960,yellowgreen:10145074};function mt(){return this.rgb().formatHex()}function yt(){return this.rgb().formatRgb()}function vt(e){var t,n;return e=(e+"").trim().toLowerCase(),(t=lt.exec(e))?(n=t[1].length,t=parseInt(t[1],16),6===n?bt(t):3===n?new Et(t>>8&15|t>>4&240,t>>4&15|240&t,(15&t)<<4|15&t,1):8===n?xt(t>>24&255,t>>16&255,t>>8&255,(255&t)/255):4===n?xt(t>>12&15|t>>8&240,t>>8&15|t>>4&240,t>>4&15|240&t,((15&t)<<4|15&t)/255):null):(t=ct.exec(e))?new Et(t[1],t[2],t[3],1):(t=ut.exec(e))?new Et(255*t[1]/100,255*t[2]/100,255*t[3]/100,1):(t=dt.exec(e))?xt(t[1],t[2],t[3],t[4]):(t=ht.exec(e))?xt(255*t[1]/100,255*t[2]/100,255*t[3]/100,t[4]):(t=ft.exec(e))?Pt(t[1],t[2]/100,t[3]/100,1):(t=gt.exec(e))?Pt(t[1],t[2]/100,t[3]/100,t[4]):pt.hasOwnProperty(e)?bt(pt[e]):"transparent"===e?new Et(NaN,NaN,NaN,0):null}function bt(e){return new Et(e>>16&255,e>>8&255,255&e,1)}function xt(e,t,n,o){return o<=0&&(e=t=n=NaN),new Et(e,t,n,o)}function wt(e){return e instanceof nt||(e=vt(e)),e?new Et((e=e.rgb()).r,e.g,e.b,e.opacity):new Et}function St(e,t,n,o){return 1===arguments.length?wt(e):new Et(e,t,n,null==o?1:o)}function Et(e,t,n,o){this.r=+e,this.g=+t,this.b=+n,this.opacity=+o}function _t(){return`#${kt(this.r)}${kt(this.g)}${kt(this.b)}`}function Ct(){const e=Nt(this.opacity);return`${1===e?"rgb(":"rgba("}${Mt(this.r)}, ${Mt(this.g)}, ${Mt(this.b)}${1===e?")":`, ${e})`}`}function Nt(e){return isNaN(e)?1:Math.max(0,Math.min(1,e))}function Mt(e){return Math.max(0,Math.min(255,Math.round(e)||0))}function kt(e){return((e=Mt(e))<16?"0":"")+e.toString(16)}function Pt(e,t,n,o){return o<=0?e=t=n=NaN:n<=0||n>=1?e=t=NaN:t<=0&&(e=NaN),new Ot(e,t,n,o)}function At(e){if(e instanceof Ot)return new Ot(e.h,e.s,e.l,e.opacity);if(e instanceof nt||(e=vt(e)),!e)return new Ot;if(e instanceof Ot)return e;var t=(e=e.rgb()).r/255,n=e.g/255,o=e.b/255,r=Math.min(t,n,o),i=Math.max(t,n,o),a=NaN,s=i-r,l=(i+r)/2;return s?(a=t===i?(n-o)/s+6*(n<o):n===i?(o-t)/s+2:(t-n)/s+4,s/=l<.5?i+r:2-i-r,a*=60):s=l>0&&l<1?0:a,new Ot(a,s,l,e.opacity)}function Ot(e,t,n,o){this.h=+e,this.s=+t,this.l=+n,this.opacity=+o}function It(e){return(e=(e||0)%360)<0?e+360:e}function Dt(e){return Math.max(0,Math.min(1,e||0))}function Rt(e,t,n){return 255*(e<60?t+(n-t)*e/60:e<180?n:e<240?t+(n-t)*(240-e)/60:t)}et(nt,vt,{copy(e){return Object.assign(new this.constructor,this,e)},displayable(){return this.rgb().displayable()},hex:mt,formatHex:mt,formatHex8:function(){return this.rgb().formatHex8()},formatHsl:function(){return At(this).formatHsl()},formatRgb:yt,toString:yt}),et(Et,St,tt(nt,{brighter(e){return e=null==e?rt:Math.pow(rt,e),new Et(this.r*e,this.g*e,this.b*e,this.opacity)},darker(e){return e=null==e?ot:Math.pow(ot,e),new Et(this.r*e,this.g*e,this.b*e,this.opacity)},rgb(){return this},clamp(){return new Et(Mt(this.r),Mt(this.g),Mt(this.b),Nt(this.opacity))},displayable(){return-.5<=this.r&&this.r<255.5&&-.5<=this.g&&this.g<255.5&&-.5<=this.b&&this.b<255.5&&0<=this.opacity&&this.opacity<=1},hex:_t,formatHex:_t,formatHex8:function(){return`#${kt(this.r)}${kt(this.g)}${kt(this.b)}${kt(255*(isNaN(this.opacity)?1:this.opacity))}`},formatRgb:Ct,toString:Ct})),et(Ot,(function(e,t,n,o){return 1===arguments.length?At(e):new Ot(e,t,n,null==o?1:o)}),tt(nt,{brighter(e){return e=null==e?rt:Math.pow(rt,e),new Ot(this.h,this.s,this.l*e,this.opacity)},darker(e){return e=null==e?ot:Math.pow(ot,e),new Ot(this.h,this.s,this.l*e,this.opacity)},rgb(){var e=this.h%360+360*(this.h<0),t=isNaN(e)||isNaN(this.s)?0:this.s,n=this.l,o=n+(n<.5?n:1-n)*t,r=2*n-o;return new Et(Rt(e>=240?e-240:e+120,r,o),Rt(e,r,o),Rt(e<120?e+240:e-120,r,o),this.opacity)},clamp(){return new Ot(It(this.h),Dt(this.s),Dt(this.l),Nt(this.opacity))},displayable(){return(0<=this.s&&this.s<=1||isNaN(this.s))&&0<=this.l&&this.l<=1&&0<=this.opacity&&this.opacity<=1},formatHsl(){const e=Nt(this.opacity);return`${1===e?"hsl(":"hsla("}${It(this.h)}, ${100*Dt(this.s)}%, ${100*Dt(this.l)}%${1===e?")":`, ${e})`}`}}));var zt=e=>()=>e;function $t(e){return 1==(e=+e)?Tt:function(t,n){return n-t?function(e,t,n){return e=Math.pow(e,n),t=Math.pow(t,n)-e,n=1/n,function(o){return Math.pow(e+o*t,n)}}(t,n,e):zt(isNaN(t)?n:t)}}function Tt(e,t){var n=t-e;return n?function(e,t){return function(n){return e+n*t}}(e,n):zt(isNaN(e)?t:e)}var Bt=function e(t){var n=$t(t);function o(e,t){var o=n((e=St(e)).r,(t=St(t)).r),r=n(e.g,t.g),i=n(e.b,t.b),a=Tt(e.opacity,t.opacity);return function(t){return e.r=o(t),e.g=r(t),e.b=i(t),e.opacity=a(t),e+""}}return o.gamma=e,o}(1);function Lt(e,t){return e=+e,t=+t,function(n){return e*(1-n)+t*n}}var Xt=/[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g,Yt=new RegExp(Xt.source,"g");function Ht(e,t){var n,o,r,i=Xt.lastIndex=Yt.lastIndex=0,a=-1,s=[],l=[];for(e+="",t+="";(n=Xt.exec(e))&&(o=Yt.exec(t));)(r=o.index)>i&&(r=t.slice(i,r),s[a]?s[a]+=r:s[++a]=r),(n=n[0])===(o=o[0])?s[a]?s[a]+=o:s[++a]=o:(s[++a]=null,l.push({i:a,x:Lt(n,o)})),i=Yt.lastIndex;return i<t.length&&(r=t.slice(i),s[a]?s[a]+=r:s[++a]=r),s.length<2?l[0]?function(e){return function(t){return e(t)+""}}(l[0].x):function(e){return function(){return e}}(t):(t=l.length,function(e){for(var n,o=0;o<t;++o)s[(n=l[o]).i]=n.x(e);return s.join("")})}var Vt,Kt=180/Math.PI,Ft={translateX:0,translateY:0,rotate:0,skewX:0,scaleX:1,scaleY:1};function Zt(e,t,n,o,r,i){var a,s,l;return(a=Math.sqrt(e*e+t*t))&&(e/=a,t/=a),(l=e*n+t*o)&&(n-=e*l,o-=t*l),(s=Math.sqrt(n*n+o*o))&&(n/=s,o/=s,l/=s),e*o<t*n&&(e=-e,t=-t,l=-l,a=-a),{translateX:r,translateY:i,rotate:Math.atan2(t,e)*Kt,skewX:Math.atan(l)*Kt,scaleX:a,scaleY:s}}function jt(e,t,n,o){function r(e){return e.length?e.pop()+" ":""}return function(i,a){var s=[],l=[];return i=e(i),a=e(a),function(e,o,r,i,a,s){if(e!==r||o!==i){var l=a.push("translate(",null,t,null,n);s.push({i:l-4,x:Lt(e,r)},{i:l-2,x:Lt(o,i)})}else(r||i)&&a.push("translate("+r+t+i+n)}(i.translateX,i.translateY,a.translateX,a.translateY,s,l),function(e,t,n,i){e!==t?(e-t>180?t+=360:t-e>180&&(e+=360),i.push({i:n.push(r(n)+"rotate(",null,o)-2,x:Lt(e,t)})):t&&n.push(r(n)+"rotate("+t+o)}(i.rotate,a.rotate,s,l),function(e,t,n,i){e!==t?i.push({i:n.push(r(n)+"skewX(",null,o)-2,x:Lt(e,t)}):t&&n.push(r(n)+"skewX("+t+o)}(i.skewX,a.skewX,s,l),function(e,t,n,o,i,a){if(e!==n||t!==o){var s=i.push(r(i)+"scale(",null,",",null,")");a.push({i:s-4,x:Lt(e,n)},{i:s-2,x:Lt(t,o)})}else 1===n&&1===o||i.push(r(i)+"scale("+n+","+o+")")}(i.scaleX,i.scaleY,a.scaleX,a.scaleY,s,l),i=a=null,function(e){for(var t,n=-1,o=l.length;++n<o;)s[(t=l[n]).i]=t.x(e);return s.join("")}}}var Wt=jt((function(e){const t=new("function"==typeof DOMMatrix?DOMMatrix:WebKitCSSMatrix)(e+"");return t.isIdentity?Ft:Zt(t.a,t.b,t.c,t.d,t.e,t.f)}),"px, ","px)","deg)"),qt=jt((function(e){return null==e?Ft:(Vt||(Vt=document.createElementNS("http://www.w3.org/2000/svg","g")),Vt.setAttribute("transform",e),(e=Vt.transform.baseVal.consolidate())?Zt((e=e.matrix).a,e.b,e.c,e.d,e.e,e.f):Ft)}),", ",")",")");function Ut(e){return((e=Math.exp(e))+1/e)/2}var Gt,Qt,Jt=function e(t,n,o){function r(e,r){var i,a,s=e[0],l=e[1],c=e[2],u=r[0],d=r[1],h=r[2],f=u-s,g=d-l,p=f*f+g*g;if(p<1e-12)a=Math.log(h/c)/t,i=function(e){return[s+e*f,l+e*g,c*Math.exp(t*e*a)]};else{var m=Math.sqrt(p),y=(h*h-c*c+o*p)/(2*c*n*m),v=(h*h-c*c-o*p)/(2*h*n*m),b=Math.log(Math.sqrt(y*y+1)-y),x=Math.log(Math.sqrt(v*v+1)-v);a=(x-b)/t,i=function(e){var o,r=e*a,i=Ut(b),u=c/(n*m)*(i*(o=t*r+b,((o=Math.exp(2*o))-1)/(o+1))-function(e){return((e=Math.exp(e))-1/e)/2}(b));return[s+u*f,l+u*g,c*i/Ut(t*r+b)]}}return i.duration=1e3*a*t/Math.SQRT2,i}return r.rho=function(t){var n=Math.max(.001,+t),o=n*n;return e(n,o,o*o)},r}(Math.SQRT2,2,4),en=0,tn=0,nn=0,on=0,rn=0,an=0,sn="object"==typeof performance&&performance.now?performance:Date,ln="object"==typeof window&&window.requestAnimationFrame?window.requestAnimationFrame.bind(window):function(e){setTimeout(e,17)};function cn(){return rn||(ln(un),rn=sn.now()+an)}function un(){rn=0}function dn(){this._call=this._time=this._next=null}function hn(e,t,n){var o=new dn;return o.restart(e,t,n),o}function fn(){rn=(on=sn.now())+an,en=tn=0;try{!function(){cn(),++en;for(var e,t=Gt;t;)(e=rn-t._time)>=0&&t._call.call(void 0,e),t=t._next;--en}()}finally{en=0,function(){var e,t,n=Gt,o=1/0;for(;n;)n._call?(o>n._time&&(o=n._time),e=n,n=n._next):(t=n._next,n._next=null,n=e?e._next=t:Gt=t);Qt=e,pn(o)}(),rn=0}}function gn(){var e=sn.now(),t=e-on;t>1e3&&(an-=t,on=e)}function pn(e){en||(tn&&(tn=clearTimeout(tn)),e-rn>24?(e<1/0&&(tn=setTimeout(fn,e-sn.now()-an)),nn&&(nn=clearInterval(nn))):(nn||(on=sn.now(),nn=setInterval(gn,1e3)),en=1,ln(fn)))}function mn(e,t,n){var o=new dn;return t=null==t?0:+t,o.restart((n=>{o.stop(),e(n+t)}),t,n),o}dn.prototype=hn.prototype={constructor:dn,restart:function(e,t,n){if("function"!=typeof e)throw new TypeError("callback is not a function");n=(null==n?cn():+n)+(null==t?0:+t),this._next||Qt===this||(Qt?Qt._next=this:Gt=this,Qt=this),this._call=e,this._time=n,pn()},stop:function(){this._call&&(this._call=null,this._time=1/0,pn())}};var yn=w("start","end","cancel","interrupt"),vn=[];function bn(e,t,n,o,r,i){var a=e.__transition;if(a){if(n in a)return}else e.__transition={};!function(e,t,n){var o,r=e.__transition;function i(e){n.state=1,n.timer.restart(a,n.delay,n.time),n.delay<=e&&a(e-n.delay)}function a(i){var c,u,d,h;if(1!==n.state)return l();for(c in r)if((h=r[c]).name===n.name){if(3===h.state)return mn(a);4===h.state?(h.state=6,h.timer.stop(),h.on.call("interrupt",e,e.__data__,h.index,h.group),delete r[c]):+c<t&&(h.state=6,h.timer.stop(),h.on.call("cancel",e,e.__data__,h.index,h.group),delete r[c])}if(mn((function(){3===n.state&&(n.state=4,n.timer.restart(s,n.delay,n.time),s(i))})),n.state=2,n.on.call("start",e,e.__data__,n.index,n.group),2===n.state){for(n.state=3,o=new Array(d=n.tween.length),c=0,u=-1;c<d;++c)(h=n.tween[c].value.call(e,e.__data__,n.index,n.group))&&(o[++u]=h);o.length=u+1}}function s(t){for(var r=t<n.duration?n.ease.call(null,t/n.duration):(n.timer.restart(l),n.state=5,1),i=-1,a=o.length;++i<a;)o[i].call(e,r);5===n.state&&(n.on.call("end",e,e.__data__,n.index,n.group),l())}function l(){for(var o in n.state=6,n.timer.stop(),delete r[t],r)return;delete e.__transition}r[t]=n,n.timer=hn(i,0,n.time)}(e,n,{name:t,index:o,group:r,on:yn,tween:vn,time:i.time,delay:i.delay,duration:i.duration,ease:i.ease,timer:null,state:0})}function xn(e,t){var n=Sn(e,t);if(n.state>0)throw new Error("too late; already scheduled");return n}function wn(e,t){var n=Sn(e,t);if(n.state>3)throw new Error("too late; already running");return n}function Sn(e,t){var n=e.__transition;if(!n||!(n=n[t]))throw new Error("transition not found");return n}function En(e,t){var n,o,r,i=e.__transition,a=!0;if(i){for(r in t=null==t?null:t+"",i)(n=i[r]).name===t?(o=n.state>2&&n.state<5,n.state=6,n.timer.stop(),n.on.call(o?"interrupt":"cancel",e,e.__data__,n.index,n.group),delete i[r]):a=!1;a&&delete e.__transition}}function _n(e,t){var n,o;return function(){var r=wn(this,e),i=r.tween;if(i!==n)for(var a=0,s=(o=n=i).length;a<s;++a)if(o[a].name===t){(o=o.slice()).splice(a,1);break}r.tween=o}}function Cn(e,t,n){var o,r;if("function"!=typeof n)throw new Error;return function(){var i=wn(this,e),a=i.tween;if(a!==o){r=(o=a).slice();for(var s={name:t,value:n},l=0,c=r.length;l<c;++l)if(r[l].name===t){r[l]=s;break}l===c&&r.push(s)}i.tween=r}}function Nn(e,t,n){var o=e._id;return e.each((function(){var e=wn(this,o);(e.value||(e.value={}))[t]=n.apply(this,arguments)})),function(e){return Sn(e,o).value[t]}}function Mn(e,t){var n;return("number"==typeof t?Lt:t instanceof vt?Bt:(n=vt(t))?(t=n,Bt):Ht)(e,t)}function kn(e){return function(){this.removeAttribute(e)}}function Pn(e){return function(){this.removeAttributeNS(e.space,e.local)}}function An(e,t,n){var o,r,i=n+"";return function(){var a=this.getAttribute(e);return a===i?null:a===o?r:r=t(o=a,n)}}function On(e,t,n){var o,r,i=n+"";return function(){var a=this.getAttributeNS(e.space,e.local);return a===i?null:a===o?r:r=t(o=a,n)}}function In(e,t,n){var o,r,i;return function(){var a,s,l=n(this);if(null!=l)return(a=this.getAttribute(e))===(s=l+"")?null:a===o&&s===r?i:(r=s,i=t(o=a,l));this.removeAttribute(e)}}function Dn(e,t,n){var o,r,i;return function(){var a,s,l=n(this);if(null!=l)return(a=this.getAttributeNS(e.space,e.local))===(s=l+"")?null:a===o&&s===r?i:(r=s,i=t(o=a,l));this.removeAttributeNS(e.space,e.local)}}function Rn(e,t){return function(n){this.setAttribute(e,t.call(this,n))}}function zn(e,t){return function(n){this.setAttributeNS(e.space,e.local,t.call(this,n))}}function $n(e,t){var n,o;function r(){var r=t.apply(this,arguments);return r!==o&&(n=(o=r)&&zn(e,r)),n}return r._value=t,r}function Tn(e,t){var n,o;function r(){var r=t.apply(this,arguments);return r!==o&&(n=(o=r)&&Rn(e,r)),n}return r._value=t,r}function Bn(e,t){return function(){xn(this,e).delay=+t.apply(this,arguments)}}function Ln(e,t){return t=+t,function(){xn(this,e).delay=t}}function Xn(e,t){return function(){wn(this,e).duration=+t.apply(this,arguments)}}function Yn(e,t){return t=+t,function(){wn(this,e).duration=t}}function Hn(e,t){if("function"!=typeof t)throw new Error;return function(){wn(this,e).ease=t}}function Vn(e,t,n){var o,r,i=function(e){return(e+"").trim().split(/^|\s+/).every((function(e){var t=e.indexOf(".");return t>=0&&(e=e.slice(0,t)),!e||"start"===e}))}(t)?xn:wn;return function(){var a=i(this,e),s=a.on;s!==o&&(r=(o=s).copy()).on(t,n),a.on=r}}var Kn=Le.prototype.constructor;function Fn(e){return function(){this.style.removeProperty(e)}}function Zn(e,t,n){return function(o){this.style.setProperty(e,t.call(this,o),n)}}function jn(e,t,n){var o,r;function i(){var i=t.apply(this,arguments);return i!==r&&(o=(r=i)&&Zn(e,i,n)),o}return i._value=t,i}function Wn(e){return function(t){this.textContent=e.call(this,t)}}function qn(e){var t,n;function o(){var o=e.apply(this,arguments);return o!==n&&(t=(n=o)&&Wn(o)),t}return o._value=e,o}var Un=0;function Gn(e,t,n,o){this._groups=e,this._parents=t,this._name=n,this._id=o}function Qn(){return++Un}var Jn=Le.prototype;Gn.prototype={constructor:Gn,select:function(e){var t=this._name,n=this._id;"function"!=typeof e&&(e=D(e));for(var o=this._groups,r=o.length,i=new Array(r),a=0;a<r;++a)for(var s,l,c=o[a],u=c.length,d=i[a]=new Array(u),h=0;h<u;++h)(s=c[h])&&(l=e.call(s,s.__data__,h,c))&&("__data__"in s&&(l.__data__=s.__data__),d[h]=l,bn(d[h],t,n,h,d,Sn(s,n)));return new Gn(i,this._parents,t,n)},selectAll:function(e){var t=this._name,n=this._id;"function"!=typeof e&&(e=$(e));for(var o=this._groups,r=o.length,i=[],a=[],s=0;s<r;++s)for(var l,c=o[s],u=c.length,d=0;d<u;++d)if(l=c[d]){for(var h,f=e.call(l,l.__data__,d,c),g=Sn(l,n),p=0,m=f.length;p<m;++p)(h=f[p])&&bn(h,t,n,p,f,g);i.push(f),a.push(l)}return new Gn(i,a,t,n)},selectChild:Jn.selectChild,selectChildren:Jn.selectChildren,filter:function(e){"function"!=typeof e&&(e=T(e));for(var t=this._groups,n=t.length,o=new Array(n),r=0;r<n;++r)for(var i,a=t[r],s=a.length,l=o[r]=[],c=0;c<s;++c)(i=a[c])&&e.call(i,i.__data__,c,a)&&l.push(i);return new Gn(o,this._parents,this._name,this._id)},merge:function(e){if(e._id!==this._id)throw new Error;for(var t=this._groups,n=e._groups,o=t.length,r=n.length,i=Math.min(o,r),a=new Array(o),s=0;s<i;++s)for(var l,c=t[s],u=n[s],d=c.length,h=a[s]=new Array(d),f=0;f<d;++f)(l=c[f]||u[f])&&(h[f]=l);for(;s<o;++s)a[s]=t[s];return new Gn(a,this._parents,this._name,this._id)},selection:function(){return new Kn(this._groups,this._parents)},transition:function(){for(var e=this._name,t=this._id,n=Qn(),o=this._groups,r=o.length,i=0;i<r;++i)for(var a,s=o[i],l=s.length,c=0;c<l;++c)if(a=s[c]){var u=Sn(a,t);bn(a,e,n,c,s,{time:u.time+u.delay+u.duration,delay:0,duration:u.duration,ease:u.ease})}return new Gn(o,this._parents,e,n)},call:Jn.call,nodes:Jn.nodes,node:Jn.node,size:Jn.size,empty:Jn.empty,each:Jn.each,on:function(e,t){var n=this._id;return arguments.length<2?Sn(this.node(),n).on.on(e):this.each(Vn(n,e,t))},attr:function(e,t){var n=k(e),o="transform"===n?qt:Mn;return this.attrTween(e,"function"==typeof t?(n.local?Dn:In)(n,o,Nn(this,"attr."+e,t)):null==t?(n.local?Pn:kn)(n):(n.local?On:An)(n,o,t))},attrTween:function(e,t){var n="attr."+e;if(arguments.length<2)return(n=this.tween(n))&&n._value;if(null==t)return this.tween(n,null);if("function"!=typeof t)throw new Error;var o=k(e);return this.tween(n,(o.local?$n:Tn)(o,t))},style:function(e,t,n){var o="transform"==(e+="")?Wt:Mn;return null==t?this.styleTween(e,function(e,t){var n,o,r;return function(){var i=se(this,e),a=(this.style.removeProperty(e),se(this,e));return i===a?null:i===n&&a===o?r:r=t(n=i,o=a)}}(e,o)).on("end.style."+e,Fn(e)):"function"==typeof t?this.styleTween(e,function(e,t,n){var o,r,i;return function(){var a=se(this,e),s=n(this),l=s+"";return null==s&&(this.style.removeProperty(e),l=s=se(this,e)),a===l?null:a===o&&l===r?i:(r=l,i=t(o=a,s))}}(e,o,Nn(this,"style."+e,t))).each(function(e,t){var n,o,r,i,a="style."+t,s="end."+a;return function(){var l=wn(this,e),c=l.on,u=null==l.value[a]?i||(i=Fn(t)):void 0;c===n&&r===u||(o=(n=c).copy()).on(s,r=u),l.on=o}}(this._id,e)):this.styleTween(e,function(e,t,n){var o,r,i=n+"";return function(){var a=se(this,e);return a===i?null:a===o?r:r=t(o=a,n)}}(e,o,t),n).on("end.style."+e,null)},styleTween:function(e,t,n){var o="style."+(e+="");if(arguments.length<2)return(o=this.tween(o))&&o._value;if(null==t)return this.tween(o,null);if("function"!=typeof t)throw new Error;return this.tween(o,jn(e,t,null==n?"":n))},text:function(e){return this.tween("text","function"==typeof e?function(e){return function(){var t=e(this);this.textContent=null==t?"":t}}(Nn(this,"text",e)):function(e){return function(){this.textContent=e}}(null==e?"":e+""))},textTween:function(e){var t="text";if(arguments.length<1)return(t=this.tween(t))&&t._value;if(null==e)return this.tween(t,null);if("function"!=typeof e)throw new Error;return this.tween(t,qn(e))},remove:function(){return this.on("end.remove",function(e){return function(){var t=this.parentNode;for(var n in this.__transition)if(+n!==e)return;t&&t.removeChild(this)}}(this._id))},tween:function(e,t){var n=this._id;if(e+="",arguments.length<2){for(var o,r=Sn(this.node(),n).tween,i=0,a=r.length;i<a;++i)if((o=r[i]).name===e)return o.value;return null}return this.each((null==t?_n:Cn)(n,e,t))},delay:function(e){var t=this._id;return arguments.length?this.each(("function"==typeof e?Bn:Ln)(t,e)):Sn(this.node(),t).delay},duration:function(e){var t=this._id;return arguments.length?this.each(("function"==typeof e?Xn:Yn)(t,e)):Sn(this.node(),t).duration},ease:function(e){var t=this._id;return arguments.length?this.each(Hn(t,e)):Sn(this.node(),t).ease},easeVarying:function(e){if("function"!=typeof e)throw new Error;return this.each(function(e,t){return function(){var n=t.apply(this,arguments);if("function"!=typeof n)throw new Error;wn(this,e).ease=n}}(this._id,e))},end:function(){var e,t,n=this,o=n._id,r=n.size();return new Promise((function(i,a){var s={value:a},l={value:function(){0==--r&&i()}};n.each((function(){var n=wn(this,o),r=n.on;r!==e&&((t=(e=r).copy())._.cancel.push(s),t._.interrupt.push(s),t._.end.push(l)),n.on=t})),0===r&&i()}))},[Symbol.iterator]:Jn[Symbol.iterator]};var eo={time:null,delay:0,duration:250,ease:function(e){return((e*=2)<=1?e*e*e:(e-=2)*e*e+2)/2}};function to(e,t){for(var n;!(n=e.__transition)||!(n=n[t]);)if(!(e=e.parentNode))throw new Error(`transition ${t} not found`);return n}Le.prototype.interrupt=function(e){return this.each((function(){En(this,e)}))},Le.prototype.transition=function(e){var t,n;e instanceof Gn?(t=e._id,e=e._name):(t=Qn(),(n=eo).time=cn(),e=null==e?null:e+"");for(var o=this._groups,r=o.length,i=0;i<r;++i)for(var a,s=o[i],l=s.length,c=0;c<l;++c)(a=s[c])&&bn(a,e,t,c,s,n||to(a,t));return new Gn(o,this._parents,e,t)};var no=e=>()=>e;function oo(e,{sourceEvent:t,target:n,transform:o,dispatch:r}){Object.defineProperties(this,{type:{value:e,enumerable:!0,configurable:!0},sourceEvent:{value:t,enumerable:!0,configurable:!0},target:{value:n,enumerable:!0,configurable:!0},transform:{value:o,enumerable:!0,configurable:!0},_:{value:r}})}function ro(e,t,n){this.k=e,this.x=t,this.y=n}ro.prototype={constructor:ro,scale:function(e){return 1===e?this:new ro(this.k*e,this.x,this.y)},translate:function(e,t){return 0===e&0===t?this:new ro(this.k,this.x+this.k*e,this.y+this.k*t)},apply:function(e){return[e[0]*this.k+this.x,e[1]*this.k+this.y]},applyX:function(e){return e*this.k+this.x},applyY:function(e){return e*this.k+this.y},invert:function(e){return[(e[0]-this.x)/this.k,(e[1]-this.y)/this.k]},invertX:function(e){return(e-this.x)/this.k},invertY:function(e){return(e-this.y)/this.k},rescaleX:function(e){return e.copy().domain(e.range().map(this.invertX,this).map(e.invert,e))},rescaleY:function(e){return e.copy().domain(e.range().map(this.invertY,this).map(e.invert,e))},toString:function(){return"translate("+this.x+","+this.y+") scale("+this.k+")"}};var io=new ro(1,0,0);function ao(e){e.stopImmediatePropagation()}function so(e){e.preventDefault(),e.stopImmediatePropagation()}function lo(e){return!(e.ctrlKey&&"wheel"!==e.type||e.button)}function co(){var e=this;return e instanceof SVGElement?(e=e.ownerSVGElement||e).hasAttribute("viewBox")?[[(e=e.viewBox.baseVal).x,e.y],[e.x+e.width,e.y+e.height]]:[[0,0],[e.width.baseVal.value,e.height.baseVal.value]]:[[0,0],[e.clientWidth,e.clientHeight]]}function uo(){return this.__zoom||io}function ho(e){return-e.deltaY*(1===e.deltaMode?.05:e.deltaMode?1:.002)*(e.ctrlKey?10:1)}function fo(){return navigator.maxTouchPoints||"ontouchstart"in this}function go(e,t,n){var o=e.invertX(t[0][0])-n[0][0],r=e.invertX(t[1][0])-n[1][0],i=e.invertY(t[0][1])-n[0][1],a=e.invertY(t[1][1])-n[1][1];return e.translate(r>o?(o+r)/2:Math.min(0,o)||Math.max(0,r),a>i?(i+a)/2:Math.min(0,i)||Math.max(0,a))}ro.prototype;const po=t.createContext(null),mo=po.Provider,yo=e=>`Node type "${e}" not found. Using fallback type "default".`,vo=()=>"The React Flow parent container needs a width and a height to render the graph.",bo=()=>"Only child nodes can use a parent extent.",xo=e=>`Marker type "${e}" doesn't exist.`,wo=(e,t)=>`Couldn't create edge for ${e?"target":"source"} handle id: "${e?t.targetHandle:t.sourceHandle}", edge id: ${t.id}.`,So=()=>"Handle: No node id found. Make sure to only use a Handle inside a custom Node.",Eo=e=>`Edge type "${e}" not found. Using fallback type "default".`,_o=e=>`Node with id "${e}" does not exist, it may have been removed. This can happen when a node is deleted before the "onNodeClick" handler is called.`,Co=(()=>"[React Flow]: Seems like you have not used zustand provider as an ancestor. Help: https://reactflow.dev/error#001")();function No(e,n){const o=t.useContext(po);if(null===o)throw new Error(Co);return y(o,e,n)}const Mo=()=>{const e=t.useContext(po);if(null===e)throw new Error(Co);return t.useMemo((()=>({getState:e.getState,setState:e.setState,subscribe:e.subscribe,destroy:e.destroy})),[e])},ko=e=>e.userSelectionActive?"none":"all";function Po({position:e,children:n,className:r,style:i,...a}){const s=No(ko),l=`${e}`.split("-");return t.createElement("div",{className:o(["react-flow__panel",r,...l]),style:{...i,pointerEvents:s},...a},n)}function Ao({proOptions:e,position:n="bottom-right"}){return e?.hideAttribution?null:t.createElement(Po,{position:n,className:"react-flow__attribution","data-message":"Please only hide this attribution when you are subscribed to React Flow Pro: https://reactflow.dev/pro"},t.createElement("a",{href:"https://reactflow.dev",target:"_blank",rel:"noopener noreferrer","aria-label":"React Flow attribution"},"React Flow"))}var Oo=t.memo((({x:e,y:n,label:r,labelStyle:i={},labelShowBg:a=!0,labelBgStyle:s={},labelBgPadding:l=[2,4],labelBgBorderRadius:c=2,children:u,className:d,...h})=>{const f=t.useRef(null),[g,p]=t.useState({x:0,y:0,width:0,height:0}),m=o(["react-flow__edge-textwrapper",d]);return t.useEffect((()=>{if(f.current){const e=f.current.getBBox();p({x:e.x,y:e.y,width:e.width,height:e.height})}}),[r]),void 0!==r&&r?t.createElement("g",{transform:`translate(${e-g.width/2} ${n-g.height/2})`,className:m,visibility:g.width?"visible":"hidden",...h},a&&t.createElement("rect",{width:g.width+2*l[0],x:-l[0],y:-l[1],height:g.height+2*l[1],className:"react-flow__edge-textbg",style:s,rx:c,ry:c}),t.createElement("text",{className:"react-flow__edge-text",y:g.height/2,dy:"0.3em",ref:f,style:i},r),u):null}));const Io=e=>({width:e.offsetWidth,height:e.offsetHeight}),Do=(e,t=0,n=1)=>Math.min(Math.max(e,t),n),Ro=(e={x:0,y:0},t)=>({x:Do(e.x,t[0][0],t[1][0]),y:Do(e.y,t[0][1],t[1][1])}),zo=(e,t,n)=>e<t?Do(Math.abs(e-t),1,50)/50:e>n?-Do(Math.abs(e-n),1,50)/50:0,$o=(e,t)=>[20*zo(e.x,35,t.width-35),20*zo(e.y,35,t.height-35)],To=e=>e.getRootNode?.()||window?.document,Bo=({x:e,y:t,width:n,height:o})=>({x:e,y:t,x2:e+n,y2:t+o}),Lo=e=>({...e.positionAbsolute||{x:0,y:0},width:e.width||0,height:e.height||0}),Xo=(e,t)=>{const n=Math.max(0,Math.min(e.x+e.width,t.x+t.width)-Math.max(e.x,t.x)),o=Math.max(0,Math.min(e.y+e.height,t.y+t.height)-Math.max(e.y,t.y));return Math.ceil(n*o)},Yo=e=>!isNaN(e)&&isFinite(e),Ho=Symbol.for("internals"),Vo=["Enter"," ","Escape"];function Ko(e){const t=((e=>"nativeEvent"in e)(e)?e.nativeEvent:e).composedPath?.()?.[0]||e.target;return["INPUT","SELECT","TEXTAREA"].includes(t?.nodeName)||t?.hasAttribute("contenteditable")||!!t?.closest(".nokey")}const Fo=e=>"clientX"in e,Zo=(e,t)=>{const n=Fo(e),o=n?e.clientX:e.touches?.[0].clientX,r=n?e.clientY:e.touches?.[0].clientY;return{x:o-(t?.left??0),y:r-(t?.top??0)}},jo=()=>"undefined"!=typeof navigator&&navigator?.userAgent?.indexOf("Mac")>=0,Wo=({id:e,path:n,labelX:o,labelY:r,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u,style:d,markerEnd:h,markerStart:f,interactionWidth:g=20})=>t.createElement(t.Fragment,null,t.createElement("path",{id:e,style:d,d:n,fill:"none",className:"react-flow__edge-path",markerEnd:h,markerStart:f}),g&&t.createElement("path",{d:n,fill:"none",strokeOpacity:0,strokeWidth:g,className:"react-flow__edge-interaction"}),i&&Yo(o)&&Yo(r)?t.createElement(Oo,{x:o,y:r,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u}):null);function qo(e,t,n){return void 0===n?n:o=>{const r=t().edges.find((t=>t.id===e));r&&n(o,{...r})}}function Uo({sourceX:e,sourceY:t,targetX:n,targetY:o}){const r=Math.abs(n-e)/2,i=n<e?n+r:n-r,a=Math.abs(o-t)/2;return[i,o<t?o+a:o-a,r,a]}function Go({sourceX:e,sourceY:t,targetX:n,targetY:o,sourceControlX:r,sourceControlY:i,targetControlX:a,targetControlY:s}){const l=.125*e+.375*r+.375*a+.125*n,c=.125*t+.375*i+.375*s+.125*o;return[l,c,Math.abs(l-e),Math.abs(c-t)]}var Qo,Jo,er,tr,nr,or;function rr({pos:e,x1:t,y1:n,x2:o,y2:r}){return e===or.Left||e===or.Right?[.5*(t+o),n]:[t,.5*(n+r)]}function ir({sourceX:e,sourceY:t,sourcePosition:n=or.Bottom,targetX:o,targetY:r,targetPosition:i=or.Top}){const[a,s]=rr({pos:n,x1:e,y1:t,x2:o,y2:r}),[l,c]=rr({pos:i,x1:o,y1:r,x2:e,y2:t}),[u,d,h,f]=Go({sourceX:e,sourceY:t,targetX:o,targetY:r,sourceControlX:a,sourceControlY:s,targetControlX:l,targetControlY:c});return[`M${e},${t} C${a},${s} ${l},${c} ${o},${r}`,u,d,h,f]}Wo.displayName="BaseEdge",function(e){e.Strict="strict",e.Loose="loose"}(Qo||(Qo={})),function(e){e.Free="free",e.Vertical="vertical",e.Horizontal="horizontal"}(Jo||(Jo={})),function(e){e.Partial="partial",e.Full="full"}(er||(er={})),function(e){e.Bezier="default",e.Straight="straight",e.Step="step",e.SmoothStep="smoothstep",e.SimpleBezier="simplebezier"}(tr||(tr={})),function(e){e.Arrow="arrow",e.ArrowClosed="arrowclosed"}(nr||(nr={})),function(e){e.Left="left",e.Top="top",e.Right="right",e.Bottom="bottom"}(or||(or={}));const ar=t.memo((({sourceX:e,sourceY:n,targetX:o,targetY:r,sourcePosition:i=or.Bottom,targetPosition:a=or.Top,label:s,labelStyle:l,labelShowBg:c,labelBgStyle:u,labelBgPadding:d,labelBgBorderRadius:h,style:f,markerEnd:g,markerStart:p,interactionWidth:m})=>{const[y,v,b]=ir({sourceX:e,sourceY:n,sourcePosition:i,targetX:o,targetY:r,targetPosition:a});return t.createElement(Wo,{path:y,labelX:v,labelY:b,label:s,labelStyle:l,labelShowBg:c,labelBgStyle:u,labelBgPadding:d,labelBgBorderRadius:h,style:f,markerEnd:g,markerStart:p,interactionWidth:m})}));ar.displayName="SimpleBezierEdge";const sr={[or.Left]:{x:-1,y:0},[or.Right]:{x:1,y:0},[or.Top]:{x:0,y:-1},[or.Bottom]:{x:0,y:1}},lr=(e,t)=>Math.sqrt(Math.pow(t.x-e.x,2)+Math.pow(t.y-e.y,2));function cr({source:e,sourcePosition:t=or.Bottom,target:n,targetPosition:o=or.Top,center:r,offset:i}){const a=sr[t],s=sr[o],l={x:e.x+a.x*i,y:e.y+a.y*i},c={x:n.x+s.x*i,y:n.y+s.y*i},u=(({source:e,sourcePosition:t=or.Bottom,target:n})=>t===or.Left||t===or.Right?e.x<n.x?{x:1,y:0}:{x:-1,y:0}:e.y<n.y?{x:0,y:1}:{x:0,y:-1})({source:l,sourcePosition:t,target:c}),d=0!==u.x?"x":"y",h=u[d];let f,g,p=[];const m={x:0,y:0},y={x:0,y:0},[v,b,x,w]=Uo({sourceX:e.x,sourceY:e.y,targetX:n.x,targetY:n.y});if(a[d]*s[d]==-1){f=r.x??v,g=r.y??b;const e=[{x:f,y:l.y},{x:f,y:c.y}],t=[{x:l.x,y:g},{x:c.x,y:g}];p=a[d]===h?"x"===d?e:t:"x"===d?t:e}else{const r=[{x:l.x,y:c.y}],u=[{x:c.x,y:l.y}];if(p="x"===d?a.x===h?u:r:a.y===h?r:u,t===o){const t=Math.abs(e[d]-n[d]);if(t<=i){const o=Math.min(i-1,i-t);a[d]===h?m[d]=(l[d]>e[d]?-1:1)*o:y[d]=(c[d]>n[d]?-1:1)*o}}if(t!==o){const e="x"===d?"y":"x",t=a[d]===s[e],n=l[e]>c[e],o=l[e]<c[e];(1===a[d]&&(!t&&n||t&&o)||1!==a[d]&&(!t&&o||t&&n))&&(p="x"===d?r:u)}const v={x:l.x+m.x,y:l.y+m.y},b={x:c.x+y.x,y:c.y+y.y};Math.max(Math.abs(v.x-p[0].x),Math.abs(b.x-p[0].x))>=Math.max(Math.abs(v.y-p[0].y),Math.abs(b.y-p[0].y))?(f=(v.x+b.x)/2,g=p[0].y):(f=p[0].x,g=(v.y+b.y)/2)}return[[e,{x:l.x+m.x,y:l.y+m.y},...p,{x:c.x+y.x,y:c.y+y.y},n],f,g,x,w]}function ur({sourceX:e,sourceY:t,sourcePosition:n=or.Bottom,targetX:o,targetY:r,targetPosition:i=or.Top,borderRadius:a=5,centerX:s,centerY:l,offset:c=20}){const[u,d,h,f,g]=cr({source:{x:e,y:t},sourcePosition:n,target:{x:o,y:r},targetPosition:i,center:{x:s,y:l},offset:c});return[u.reduce(((e,t,n)=>{let o="";return o=n>0&&n<u.length-1?function(e,t,n,o){const r=Math.min(lr(e,t)/2,lr(t,n)/2,o),{x:i,y:a}=t;if(e.x===i&&i===n.x||e.y===a&&a===n.y)return`L${i} ${a}`;if(e.y===a)return`L ${i+r*(e.x<n.x?-1:1)},${a}Q ${i},${a} ${i},${a+r*(e.y<n.y?1:-1)}`;const s=e.x<n.x?1:-1;return`L ${i},${a+r*(e.y<n.y?-1:1)}Q ${i},${a} ${i+r*s},${a}`}(u[n-1],t,u[n+1],a):`${0===n?"M":"L"}${t.x} ${t.y}`,e+=o}),""),d,h,f,g]}const dr=t.memo((({sourceX:e,sourceY:n,targetX:o,targetY:r,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u,style:d,sourcePosition:h=or.Bottom,targetPosition:f=or.Top,markerEnd:g,markerStart:p,pathOptions:m,interactionWidth:y})=>{const[v,b,x]=ur({sourceX:e,sourceY:n,sourcePosition:h,targetX:o,targetY:r,targetPosition:f,borderRadius:m?.borderRadius,offset:m?.offset});return t.createElement(Wo,{path:v,labelX:b,labelY:x,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u,style:d,markerEnd:g,markerStart:p,interactionWidth:y})}));dr.displayName="SmoothStepEdge";const hr=t.memo((e=>t.createElement(dr,{...e,pathOptions:t.useMemo((()=>({borderRadius:0,offset:e.pathOptions?.offset})),[e.pathOptions?.offset])})));hr.displayName="StepEdge";const fr=t.memo((({sourceX:e,sourceY:n,targetX:o,targetY:r,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u,style:d,markerEnd:h,markerStart:f,interactionWidth:g})=>{const[p,m,y]=function({sourceX:e,sourceY:t,targetX:n,targetY:o}){const[r,i,a,s]=Uo({sourceX:e,sourceY:t,targetX:n,targetY:o});return[`M ${e},${t}L ${n},${o}`,r,i,a,s]}({sourceX:e,sourceY:n,targetX:o,targetY:r});return t.createElement(Wo,{path:p,labelX:m,labelY:y,label:i,labelStyle:a,labelShowBg:s,labelBgStyle:l,labelBgPadding:c,labelBgBorderRadius:u,style:d,markerEnd:h,markerStart:f,interactionWidth:g})}));function gr(e,t){return e>=0?.5*e:25*t*Math.sqrt(-e)}function pr({pos:e,x1:t,y1:n,x2:o,y2:r,c:i}){switch(e){case or.Left:return[t-gr(t-o,i),n];case or.Right:return[t+gr(o-t,i),n];case or.Top:return[t,n-gr(n-r,i)];case or.Bottom:return[t,n+gr(r-n,i)]}}function mr({sourceX:e,sourceY:t,sourcePosition:n=or.Bottom,targetX:o,targetY:r,targetPosition:i=or.Top,curvature:a=.25}){const[s,l]=pr({pos:n,x1:e,y1:t,x2:o,y2:r,c:a}),[c,u]=pr({pos:i,x1:o,y1:r,x2:e,y2:t,c:a}),[d,h,f,g]=Go({sourceX:e,sourceY:t,targetX:o,targetY:r,sourceControlX:s,sourceControlY:l,targetControlX:c,targetControlY:u});return[`M${e},${t} C${s},${l} ${c},${u} ${o},${r}`,d,h,f,g]}fr.displayName="StraightEdge";const yr=t.memo((({sourceX:e,sourceY:n,targetX:o,targetY:r,sourcePosition:i=or.Bottom,targetPosition:a=or.Top,label:s,labelStyle:l,labelShowBg:c,labelBgStyle:u,labelBgPadding:d,labelBgBorderRadius:h,style:f,markerEnd:g,markerStart:p,pathOptions:m,interactionWidth:y})=>{const[v,b,x]=mr({sourceX:e,sourceY:n,sourcePosition:i,targetX:o,targetY:r,targetPosition:a,curvature:m?.curvature});return t.createElement(Wo,{path:v,labelX:b,labelY:x,label:s,labelStyle:l,labelShowBg:c,labelBgStyle:u,labelBgPadding:d,labelBgBorderRadius:h,style:f,markerEnd:g,markerStart:p,interactionWidth:y})}));yr.displayName="BezierEdge";const vr=t.createContext(null),br=vr.Provider;vr.Consumer;const xr=()=>t.useContext(vr),wr=({source:e,sourceHandle:t,target:n,targetHandle:o})=>`reactflow__edge-${e}${t||""}-${n}${o||""}`,Sr=(e,t)=>{if(void 0===e)return"";if("string"==typeof e)return e;return`${t?`${t}__`:""}${Object.keys(e).sort().map((t=>`${t}=${e[t]}`)).join("&")}`},Er=({x:e,y:t},[n,o,r],i,[a,s])=>{const l={x:(e-n)/r,y:(t-o)/r};return i?{x:a*Math.round(l.x/a),y:s*Math.round(l.y/s)}:l},_r=({x:e,y:t},[n,o,r])=>({x:e*r+n,y:t*r+o}),Cr=(e,t=[0,0])=>{if(!e)return{x:0,y:0,positionAbsolute:{x:0,y:0}};const n=(e.width??0)*t[0],o=(e.height??0)*t[1],r={x:e.position.x-n,y:e.position.y-o};return{...r,positionAbsolute:e.positionAbsolute?{x:e.positionAbsolute.x-n,y:e.positionAbsolute.y-o}:r}},Nr=(e,t=[0,0])=>{if(0===e.length)return{x:0,y:0,width:0,height:0};return(({x:e,y:t,x2:n,y2:o})=>({x:e,y:t,width:n-e,height:o-t}))(e.reduce(((e,n)=>{const{x:o,y:r}=Cr(n,t).positionAbsolute;return i=e,a=Bo({x:o,y:r,width:n.width||0,height:n.height||0}),{x:Math.min(i.x,a.x),y:Math.min(i.y,a.y),x2:Math.max(i.x2,a.x2),y2:Math.max(i.y2,a.y2)};var i,a}),{x:1/0,y:1/0,x2:-1/0,y2:-1/0}))},Mr=(e,t,[n,o,r]=[0,0,1],i=!1,a=!1,s=[0,0])=>{const l={x:(t.x-n)/r,y:(t.y-o)/r,width:t.width/r,height:t.height/r},c=[];return e.forEach((e=>{const{width:t,height:n,selectable:o=!0,hidden:r=!1}=e;if(a&&!o||r)return!1;const{positionAbsolute:u}=Cr(e,s),d={x:u.x,y:u.y,width:t||0,height:n||0},h=Xo(l,d);(void 0===t||void 0===n||null===t||null===n||i&&h>0||h>=(t||0)*(n||0)||e.dragging)&&c.push(e)})),c},kr=(e,t)=>{const n=e.map((e=>e.id));return t.filter((e=>n.includes(e.source)||n.includes(e.target)))},Pr=(e,t,n,o,r,i=.1)=>{const a=t/(e.width*(1+i)),s=n/(e.height*(1+i)),l=Math.min(a,s),c=Do(l,o,r);return{x:t/2-(e.x+e.width/2)*c,y:n/2-(e.y+e.height/2)*c,zoom:c}},Ar=(e,t=0)=>e.transition().duration(t);function Or(e,t,n,o){return(t[n]||[]).reduce(((t,r)=>(`${e.id}-${r.id}-${n}`!==o&&t.push({id:r.id||null,type:n,nodeId:e.id,x:(e.positionAbsolute?.x??0)+r.x+r.width/2,y:(e.positionAbsolute?.y??0)+r.y+r.height/2}),t)),[])}const Ir={source:null,target:null,sourceHandle:null,targetHandle:null},Dr=()=>({handleDomNode:null,isValid:!1,connection:Ir,endHandle:null});function Rr(e,t,n,o,r,i,a){const s="target"===r,l=a.querySelector(`.react-flow__handle[data-id="${e?.nodeId}-${e?.id}-${e?.type}"]`),c={...Dr(),handleDomNode:l};if(l){const e=zr(void 0,l),r=l.getAttribute("data-nodeid"),a=l.getAttribute("data-handleid"),u=l.classList.contains("connectable"),d=l.classList.contains("connectableend"),h={source:s?r:n,sourceHandle:s?a:o,target:s?n:r,targetHandle:s?o:a};c.connection=h;u&&d&&(t===Qo.Strict?s&&"source"===e||!s&&"target"===e:r!==n||a!==o)&&(c.endHandle={nodeId:r,handleId:a,type:e},c.isValid=i(h))}return c}function zr(e,t){return e||(t?.classList.contains("target")?"target":t?.classList.contains("source")?"source":null)}function $r(e){e?.classList.remove("valid","connecting","react-flow__handle-valid","react-flow__handle-connecting")}function Tr(e,t){let n=null;return t?n="valid":e&&!t&&(n="invalid"),n}function Br({event:e,handleId:t,nodeId:n,onConnect:o,isTarget:r,getState:i,setState:a,isValidConnection:s,edgeUpdaterType:l,onReconnectEnd:c}){const u=To(e.target),{connectionMode:d,domNode:h,autoPanOnConnect:f,connectionRadius:g,onConnectStart:p,panBy:m,getNodes:y,cancelConnection:v}=i();let b,x=0;const{x:w,y:S}=Zo(e),E=u?.elementFromPoint(w,S),_=zr(l,E),C=h?.getBoundingClientRect();if(!C||!_)return;let N,M=Zo(e,C),k=!1,P=null,A=!1,O=null;const I=function({nodes:e,nodeId:t,handleId:n,handleType:o}){return e.reduce(((e,r)=>{if(r[Ho]){const{handleBounds:i}=r[Ho];let a=[],s=[];i&&(a=Or(r,i,"source",`${t}-${n}-${o}`),s=Or(r,i,"target",`${t}-${n}-${o}`)),e.push(...a,...s)}return e}),[])}({nodes:y(),nodeId:n,handleId:t,handleType:_}),D=()=>{if(!f)return;const[e,t]=$o(M,C);m({x:e,y:t}),x=requestAnimationFrame(D)};function R(e){const{transform:o}=i();M=Zo(e,C);const{handle:l,validHandleResult:c}=function(e,t,n,o,r,i){const{x:a,y:s}=Zo(e),l=t.elementsFromPoint(a,s).find((e=>e.classList.contains("react-flow__handle")));if(l){const e=l.getAttribute("data-nodeid");if(e){const t=zr(void 0,l),o=l.getAttribute("data-handleid"),a=i({nodeId:e,id:o,type:t});if(a){const i=r.find((n=>n.nodeId===e&&n.type===t&&n.id===o));return{handle:{id:o,type:t,nodeId:e,x:i?.x||n.x,y:i?.y||n.y},validHandleResult:a}}}}let c=[],u=1/0;if(r.forEach((e=>{const t=Math.sqrt((e.x-n.x)**2+(e.y-n.y)**2);if(t<=o){const n=i(e);t<=u&&(t<u?c=[{handle:e,validHandleResult:n}]:t===u&&c.push({handle:e,validHandleResult:n}),u=t)}})),!c.length)return{handle:null,validHandleResult:Dr()};if(1===c.length)return c[0];const d=c.some((({validHandleResult:e})=>e.isValid)),h=c.some((({handle:e})=>"target"===e.type));return c.find((({handle:e,validHandleResult:t})=>h?"target"===e.type:!d||t.isValid))||c[0]}(e,u,Er(M,o,!1,[1,1]),g,I,(e=>Rr(e,d,n,t,r?"target":"source",s,u)));if(b=l,k||(D(),k=!0),O=c.handleDomNode,P=c.connection,A=c.isValid,a({connectionPosition:b&&A?_r({x:b.x,y:b.y},o):M,connectionStatus:Tr(!!b,A),connectionEndHandle:c.endHandle}),!b&&!A&&!O)return $r(N);P.source!==P.target&&O&&($r(N),N=O,O.classList.add("connecting","react-flow__handle-connecting"),O.classList.toggle("valid",A),O.classList.toggle("react-flow__handle-valid",A))}function z(e){(b||O)&&P&&A&&o?.(P),i().onConnectEnd?.(e),l&&c?.(e),$r(N),v(),cancelAnimationFrame(x),k=!1,A=!1,P=null,O=null,u.removeEventListener("mousemove",R),u.removeEventListener("mouseup",z),u.removeEventListener("touchmove",R),u.removeEventListener("touchend",z)}a({connectionPosition:M,connectionStatus:null,connectionNodeId:n,connectionHandleId:t,connectionHandleType:_,connectionStartHandle:{nodeId:n,handleId:t,type:_},connectionEndHandle:null}),p?.(e,{nodeId:n,handleId:t,handleType:_}),u.addEventListener("mousemove",R),u.addEventListener("mouseup",z),u.addEventListener("touchmove",R),u.addEventListener("touchend",z)}const Lr=()=>!0,Xr=e=>({connectionStartHandle:e.connectionStartHandle,connectOnClick:e.connectOnClick,noPanClassName:e.noPanClassName}),Yr=t.forwardRef((({type:e="source",position:n=or.Top,isValidConnection:r,isConnectable:i=!0,isConnectableStart:a=!0,isConnectableEnd:s=!0,id:l,onConnect:c,children:u,className:d,onMouseDown:h,onTouchStart:f,...g},p)=>{const m=l||null,y="target"===e,v=Mo(),x=xr(),{connectOnClick:w,noPanClassName:S}=No(Xr,b),{connecting:E,clickConnecting:_}=No(((e,t,n)=>o=>{const{connectionStartHandle:r,connectionEndHandle:i,connectionClickStartHandle:a}=o;return{connecting:r?.nodeId===e&&r?.handleId===t&&r?.type===n||i?.nodeId===e&&i?.handleId===t&&i?.type===n,clickConnecting:a?.nodeId===e&&a?.handleId===t&&a?.type===n}})(x,m,e),b);x||v.getState().onError?.("010",So());const C=e=>{const{defaultEdgeOptions:t,onConnect:n,hasDefaultEdges:o}=v.getState(),r={...t,...e};if(o){const{edges:e,setEdges:t}=v.getState();t(((e,t)=>{if(!e.source||!e.target)return t;let n;var o;return n="id"in(o=e)&&"source"in o&&"target"in o?{...e}:{...e,id:wr(e)},((e,t)=>t.some((t=>!(t.source!==e.source||t.target!==e.target||t.sourceHandle!==e.sourceHandle&&(t.sourceHandle||e.sourceHandle)||t.targetHandle!==e.targetHandle&&(t.targetHandle||e.targetHandle)))))(n,t)?t:t.concat(n)})(r,e))}n?.(r),c?.(r)},N=e=>{if(!x)return;const t=Fo(e);a&&(t&&0===e.button||!t)&&Br({event:e,handleId:m,nodeId:x,onConnect:C,isTarget:y,getState:v.getState,setState:v.setState,isValidConnection:r||v.getState().isValidConnection||Lr}),t?h?.(e):f?.(e)};return t.createElement("div",{"data-handleid":m,"data-nodeid":x,"data-handlepos":n,"data-id":`${x}-${m}-${e}`,className:o(["react-flow__handle",`react-flow__handle-${n}`,"nodrag",S,d,{source:!y,target:y,connectable:i,connectablestart:a,connectableend:s,connecting:_,connectionindicator:i&&(a&&!E||s&&E)}]),onMouseDown:N,onTouchStart:N,onClick:w?t=>{const{onClickConnectStart:n,onClickConnectEnd:o,connectionClickStartHandle:i,connectionMode:s,isValidConnection:l}=v.getState();if(!x||!i&&!a)return;if(!i)return n?.(t,{nodeId:x,handleId:m,handleType:e}),void v.setState({connectionClickStartHandle:{nodeId:x,type:e,handleId:m}});const c=To(t.target),u=r||l||Lr,{connection:d,isValid:h}=Rr({nodeId:x,id:m,type:e},s,i.nodeId,i.handleId||null,i.type,u,c);h&&C(d),o?.(t),v.setState({connectionClickStartHandle:null})}:void 0,ref:p,...g},u)}));Yr.displayName="Handle";var Hr=t.memo(Yr);const Vr=({data:e,isConnectable:n,targetPosition:o=or.Top,sourcePosition:r=or.Bottom})=>t.createElement(t.Fragment,null,t.createElement(Hr,{type:"target",position:o,isConnectable:n}),e?.label,t.createElement(Hr,{type:"source",position:r,isConnectable:n}));Vr.displayName="DefaultNode";var Kr=t.memo(Vr);const Fr=({data:e,isConnectable:n,sourcePosition:o=or.Bottom})=>t.createElement(t.Fragment,null,e?.label,t.createElement(Hr,{type:"source",position:o,isConnectable:n}));Fr.displayName="InputNode";var Zr=t.memo(Fr);const jr=({data:e,isConnectable:n,targetPosition:o=or.Top})=>t.createElement(t.Fragment,null,t.createElement(Hr,{type:"target",position:o,isConnectable:n}),e?.label);jr.displayName="OutputNode";var Wr=t.memo(jr);const qr=()=>null;qr.displayName="GroupNode";const Ur=e=>({selectedNodes:e.getNodes().filter((e=>e.selected)),selectedEdges:e.edges.filter((e=>e.selected)).map((e=>({...e})))}),Gr=e=>e.id;function Qr(e,t){return b(e.selectedNodes.map(Gr),t.selectedNodes.map(Gr))&&b(e.selectedEdges.map(Gr),t.selectedEdges.map(Gr))}const Jr=t.memo((({onSelectionChange:e})=>{const n=Mo(),{selectedNodes:o,selectedEdges:r}=No(Ur,Qr);return t.useEffect((()=>{const t={nodes:o,edges:r};e?.(t),n.getState().onSelectionChange.forEach((e=>e(t)))}),[o,r,e]),null}));Jr.displayName="SelectionListener";const ei=e=>!!e.onSelectionChange;function ti({onSelectionChange:e}){const n=No(ei);return e||n?t.createElement(Jr,{onSelectionChange:e}):null}const ni=e=>({setNodes:e.setNodes,setEdges:e.setEdges,setDefaultNodesAndEdges:e.setDefaultNodesAndEdges,setMinZoom:e.setMinZoom,setMaxZoom:e.setMaxZoom,setTranslateExtent:e.setTranslateExtent,setNodeExtent:e.setNodeExtent,reset:e.reset});function oi(e,n){t.useEffect((()=>{void 0!==e&&n(e)}),[e])}function ri(e,n,o){t.useEffect((()=>{void 0!==n&&o({[e]:n})}),[n])}const ii=({nodes:e,edges:n,defaultNodes:o,defaultEdges:r,onConnect:i,onConnectStart:a,onConnectEnd:s,onClickConnectStart:l,onClickConnectEnd:c,nodesDraggable:u,nodesConnectable:d,nodesFocusable:h,edgesFocusable:f,edgesUpdatable:g,elevateNodesOnSelect:p,minZoom:m,maxZoom:y,nodeExtent:v,onNodesChange:x,onEdgesChange:w,elementsSelectable:S,connectionMode:E,snapGrid:_,snapToGrid:C,translateExtent:N,connectOnClick:M,defaultEdgeOptions:k,fitView:P,fitViewOptions:A,onNodesDelete:O,onEdgesDelete:I,onNodeDrag:D,onNodeDragStart:R,onNodeDragStop:z,onSelectionDrag:$,onSelectionDragStart:T,onSelectionDragStop:B,noPanClassName:L,nodeOrigin:X,rfId:Y,autoPanOnConnect:H,autoPanOnNodeDrag:V,onError:K,connectionRadius:F,isValidConnection:Z,nodeDragThreshold:j})=>{const{setNodes:W,setEdges:q,setDefaultNodesAndEdges:U,setMinZoom:G,setMaxZoom:Q,setTranslateExtent:J,setNodeExtent:ee,reset:te}=No(ni,b),ne=Mo();return t.useEffect((()=>{const e=r?.map((e=>({...e,...k})));return U(o,e),()=>{te()}}),[]),ri("defaultEdgeOptions",k,ne.setState),ri("connectionMode",E,ne.setState),ri("onConnect",i,ne.setState),ri("onConnectStart",a,ne.setState),ri("onConnectEnd",s,ne.setState),ri("onClickConnectStart",l,ne.setState),ri("onClickConnectEnd",c,ne.setState),ri("nodesDraggable",u,ne.setState),ri("nodesConnectable",d,ne.setState),ri("nodesFocusable",h,ne.setState),ri("edgesFocusable",f,ne.setState),ri("edgesUpdatable",g,ne.setState),ri("elementsSelectable",S,ne.setState),ri("elevateNodesOnSelect",p,ne.setState),ri("snapToGrid",C,ne.setState),ri("snapGrid",_,ne.setState),ri("onNodesChange",x,ne.setState),ri("onEdgesChange",w,ne.setState),ri("connectOnClick",M,ne.setState),ri("fitViewOnInit",P,ne.setState),ri("fitViewOnInitOptions",A,ne.setState),ri("onNodesDelete",O,ne.setState),ri("onEdgesDelete",I,ne.setState),ri("onNodeDrag",D,ne.setState),ri("onNodeDragStart",R,ne.setState),ri("onNodeDragStop",z,ne.setState),ri("onSelectionDrag",$,ne.setState),ri("onSelectionDragStart",T,ne.setState),ri("onSelectionDragStop",B,ne.setState),ri("noPanClassName",L,ne.setState),ri("nodeOrigin",X,ne.setState),ri("rfId",Y,ne.setState),ri("autoPanOnConnect",H,ne.setState),ri("autoPanOnNodeDrag",V,ne.setState),ri("onError",K,ne.setState),ri("connectionRadius",F,ne.setState),ri("isValidConnection",Z,ne.setState),ri("nodeDragThreshold",j,ne.setState),oi(e,W),oi(n,q),oi(m,G),oi(y,Q),oi(N,J),oi(v,ee),null},ai={display:"none"},si={position:"absolute",width:1,height:1,margin:-1,border:0,padding:0,overflow:"hidden",clip:"rect(0px, 0px, 0px, 0px)",clipPath:"inset(100%)"},li="react-flow__node-desc",ci="react-flow__edge-desc",ui=e=>e.ariaLiveMessage;function di({rfId:e}){const n=No(ui);return t.createElement("div",{id:`react-flow__aria-live-${e}`,"aria-live":"assertive","aria-atomic":"true",style:si},n)}function hi({rfId:e,disableKeyboardA11y:n}){return t.createElement(t.Fragment,null,t.createElement("div",{id:`${li}-${e}`,style:ai},"Press enter or space to select a node.",!n&&"You can then use the arrow keys to move the node around."," Press delete to remove it and escape to cancel."," "),t.createElement("div",{id:`${ci}-${e}`,style:ai},"Press enter or space to select an edge. You can then press delete to remove it or escape to cancel."),!n&&t.createElement(di,{rfId:e}))}var fi=(e=null,n={actInsideInputWithModifier:!0})=>{const[o,r]=t.useState(!1),i=t.useRef(!1),a=t.useRef(new Set([])),[s,l]=t.useMemo((()=>{if(null!==e){const t=(Array.isArray(e)?e:[e]).filter((e=>"string"==typeof e)).map((e=>e.split("+"))),n=t.reduce(((e,t)=>e.concat(...t)),[]);return[t,n]}return[[],[]]}),[e]);return t.useEffect((()=>{const t="undefined"!=typeof document?document:null,o=n?.target||t;if(null!==e){const e=e=>{i.current=e.ctrlKey||e.metaKey||e.shiftKey;if((!i.current||i.current&&!n.actInsideInputWithModifier)&&Ko(e))return!1;const t=pi(e.code,l);a.current.add(e[t]),gi(s,a.current,!1)&&(e.preventDefault(),r(!0))},t=e=>{if((!i.current||i.current&&!n.actInsideInputWithModifier)&&Ko(e))return!1;const t=pi(e.code,l);gi(s,a.current,!0)?(r(!1),a.current.clear()):a.current.delete(e[t]),"Meta"===e.key&&a.current.clear(),i.current=!1},c=()=>{a.current.clear(),r(!1)};return o?.addEventListener("keydown",e),o?.addEventListener("keyup",t),window.addEventListener("blur",c),()=>{o?.removeEventListener("keydown",e),o?.removeEventListener("keyup",t),window.removeEventListener("blur",c)}}}),[e,r]),o};function gi(e,t,n){return e.filter((e=>n||e.length===t.size)).some((e=>e.every((e=>t.has(e)))))}function pi(e,t){return t.includes(e)?"code":"key"}function mi(e,t,n,o){const r=e.parentNode||e.parentId;if(!r)return n;const i=t.get(r),a=Cr(i,o);return mi(i,t,{x:(n.x??0)+a.x,y:(n.y??0)+a.y,z:(i[Ho]?.z??0)>(n.z??0)?i[Ho]?.z??0:n.z??0},o)}function yi(e,t,n){e.forEach((o=>{const r=o.parentNode||o.parentId;if(r&&!e.has(r))throw new Error(`Parent node ${r} not found`);if(r||n?.[o.id]){const{x:r,y:i,z:a}=mi(o,e,{...o.position,z:o[Ho]?.z??0},t);o.positionAbsolute={x:r,y:i},o[Ho].z=a,n?.[o.id]&&(o[Ho].isParent=!0)}}))}function vi(e,t,n,o){const r=new Map,i={},a=o?1e3:0;return e.forEach((e=>{const n=(Yo(e.zIndex)?e.zIndex:0)+(e.selected?a:0),o=t.get(e.id),s={...e,positionAbsolute:{x:e.position.x,y:e.position.y}},l=e.parentNode||e.parentId;l&&(i[l]=!0);const c=o?.type&&o?.type!==e.type;Object.defineProperty(s,Ho,{enumerable:!1,value:{handleBounds:c?void 0:o?.[Ho]?.handleBounds,z:n}}),r.set(e.id,s)})),yi(r,n,i),r}function bi(e,t={}){const{getNodes:n,width:o,height:r,minZoom:i,maxZoom:a,d3Zoom:s,d3Selection:l,fitViewOnInitDone:c,fitViewOnInit:u,nodeOrigin:d}=e(),h=t.initial&&!c&&u;if(s&&l&&(h||!t.initial)){const e=n().filter((e=>{const n=t.includeHiddenNodes?e.width&&e.height:!e.hidden;return t.nodes?.length?n&&t.nodes.some((t=>t.id===e.id)):n})),c=e.every((e=>e.width&&e.height));if(e.length>0&&c){const n=Nr(e,d),{x:c,y:u,zoom:h}=Pr(n,o,r,t.minZoom??i,t.maxZoom??a,t.padding??.1),f=io.translate(c,u).scale(h);return"number"==typeof t.duration&&t.duration>0?s.transform(Ar(l,t.duration),f):s.transform(l,f),!0}}return!1}function xi(e,t){return e.forEach((e=>{const n=t.get(e.id);n&&t.set(n.id,{...n,[Ho]:n[Ho],selected:e.selected})})),new Map(t)}function wi(e,t){return t.map((t=>{const n=e.find((e=>e.id===t.id));return n&&(t.selected=n.selected),t}))}function Si({changedNodes:e,changedEdges:t,get:n,set:o}){const{nodeInternals:r,edges:i,onNodesChange:a,onEdgesChange:s,hasDefaultNodes:l,hasDefaultEdges:c}=n();e?.length&&(l&&o({nodeInternals:xi(e,r)}),a?.(e)),t?.length&&(c&&o({edges:wi(t,i)}),s?.(t))}const Ei=()=>{},_i={zoomIn:Ei,zoomOut:Ei,zoomTo:Ei,getZoom:()=>1,setViewport:Ei,getViewport:()=>({x:0,y:0,zoom:1}),fitView:()=>!1,setCenter:Ei,fitBounds:Ei,project:e=>e,screenToFlowPosition:e=>e,flowToScreenPosition:e=>e,viewportInitialized:!1},Ci=e=>({d3Zoom:e.d3Zoom,d3Selection:e.d3Selection});function Ni(){const e=(()=>{const e=Mo(),{d3Zoom:n,d3Selection:o}=No(Ci,b),r=t.useMemo((()=>o&&n?{zoomIn:e=>n.scaleBy(Ar(o,e?.duration),1.2),zoomOut:e=>n.scaleBy(Ar(o,e?.duration),1/1.2),zoomTo:(e,t)=>n.scaleTo(Ar(o,t?.duration),e),getZoom:()=>e.getState().transform[2],setViewport:(t,r)=>{const[i,a,s]=e.getState().transform,l=io.translate(t.x??i,t.y??a).scale(t.zoom??s);n.transform(Ar(o,r?.duration),l)},getViewport:()=>{const[t,n,o]=e.getState().transform;return{x:t,y:n,zoom:o}},fitView:t=>bi(e.getState,t),setCenter:(t,r,i)=>{const{width:a,height:s,maxZoom:l}=e.getState(),c=void 0!==i?.zoom?i.zoom:l,u=a/2-t*c,d=s/2-r*c,h=io.translate(u,d).scale(c);n.transform(Ar(o,i?.duration),h)},fitBounds:(t,r)=>{const{width:i,height:a,minZoom:s,maxZoom:l}=e.getState(),{x:c,y:u,zoom:d}=Pr(t,i,a,s,l,r?.padding??.1),h=io.translate(c,u).scale(d);n.transform(Ar(o,r?.duration),h)},project:t=>{const{transform:n,snapToGrid:o,snapGrid:r}=e.getState();return console.warn("[DEPRECATED] `project` is deprecated. Instead use `screenToFlowPosition`. There is no need to subtract the react flow bounds anymore! https://reactflow.dev/api-reference/types/react-flow-instance#screen-to-flow-position"),Er(t,n,o,r)},screenToFlowPosition:t=>{const{transform:n,snapToGrid:o,snapGrid:r,domNode:i}=e.getState();if(!i)return t;const{x:a,y:s}=i.getBoundingClientRect(),l={x:t.x-a,y:t.y-s};return Er(l,n,o,r)},flowToScreenPosition:t=>{const{transform:n,domNode:o}=e.getState();if(!o)return t;const{x:r,y:i}=o.getBoundingClientRect(),a=_r(t,n);return{x:a.x+r,y:a.y+i}},viewportInitialized:!0}:_i),[n,o]);return r})(),n=Mo(),o=t.useCallback((()=>n.getState().getNodes().map((e=>({...e})))),[]),r=t.useCallback((e=>n.getState().nodeInternals.get(e)),[]),i=t.useCallback((()=>{const{edges:e=[]}=n.getState();return e.map((e=>({...e})))}),[]),a=t.useCallback((e=>{const{edges:t=[]}=n.getState();return t.find((t=>t.id===e))}),[]),s=t.useCallback((e=>{const{getNodes:t,setNodes:o,hasDefaultNodes:r,onNodesChange:i}=n.getState(),a=t(),s="function"==typeof e?e(a):e;if(r)o(s);else if(i){i(0===s.length?a.map((e=>({type:"remove",id:e.id}))):s.map((e=>({item:e,type:"reset"}))))}}),[]),l=t.useCallback((e=>{const{edges:t=[],setEdges:o,hasDefaultEdges:r,onEdgesChange:i}=n.getState(),a="function"==typeof e?e(t):e;if(r)o(a);else if(i){i(0===a.length?t.map((e=>({type:"remove",id:e.id}))):a.map((e=>({item:e,type:"reset"}))))}}),[]),c=t.useCallback((e=>{const t=Array.isArray(e)?e:[e],{getNodes:o,setNodes:r,hasDefaultNodes:i,onNodesChange:a}=n.getState();if(i){r([...o(),...t])}else if(a){a(t.map((e=>({item:e,type:"add"}))))}}),[]),u=t.useCallback((e=>{const t=Array.isArray(e)?e:[e],{edges:o=[],setEdges:r,hasDefaultEdges:i,onEdgesChange:a}=n.getState();if(i)r([...o,...t]);else if(a){a(t.map((e=>({item:e,type:"add"}))))}}),[]),d=t.useCallback((()=>{const{getNodes:e,edges:t=[],transform:o}=n.getState(),[r,i,a]=o;return{nodes:e().map((e=>({...e}))),edges:t.map((e=>({...e}))),viewport:{x:r,y:i,zoom:a}}}),[]),h=t.useCallback((({nodes:e,edges:t})=>{const{nodeInternals:o,getNodes:r,edges:i,hasDefaultNodes:a,hasDefaultEdges:s,onNodesDelete:l,onEdgesDelete:c,onNodesChange:u,onEdgesChange:d}=n.getState(),h=(e||[]).map((e=>e.id)),f=(t||[]).map((e=>e.id)),g=r().reduce(((e,t)=>{const n=t.parentNode||t.parentId,o=!h.includes(t.id)&&n&&e.find((e=>e.id===n));return("boolean"!=typeof t.deletable||t.deletable)&&(h.includes(t.id)||o)&&e.push(t),e}),[]),p=i.filter((e=>"boolean"!=typeof e.deletable||e.deletable)),m=p.filter((e=>f.includes(e.id)));if(g||m){const e=kr(g,p),t=[...m,...e],r=t.reduce(((e,t)=>(e.includes(t.id)||e.push(t.id),e)),[]);if((s||a)&&(s&&n.setState({edges:i.filter((e=>!r.includes(e.id)))}),a&&(g.forEach((e=>{o.delete(e.id)})),n.setState({nodeInternals:new Map(o)}))),r.length>0&&(c?.(t),d&&d(r.map((e=>({id:e,type:"remove"}))))),g.length>0&&(l?.(g),u)){u(g.map((e=>({id:e.id,type:"remove"}))))}}}),[]),f=t.useCallback((e=>{const t=Yo((o=e).width)&&Yo(o.height)&&Yo(o.x)&&Yo(o.y);var o;const r=t?null:n.getState().nodeInternals.get(e.id);if(!t&&!r)return[null,null,t];return[t?e:Lo(r),r,t]}),[]),g=t.useCallback(((e,t=!0,o)=>{const[r,i,a]=f(e);return r?(o||n.getState().getNodes()).filter((e=>{if(!(a||e.id!==i.id&&e.positionAbsolute))return!1;const n=Lo(e),o=Xo(n,r);return t&&o>0||o>=r.width*r.height})):[]}),[]),p=t.useCallback(((e,t,n=!0)=>{const[o]=f(e);if(!o)return!1;const r=Xo(o,t);return n&&r>0||r>=o.width*o.height}),[]);return t.useMemo((()=>({...e,getNodes:o,getNode:r,getEdges:i,getEdge:a,setNodes:s,setEdges:l,addNodes:c,addEdges:u,toObject:d,deleteElements:h,getIntersectingNodes:g,isNodeIntersecting:p})),[e,o,r,i,a,s,l,c,u,d,h,g,p])}const Mi={actInsideInputWithModifier:!1};const ki={position:"absolute",width:"100%",height:"100%",top:0,left:0},Pi=e=>({x:e.x,y:e.y,zoom:e.k}),Ai=(e,t)=>e.target.closest(`.${t}`),Oi=(e,t)=>2===t&&Array.isArray(e)&&e.includes(2),Ii=e=>{const t=e.ctrlKey&&jo()?10:1;return-e.deltaY*(1===e.deltaMode?.05:e.deltaMode?1:.002)*t},Di=e=>({d3Zoom:e.d3Zoom,d3Selection:e.d3Selection,d3ZoomHandler:e.d3ZoomHandler,userSelectionActive:e.userSelectionActive}),Ri=({onMove:e,onMoveStart:n,onMoveEnd:o,onPaneContextMenu:r,zoomOnScroll:i=!0,zoomOnPinch:a=!0,panOnScroll:s=!1,panOnScrollSpeed:l=.5,panOnScrollMode:c=Jo.Free,zoomOnDoubleClick:u=!0,elementsSelectable:d,panOnDrag:h=!0,defaultViewport:f,translateExtent:g,minZoom:p,maxZoom:m,zoomActivationKeyCode:y,preventScrolling:v=!0,children:x,noWheelClassName:S,noPanClassName:E})=>{const _=t.useRef(),C=Mo(),N=t.useRef(!1),M=t.useRef(!1),k=t.useRef(null),P=t.useRef({x:0,y:0,zoom:0}),{d3Zoom:A,d3Selection:O,d3ZoomHandler:I,userSelectionActive:D}=No(Di,b),R=fi(y),z=t.useRef(0),$=t.useRef(!1),T=t.useRef();return function(e){const n=Mo();t.useEffect((()=>{let t;const o=()=>{if(!e.current)return;const t=Io(e.current);0!==t.height&&0!==t.width||n.getState().onError?.("004",vo()),n.setState({width:t.width||500,height:t.height||500})};return o(),window.addEventListener("resize",o),e.current&&(t=new ResizeObserver((()=>o())),t.observe(e.current)),()=>{window.removeEventListener("resize",o),t&&e.current&&t.unobserve(e.current)}}),[])}(k),t.useEffect((()=>{if(k.current){const e=k.current.getBoundingClientRect(),t=function(){var e,t,n,o=lo,r=co,i=go,a=ho,s=fo,l=[0,1/0],c=[[-1/0,-1/0],[1/0,1/0]],u=250,d=Jt,h=w("start","zoom","end"),f=500,g=0,p=10;function m(e){e.property("__zoom",uo).on("wheel.zoom",_,{passive:!1}).on("mousedown.zoom",C).on("dblclick.zoom",N).filter(s).on("touchstart.zoom",M).on("touchmove.zoom",k).on("touchend.zoom touchcancel.zoom",P).style("-webkit-tap-highlight-color","rgba(0,0,0,0)")}function y(e,t){return(t=Math.max(l[0],Math.min(l[1],t)))===e.k?e:new ro(t,e.x,e.y)}function v(e,t,n){var o=t[0]-n[0]*e.k,r=t[1]-n[1]*e.k;return o===e.x&&r===e.y?e:new ro(e.k,o,r)}function b(e){return[(+e[0][0]+ +e[1][0])/2,(+e[0][1]+ +e[1][1])/2]}function x(e,t,n,o){e.on("start.zoom",(function(){S(this,arguments).event(o).start()})).on("interrupt.zoom end.zoom",(function(){S(this,arguments).event(o).end()})).tween("zoom",(function(){var e=this,i=arguments,a=S(e,i).event(o),s=r.apply(e,i),l=null==n?b(s):"function"==typeof n?n.apply(e,i):n,c=Math.max(s[1][0]-s[0][0],s[1][1]-s[0][1]),u=e.__zoom,h="function"==typeof t?t.apply(e,i):t,f=d(u.invert(l).concat(c/u.k),h.invert(l).concat(c/h.k));return function(e){if(1===e)e=h;else{var t=f(e),n=c/t[2];e=new ro(n,l[0]-t[0]*n,l[1]-t[1]*n)}a.zoom(null,e)}}))}function S(e,t,n){return!n&&e.__zooming||new E(e,t)}function E(e,t){this.that=e,this.args=t,this.active=0,this.sourceEvent=null,this.extent=r.apply(e,t),this.taps=0}function _(e,...t){if(o.apply(this,arguments)){var n=S(this,t).event(e),r=this.__zoom,s=Math.max(l[0],Math.min(l[1],r.k*Math.pow(2,a.apply(this,arguments)))),u=Ye(e);if(n.wheel)n.mouse[0][0]===u[0]&&n.mouse[0][1]===u[1]||(n.mouse[1]=r.invert(n.mouse[0]=u)),clearTimeout(n.wheel);else{if(r.k===s)return;n.mouse=[u,r.invert(u)],En(this),n.start()}so(e),n.wheel=setTimeout(d,150),n.zoom("mouse",i(v(y(r,s),n.mouse[0],n.mouse[1]),n.extent,c))}function d(){n.wheel=null,n.end()}}function C(e,...t){if(!n&&o.apply(this,arguments)){var r=e.currentTarget,a=S(this,t,!0).event(e),s=Xe(e.view).on("mousemove.zoom",h,!0).on("mouseup.zoom",f,!0),l=Ye(e,r),u=e.clientX,d=e.clientY;Ze(e.view),ao(e),a.mouse=[l,this.__zoom.invert(l)],En(this),a.start()}function h(e){if(so(e),!a.moved){var t=e.clientX-u,n=e.clientY-d;a.moved=t*t+n*n>g}a.event(e).zoom("mouse",i(v(a.that.__zoom,a.mouse[0]=Ye(e,r),a.mouse[1]),a.extent,c))}function f(e){s.on("mousemove.zoom mouseup.zoom",null),je(e.view,a.moved),so(e),a.event(e).end()}}function N(e,...t){if(o.apply(this,arguments)){var n=this.__zoom,a=Ye(e.changedTouches?e.changedTouches[0]:e,this),s=n.invert(a),l=n.k*(e.shiftKey?.5:2),d=i(v(y(n,l),a,s),r.apply(this,t),c);so(e),u>0?Xe(this).transition().duration(u).call(x,d,a,e):Xe(this).call(m.transform,d,a,e)}}function M(n,...r){if(o.apply(this,arguments)){var i,a,s,l,c=n.touches,u=c.length,d=S(this,r,n.changedTouches.length===u).event(n);for(ao(n),a=0;a<u;++a)l=[l=Ye(s=c[a],this),this.__zoom.invert(l),s.identifier],d.touch0?d.touch1||d.touch0[2]===l[2]||(d.touch1=l,d.taps=0):(d.touch0=l,i=!0,d.taps=1+!!e);e&&(e=clearTimeout(e)),i&&(d.taps<2&&(t=l[0],e=setTimeout((function(){e=null}),f)),En(this),d.start())}}function k(e,...t){if(this.__zooming){var n,o,r,a,s=S(this,t).event(e),l=e.changedTouches,u=l.length;for(so(e),n=0;n<u;++n)r=Ye(o=l[n],this),s.touch0&&s.touch0[2]===o.identifier?s.touch0[0]=r:s.touch1&&s.touch1[2]===o.identifier&&(s.touch1[0]=r);if(o=s.that.__zoom,s.touch1){var d=s.touch0[0],h=s.touch0[1],f=s.touch1[0],g=s.touch1[1],p=(p=f[0]-d[0])*p+(p=f[1]-d[1])*p,m=(m=g[0]-h[0])*m+(m=g[1]-h[1])*m;o=y(o,Math.sqrt(p/m)),r=[(d[0]+f[0])/2,(d[1]+f[1])/2],a=[(h[0]+g[0])/2,(h[1]+g[1])/2]}else{if(!s.touch0)return;r=s.touch0[0],a=s.touch0[1]}s.zoom("touch",i(v(o,r,a),s.extent,c))}}function P(e,...o){if(this.__zooming){var r,i,a=S(this,o).event(e),s=e.changedTouches,l=s.length;for(ao(e),n&&clearTimeout(n),n=setTimeout((function(){n=null}),f),r=0;r<l;++r)i=s[r],a.touch0&&a.touch0[2]===i.identifier?delete a.touch0:a.touch1&&a.touch1[2]===i.identifier&&delete a.touch1;if(a.touch1&&!a.touch0&&(a.touch0=a.touch1,delete a.touch1),a.touch0)a.touch0[1]=this.__zoom.invert(a.touch0[0]);else if(a.end(),2===a.taps&&(i=Ye(i,this),Math.hypot(t[0]-i[0],t[1]-i[1])<p)){var c=Xe(this).on("dblclick.zoom");c&&c.apply(this,arguments)}}}return m.transform=function(e,t,n,o){var r=e.selection?e.selection():e;r.property("__zoom",uo),e!==r?x(e,t,n,o):r.interrupt().each((function(){S(this,arguments).event(o).start().zoom(null,"function"==typeof t?t.apply(this,arguments):t).end()}))},m.scaleBy=function(e,t,n,o){m.scaleTo(e,(function(){return this.__zoom.k*("function"==typeof t?t.apply(this,arguments):t)}),n,o)},m.scaleTo=function(e,t,n,o){m.transform(e,(function(){var e=r.apply(this,arguments),o=this.__zoom,a=null==n?b(e):"function"==typeof n?n.apply(this,arguments):n,s=o.invert(a),l="function"==typeof t?t.apply(this,arguments):t;return i(v(y(o,l),a,s),e,c)}),n,o)},m.translateBy=function(e,t,n,o){m.transform(e,(function(){return i(this.__zoom.translate("function"==typeof t?t.apply(this,arguments):t,"function"==typeof n?n.apply(this,arguments):n),r.apply(this,arguments),c)}),null,o)},m.translateTo=function(e,t,n,o,a){m.transform(e,(function(){var e=r.apply(this,arguments),a=this.__zoom,s=null==o?b(e):"function"==typeof o?o.apply(this,arguments):o;return i(io.translate(s[0],s[1]).scale(a.k).translate("function"==typeof t?-t.apply(this,arguments):-t,"function"==typeof n?-n.apply(this,arguments):-n),e,c)}),o,a)},E.prototype={event:function(e){return e&&(this.sourceEvent=e),this},start:function(){return 1==++this.active&&(this.that.__zooming=this,this.emit("start")),this},zoom:function(e,t){return this.mouse&&"mouse"!==e&&(this.mouse[1]=t.invert(this.mouse[0])),this.touch0&&"touch"!==e&&(this.touch0[1]=t.invert(this.touch0[0])),this.touch1&&"touch"!==e&&(this.touch1[1]=t.invert(this.touch1[0])),this.that.__zoom=t,this.emit("zoom"),this},end:function(){return 0==--this.active&&(delete this.that.__zooming,this.emit("end")),this},emit:function(e){var t=Xe(this.that).datum();h.call(e,this.that,new oo(e,{sourceEvent:this.sourceEvent,target:m,type:e,transform:this.that.__zoom,dispatch:h}),t)}},m.wheelDelta=function(e){return arguments.length?(a="function"==typeof e?e:no(+e),m):a},m.filter=function(e){return arguments.length?(o="function"==typeof e?e:no(!!e),m):o},m.touchable=function(e){return arguments.length?(s="function"==typeof e?e:no(!!e),m):s},m.extent=function(e){return arguments.length?(r="function"==typeof e?e:no([[+e[0][0],+e[0][1]],[+e[1][0],+e[1][1]]]),m):r},m.scaleExtent=function(e){return arguments.length?(l[0]=+e[0],l[1]=+e[1],m):[l[0],l[1]]},m.translateExtent=function(e){return arguments.length?(c[0][0]=+e[0][0],c[1][0]=+e[1][0],c[0][1]=+e[0][1],c[1][1]=+e[1][1],m):[[c[0][0],c[0][1]],[c[1][0],c[1][1]]]},m.constrain=function(e){return arguments.length?(i=e,m):i},m.duration=function(e){return arguments.length?(u=+e,m):u},m.interpolate=function(e){return arguments.length?(d=e,m):d},m.on=function(){var e=h.on.apply(h,arguments);return e===h?m:e},m.clickDistance=function(e){return arguments.length?(g=(e=+e)*e,m):Math.sqrt(g)},m.tapDistance=function(e){return arguments.length?(p=+e,m):p},m}().scaleExtent([p,m]).translateExtent(g),n=Xe(k.current).call(t),o=io.translate(f.x,f.y).scale(Do(f.zoom,p,m)),r=[[0,0],[e.width,e.height]],i=t.constrain()(o,r,g);t.transform(n,i),t.wheelDelta(Ii),C.setState({d3Zoom:t,d3Selection:n,d3ZoomHandler:n.on("wheel.zoom"),transform:[i.x,i.y,i.k],domNode:k.current.closest(".react-flow")})}}),[]),t.useEffect((()=>{O&&A&&(!s||R||D?void 0!==I&&O.on("wheel.zoom",(function(e,t){if(!v&&"wheel"===e.type&&!e.ctrlKey||Ai(e,S))return null;e.preventDefault(),I.call(this,e,t)}),{passive:!1}):O.on("wheel.zoom",(t=>{if(Ai(t,S))return!1;t.preventDefault(),t.stopImmediatePropagation();const r=O.property("__zoom").k||1;if(t.ctrlKey&&a){const e=Ye(t),n=Ii(t),o=r*Math.pow(2,n);return void A.scaleTo(O,o,e,t)}const i=1===t.deltaMode?20:1;let s=c===Jo.Vertical?0:t.deltaX*i,u=c===Jo.Horizontal?0:t.deltaY*i;!jo()&&t.shiftKey&&c!==Jo.Vertical&&(s=t.deltaY*i,u=0),A.translateBy(O,-s/r*l,-u/r*l,{internal:!0});const d=Pi(O.property("__zoom")),{onViewportChangeStart:h,onViewportChange:f,onViewportChangeEnd:g}=C.getState();clearTimeout(T.current),$.current||($.current=!0,n?.(t,d),h?.(d)),$.current&&(e?.(t,d),f?.(d),T.current=setTimeout((()=>{o?.(t,d),g?.(d),$.current=!1}),150))}),{passive:!1}))}),[D,s,c,O,A,I,R,a,v,S,n,e,o]),t.useEffect((()=>{A&&A.on("start",(e=>{if(!e.sourceEvent||e.sourceEvent.internal)return null;z.current=e.sourceEvent?.button;const{onViewportChangeStart:t}=C.getState(),o=Pi(e.transform);N.current=!0,P.current=o,"mousedown"===e.sourceEvent?.type&&C.setState({paneDragging:!0}),t?.(o),n?.(e.sourceEvent,o)}))}),[A,n]),t.useEffect((()=>{A&&(D&&!N.current?A.on("zoom",null):D||A.on("zoom",(t=>{const{onViewportChange:n}=C.getState();if(C.setState({transform:[t.transform.x,t.transform.y,t.transform.k]}),M.current=!(!r||!Oi(h,z.current??0)),(e||n)&&!t.sourceEvent?.internal){const o=Pi(t.transform);n?.(o),e?.(t.sourceEvent,o)}})))}),[D,A,e,h,r]),t.useEffect((()=>{A&&A.on("end",(e=>{if(!e.sourceEvent||e.sourceEvent.internal)return null;const{onViewportChangeEnd:t}=C.getState();if(N.current=!1,C.setState({paneDragging:!1}),r&&Oi(h,z.current??0)&&!M.current&&r(e.sourceEvent),M.current=!1,(o||t)&&(n=P.current,i=e.transform,n.x!==i.x||n.y!==i.y||n.zoom!==i.k)){const n=Pi(e.transform);P.current=n,clearTimeout(_.current),_.current=setTimeout((()=>{t?.(n),o?.(e.sourceEvent,n)}),s?150:0)}var n,i}))}),[A,s,h,o,r]),t.useEffect((()=>{A&&A.filter((e=>{const t=R||i,n=a&&e.ctrlKey;if((!0===h||Array.isArray(h)&&h.includes(1))&&1===e.button&&"mousedown"===e.type&&(Ai(e,"react-flow__node")||Ai(e,"react-flow__edge")))return!0;if(!(h||t||s||u||a))return!1;if(D)return!1;if(!u&&"dblclick"===e.type)return!1;if(Ai(e,S)&&"wheel"===e.type)return!1;if(Ai(e,E)&&("wheel"!==e.type||s&&"wheel"===e.type&&!R))return!1;if(!a&&e.ctrlKey&&"wheel"===e.type)return!1;if(!t&&!s&&!n&&"wheel"===e.type)return!1;if(!h&&("mousedown"===e.type||"touchstart"===e.type))return!1;if(Array.isArray(h)&&!h.includes(e.button)&&"mousedown"===e.type)return!1;const o=Array.isArray(h)&&h.includes(e.button)||!e.button||e.button<=1;return(!e.ctrlKey||"wheel"===e.type)&&o}))}),[D,A,i,a,s,u,h,d,R]),t.createElement("div",{className:"react-flow__renderer",ref:k,style:ki},x)},zi=e=>({userSelectionActive:e.userSelectionActive,userSelectionRect:e.userSelectionRect});function $i(){const{userSelectionActive:e,userSelectionRect:n}=No(zi,b);return e&&n?t.createElement("div",{className:"react-flow__selection react-flow__container",style:{width:n.width,height:n.height,transform:`translate(${n.x}px, ${n.y}px)`}}):null}function Ti(e,t){const n=t.parentNode||t.parentId,o=e.find((e=>e.id===n));if(o){const e=t.position.x+t.width-o.width,n=t.position.y+t.height-o.height;if(e>0||n>0||t.position.x<0||t.position.y<0){if(o.style={...o.style}||{},o.style.width=o.style.width??o.width,o.style.height=o.style.height??o.height,e>0&&(o.style.width+=e),n>0&&(o.style.height+=n),t.position.x<0){const e=Math.abs(t.position.x);o.position.x=o.position.x-e,o.style.width+=e,t.position.x=0}if(t.position.y<0){const e=Math.abs(t.position.y);o.position.y=o.position.y-e,o.style.height+=e,t.position.y=0}o.width=o.style.width,o.height=o.style.height}}}function Bi(e,t){return function(e,t){if(e.some((e=>"reset"===e.type)))return e.filter((e=>"reset"===e.type)).map((e=>e.item));const n=e.filter((e=>"add"===e.type)).map((e=>e.item));return t.reduce(((t,n)=>{const o=e.filter((e=>e.id===n.id));if(0===o.length)return t.push(n),t;const r={...n};for(const e of o)if(e)switch(e.type){case"select":r.selected=e.selected;break;case"position":void 0!==e.position&&(r.position=e.position),void 0!==e.positionAbsolute&&(r.positionAbsolute=e.positionAbsolute),void 0!==e.dragging&&(r.dragging=e.dragging),r.expandParent&&Ti(t,r);break;case"dimensions":void 0!==e.dimensions&&(r.width=e.dimensions.width,r.height=e.dimensions.height),void 0!==e.updateStyle&&(r.style={...r.style||{},...e.dimensions}),"boolean"==typeof e.resizing&&(r.resizing=e.resizing),r.expandParent&&Ti(t,r);break;case"remove":return t}return t.push(r),t}),n)}(e,t)}const Li=(e,t)=>({id:e,type:"select",selected:t});function Xi(e,t){return e.reduce(((e,n)=>{const o=t.includes(n.id);return!n.selected&&o?(n.selected=!0,e.push(Li(n.id,!0))):n.selected&&!o&&(n.selected=!1,e.push(Li(n.id,!1))),e}),[])}const Yi=(e,t)=>n=>{n.target===t.current&&e?.(n)},Hi=e=>({userSelectionActive:e.userSelectionActive,elementsSelectable:e.elementsSelectable,dragging:e.paneDragging}),Vi=t.memo((({isSelecting:e,selectionMode:n=er.Full,panOnDrag:r,onSelectionStart:i,onSelectionEnd:a,onPaneClick:s,onPaneContextMenu:l,onPaneScroll:c,onPaneMouseEnter:u,onPaneMouseMove:d,onPaneMouseLeave:h,children:f})=>{const g=t.useRef(null),p=Mo(),m=t.useRef(0),y=t.useRef(0),v=t.useRef(),{userSelectionActive:x,elementsSelectable:w,dragging:S}=No(Hi,b),E=()=>{p.setState({userSelectionActive:!1,userSelectionRect:null}),m.current=0,y.current=0},_=e=>{s?.(e),p.getState().resetSelectedElements(),p.setState({nodesSelectionActive:!1})},C=c?e=>c(e):void 0,N=w&&(e||x);return t.createElement("div",{className:o(["react-flow__pane",{dragging:S,selection:e}]),onClick:N?void 0:Yi(_,g),onContextMenu:Yi((e=>{Array.isArray(r)&&r?.includes(2)?e.preventDefault():l?.(e)}),g),onWheel:Yi(C,g),onMouseEnter:N?void 0:u,onMouseDown:N?t=>{const{resetSelectedElements:n,domNode:o}=p.getState();if(v.current=o?.getBoundingClientRect(),!w||!e||0!==t.button||t.target!==g.current||!v.current)return;const{x:r,y:a}=Zo(t,v.current);n(),p.setState({userSelectionRect:{width:0,height:0,startX:r,startY:a,x:r,y:a}}),i?.(t)}:void 0,onMouseMove:N?t=>{const{userSelectionRect:o,nodeInternals:r,edges:i,transform:a,onNodesChange:s,onEdgesChange:l,nodeOrigin:c,getNodes:u}=p.getState();if(!e||!v.current||!o)return;p.setState({userSelectionActive:!0,nodesSelectionActive:!1});const d=Zo(t,v.current),h=o.startX??0,f=o.startY??0,g={...o,x:d.x<h?d.x:h,y:d.y<f?d.y:f,width:Math.abs(d.x-h),height:Math.abs(d.y-f)},b=u(),x=Mr(r,g,a,n===er.Partial,!0,c),w=kr(x,i).map((e=>e.id)),S=x.map((e=>e.id));if(m.current!==S.length){m.current=S.length;const e=Xi(b,S);e.length&&s?.(e)}if(y.current!==w.length){y.current=w.length;const e=Xi(i,w);e.length&&l?.(e)}p.setState({userSelectionRect:g})}:d,onMouseUp:N?e=>{if(0!==e.button)return;const{userSelectionRect:t}=p.getState();!x&&t&&e.target===g.current&&_?.(e),p.setState({nodesSelectionActive:m.current>0}),E(),a?.(e)}:void 0,onMouseLeave:N?e=>{x&&(p.setState({nodesSelectionActive:m.current>0}),a?.(e)),E()}:h,ref:g,style:ki},f,t.createElement($i,null))}));function Ki(e,t){const n=e.parentNode||e.parentId;if(!n)return!1;const o=t.get(n);return!!o&&(!!o.selected||Ki(o,t))}function Fi(e,t,n){let o=e;do{if(o?.matches(t))return!0;if(o===n.current)return!1;o=o.parentElement}while(o);return!1}function Zi(e,t,n,o){return Array.from(e.values()).filter((n=>(n.selected||n.id===o)&&(!n.parentNode||n.parentId||!Ki(n,e))&&(n.draggable||t&&void 0===n.draggable))).map((e=>({id:e.id,position:e.position||{x:0,y:0},positionAbsolute:e.positionAbsolute||{x:0,y:0},distance:{x:n.x-(e.positionAbsolute?.x??0),y:n.y-(e.positionAbsolute?.y??0)},delta:{x:0,y:0},extent:e.extent,parentNode:e.parentNode||e.parentId,parentId:e.parentNode||e.parentId,width:e.width,height:e.height,expandParent:e.expandParent})))}function ji(e,t,n,o,r=[0,0],i){const a=function(e,t){return t&&"parent"!==t?[t[0],[t[1][0]-(e.width||0),t[1][1]-(e.height||0)]]:t}(e,e.extent||o);let s=a;const l=e.parentNode||e.parentId;if("parent"!==e.extent||e.expandParent){if(e.extent&&l&&"parent"!==e.extent){const t=n.get(l),{x:o,y:i}=Cr(t,r).positionAbsolute;s=[[e.extent[0][0]+o,e.extent[0][1]+i],[e.extent[1][0]+o,e.extent[1][1]+i]]}}else if(l&&e.width&&e.height){const t=n.get(l),{x:o,y:i}=Cr(t,r).positionAbsolute;s=t&&Yo(o)&&Yo(i)&&Yo(t.width)&&Yo(t.height)?[[o+e.width*r[0],i+e.height*r[1]],[o+t.width-e.width+e.width*r[0],i+t.height-e.height+e.height*r[1]]]:s}else i?.("005",bo()),s=a;let c={x:0,y:0};if(l){const e=n.get(l);c=Cr(e,r).positionAbsolute}const u=s&&"parent"!==s?Ro(t,s):t;return{position:{x:u.x-c.x,y:u.y-c.y},positionAbsolute:u}}function Wi({nodeId:e,dragItems:t,nodeInternals:n}){const o=t.map((e=>({...n.get(e.id),position:e.position,positionAbsolute:e.positionAbsolute})));return[e?o.find((t=>t.id===e)):o[0],o]}Vi.displayName="Pane";const qi=(e,t,n,o)=>{const r=t.querySelectorAll(e);if(!r||!r.length)return null;const i=Array.from(r),a=t.getBoundingClientRect(),s=a.width*o[0],l=a.height*o[1];return i.map((e=>{const t=e.getBoundingClientRect();return{id:e.getAttribute("data-handleid"),position:e.getAttribute("data-handlepos"),x:(t.left-a.left-s)/n,y:(t.top-a.top-l)/n,...Io(e)}}))};function Ui(e,t,n){return void 0===n?n:o=>{const r=t().nodeInternals.get(e);r&&n(o,{...r})}}function Gi({id:e,store:t,unselect:n=!1,nodeRef:o}){const{addSelectedNodes:r,unselectNodesAndEdges:i,multiSelectionActive:a,nodeInternals:s,onError:l}=t.getState(),c=s.get(e);c?(t.setState({nodesSelectionActive:!1}),c.selected?(n||c.selected&&a)&&(i({nodes:[c],edges:[]}),requestAnimationFrame((()=>o?.current?.blur()))):r([e])):l?.("012",_o(e))}function Qi(e){return(t,n,o)=>e?.(t,o)}function Ji({nodeRef:e,disabled:n=!1,noDragClassName:o,handleSelector:r,nodeId:i,isSelectable:a,selectNodesOnDrag:s}){const l=Mo(),[c,u]=t.useState(!1),d=t.useRef([]),h=t.useRef({x:null,y:null}),f=t.useRef(0),g=t.useRef(null),p=t.useRef({x:0,y:0}),m=t.useRef(null),y=t.useRef(!1),v=t.useRef(!1),b=t.useRef(!1),x=function(){const e=Mo(),n=t.useCallback((({sourceEvent:t})=>{const{transform:n,snapGrid:o,snapToGrid:r}=e.getState(),i=t.touches?t.touches[0].clientX:t.clientX,a=t.touches?t.touches[0].clientY:t.clientY,s={x:(i-n[0])/n[2],y:(a-n[1])/n[2]};return{xSnapped:r?o[0]*Math.round(s.x/o[0]):s.x,ySnapped:r?o[1]*Math.round(s.y/o[1]):s.y,...s}}),[]);return n}();return t.useEffect((()=>{if(e?.current){const t=Xe(e.current),c=({x:e,y:t})=>{const{nodeInternals:n,onNodeDrag:o,onSelectionDrag:r,updateNodePositions:a,nodeExtent:s,snapGrid:c,snapToGrid:f,nodeOrigin:g,onError:p}=l.getState();h.current={x:e,y:t};let y=!1,v={x:0,y:0,x2:0,y2:0};if(d.current.length>1&&s){const e=Nr(d.current,g);v=Bo(e)}if(d.current=d.current.map((o=>{const r={x:e-o.distance.x,y:t-o.distance.y};f&&(r.x=c[0]*Math.round(r.x/c[0]),r.y=c[1]*Math.round(r.y/c[1]));const i=[[s[0][0],s[0][1]],[s[1][0],s[1][1]]];d.current.length>1&&s&&!o.extent&&(i[0][0]=o.positionAbsolute.x-v.x+s[0][0],i[1][0]=o.positionAbsolute.x+(o.width??0)-v.x2+s[1][0],i[0][1]=o.positionAbsolute.y-v.y+s[0][1],i[1][1]=o.positionAbsolute.y+(o.height??0)-v.y2+s[1][1]);const a=ji(o,r,n,i,g,p);return y=y||o.position.x!==a.position.x||o.position.y!==a.position.y,o.position=a.position,o.positionAbsolute=a.positionAbsolute,o})),!y)return;a(d.current,!0,!0),u(!0);const b=i?o:Qi(r);if(b&&m.current){const[e,t]=Wi({nodeId:i,dragItems:d.current,nodeInternals:n});b(m.current,e,t)}},S=()=>{if(!g.current)return;const[e,t]=$o(p.current,g.current);if(0!==e||0!==t){const{transform:n,panBy:o}=l.getState();h.current.x=(h.current.x??0)-e/n[2],h.current.y=(h.current.y??0)-t/n[2],o({x:e,y:t})&&c(h.current)}f.current=requestAnimationFrame(S)},E=t=>{const{nodeInternals:n,multiSelectionActive:o,nodesDraggable:r,unselectNodesAndEdges:c,onNodeDragStart:u,onSelectionDragStart:f}=l.getState();v.current=!0;const g=i?u:Qi(f);s&&a||o||!i||n.get(i)?.selected||c(),i&&a&&s&&Gi({id:i,store:l,nodeRef:e});const p=x(t);if(h.current=p,d.current=Zi(n,r,p,i),g&&d.current){const[e,o]=Wi({nodeId:i,dragItems:d.current,nodeInternals:n});g(t.sourceEvent,e,o)}};if(!n){const n=function(){var e,t,n,o,r=Ue,i=Ge,a=Qe,s=Je,l={},c=w("start","drag","end"),u=0,d=0;function h(e){e.on("mousedown.drag",f).filter(s).on("touchstart.drag",m).on("touchmove.drag",y,He).on("touchend.drag touchcancel.drag",v).style("touch-action","none").style("-webkit-tap-highlight-color","rgba(0,0,0,0)")}function f(a,s){if(!o&&r.call(this,a,s)){var l=b(this,i.call(this,a,s),a,s,"mouse");l&&(Xe(a.view).on("mousemove.drag",g,Ve).on("mouseup.drag",p,Ve),Ze(a.view),Ke(a),n=!1,e=a.clientX,t=a.clientY,l("start",a))}}function g(o){if(Fe(o),!n){var r=o.clientX-e,i=o.clientY-t;n=r*r+i*i>d}l.mouse("drag",o)}function p(e){Xe(e.view).on("mousemove.drag mouseup.drag",null),je(e.view,n),Fe(e),l.mouse("end",e)}function m(e,t){if(r.call(this,e,t)){var n,o,a=e.changedTouches,s=i.call(this,e,t),l=a.length;for(n=0;n<l;++n)(o=b(this,s,e,t,a[n].identifier,a[n]))&&(Ke(e),o("start",e,a[n]))}}function y(e){var t,n,o=e.changedTouches,r=o.length;for(t=0;t<r;++t)(n=l[o[t].identifier])&&(Fe(e),n("drag",e,o[t]))}function v(e){var t,n,r=e.changedTouches,i=r.length;for(o&&clearTimeout(o),o=setTimeout((function(){o=null}),500),t=0;t<i;++t)(n=l[r[t].identifier])&&(Ke(e),n("end",e,r[t]))}function b(e,t,n,o,r,i){var s,d,f,g=c.copy(),p=Ye(i||n,t);if(null!=(f=a.call(e,new qe("beforestart",{sourceEvent:n,target:h,identifier:r,active:u,x:p[0],y:p[1],dx:0,dy:0,dispatch:g}),o)))return s=f.x-p[0]||0,d=f.y-p[1]||0,function n(i,a,c){var m,y=p;switch(i){case"start":l[r]=n,m=u++;break;case"end":delete l[r],--u;case"drag":p=Ye(c||a,t),m=u}g.call(i,e,new qe(i,{sourceEvent:a,subject:f,target:h,identifier:r,active:m,x:p[0]+s,y:p[1]+d,dx:p[0]-y[0],dy:p[1]-y[1],dispatch:g}),o)}}return h.filter=function(e){return arguments.length?(r="function"==typeof e?e:We(!!e),h):r},h.container=function(e){return arguments.length?(i="function"==typeof e?e:We(e),h):i},h.subject=function(e){return arguments.length?(a="function"==typeof e?e:We(e),h):a},h.touchable=function(e){return arguments.length?(s="function"==typeof e?e:We(!!e),h):s},h.on=function(){var e=c.on.apply(c,arguments);return e===c?h:e},h.clickDistance=function(e){return arguments.length?(d=(e=+e)*e,h):Math.sqrt(d)},h}().on("start",(e=>{const{domNode:t,nodeDragThreshold:n}=l.getState();0===n&&E(e),b.current=!1;const o=x(e);h.current=o,g.current=t?.getBoundingClientRect()||null,p.current=Zo(e.sourceEvent,g.current)})).on("drag",(e=>{const t=x(e),{autoPanOnNodeDrag:n,nodeDragThreshold:o}=l.getState();if("touchmove"===e.sourceEvent.type&&e.sourceEvent.touches.length>1&&(b.current=!0),!b.current){if(!y.current&&v.current&&n&&(y.current=!0,S()),!v.current){const n=t.xSnapped-(h?.current?.x??0),r=t.ySnapped-(h?.current?.y??0);Math.sqrt(n*n+r*r)>o&&E(e)}(h.current.x!==t.xSnapped||h.current.y!==t.ySnapped)&&d.current&&v.current&&(m.current=e.sourceEvent,p.current=Zo(e.sourceEvent,g.current),c(t))}})).on("end",(e=>{if(v.current&&!b.current&&(u(!1),y.current=!1,v.current=!1,cancelAnimationFrame(f.current),d.current)){const{updateNodePositions:t,nodeInternals:n,onNodeDragStop:o,onSelectionDragStop:r}=l.getState(),a=i?o:Qi(r);if(t(d.current,!1,!1),a){const[t,o]=Wi({nodeId:i,dragItems:d.current,nodeInternals:n});a(e.sourceEvent,t,o)}}})).filter((t=>{const n=t.target;return!t.button&&(!o||!Fi(n,`.${o}`,e))&&(!r||Fi(n,r,e))}));return t.call(n),()=>{t.on(".drag",null)}}t.on(".drag",null)}}),[e,n,o,r,a,l,i,s,x]),c}function ea(){const e=Mo();return t.useCallback((t=>{const{nodeInternals:n,nodeExtent:o,updateNodePositions:r,getNodes:i,snapToGrid:a,snapGrid:s,onError:l,nodesDraggable:c}=e.getState(),u=i().filter((e=>e.selected&&(e.draggable||c&&void 0===e.draggable))),d=a?s[0]:5,h=a?s[1]:5,f=t.isShiftPressed?4:1,g=t.x*d*f,p=t.y*h*f;r(u.map((e=>{if(e.positionAbsolute){const t={x:e.positionAbsolute.x+g,y:e.positionAbsolute.y+p};a&&(t.x=s[0]*Math.round(t.x/s[0]),t.y=s[1]*Math.round(t.y/s[1]));const{positionAbsolute:r,position:i}=ji(e,t,n,o,void 0,l);e.position=i,e.positionAbsolute=r}return e})),!0,!1)}),[])}const ta={ArrowUp:{x:0,y:-1},ArrowDown:{x:0,y:1},ArrowLeft:{x:-1,y:0},ArrowRight:{x:1,y:0}};var na=e=>{const n=({id:n,type:r,data:i,xPos:a,yPos:s,xPosOrigin:l,yPosOrigin:c,selected:u,onClick:d,onMouseEnter:h,onMouseMove:f,onMouseLeave:g,onContextMenu:p,onDoubleClick:m,style:y,className:v,isDraggable:b,isSelectable:x,isConnectable:w,isFocusable:S,selectNodesOnDrag:E,sourcePosition:_,targetPosition:C,hidden:N,resizeObserver:M,dragHandle:k,zIndex:P,isParent:A,noDragClassName:O,noPanClassName:I,initialized:D,disableKeyboardA11y:R,ariaLabel:z,rfId:$,hasHandleBounds:T})=>{const B=Mo(),L=t.useRef(null),X=t.useRef(null),Y=t.useRef(_),H=t.useRef(C),V=t.useRef(r),K=x||b||d||h||f||g,F=ea(),Z=Ui(n,B.getState,h),j=Ui(n,B.getState,f),W=Ui(n,B.getState,g),q=Ui(n,B.getState,p),U=Ui(n,B.getState,m);t.useEffect((()=>()=>{X.current&&(M?.unobserve(X.current),X.current=null)}),[]),t.useEffect((()=>{if(L.current&&!N){const e=L.current;D&&T&&X.current===e||(X.current&&M?.unobserve(X.current),M?.observe(e),X.current=e)}}),[N,D,T]),t.useEffect((()=>{const e=V.current!==r,t=Y.current!==_,o=H.current!==C;L.current&&(e||t||o)&&(e&&(V.current=r),t&&(Y.current=_),o&&(H.current=C),B.getState().updateNodeDimensions([{id:n,nodeElement:L.current,forceUpdate:!0}]))}),[n,r,_,C]);const G=Ji({nodeRef:L,disabled:N||!b,noDragClassName:O,handleSelector:k,nodeId:n,isSelectable:x,selectNodesOnDrag:E});return N?null:t.createElement("div",{className:o(["react-flow__node",`react-flow__node-${r}`,{[I]:b},v,{selected:u,selectable:x,parent:A,dragging:G}]),ref:L,style:{zIndex:P,transform:`translate(${l}px,${c}px)`,pointerEvents:K?"all":"none",visibility:D?"visible":"hidden",...y},"data-id":n,"data-testid":`rf__node-${n}`,onMouseEnter:Z,onMouseMove:j,onMouseLeave:W,onContextMenu:q,onClick:e=>{const{nodeDragThreshold:t,preventNodeClick:o}=B.getState();if(!o&&(x&&(!E||!b||t>0)&&Gi({id:n,store:B,nodeRef:L}),d)){const t=B.getState().nodeInternals.get(n);t&&d(e,{...t})}},onDoubleClick:U,onKeyDown:S?e=>{if(!Ko(e)&&!R)if(Vo.includes(e.key)&&x){const t="Escape"===e.key;Gi({id:n,store:B,unselect:t,nodeRef:L})}else b&&u&&Object.prototype.hasOwnProperty.call(ta,e.key)&&(B.setState({ariaLiveMessage:`Moved selected node ${e.key.replace("Arrow","").toLowerCase()}. New position, x: ${~~a}, y: ${~~s}`}),F({x:ta[e.key].x,y:ta[e.key].y,isShiftPressed:e.shiftKey}))}:void 0,tabIndex:S?0:void 0,role:S?"button":void 0,"aria-describedby":R?void 0:`${li}-${$}`,"aria-label":z},t.createElement(br,{value:n},t.createElement(e,{id:n,data:i,type:r,xPos:a,yPos:s,selected:u,isConnectable:w,sourcePosition:_,targetPosition:C,dragging:G,dragHandle:k,zIndex:P})))};return n.displayName="NodeWrapper",t.memo(n)};const oa=e=>{const t=e.getNodes().filter((e=>e.selected));return{...Nr(t,e.nodeOrigin),transformString:`translate(${e.transform[0]}px,${e.transform[1]}px) scale(${e.transform[2]})`,userSelectionActive:e.userSelectionActive}};var ra=t.memo((function({onSelectionContextMenu:e,noPanClassName:n,disableKeyboardA11y:r}){const i=Mo(),{width:a,height:s,x:l,y:c,transformString:u,userSelectionActive:d}=No(oa,b),h=ea(),f=t.useRef(null);if(t.useEffect((()=>{r||f.current?.focus({preventScroll:!0})}),[r]),Ji({nodeRef:f}),d||!a||!s)return null;const g=e?t=>{const n=i.getState().getNodes().filter((e=>e.selected));e(t,n)}:void 0;return t.createElement("div",{className:o(["react-flow__nodesselection","react-flow__container",n]),style:{transform:u}},t.createElement("div",{ref:f,className:"react-flow__nodesselection-rect",onContextMenu:g,tabIndex:r?void 0:-1,onKeyDown:r?void 0:e=>{Object.prototype.hasOwnProperty.call(ta,e.key)&&h({x:ta[e.key].x,y:ta[e.key].y,isShiftPressed:e.shiftKey})},style:{width:a,height:s,top:c,left:l}}))}));const ia=e=>e.nodesSelectionActive,aa=({children:e,onPaneClick:n,onPaneMouseEnter:o,onPaneMouseMove:r,onPaneMouseLeave:i,onPaneContextMenu:a,onPaneScroll:s,deleteKeyCode:l,onMove:c,onMoveStart:u,onMoveEnd:d,selectionKeyCode:h,selectionOnDrag:f,selectionMode:g,onSelectionStart:p,onSelectionEnd:m,multiSelectionKeyCode:y,panActivationKeyCode:v,zoomActivationKeyCode:b,elementsSelectable:x,zoomOnScroll:w,zoomOnPinch:S,panOnScroll:E,panOnScrollSpeed:_,panOnScrollMode:C,zoomOnDoubleClick:N,panOnDrag:M,defaultViewport:k,translateExtent:P,minZoom:A,maxZoom:O,preventScrolling:I,onSelectionContextMenu:D,noWheelClassName:R,noPanClassName:z,disableKeyboardA11y:$})=>{const T=No(ia),B=fi(h),L=fi(v),X=L||M,Y=L||E,H=B||f&&!0!==X;return(({deleteKeyCode:e,multiSelectionKeyCode:n})=>{const o=Mo(),{deleteElements:r}=Ni(),i=fi(e,Mi),a=fi(n);t.useEffect((()=>{if(i){const{edges:e,getNodes:t}=o.getState(),n=t().filter((e=>e.selected)),i=e.filter((e=>e.selected));r({nodes:n,edges:i}),o.setState({nodesSelectionActive:!1})}}),[i]),t.useEffect((()=>{o.setState({multiSelectionActive:a})}),[a])})({deleteKeyCode:l,multiSelectionKeyCode:y}),t.createElement(Ri,{onMove:c,onMoveStart:u,onMoveEnd:d,onPaneContextMenu:a,elementsSelectable:x,zoomOnScroll:w,zoomOnPinch:S,panOnScroll:Y,panOnScrollSpeed:_,panOnScrollMode:C,zoomOnDoubleClick:N,panOnDrag:!B&&X,defaultViewport:k,translateExtent:P,minZoom:A,maxZoom:O,zoomActivationKeyCode:b,preventScrolling:I,noWheelClassName:R,noPanClassName:z},t.createElement(Vi,{onSelectionStart:p,onSelectionEnd:m,onPaneClick:n,onPaneMouseEnter:o,onPaneMouseMove:r,onPaneMouseLeave:i,onPaneContextMenu:a,onPaneScroll:s,panOnDrag:X,isSelecting:!!H,selectionMode:g},e,T&&t.createElement(ra,{onSelectionContextMenu:D,noPanClassName:z,disableKeyboardA11y:$})))};aa.displayName="FlowRenderer";var sa=t.memo(aa);function la(e){return{...{input:na(e.input||Zr),default:na(e.default||Kr),output:na(e.output||Wr),group:na(e.group||qr)},...Object.keys(e).filter((e=>!["input","default","output","group"].includes(e))).reduce(((t,n)=>(t[n]=na(e[n]||Kr),t)),{})}}const ca=e=>({nodesDraggable:e.nodesDraggable,nodesConnectable:e.nodesConnectable,nodesFocusable:e.nodesFocusable,elementsSelectable:e.elementsSelectable,updateNodeDimensions:e.updateNodeDimensions,onError:e.onError}),ua=e=>{const{nodesDraggable:n,nodesConnectable:o,nodesFocusable:r,elementsSelectable:i,updateNodeDimensions:a,onError:s}=No(ca,b),l=(c=e.onlyRenderVisibleElements,No(t.useCallback((e=>c?Mr(e.nodeInternals,{x:0,y:0,width:e.width,height:e.height},e.transform,!0):e.getNodes()),[c])));var c;const u=t.useRef(),d=t.useMemo((()=>{if("undefined"==typeof ResizeObserver)return null;const e=new ResizeObserver((e=>{const t=e.map((e=>({id:e.target.getAttribute("data-id"),nodeElement:e.target,forceUpdate:!0})));a(t)}));return u.current=e,e}),[]);return t.useEffect((()=>()=>{u?.current?.disconnect()}),[]),t.createElement("div",{className:"react-flow__nodes",style:ki},l.map((a=>{let l=a.type||"default";e.nodeTypes[l]||(s?.("003",yo(l)),l="default");const c=e.nodeTypes[l]||e.nodeTypes.default,u=!!(a.draggable||n&&void 0===a.draggable),h=!!(a.selectable||i&&void 0===a.selectable),f=!!(a.connectable||o&&void 0===a.connectable),g=!!(a.focusable||r&&void 0===a.focusable),p=e.nodeExtent?Ro(a.positionAbsolute,e.nodeExtent):a.positionAbsolute,m=p?.x??0,y=p?.y??0,v=(({x:e,y:t,width:n,height:o,origin:r})=>n&&o?r[0]<0||r[1]<0||r[0]>1||r[1]>1?{x:e,y:t}:{x:e-n*r[0],y:t-o*r[1]}:{x:e,y:t})({x:m,y:y,width:a.width??0,height:a.height??0,origin:e.nodeOrigin});return t.createElement(c,{key:a.id,id:a.id,className:a.className,style:a.style,type:l,data:a.data,sourcePosition:a.sourcePosition||or.Bottom,targetPosition:a.targetPosition||or.Top,hidden:a.hidden,xPos:m,yPos:y,xPosOrigin:v.x,yPosOrigin:v.y,selectNodesOnDrag:e.selectNodesOnDrag,onClick:e.onNodeClick,onMouseEnter:e.onNodeMouseEnter,onMouseMove:e.onNodeMouseMove,onMouseLeave:e.onNodeMouseLeave,onContextMenu:e.onNodeContextMenu,onDoubleClick:e.onNodeDoubleClick,selected:!!a.selected,isDraggable:u,isSelectable:h,isConnectable:f,isFocusable:g,resizeObserver:d,dragHandle:a.dragHandle,zIndex:a[Ho]?.z??0,isParent:!!a[Ho]?.isParent,noDragClassName:e.noDragClassName,noPanClassName:e.noPanClassName,initialized:!!a.width&&!!a.height,rfId:e.rfId,disableKeyboardA11y:e.disableKeyboardA11y,ariaLabel:a.ariaLabel,hasHandleBounds:!!a[Ho]?.handleBounds})})))};ua.displayName="NodeRenderer";var da=t.memo(ua);const ha=(e,t,n)=>n===or.Left?e-t:n===or.Right?e+t:e,fa=(e,t,n)=>n===or.Top?e-t:n===or.Bottom?e+t:e,ga="react-flow__edgeupdater",pa=({position:e,centerX:n,centerY:r,radius:i=10,onMouseDown:a,onMouseEnter:s,onMouseOut:l,type:c})=>t.createElement("circle",{onMouseDown:a,onMouseEnter:s,onMouseOut:l,className:o([ga,`${ga}-${c}`]),cx:ha(n,i,e),cy:fa(r,i,e),r:i,stroke:"transparent",fill:"transparent"}),ma=()=>!0;var ya=e=>{const n=({id:n,className:r,type:i,data:a,onClick:s,onEdgeDoubleClick:l,selected:c,animated:u,label:d,labelStyle:h,labelShowBg:f,labelBgStyle:g,labelBgPadding:p,labelBgBorderRadius:m,style:y,source:v,target:b,sourceX:x,sourceY:w,targetX:S,targetY:E,sourcePosition:_,targetPosition:C,elementsSelectable:N,hidden:M,sourceHandleId:k,targetHandleId:P,onContextMenu:A,onMouseEnter:O,onMouseMove:I,onMouseLeave:D,reconnectRadius:R,onReconnect:z,onReconnectStart:$,onReconnectEnd:T,markerEnd:B,markerStart:L,rfId:X,ariaLabel:Y,isFocusable:H,isReconnectable:V,pathOptions:K,interactionWidth:F,disableKeyboardA11y:Z})=>{const j=t.useRef(null),[W,q]=t.useState(!1),[U,G]=t.useState(!1),Q=Mo(),J=t.useMemo((()=>`url('#${Sr(L,X)}')`),[L,X]),ee=t.useMemo((()=>`url('#${Sr(B,X)}')`),[B,X]);if(M)return null;const te=qo(n,Q.getState,l),ne=qo(n,Q.getState,A),oe=qo(n,Q.getState,O),re=qo(n,Q.getState,I),ie=qo(n,Q.getState,D),ae=(e,t)=>{if(0!==e.button)return;const{edges:o,isValidConnection:r}=Q.getState(),i=t?b:v,a=(t?P:k)||null,s=t?"target":"source",l=r||ma,c=t,u=o.find((e=>e.id===n));G(!0),$?.(e,u,s);Br({event:e,handleId:a,nodeId:i,onConnect:e=>z?.(u,e),isTarget:c,getState:Q.getState,setState:Q.setState,isValidConnection:l,edgeUpdaterType:s,onReconnectEnd:e=>{G(!1),T?.(e,u,s)}})},se=()=>q(!0),le=()=>q(!1),ce=!N&&!s;return t.createElement("g",{className:o(["react-flow__edge",`react-flow__edge-${i}`,r,{selected:c,animated:u,inactive:ce,updating:W}]),onClick:e=>{const{edges:t,addSelectedEdges:o,unselectNodesAndEdges:r,multiSelectionActive:i}=Q.getState(),a=t.find((e=>e.id===n));a&&(N&&(Q.setState({nodesSelectionActive:!1}),a.selected&&i?(r({nodes:[],edges:[a]}),j.current?.blur()):o([n])),s&&s(e,a))},onDoubleClick:te,onContextMenu:ne,onMouseEnter:oe,onMouseMove:re,onMouseLeave:ie,onKeyDown:H?e=>{if(!Z&&Vo.includes(e.key)&&N){const{unselectNodesAndEdges:t,addSelectedEdges:o,edges:r}=Q.getState();"Escape"===e.key?(j.current?.blur(),t({edges:[r.find((e=>e.id===n))]})):o([n])}}:void 0,tabIndex:H?0:void 0,role:H?"button":"img","data-testid":`rf__edge-${n}`,"aria-label":null===Y?void 0:Y||`Edge from ${v} to ${b}`,"aria-describedby":H?`${ci}-${X}`:void 0,ref:j},!U&&t.createElement(e,{id:n,source:v,target:b,selected:c,animated:u,label:d,labelStyle:h,labelShowBg:f,labelBgStyle:g,labelBgPadding:p,labelBgBorderRadius:m,data:a,style:y,sourceX:x,sourceY:w,targetX:S,targetY:E,sourcePosition:_,targetPosition:C,sourceHandleId:k,targetHandleId:P,markerStart:J,markerEnd:ee,pathOptions:K,interactionWidth:F}),V&&t.createElement(t.Fragment,null,("source"===V||!0===V)&&t.createElement(pa,{position:_,centerX:x,centerY:w,radius:R,onMouseDown:e=>ae(e,!0),onMouseEnter:se,onMouseOut:le,type:"source"}),("target"===V||!0===V)&&t.createElement(pa,{position:C,centerX:S,centerY:E,radius:R,onMouseDown:e=>ae(e,!1),onMouseEnter:se,onMouseOut:le,type:"target"})))};return n.displayName="EdgeWrapper",t.memo(n)};function va(e){return{...{default:ya(e.default||yr),straight:ya(e.bezier||fr),step:ya(e.step||hr),smoothstep:ya(e.step||dr),simplebezier:ya(e.simplebezier||ar)},...Object.keys(e).filter((e=>!["default","bezier"].includes(e))).reduce(((t,n)=>(t[n]=ya(e[n]||yr),t)),{})}}function ba(e,t,n=null){const o=(n?.x||0)+t.x,r=(n?.y||0)+t.y,i=n?.width||t.width,a=n?.height||t.height;switch(e){case or.Top:return{x:o+i/2,y:r};case or.Right:return{x:o+i,y:r+a/2};case or.Bottom:return{x:o+i/2,y:r+a};case or.Left:return{x:o,y:r+a/2}}}function xa(e,t){return e?1!==e.length&&t?t&&e.find((e=>e.id===t))||null:e[0]:null}function wa(e){const t=e?.[Ho]?.handleBounds||null,n=t&&e?.width&&e?.height&&void 0!==e?.positionAbsolute?.x&&void 0!==e?.positionAbsolute?.y;return[{x:e?.positionAbsolute?.x||0,y:e?.positionAbsolute?.y||0,width:e?.width||0,height:e?.height||0},t,!!n]}const Sa=[{level:0,isMaxLevel:!0,edges:[]}];function Ea(e,n,o){return function(e,t,n=!1){let o=-1;const r=e.reduce(((e,r)=>{const i=Yo(r.zIndex);let a=i?r.zIndex:0;if(n){const e=t.get(r.target),n=t.get(r.source),o=r.selected||e?.selected||n?.selected,s=Math.max(n?.[Ho]?.z||0,e?.[Ho]?.z||0,1e3);a=(i?r.zIndex:0)+(o?s:0)}return e[a]?e[a].push(r):e[a]=[r],o=a>o?a:o,e}),{}),i=Object.entries(r).map((([e,t])=>{const n=+e;return{edges:t,level:n,isMaxLevel:n===o}}));return 0===i.length?Sa:i}(No(t.useCallback((t=>e?t.edges.filter((e=>{const o=n.get(e.source),r=n.get(e.target);return o?.width&&o?.height&&r?.width&&r?.height&&function({sourcePos:e,targetPos:t,sourceWidth:n,sourceHeight:o,targetWidth:r,targetHeight:i,width:a,height:s,transform:l}){const c={x:Math.min(e.x,t.x),y:Math.min(e.y,t.y),x2:Math.max(e.x+n,t.x+r),y2:Math.max(e.y+o,t.y+i)};c.x===c.x2&&(c.x2+=1),c.y===c.y2&&(c.y2+=1);const u=Bo({x:(0-l[0])/l[2],y:(0-l[1])/l[2],width:a/l[2],height:s/l[2]}),d=Math.max(0,Math.min(u.x2,c.x2)-Math.max(u.x,c.x)),h=Math.max(0,Math.min(u.y2,c.y2)-Math.max(u.y,c.y));return Math.ceil(d*h)>0}({sourcePos:o.positionAbsolute||{x:0,y:0},targetPos:r.positionAbsolute||{x:0,y:0},sourceWidth:o.width,sourceHeight:o.height,targetWidth:r.width,targetHeight:r.height,width:t.width,height:t.height,transform:t.transform})})):t.edges),[e,n])),n,o)}const _a={[nr.Arrow]:({color:e="none",strokeWidth:n=1})=>t.createElement("polyline",{style:{stroke:e,strokeWidth:n},strokeLinecap:"round",strokeLinejoin:"round",fill:"none",points:"-5,-4 0,0 -5,4"}),[nr.ArrowClosed]:({color:e="none",strokeWidth:n=1})=>t.createElement("polyline",{style:{stroke:e,fill:e,strokeWidth:n},strokeLinecap:"round",strokeLinejoin:"round",points:"-5,-4 0,0 -5,4 -5,-4"})};const Ca=({id:e,type:n,color:o,width:r=12.5,height:i=12.5,markerUnits:a="strokeWidth",strokeWidth:s,orient:l="auto-start-reverse"})=>{const c=function(e){const n=Mo();return t.useMemo((()=>Object.prototype.hasOwnProperty.call(_a,e)?_a[e]:(n.getState().onError?.("009",xo(e)),null)),[e])}(n);return c?t.createElement("marker",{className:"react-flow__arrowhead",id:e,markerWidth:`${r}`,markerHeight:`${i}`,viewBox:"-10 -10 20 20",markerUnits:a,orient:l,refX:"0",refY:"0"},t.createElement(c,{color:o,strokeWidth:s})):null},Na=({defaultColor:e,rfId:n})=>{const o=No(t.useCallback((({defaultColor:e,rfId:t})=>n=>{const o=[];return n.edges.reduce(((n,r)=>([r.markerStart,r.markerEnd].forEach((r=>{if(r&&"object"==typeof r){const i=Sr(r,t);o.includes(i)||(n.push({id:i,color:r.color||e,...r}),o.push(i))}})),n)),[]).sort(((e,t)=>e.id.localeCompare(t.id)))})({defaultColor:e,rfId:n}),[e,n]),((e,t)=>!(e.length!==t.length||e.some(((e,n)=>e.id!==t[n].id)))));return t.createElement("defs",null,o.map((e=>t.createElement(Ca,{id:e.id,key:e.id,type:e.type,color:e.color,width:e.width,height:e.height,markerUnits:e.markerUnits,strokeWidth:e.strokeWidth,orient:e.orient}))))};Na.displayName="MarkerDefinitions";var Ma=t.memo(Na);const ka=e=>({nodesConnectable:e.nodesConnectable,edgesFocusable:e.edgesFocusable,edgesUpdatable:e.edgesUpdatable,elementsSelectable:e.elementsSelectable,width:e.width,height:e.height,connectionMode:e.connectionMode,nodeInternals:e.nodeInternals,onError:e.onError}),Pa=({defaultMarkerColor:e,onlyRenderVisibleElements:n,elevateEdgesOnSelect:r,rfId:i,edgeTypes:a,noPanClassName:s,onEdgeContextMenu:l,onEdgeMouseEnter:c,onEdgeMouseMove:u,onEdgeMouseLeave:d,onEdgeClick:h,onEdgeDoubleClick:f,onReconnect:g,onReconnectStart:p,onReconnectEnd:m,reconnectRadius:y,children:v,disableKeyboardA11y:x})=>{const{edgesFocusable:w,edgesUpdatable:S,elementsSelectable:E,width:_,height:C,connectionMode:N,nodeInternals:M,onError:k}=No(ka,b),P=Ea(n,M,r);return _?t.createElement(t.Fragment,null,P.map((({level:n,edges:r,isMaxLevel:v})=>t.createElement("svg",{key:n,style:{zIndex:n},width:_,height:C,className:"react-flow__edges react-flow__container"},v&&t.createElement(Ma,{defaultColor:e,rfId:i}),t.createElement("g",null,r.map((e=>{const[n,r,v]=wa(M.get(e.source)),[b,_,C]=wa(M.get(e.target));if(!v||!C)return null;let P=e.type||"default";a[P]||(k?.("011",Eo(P)),P="default");const A=a[P]||a.default,O=N===Qo.Strict?_.target:(_.target??[]).concat(_.source??[]),I=xa(r.source,e.sourceHandle),D=xa(O,e.targetHandle),R=I?.position||or.Bottom,z=D?.position||or.Top,$=!!(e.focusable||w&&void 0===e.focusable),T=e.reconnectable||e.updatable,B=void 0!==g&&(T||S&&void 0===T);if(!I||!D)return k?.("008",wo(I,e)),null;const{sourceX:L,sourceY:X,targetX:Y,targetY:H}=((e,t,n,o,r,i)=>{const a=ba(n,e,t),s=ba(i,o,r);return{sourceX:a.x,sourceY:a.y,targetX:s.x,targetY:s.y}})(n,I,R,b,D,z);return t.createElement(A,{key:e.id,id:e.id,className:o([e.className,s]),type:P,data:e.data,selected:!!e.selected,animated:!!e.animated,hidden:!!e.hidden,label:e.label,labelStyle:e.labelStyle,labelShowBg:e.labelShowBg,labelBgStyle:e.labelBgStyle,labelBgPadding:e.labelBgPadding,labelBgBorderRadius:e.labelBgBorderRadius,style:e.style,source:e.source,target:e.target,sourceHandleId:e.sourceHandle,targetHandleId:e.targetHandle,markerEnd:e.markerEnd,markerStart:e.markerStart,sourceX:L,sourceY:X,targetX:Y,targetY:H,sourcePosition:R,targetPosition:z,elementsSelectable:E,onContextMenu:l,onMouseEnter:c,onMouseMove:u,onMouseLeave:d,onClick:h,onEdgeDoubleClick:f,onReconnect:g,onReconnectStart:p,onReconnectEnd:m,reconnectRadius:y,rfId:i,ariaLabel:e.ariaLabel,isFocusable:$,isReconnectable:B,pathOptions:"pathOptions"in e?e.pathOptions:void 0,interactionWidth:e.interactionWidth,disableKeyboardA11y:x})})))))),v):null};Pa.displayName="EdgeRenderer";var Aa=t.memo(Pa);const Oa=e=>`translate(${e.transform[0]}px,${e.transform[1]}px) scale(${e.transform[2]})`;function Ia({children:e}){const n=No(Oa);return t.createElement("div",{className:"react-flow__viewport react-flow__container",style:{transform:n}},e)}const Da={[or.Left]:or.Right,[or.Right]:or.Left,[or.Top]:or.Bottom,[or.Bottom]:or.Top},Ra=({nodeId:e,handleType:n,style:o,type:r=tr.Bezier,CustomComponent:i,connectionStatus:a})=>{const{fromNode:s,handleId:l,toX:c,toY:u,connectionMode:d}=No(t.useCallback((t=>({fromNode:t.nodeInternals.get(e),handleId:t.connectionHandleId,toX:(t.connectionPosition.x-t.transform[0])/t.transform[2],toY:(t.connectionPosition.y-t.transform[1])/t.transform[2],connectionMode:t.connectionMode})),[e]),b),h=s?.[Ho]?.handleBounds;let f=h?.[n];if(d===Qo.Loose&&(f=f||h?.["source"===n?"target":"source"]),!s||!f)return null;const g=l?f.find((e=>e.id===l)):f[0],p=g?g.x+g.width/2:(s.width??0)/2,m=g?g.y+g.height/2:s.height??0,y=(s.positionAbsolute?.x??0)+p,v=(s.positionAbsolute?.y??0)+m,x=g?.position,w=x?Da[x]:null;if(!x||!w)return null;if(i)return t.createElement(i,{connectionLineType:r,connectionLineStyle:o,fromNode:s,fromHandle:g,fromX:y,fromY:v,toX:c,toY:u,fromPosition:x,toPosition:w,connectionStatus:a});let S="";const E={sourceX:y,sourceY:v,sourcePosition:x,targetX:c,targetY:u,targetPosition:w};return r===tr.Bezier?[S]=mr(E):r===tr.Step?[S]=ur({...E,borderRadius:0}):r===tr.SmoothStep?[S]=ur(E):r===tr.SimpleBezier?[S]=ir(E):S=`M${y},${v} ${c},${u}`,t.createElement("path",{d:S,fill:"none",className:"react-flow__connection-path",style:o})};Ra.displayName="ConnectionLine";const za=e=>({nodeId:e.connectionNodeId,handleType:e.connectionHandleType,nodesConnectable:e.nodesConnectable,connectionStatus:e.connectionStatus,width:e.width,height:e.height});function $a({containerStyle:e,style:n,type:r,component:i}){const{nodeId:a,handleType:s,nodesConnectable:l,width:c,height:u,connectionStatus:d}=No(za,b);return!!(a&&s&&c&&l)?t.createElement("svg",{style:e,width:c,height:u,className:"react-flow__edges react-flow__connectionline react-flow__container"},t.createElement("g",{className:o(["react-flow__connection",d])},t.createElement(Ra,{nodeId:a,handleType:s,style:n,type:r,CustomComponent:i,connectionStatus:d}))):null}function Ta(e,n){t.useRef(null),Mo();return t.useMemo((()=>n(e)),[e])}const Ba=({nodeTypes:e,edgeTypes:n,onMove:o,onMoveStart:r,onMoveEnd:i,onInit:a,onNodeClick:s,onEdgeClick:l,onNodeDoubleClick:c,onEdgeDoubleClick:u,onNodeMouseEnter:d,onNodeMouseMove:h,onNodeMouseLeave:f,onNodeContextMenu:g,onSelectionContextMenu:p,onSelectionStart:m,onSelectionEnd:y,connectionLineType:v,connectionLineStyle:b,connectionLineComponent:x,connectionLineContainerStyle:w,selectionKeyCode:S,selectionOnDrag:E,selectionMode:_,multiSelectionKeyCode:C,panActivationKeyCode:N,zoomActivationKeyCode:M,deleteKeyCode:k,onlyRenderVisibleElements:P,elementsSelectable:A,selectNodesOnDrag:O,defaultViewport:I,translateExtent:D,minZoom:R,maxZoom:z,preventScrolling:$,defaultMarkerColor:T,zoomOnScroll:B,zoomOnPinch:L,panOnScroll:X,panOnScrollSpeed:Y,panOnScrollMode:H,zoomOnDoubleClick:V,panOnDrag:K,onPaneClick:F,onPaneMouseEnter:Z,onPaneMouseMove:j,onPaneMouseLeave:W,onPaneScroll:q,onPaneContextMenu:U,onEdgeContextMenu:G,onEdgeMouseEnter:Q,onEdgeMouseMove:J,onEdgeMouseLeave:ee,onReconnect:te,onReconnectStart:ne,onReconnectEnd:oe,reconnectRadius:re,noDragClassName:ie,noWheelClassName:ae,noPanClassName:se,elevateEdgesOnSelect:le,disableKeyboardA11y:ce,nodeOrigin:ue,nodeExtent:de,rfId:he})=>{const fe=Ta(e,la),ge=Ta(n,va);return function(e){const n=Ni(),o=t.useRef(!1);t.useEffect((()=>{!o.current&&n.viewportInitialized&&e&&(setTimeout((()=>e(n)),1),o.current=!0)}),[e,n.viewportInitialized])}(a),t.createElement(sa,{onPaneClick:F,onPaneMouseEnter:Z,onPaneMouseMove:j,onPaneMouseLeave:W,onPaneContextMenu:U,onPaneScroll:q,deleteKeyCode:k,selectionKeyCode:S,selectionOnDrag:E,selectionMode:_,onSelectionStart:m,onSelectionEnd:y,multiSelectionKeyCode:C,panActivationKeyCode:N,zoomActivationKeyCode:M,elementsSelectable:A,onMove:o,onMoveStart:r,onMoveEnd:i,zoomOnScroll:B,zoomOnPinch:L,zoomOnDoubleClick:V,panOnScroll:X,panOnScrollSpeed:Y,panOnScrollMode:H,panOnDrag:K,defaultViewport:I,translateExtent:D,minZoom:R,maxZoom:z,onSelectionContextMenu:p,preventScrolling:$,noDragClassName:ie,noWheelClassName:ae,noPanClassName:se,disableKeyboardA11y:ce},t.createElement(Ia,null,t.createElement(Aa,{edgeTypes:ge,onEdgeClick:l,onEdgeDoubleClick:u,onlyRenderVisibleElements:P,onEdgeContextMenu:G,onEdgeMouseEnter:Q,onEdgeMouseMove:J,onEdgeMouseLeave:ee,onReconnect:te,onReconnectStart:ne,onReconnectEnd:oe,reconnectRadius:re,defaultMarkerColor:T,noPanClassName:se,elevateEdgesOnSelect:!!le,disableKeyboardA11y:ce,rfId:he},t.createElement($a,{style:b,type:v,component:x,containerStyle:w})),t.createElement("div",{className:"react-flow__edgelabel-renderer"}),t.createElement(da,{nodeTypes:fe,onNodeClick:s,onNodeDoubleClick:c,onNodeMouseEnter:d,onNodeMouseMove:h,onNodeMouseLeave:f,onNodeContextMenu:g,selectNodesOnDrag:O,onlyRenderVisibleElements:P,noPanClassName:se,noDragClassName:ie,disableKeyboardA11y:ce,nodeOrigin:ue,nodeExtent:de,rfId:he})))};Ba.displayName="GraphView";var La=t.memo(Ba);const Xa=[[Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY],[Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY]],Ya={preventNodeClick:!1,rfId:"1",width:0,height:0,transform:[0,0,1],nodeInternals:new Map,edges:[],onNodesChange:null,onEdgesChange:null,hasDefaultNodes:!1,hasDefaultEdges:!1,d3Zoom:null,d3Selection:null,d3ZoomHandler:void 0,minZoom:.5,maxZoom:2,translateExtent:Xa,nodeExtent:Xa,nodesSelectionActive:!1,userSelectionActive:!1,userSelectionRect:null,connectionNodeId:null,connectionHandleId:null,connectionHandleType:"source",connectionPosition:{x:0,y:0},connectionStatus:null,connectionMode:Qo.Strict,domNode:null,paneDragging:!1,noPanClassName:"nopan",nodeOrigin:[0,0],nodeDragThreshold:0,snapGrid:[15,15],snapToGrid:!1,nodesDraggable:!0,nodesConnectable:!0,nodesFocusable:!0,edgesFocusable:!0,edgesUpdatable:!0,elementsSelectable:!0,elevateNodesOnSelect:!0,fitViewOnInit:!1,fitViewOnInitDone:!1,fitViewOnInitOptions:void 0,onSelectionChange:[],multiSelectionActive:!1,connectionStartHandle:null,connectionEndHandle:null,connectionClickStartHandle:null,connectOnClick:!0,ariaLiveMessage:"",autoPanOnConnect:!0,autoPanOnNodeDrag:!0,connectionRadius:20,onError:(e,t)=>{},isValidConnection:void 0},Ha=()=>{return e=(e,t)=>({...Ya,setNodes:n=>{const{nodeInternals:o,nodeOrigin:r,elevateNodesOnSelect:i}=t();e({nodeInternals:vi(n,o,r,i)})},getNodes:()=>Array.from(t().nodeInternals.values()),setEdges:n=>{const{defaultEdgeOptions:o={}}=t();e({edges:n.map((e=>({...o,...e})))})},setDefaultNodesAndEdges:(n,o)=>{const r=void 0!==n,i=void 0!==o,a=r?vi(n,new Map,t().nodeOrigin,t().elevateNodesOnSelect):new Map;e({nodeInternals:a,edges:i?o:[],hasDefaultNodes:r,hasDefaultEdges:i})},updateNodeDimensions:n=>{const{onNodesChange:o,nodeInternals:r,fitViewOnInit:i,fitViewOnInitDone:a,fitViewOnInitOptions:s,domNode:l,nodeOrigin:c}=t(),u=l?.querySelector(".react-flow__viewport");if(!u)return;const d=window.getComputedStyle(u),{m22:h}=new window.DOMMatrixReadOnly(d.transform),f=n.reduce(((e,t)=>{const n=r.get(t.id);if(n?.hidden)r.set(n.id,{...n,[Ho]:{...n[Ho],handleBounds:void 0}});else if(n){const o=Io(t.nodeElement);o.width&&o.height&&(n.width!==o.width||n.height!==o.height||t.forceUpdate)&&(r.set(n.id,{...n,[Ho]:{...n[Ho],handleBounds:{source:qi(".source",t.nodeElement,h,c),target:qi(".target",t.nodeElement,h,c)}},...o}),e.push({id:n.id,type:"dimensions",dimensions:o}))}return e}),[]);yi(r,c);const g=a||i&&!a&&bi(t,{initial:!0,...s});e({nodeInternals:new Map(r),fitViewOnInitDone:g}),f?.length>0&&o?.(f)},updateNodePositions:(e,n=!0,o=!1)=>{const{triggerNodeChanges:r}=t();r(e.map((e=>{const t={id:e.id,type:"position",dragging:o};return n&&(t.positionAbsolute=e.positionAbsolute,t.position=e.position),t})))},triggerNodeChanges:n=>{const{onNodesChange:o,nodeInternals:r,hasDefaultNodes:i,nodeOrigin:a,getNodes:s,elevateNodesOnSelect:l}=t();if(n?.length){if(i){const t=vi(Bi(n,s()),r,a,l);e({nodeInternals:t})}o?.(n)}},addSelectedNodes:n=>{const{multiSelectionActive:o,edges:r,getNodes:i}=t();let a,s=null;o?a=n.map((e=>Li(e,!0))):(a=Xi(i(),n),s=Xi(r,[])),Si({changedNodes:a,changedEdges:s,get:t,set:e})},addSelectedEdges:n=>{const{multiSelectionActive:o,edges:r,getNodes:i}=t();let a,s=null;o?a=n.map((e=>Li(e,!0))):(a=Xi(r,n),s=Xi(i(),[])),Si({changedNodes:s,changedEdges:a,get:t,set:e})},unselectNodesAndEdges:({nodes:n,edges:o}={})=>{const{edges:r,getNodes:i}=t(),a=o||r;Si({changedNodes:(n||i()).map((e=>(e.selected=!1,Li(e.id,!1)))),changedEdges:a.map((e=>Li(e.id,!1))),get:t,set:e})},setMinZoom:n=>{const{d3Zoom:o,maxZoom:r}=t();o?.scaleExtent([n,r]),e({minZoom:n})},setMaxZoom:n=>{const{d3Zoom:o,minZoom:r}=t();o?.scaleExtent([r,n]),e({maxZoom:n})},setTranslateExtent:n=>{t().d3Zoom?.translateExtent(n),e({translateExtent:n})},resetSelectedElements:()=>{const{edges:n,getNodes:o}=t();Si({changedNodes:o().filter((e=>e.selected)).map((e=>Li(e.id,!1))),changedEdges:n.filter((e=>e.selected)).map((e=>Li(e.id,!1))),get:t,set:e})},setNodeExtent:n=>{const{nodeInternals:o}=t();o.forEach((e=>{e.positionAbsolute=Ro(e.position,n)})),e({nodeExtent:n,nodeInternals:new Map(o)})},panBy:e=>{const{transform:n,width:o,height:r,d3Zoom:i,d3Selection:a,translateExtent:s}=t();if(!i||!a||!e.x&&!e.y)return!1;const l=io.translate(n[0]+e.x,n[1]+e.y).scale(n[2]),c=[[0,0],[o,r]],u=i?.constrain()(l,c,s);return i.transform(a,u),n[0]!==u.x||n[1]!==u.y||n[2]!==u.k},cancelConnection:()=>e({connectionNodeId:Ya.connectionNodeId,connectionHandleId:Ya.connectionHandleId,connectionHandleType:Ya.connectionHandleType,connectionStatus:Ya.connectionStatus,connectionStartHandle:Ya.connectionStartHandle,connectionEndHandle:Ya.connectionEndHandle}),reset:()=>e({...Ya})}),t=Object.is,e?v(e,t):v;var e,t},Va=({children:e})=>{const n=t.useRef(null);return n.current||(n.current=Ha()),t.createElement(mo,{value:n.current},e)};Va.displayName="ReactFlowProvider";const Ka=({children:e})=>t.useContext(po)?t.createElement(t.Fragment,null,e):t.createElement(Va,null,e);Ka.displayName="ReactFlowWrapper";const Fa={input:Zr,default:Kr,output:Wr,group:qr},Za={default:yr,straight:fr,step:hr,smoothstep:dr,simplebezier:ar},ja=[0,0],Wa=[15,15],qa={x:0,y:0,zoom:1},Ua={width:"100%",height:"100%",overflow:"hidden",position:"relative",zIndex:0},Ga=t.forwardRef((({nodes:e,edges:n,defaultNodes:r,defaultEdges:i,className:a,nodeTypes:s=Fa,edgeTypes:l=Za,onNodeClick:c,onEdgeClick:u,onInit:d,onMove:h,onMoveStart:f,onMoveEnd:g,onConnect:p,onConnectStart:m,onConnectEnd:y,onClickConnectStart:v,onClickConnectEnd:b,onNodeMouseEnter:x,onNodeMouseMove:w,onNodeMouseLeave:S,onNodeContextMenu:E,onNodeDoubleClick:_,onNodeDragStart:C,onNodeDrag:N,onNodeDragStop:M,onNodesDelete:k,onEdgesDelete:P,onSelectionChange:A,onSelectionDragStart:O,onSelectionDrag:I,onSelectionDragStop:D,onSelectionContextMenu:R,onSelectionStart:z,onSelectionEnd:$,connectionMode:T=Qo.Strict,connectionLineType:B=tr.Bezier,connectionLineStyle:L,connectionLineComponent:X,connectionLineContainerStyle:Y,deleteKeyCode:H="Backspace",selectionKeyCode:V="Shift",selectionOnDrag:K=!1,selectionMode:F=er.Full,panActivationKeyCode:Z="Space",multiSelectionKeyCode:j=(jo()?"Meta":"Control"),zoomActivationKeyCode:W=(jo()?"Meta":"Control"),snapToGrid:q=!1,snapGrid:U=Wa,onlyRenderVisibleElements:G=!1,selectNodesOnDrag:Q=!0,nodesDraggable:J,nodesConnectable:ee,nodesFocusable:te,nodeOrigin:ne=ja,edgesFocusable:oe,edgesUpdatable:re,elementsSelectable:ie,defaultViewport:ae=qa,minZoom:se=.5,maxZoom:le=2,translateExtent:ce=Xa,preventScrolling:ue=!0,nodeExtent:de,defaultMarkerColor:he="#b1b1b7",zoomOnScroll:fe=!0,zoomOnPinch:ge=!0,panOnScroll:pe=!1,panOnScrollSpeed:me=.5,panOnScrollMode:ye=Jo.Free,zoomOnDoubleClick:ve=!0,panOnDrag:be=!0,onPaneClick:xe,onPaneMouseEnter:we,onPaneMouseMove:Se,onPaneMouseLeave:Ee,onPaneScroll:_e,onPaneContextMenu:Ce,children:Ne,onEdgeContextMenu:Me,onEdgeDoubleClick:ke,onEdgeMouseEnter:Pe,onEdgeMouseMove:Ae,onEdgeMouseLeave:Oe,onEdgeUpdate:Ie,onEdgeUpdateStart:De,onEdgeUpdateEnd:Re,onReconnect:ze,onReconnectStart:$e,onReconnectEnd:Te,reconnectRadius:Be=10,edgeUpdaterRadius:Le=10,onNodesChange:Xe,onEdgesChange:Ye,noDragClassName:He="nodrag",noWheelClassName:Ve="nowheel",noPanClassName:Ke="nopan",fitView:Fe=!1,fitViewOptions:Ze,connectOnClick:je=!0,attributionPosition:We,proOptions:qe,defaultEdgeOptions:Ue,elevateNodesOnSelect:Ge=!0,elevateEdgesOnSelect:Qe=!1,disableKeyboardA11y:Je=!1,autoPanOnConnect:et=!0,autoPanOnNodeDrag:tt=!0,connectionRadius:nt=20,isValidConnection:ot,onError:rt,style:it,id:at,nodeDragThreshold:st,...lt},ct)=>{const ut=at||"1";return t.createElement("div",{...lt,style:{...it,...Ua},ref:ct,className:o(["react-flow",a]),"data-testid":"rf__wrapper",id:at},t.createElement(Ka,null,t.createElement(La,{onInit:d,onMove:h,onMoveStart:f,onMoveEnd:g,onNodeClick:c,onEdgeClick:u,onNodeMouseEnter:x,onNodeMouseMove:w,onNodeMouseLeave:S,onNodeContextMenu:E,onNodeDoubleClick:_,nodeTypes:s,edgeTypes:l,connectionLineType:B,connectionLineStyle:L,connectionLineComponent:X,connectionLineContainerStyle:Y,selectionKeyCode:V,selectionOnDrag:K,selectionMode:F,deleteKeyCode:H,multiSelectionKeyCode:j,panActivationKeyCode:Z,zoomActivationKeyCode:W,onlyRenderVisibleElements:G,selectNodesOnDrag:Q,defaultViewport:ae,translateExtent:ce,minZoom:se,maxZoom:le,preventScrolling:ue,zoomOnScroll:fe,zoomOnPinch:ge,zoomOnDoubleClick:ve,panOnScroll:pe,panOnScrollSpeed:me,panOnScrollMode:ye,panOnDrag:be,onPaneClick:xe,onPaneMouseEnter:we,onPaneMouseMove:Se,onPaneMouseLeave:Ee,onPaneScroll:_e,onPaneContextMenu:Ce,onSelectionContextMenu:R,onSelectionStart:z,onSelectionEnd:$,onEdgeContextMenu:Me,onEdgeDoubleClick:ke,onEdgeMouseEnter:Pe,onEdgeMouseMove:Ae,onEdgeMouseLeave:Oe,onReconnect:ze??Ie,onReconnectStart:$e??De,onReconnectEnd:Te??Re,reconnectRadius:Be??Le,defaultMarkerColor:he,noDragClassName:He,noWheelClassName:Ve,noPanClassName:Ke,elevateEdgesOnSelect:Qe,rfId:ut,disableKeyboardA11y:Je,nodeOrigin:ne,nodeExtent:de}),t.createElement(ii,{nodes:e,edges:n,defaultNodes:r,defaultEdges:i,onConnect:p,onConnectStart:m,onConnectEnd:y,onClickConnectStart:v,onClickConnectEnd:b,nodesDraggable:J,nodesConnectable:ee,nodesFocusable:te,edgesFocusable:oe,edgesUpdatable:re,elementsSelectable:ie,elevateNodesOnSelect:Ge,minZoom:se,maxZoom:le,nodeExtent:de,onNodesChange:Xe,onEdgesChange:Ye,snapToGrid:q,snapGrid:U,connectionMode:T,translateExtent:ce,connectOnClick:je,defaultEdgeOptions:Ue,fitView:Fe,fitViewOptions:Ze,onNodesDelete:k,onEdgesDelete:P,onNodeDragStart:C,onNodeDrag:N,onNodeDragStop:M,onSelectionDrag:I,onSelectionDragStart:O,onSelectionDragStop:D,noPanClassName:Ke,nodeOrigin:ne,rfId:ut,autoPanOnConnect:et,autoPanOnNodeDrag:tt,onError:rt,connectionRadius:nt,isValidConnection:ot,nodeDragThreshold:st}),t.createElement(ti,{onSelectionChange:A}),Ne,t.createElement(Ao,{proOptions:qe,position:We}),t.createElement(hi,{rfId:ut,disableKeyboardA11y:Je})))}));Ga.displayName="ReactFlow";const Qa=e=>e.domNode?.querySelector(".react-flow__renderer");function Ja({children:e}){const t=No(Qa);return t?n.createPortal(e,t):null}const es=(e,t)=>e.length===t.length&&e.every(((e,n)=>((e,t)=>e?.positionAbsolute?.x===t?.positionAbsolute?.x&&e?.positionAbsolute?.y===t?.positionAbsolute?.y&&e?.width===t?.width&&e?.height===t?.height&&e?.selected===t?.selected&&e?.[Ho]?.z===t?.[Ho]?.z)(e,t[n]))),ts=e=>({transform:e.transform,nodeOrigin:e.nodeOrigin,selectedNodesCount:e.getNodes().filter((e=>e.selected)).length});function ns(e,t,n,o,r){let i=.5;"start"===r?i=0:"end"===r&&(i=1);let a=[(e.x+e.width*i)*t[2]+t[0],e.y*t[2]+t[1]-o],s=[-100*i,-100];switch(n){case or.Right:a=[(e.x+e.width)*t[2]+t[0]+o,(e.y+e.height*i)*t[2]+t[1]],s=[0,-100*i];break;case or.Bottom:a[1]=(e.y+e.height)*t[2]+t[1]+o,s[1]=0;break;case or.Left:a=[e.x*t[2]+t[0]-o,(e.y+e.height*i)*t[2]+t[1]],s=[-100,-100*i]}return`translate(${a[0]}px, ${a[1]}px) translate(${s[0]}%, ${s[1]}%)`}e.NodeToolbar=function({nodeId:e,children:n,className:r,style:i,isVisible:a,position:s=or.Top,offset:l=10,align:c="center",...u}){const d=xr(),h=t.useCallback((t=>(Array.isArray(e)?e:[e||d||""]).reduce(((e,n)=>{const o=t.nodeInternals.get(n);return o&&e.push(o),e}),[])),[e,d]),f=No(h,es),{transform:g,nodeOrigin:p,selectedNodesCount:m}=No(ts,b);if(!("boolean"==typeof a?a:1===f.length&&f[0].selected&&1===m)||!f.length)return null;const y=Nr(f,p),v=Math.max(...f.map((e=>(e[Ho]?.z||1)+1))),x={position:"absolute",transform:ns(y,g,s,l,c),zIndex:v,...i};return t.createElement(Ja,null,t.createElement("div",{style:x,className:o(["react-flow__node-toolbar",r]),...u},n))}}));
+   */
+
+  var hasRequiredWithSelector_production_min;
+
+  function requireWithSelector_production_min () {
+  	if (hasRequiredWithSelector_production_min) return withSelector_production_min;
+  	hasRequiredWithSelector_production_min = 1;
+  var h=React,n=requireShim();function p(a,b){return a===b&&(0!==a||1/a===1/b)||a!==a&&b!==b}var q="function"===typeof Object.is?Object.is:p,r=n.useSyncExternalStore,t=h.useRef,u=h.useEffect,v=h.useMemo,w=h.useDebugValue;
+  	withSelector_production_min.useSyncExternalStoreWithSelector=function(a,b,e,l,g){var c=t(null);if(null===c.current){var f={hasValue:!1,value:null};c.current=f;}else f=c.current;c=v(function(){function a(a){if(!c){c=!0;d=a;a=l(a);if(void 0!==g&&f.hasValue){var b=f.value;if(g(b,a))return k=b}return k=a}b=k;if(q(d,a))return b;var e=l(a);if(void 0!==g&&g(b,e))return b;d=a;return k=e}var c=!1,d,k,m=void 0===e?null:e;return [function(){return a(b())},null===m?void 0:function(){return a(m())}]},[b,e,l,g]);var d=r(a,c[0],c[1]);
+  	u(function(){f.hasValue=!0;f.value=d;},[d]);w(d);return d};
+  	return withSelector_production_min;
+  }
+
+  (function (module) {
+
+  	{
+  	  module.exports = requireWithSelector_production_min();
+  	}
+  } (withSelector));
+
+  var useSyncExternalStoreExports = /*@__PURE__*/getDefaultExportFromCjs(withSelectorExports);
+
+  const createStoreImpl = (createState) => {
+    let state;
+    const listeners = /* @__PURE__ */ new Set();
+    const setState = (partial, replace) => {
+      const nextState = typeof partial === "function" ? partial(state) : partial;
+      if (!Object.is(nextState, state)) {
+        const previousState = state;
+        state = (replace != null ? replace : typeof nextState !== "object") ? nextState : Object.assign({}, state, nextState);
+        listeners.forEach((listener) => listener(state, previousState));
+      }
+    };
+    const getState = () => state;
+    const subscribe = (listener) => {
+      listeners.add(listener);
+      return () => listeners.delete(listener);
+    };
+    const destroy = () => {
+      if ((undefined ? undefined.MODE : void 0) !== "production") {
+        console.warn(
+          "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
+        );
+      }
+      listeners.clear();
+    };
+    const api = { setState, getState, subscribe, destroy };
+    state = createState(setState, getState, api);
+    return api;
+  };
+  const createStore = (createState) => createState ? createStoreImpl(createState) : createStoreImpl;
+
+  const { useSyncExternalStoreWithSelector } = useSyncExternalStoreExports;
+  function useStoreWithEqualityFn(api, selector = api.getState, equalityFn) {
+    const slice = useSyncExternalStoreWithSelector(
+      api.subscribe,
+      api.getState,
+      api.getServerState || api.getState,
+      selector,
+      equalityFn
+    );
+    React.useDebugValue(slice);
+    return slice;
+  }
+  const createWithEqualityFnImpl = (createState, defaultEqualityFn) => {
+    const api = createStore(createState);
+    const useBoundStoreWithEqualityFn = (selector, equalityFn = defaultEqualityFn) => useStoreWithEqualityFn(api, selector, equalityFn);
+    Object.assign(useBoundStoreWithEqualityFn, api);
+    return useBoundStoreWithEqualityFn;
+  };
+  const createWithEqualityFn = (createState, defaultEqualityFn) => createState ? createWithEqualityFnImpl(createState, defaultEqualityFn) : createWithEqualityFnImpl;
+
+  function shallow(objA, objB) {
+    if (Object.is(objA, objB)) {
+      return true;
+    }
+    if (typeof objA !== "object" || objA === null || typeof objB !== "object" || objB === null) {
+      return false;
+    }
+    if (objA instanceof Map && objB instanceof Map) {
+      if (objA.size !== objB.size)
+        return false;
+      for (const [key, value] of objA) {
+        if (!Object.is(value, objB.get(key))) {
+          return false;
+        }
+      }
+      return true;
+    }
+    if (objA instanceof Set && objB instanceof Set) {
+      if (objA.size !== objB.size)
+        return false;
+      for (const value of objA) {
+        if (!objB.has(value)) {
+          return false;
+        }
+      }
+      return true;
+    }
+    const keysA = Object.keys(objA);
+    if (keysA.length !== Object.keys(objB).length) {
+      return false;
+    }
+    for (let i = 0; i < keysA.length; i++) {
+      if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !Object.is(objA[keysA[i]], objB[keysA[i]])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  var noop$1 = {value: () => {}};
+
+  function dispatch() {
+    for (var i = 0, n = arguments.length, _ = {}, t; i < n; ++i) {
+      if (!(t = arguments[i] + "") || (t in _) || /[\s.]/.test(t)) throw new Error("illegal type: " + t);
+      _[t] = [];
+    }
+    return new Dispatch(_);
+  }
+
+  function Dispatch(_) {
+    this._ = _;
+  }
+
+  function parseTypenames$1(typenames, types) {
+    return typenames.trim().split(/^|\s+/).map(function(t) {
+      var name = "", i = t.indexOf(".");
+      if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
+      if (t && !types.hasOwnProperty(t)) throw new Error("unknown type: " + t);
+      return {type: t, name: name};
+    });
+  }
+
+  Dispatch.prototype = dispatch.prototype = {
+    constructor: Dispatch,
+    on: function(typename, callback) {
+      var _ = this._,
+          T = parseTypenames$1(typename + "", _),
+          t,
+          i = -1,
+          n = T.length;
+
+      // If no callback was specified, return the callback of the given type and name.
+      if (arguments.length < 2) {
+        while (++i < n) if ((t = (typename = T[i]).type) && (t = get$1(_[t], typename.name))) return t;
+        return;
+      }
+
+      // If a type was specified, set the callback for the given type and name.
+      // Otherwise, if a null callback was specified, remove callbacks of the given name.
+      if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);
+      while (++i < n) {
+        if (t = (typename = T[i]).type) _[t] = set$1(_[t], typename.name, callback);
+        else if (callback == null) for (t in _) _[t] = set$1(_[t], typename.name, null);
+      }
+
+      return this;
+    },
+    copy: function() {
+      var copy = {}, _ = this._;
+      for (var t in _) copy[t] = _[t].slice();
+      return new Dispatch(copy);
+    },
+    call: function(type, that) {
+      if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t; i < n; ++i) args[i] = arguments[i + 2];
+      if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
+      for (t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
+    },
+    apply: function(type, that, args) {
+      if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
+      for (var t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
+    }
+  };
+
+  function get$1(type, name) {
+    for (var i = 0, n = type.length, c; i < n; ++i) {
+      if ((c = type[i]).name === name) {
+        return c.value;
+      }
+    }
+  }
+
+  function set$1(type, name, callback) {
+    for (var i = 0, n = type.length; i < n; ++i) {
+      if (type[i].name === name) {
+        type[i] = noop$1, type = type.slice(0, i).concat(type.slice(i + 1));
+        break;
+      }
+    }
+    if (callback != null) type.push({name: name, value: callback});
+    return type;
+  }
+
+  var xhtml = "http://www.w3.org/1999/xhtml";
+
+  var namespaces = {
+    svg: "http://www.w3.org/2000/svg",
+    xhtml: xhtml,
+    xlink: "http://www.w3.org/1999/xlink",
+    xml: "http://www.w3.org/XML/1998/namespace",
+    xmlns: "http://www.w3.org/2000/xmlns/"
+  };
+
+  function namespace(name) {
+    var prefix = name += "", i = prefix.indexOf(":");
+    if (i >= 0 && (prefix = name.slice(0, i)) !== "xmlns") name = name.slice(i + 1);
+    return namespaces.hasOwnProperty(prefix) ? {space: namespaces[prefix], local: name} : name; // eslint-disable-line no-prototype-builtins
+  }
+
+  function creatorInherit(name) {
+    return function() {
+      var document = this.ownerDocument,
+          uri = this.namespaceURI;
+      return uri === xhtml && document.documentElement.namespaceURI === xhtml
+          ? document.createElement(name)
+          : document.createElementNS(uri, name);
+    };
+  }
+
+  function creatorFixed(fullname) {
+    return function() {
+      return this.ownerDocument.createElementNS(fullname.space, fullname.local);
+    };
+  }
+
+  function creator(name) {
+    var fullname = namespace(name);
+    return (fullname.local
+        ? creatorFixed
+        : creatorInherit)(fullname);
+  }
+
+  function none() {}
+
+  function selector$1(selector) {
+    return selector == null ? none : function() {
+      return this.querySelector(selector);
+    };
+  }
+
+  function selection_select(select) {
+    if (typeof select !== "function") select = selector$1(select);
+
+    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
+        if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {
+          if ("__data__" in node) subnode.__data__ = node.__data__;
+          subgroup[i] = subnode;
+        }
+      }
+    }
+
+    return new Selection$1(subgroups, this._parents);
+  }
+
+  // Given something array like (or null), returns something that is strictly an
+  // array. This is used to ensure that array-like objects passed to d3.selectAll
+  // or selection.selectAll are converted into proper arrays when creating a
+  // selection; we don’t ever want to create a selection backed by a live
+  // HTMLCollection or NodeList. However, note that selection.selectAll will use a
+  // static NodeList as a group, since it safely derived from querySelectorAll.
+  function array(x) {
+    return x == null ? [] : Array.isArray(x) ? x : Array.from(x);
+  }
+
+  function empty() {
+    return [];
+  }
+
+  function selectorAll(selector) {
+    return selector == null ? empty : function() {
+      return this.querySelectorAll(selector);
+    };
+  }
+
+  function arrayAll(select) {
+    return function() {
+      return array(select.apply(this, arguments));
+    };
+  }
+
+  function selection_selectAll(select) {
+    if (typeof select === "function") select = arrayAll(select);
+    else select = selectorAll(select);
+
+    for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
+        if (node = group[i]) {
+          subgroups.push(select.call(node, node.__data__, i, group));
+          parents.push(node);
+        }
+      }
+    }
+
+    return new Selection$1(subgroups, parents);
+  }
+
+  function matcher(selector) {
+    return function() {
+      return this.matches(selector);
+    };
+  }
+
+  function childMatcher(selector) {
+    return function(node) {
+      return node.matches(selector);
+    };
+  }
+
+  var find = Array.prototype.find;
+
+  function childFind(match) {
+    return function() {
+      return find.call(this.children, match);
+    };
+  }
+
+  function childFirst() {
+    return this.firstElementChild;
+  }
+
+  function selection_selectChild(match) {
+    return this.select(match == null ? childFirst
+        : childFind(typeof match === "function" ? match : childMatcher(match)));
+  }
+
+  var filter = Array.prototype.filter;
+
+  function children() {
+    return Array.from(this.children);
+  }
+
+  function childrenFilter(match) {
+    return function() {
+      return filter.call(this.children, match);
+    };
+  }
+
+  function selection_selectChildren(match) {
+    return this.selectAll(match == null ? children
+        : childrenFilter(typeof match === "function" ? match : childMatcher(match)));
+  }
+
+  function selection_filter(match) {
+    if (typeof match !== "function") match = matcher(match);
+
+    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
+        if ((node = group[i]) && match.call(node, node.__data__, i, group)) {
+          subgroup.push(node);
+        }
+      }
+    }
+
+    return new Selection$1(subgroups, this._parents);
+  }
+
+  function sparse(update) {
+    return new Array(update.length);
+  }
+
+  function selection_enter() {
+    return new Selection$1(this._enter || this._groups.map(sparse), this._parents);
+  }
+
+  function EnterNode(parent, datum) {
+    this.ownerDocument = parent.ownerDocument;
+    this.namespaceURI = parent.namespaceURI;
+    this._next = null;
+    this._parent = parent;
+    this.__data__ = datum;
+  }
+
+  EnterNode.prototype = {
+    constructor: EnterNode,
+    appendChild: function(child) { return this._parent.insertBefore(child, this._next); },
+    insertBefore: function(child, next) { return this._parent.insertBefore(child, next); },
+    querySelector: function(selector) { return this._parent.querySelector(selector); },
+    querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
+  };
+
+  function constant$3(x) {
+    return function() {
+      return x;
+    };
+  }
+
+  function bindIndex(parent, group, enter, update, exit, data) {
+    var i = 0,
+        node,
+        groupLength = group.length,
+        dataLength = data.length;
+
+    // Put any non-null nodes that fit into update.
+    // Put any null nodes into enter.
+    // Put any remaining data into enter.
+    for (; i < dataLength; ++i) {
+      if (node = group[i]) {
+        node.__data__ = data[i];
+        update[i] = node;
+      } else {
+        enter[i] = new EnterNode(parent, data[i]);
+      }
+    }
+
+    // Put any non-null nodes that don’t fit into exit.
+    for (; i < groupLength; ++i) {
+      if (node = group[i]) {
+        exit[i] = node;
+      }
+    }
+  }
+
+  function bindKey(parent, group, enter, update, exit, data, key) {
+    var i,
+        node,
+        nodeByKeyValue = new Map,
+        groupLength = group.length,
+        dataLength = data.length,
+        keyValues = new Array(groupLength),
+        keyValue;
+
+    // Compute the key for each node.
+    // If multiple nodes have the same key, the duplicates are added to exit.
+    for (i = 0; i < groupLength; ++i) {
+      if (node = group[i]) {
+        keyValues[i] = keyValue = key.call(node, node.__data__, i, group) + "";
+        if (nodeByKeyValue.has(keyValue)) {
+          exit[i] = node;
+        } else {
+          nodeByKeyValue.set(keyValue, node);
+        }
+      }
+    }
+
+    // Compute the key for each datum.
+    // If there a node associated with this key, join and add it to update.
+    // If there is not (or the key is a duplicate), add it to enter.
+    for (i = 0; i < dataLength; ++i) {
+      keyValue = key.call(parent, data[i], i, data) + "";
+      if (node = nodeByKeyValue.get(keyValue)) {
+        update[i] = node;
+        node.__data__ = data[i];
+        nodeByKeyValue.delete(keyValue);
+      } else {
+        enter[i] = new EnterNode(parent, data[i]);
+      }
+    }
+
+    // Add any remaining nodes that were not bound to data to exit.
+    for (i = 0; i < groupLength; ++i) {
+      if ((node = group[i]) && (nodeByKeyValue.get(keyValues[i]) === node)) {
+        exit[i] = node;
+      }
+    }
+  }
+
+  function datum(node) {
+    return node.__data__;
+  }
+
+  function selection_data(value, key) {
+    if (!arguments.length) return Array.from(this, datum);
+
+    var bind = key ? bindKey : bindIndex,
+        parents = this._parents,
+        groups = this._groups;
+
+    if (typeof value !== "function") value = constant$3(value);
+
+    for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
+      var parent = parents[j],
+          group = groups[j],
+          groupLength = group.length,
+          data = arraylike(value.call(parent, parent && parent.__data__, j, parents)),
+          dataLength = data.length,
+          enterGroup = enter[j] = new Array(dataLength),
+          updateGroup = update[j] = new Array(dataLength),
+          exitGroup = exit[j] = new Array(groupLength);
+
+      bind(parent, group, enterGroup, updateGroup, exitGroup, data, key);
+
+      // Now connect the enter nodes to their following update node, such that
+      // appendChild can insert the materialized enter node before this node,
+      // rather than at the end of the parent node.
+      for (var i0 = 0, i1 = 0, previous, next; i0 < dataLength; ++i0) {
+        if (previous = enterGroup[i0]) {
+          if (i0 >= i1) i1 = i0 + 1;
+          while (!(next = updateGroup[i1]) && ++i1 < dataLength);
+          previous._next = next || null;
+        }
+      }
+    }
+
+    update = new Selection$1(update, parents);
+    update._enter = enter;
+    update._exit = exit;
+    return update;
+  }
+
+  // Given some data, this returns an array-like view of it: an object that
+  // exposes a length property and allows numeric indexing. Note that unlike
+  // selectAll, this isn’t worried about “live” collections because the resulting
+  // array will only be used briefly while data is being bound. (It is possible to
+  // cause the data to change while iterating by using a key function, but please
+  // don’t; we’d rather avoid a gratuitous copy.)
+  function arraylike(data) {
+    return typeof data === "object" && "length" in data
+      ? data // Array, TypedArray, NodeList, array-like
+      : Array.from(data); // Map, Set, iterable, string, or anything else
+  }
+
+  function selection_exit() {
+    return new Selection$1(this._exit || this._groups.map(sparse), this._parents);
+  }
+
+  function selection_join(onenter, onupdate, onexit) {
+    var enter = this.enter(), update = this, exit = this.exit();
+    if (typeof onenter === "function") {
+      enter = onenter(enter);
+      if (enter) enter = enter.selection();
+    } else {
+      enter = enter.append(onenter + "");
+    }
+    if (onupdate != null) {
+      update = onupdate(update);
+      if (update) update = update.selection();
+    }
+    if (onexit == null) exit.remove(); else onexit(exit);
+    return enter && update ? enter.merge(update).order() : update;
+  }
+
+  function selection_merge(context) {
+    var selection = context.selection ? context.selection() : context;
+
+    for (var groups0 = this._groups, groups1 = selection._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
+      for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
+        if (node = group0[i] || group1[i]) {
+          merge[i] = node;
+        }
+      }
+    }
+
+    for (; j < m0; ++j) {
+      merges[j] = groups0[j];
+    }
+
+    return new Selection$1(merges, this._parents);
+  }
+
+  function selection_order() {
+
+    for (var groups = this._groups, j = -1, m = groups.length; ++j < m;) {
+      for (var group = groups[j], i = group.length - 1, next = group[i], node; --i >= 0;) {
+        if (node = group[i]) {
+          if (next && node.compareDocumentPosition(next) ^ 4) next.parentNode.insertBefore(node, next);
+          next = node;
+        }
+      }
+    }
+
+    return this;
+  }
+
+  function selection_sort(compare) {
+    if (!compare) compare = ascending;
+
+    function compareNode(a, b) {
+      return a && b ? compare(a.__data__, b.__data__) : !a - !b;
+    }
+
+    for (var groups = this._groups, m = groups.length, sortgroups = new Array(m), j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, sortgroup = sortgroups[j] = new Array(n), node, i = 0; i < n; ++i) {
+        if (node = group[i]) {
+          sortgroup[i] = node;
+        }
+      }
+      sortgroup.sort(compareNode);
+    }
+
+    return new Selection$1(sortgroups, this._parents).order();
+  }
+
+  function ascending(a, b) {
+    return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
+  }
+
+  function selection_call() {
+    var callback = arguments[0];
+    arguments[0] = this;
+    callback.apply(null, arguments);
+    return this;
+  }
+
+  function selection_nodes() {
+    return Array.from(this);
+  }
+
+  function selection_node() {
+
+    for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
+      for (var group = groups[j], i = 0, n = group.length; i < n; ++i) {
+        var node = group[i];
+        if (node) return node;
+      }
+    }
+
+    return null;
+  }
+
+  function selection_size() {
+    let size = 0;
+    for (const node of this) ++size; // eslint-disable-line no-unused-vars
+    return size;
+  }
+
+  function selection_empty() {
+    return !this.node();
+  }
+
+  function selection_each(callback) {
+
+    for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
+      for (var group = groups[j], i = 0, n = group.length, node; i < n; ++i) {
+        if (node = group[i]) callback.call(node, node.__data__, i, group);
+      }
+    }
+
+    return this;
+  }
+
+  function attrRemove$1(name) {
+    return function() {
+      this.removeAttribute(name);
+    };
+  }
+
+  function attrRemoveNS$1(fullname) {
+    return function() {
+      this.removeAttributeNS(fullname.space, fullname.local);
+    };
+  }
+
+  function attrConstant$1(name, value) {
+    return function() {
+      this.setAttribute(name, value);
+    };
+  }
+
+  function attrConstantNS$1(fullname, value) {
+    return function() {
+      this.setAttributeNS(fullname.space, fullname.local, value);
+    };
+  }
+
+  function attrFunction$1(name, value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      if (v == null) this.removeAttribute(name);
+      else this.setAttribute(name, v);
+    };
+  }
+
+  function attrFunctionNS$1(fullname, value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      if (v == null) this.removeAttributeNS(fullname.space, fullname.local);
+      else this.setAttributeNS(fullname.space, fullname.local, v);
+    };
+  }
+
+  function selection_attr(name, value) {
+    var fullname = namespace(name);
+
+    if (arguments.length < 2) {
+      var node = this.node();
+      return fullname.local
+          ? node.getAttributeNS(fullname.space, fullname.local)
+          : node.getAttribute(fullname);
+    }
+
+    return this.each((value == null
+        ? (fullname.local ? attrRemoveNS$1 : attrRemove$1) : (typeof value === "function"
+        ? (fullname.local ? attrFunctionNS$1 : attrFunction$1)
+        : (fullname.local ? attrConstantNS$1 : attrConstant$1)))(fullname, value));
+  }
+
+  function defaultView(node) {
+    return (node.ownerDocument && node.ownerDocument.defaultView) // node is a Node
+        || (node.document && node) // node is a Window
+        || node.defaultView; // node is a Document
+  }
+
+  function styleRemove$1(name) {
+    return function() {
+      this.style.removeProperty(name);
+    };
+  }
+
+  function styleConstant$1(name, value, priority) {
+    return function() {
+      this.style.setProperty(name, value, priority);
+    };
+  }
+
+  function styleFunction$1(name, value, priority) {
+    return function() {
+      var v = value.apply(this, arguments);
+      if (v == null) this.style.removeProperty(name);
+      else this.style.setProperty(name, v, priority);
+    };
+  }
+
+  function selection_style(name, value, priority) {
+    return arguments.length > 1
+        ? this.each((value == null
+              ? styleRemove$1 : typeof value === "function"
+              ? styleFunction$1
+              : styleConstant$1)(name, value, priority == null ? "" : priority))
+        : styleValue(this.node(), name);
+  }
+
+  function styleValue(node, name) {
+    return node.style.getPropertyValue(name)
+        || defaultView(node).getComputedStyle(node, null).getPropertyValue(name);
+  }
+
+  function propertyRemove(name) {
+    return function() {
+      delete this[name];
+    };
+  }
+
+  function propertyConstant(name, value) {
+    return function() {
+      this[name] = value;
+    };
+  }
+
+  function propertyFunction(name, value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      if (v == null) delete this[name];
+      else this[name] = v;
+    };
+  }
+
+  function selection_property(name, value) {
+    return arguments.length > 1
+        ? this.each((value == null
+            ? propertyRemove : typeof value === "function"
+            ? propertyFunction
+            : propertyConstant)(name, value))
+        : this.node()[name];
+  }
+
+  function classArray(string) {
+    return string.trim().split(/^|\s+/);
+  }
+
+  function classList(node) {
+    return node.classList || new ClassList(node);
+  }
+
+  function ClassList(node) {
+    this._node = node;
+    this._names = classArray(node.getAttribute("class") || "");
+  }
+
+  ClassList.prototype = {
+    add: function(name) {
+      var i = this._names.indexOf(name);
+      if (i < 0) {
+        this._names.push(name);
+        this._node.setAttribute("class", this._names.join(" "));
+      }
+    },
+    remove: function(name) {
+      var i = this._names.indexOf(name);
+      if (i >= 0) {
+        this._names.splice(i, 1);
+        this._node.setAttribute("class", this._names.join(" "));
+      }
+    },
+    contains: function(name) {
+      return this._names.indexOf(name) >= 0;
+    }
+  };
+
+  function classedAdd(node, names) {
+    var list = classList(node), i = -1, n = names.length;
+    while (++i < n) list.add(names[i]);
+  }
+
+  function classedRemove(node, names) {
+    var list = classList(node), i = -1, n = names.length;
+    while (++i < n) list.remove(names[i]);
+  }
+
+  function classedTrue(names) {
+    return function() {
+      classedAdd(this, names);
+    };
+  }
+
+  function classedFalse(names) {
+    return function() {
+      classedRemove(this, names);
+    };
+  }
+
+  function classedFunction(names, value) {
+    return function() {
+      (value.apply(this, arguments) ? classedAdd : classedRemove)(this, names);
+    };
+  }
+
+  function selection_classed(name, value) {
+    var names = classArray(name + "");
+
+    if (arguments.length < 2) {
+      var list = classList(this.node()), i = -1, n = names.length;
+      while (++i < n) if (!list.contains(names[i])) return false;
+      return true;
+    }
+
+    return this.each((typeof value === "function"
+        ? classedFunction : value
+        ? classedTrue
+        : classedFalse)(names, value));
+  }
+
+  function textRemove() {
+    this.textContent = "";
+  }
+
+  function textConstant$1(value) {
+    return function() {
+      this.textContent = value;
+    };
+  }
+
+  function textFunction$1(value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      this.textContent = v == null ? "" : v;
+    };
+  }
+
+  function selection_text(value) {
+    return arguments.length
+        ? this.each(value == null
+            ? textRemove : (typeof value === "function"
+            ? textFunction$1
+            : textConstant$1)(value))
+        : this.node().textContent;
+  }
+
+  function htmlRemove() {
+    this.innerHTML = "";
+  }
+
+  function htmlConstant(value) {
+    return function() {
+      this.innerHTML = value;
+    };
+  }
+
+  function htmlFunction(value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      this.innerHTML = v == null ? "" : v;
+    };
+  }
+
+  function selection_html(value) {
+    return arguments.length
+        ? this.each(value == null
+            ? htmlRemove : (typeof value === "function"
+            ? htmlFunction
+            : htmlConstant)(value))
+        : this.node().innerHTML;
+  }
+
+  function raise() {
+    if (this.nextSibling) this.parentNode.appendChild(this);
+  }
+
+  function selection_raise() {
+    return this.each(raise);
+  }
+
+  function lower() {
+    if (this.previousSibling) this.parentNode.insertBefore(this, this.parentNode.firstChild);
+  }
+
+  function selection_lower() {
+    return this.each(lower);
+  }
+
+  function selection_append(name) {
+    var create = typeof name === "function" ? name : creator(name);
+    return this.select(function() {
+      return this.appendChild(create.apply(this, arguments));
+    });
+  }
+
+  function constantNull() {
+    return null;
+  }
+
+  function selection_insert(name, before) {
+    var create = typeof name === "function" ? name : creator(name),
+        select = before == null ? constantNull : typeof before === "function" ? before : selector$1(before);
+    return this.select(function() {
+      return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);
+    });
+  }
+
+  function remove() {
+    var parent = this.parentNode;
+    if (parent) parent.removeChild(this);
+  }
+
+  function selection_remove() {
+    return this.each(remove);
+  }
+
+  function selection_cloneShallow() {
+    var clone = this.cloneNode(false), parent = this.parentNode;
+    return parent ? parent.insertBefore(clone, this.nextSibling) : clone;
+  }
+
+  function selection_cloneDeep() {
+    var clone = this.cloneNode(true), parent = this.parentNode;
+    return parent ? parent.insertBefore(clone, this.nextSibling) : clone;
+  }
+
+  function selection_clone(deep) {
+    return this.select(deep ? selection_cloneDeep : selection_cloneShallow);
+  }
+
+  function selection_datum(value) {
+    return arguments.length
+        ? this.property("__data__", value)
+        : this.node().__data__;
+  }
+
+  function contextListener(listener) {
+    return function(event) {
+      listener.call(this, event, this.__data__);
+    };
+  }
+
+  function parseTypenames(typenames) {
+    return typenames.trim().split(/^|\s+/).map(function(t) {
+      var name = "", i = t.indexOf(".");
+      if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
+      return {type: t, name: name};
+    });
+  }
+
+  function onRemove(typename) {
+    return function() {
+      var on = this.__on;
+      if (!on) return;
+      for (var j = 0, i = -1, m = on.length, o; j < m; ++j) {
+        if (o = on[j], (!typename.type || o.type === typename.type) && o.name === typename.name) {
+          this.removeEventListener(o.type, o.listener, o.options);
+        } else {
+          on[++i] = o;
+        }
+      }
+      if (++i) on.length = i;
+      else delete this.__on;
+    };
+  }
+
+  function onAdd(typename, value, options) {
+    return function() {
+      var on = this.__on, o, listener = contextListener(value);
+      if (on) for (var j = 0, m = on.length; j < m; ++j) {
+        if ((o = on[j]).type === typename.type && o.name === typename.name) {
+          this.removeEventListener(o.type, o.listener, o.options);
+          this.addEventListener(o.type, o.listener = listener, o.options = options);
+          o.value = value;
+          return;
+        }
+      }
+      this.addEventListener(typename.type, listener, options);
+      o = {type: typename.type, name: typename.name, value: value, listener: listener, options: options};
+      if (!on) this.__on = [o];
+      else on.push(o);
+    };
+  }
+
+  function selection_on(typename, value, options) {
+    var typenames = parseTypenames(typename + ""), i, n = typenames.length, t;
+
+    if (arguments.length < 2) {
+      var on = this.node().__on;
+      if (on) for (var j = 0, m = on.length, o; j < m; ++j) {
+        for (i = 0, o = on[j]; i < n; ++i) {
+          if ((t = typenames[i]).type === o.type && t.name === o.name) {
+            return o.value;
+          }
+        }
+      }
+      return;
+    }
+
+    on = value ? onAdd : onRemove;
+    for (i = 0; i < n; ++i) this.each(on(typenames[i], value, options));
+    return this;
+  }
+
+  function dispatchEvent(node, type, params) {
+    var window = defaultView(node),
+        event = window.CustomEvent;
+
+    if (typeof event === "function") {
+      event = new event(type, params);
+    } else {
+      event = window.document.createEvent("Event");
+      if (params) event.initEvent(type, params.bubbles, params.cancelable), event.detail = params.detail;
+      else event.initEvent(type, false, false);
+    }
+
+    node.dispatchEvent(event);
+  }
+
+  function dispatchConstant(type, params) {
+    return function() {
+      return dispatchEvent(this, type, params);
+    };
+  }
+
+  function dispatchFunction(type, params) {
+    return function() {
+      return dispatchEvent(this, type, params.apply(this, arguments));
+    };
+  }
+
+  function selection_dispatch(type, params) {
+    return this.each((typeof params === "function"
+        ? dispatchFunction
+        : dispatchConstant)(type, params));
+  }
+
+  function* selection_iterator() {
+    for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
+      for (var group = groups[j], i = 0, n = group.length, node; i < n; ++i) {
+        if (node = group[i]) yield node;
+      }
+    }
+  }
+
+  var root = [null];
+
+  function Selection$1(groups, parents) {
+    this._groups = groups;
+    this._parents = parents;
+  }
+
+  function selection() {
+    return new Selection$1([[document.documentElement]], root);
+  }
+
+  function selection_selection() {
+    return this;
+  }
+
+  Selection$1.prototype = selection.prototype = {
+    constructor: Selection$1,
+    select: selection_select,
+    selectAll: selection_selectAll,
+    selectChild: selection_selectChild,
+    selectChildren: selection_selectChildren,
+    filter: selection_filter,
+    data: selection_data,
+    enter: selection_enter,
+    exit: selection_exit,
+    join: selection_join,
+    merge: selection_merge,
+    selection: selection_selection,
+    order: selection_order,
+    sort: selection_sort,
+    call: selection_call,
+    nodes: selection_nodes,
+    node: selection_node,
+    size: selection_size,
+    empty: selection_empty,
+    each: selection_each,
+    attr: selection_attr,
+    style: selection_style,
+    property: selection_property,
+    classed: selection_classed,
+    text: selection_text,
+    html: selection_html,
+    raise: selection_raise,
+    lower: selection_lower,
+    append: selection_append,
+    insert: selection_insert,
+    remove: selection_remove,
+    clone: selection_clone,
+    datum: selection_datum,
+    on: selection_on,
+    dispatch: selection_dispatch,
+    [Symbol.iterator]: selection_iterator
+  };
+
+  function select(selector) {
+    return typeof selector === "string"
+        ? new Selection$1([[document.querySelector(selector)]], [document.documentElement])
+        : new Selection$1([[selector]], root);
+  }
+
+  function sourceEvent(event) {
+    let sourceEvent;
+    while (sourceEvent = event.sourceEvent) event = sourceEvent;
+    return event;
+  }
+
+  function pointer(event, node) {
+    event = sourceEvent(event);
+    if (node === undefined) node = event.currentTarget;
+    if (node) {
+      var svg = node.ownerSVGElement || node;
+      if (svg.createSVGPoint) {
+        var point = svg.createSVGPoint();
+        point.x = event.clientX, point.y = event.clientY;
+        point = point.matrixTransform(node.getScreenCTM().inverse());
+        return [point.x, point.y];
+      }
+      if (node.getBoundingClientRect) {
+        var rect = node.getBoundingClientRect();
+        return [event.clientX - rect.left - node.clientLeft, event.clientY - rect.top - node.clientTop];
+      }
+    }
+    return [event.pageX, event.pageY];
+  }
+
+  // These are typically used in conjunction with noevent to ensure that we can
+  // preventDefault on the event.
+  const nonpassive = {passive: false};
+  const nonpassivecapture = {capture: true, passive: false};
+
+  function nopropagation$1(event) {
+    event.stopImmediatePropagation();
+  }
+
+  function noevent$1(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+
+  function dragDisable(view) {
+    var root = view.document.documentElement,
+        selection = select(view).on("dragstart.drag", noevent$1, nonpassivecapture);
+    if ("onselectstart" in root) {
+      selection.on("selectstart.drag", noevent$1, nonpassivecapture);
+    } else {
+      root.__noselect = root.style.MozUserSelect;
+      root.style.MozUserSelect = "none";
+    }
+  }
+
+  function yesdrag(view, noclick) {
+    var root = view.document.documentElement,
+        selection = select(view).on("dragstart.drag", null);
+    if (noclick) {
+      selection.on("click.drag", noevent$1, nonpassivecapture);
+      setTimeout(function() { selection.on("click.drag", null); }, 0);
+    }
+    if ("onselectstart" in root) {
+      selection.on("selectstart.drag", null);
+    } else {
+      root.style.MozUserSelect = root.__noselect;
+      delete root.__noselect;
+    }
+  }
+
+  var constant$2 = x => () => x;
+
+  function DragEvent(type, {
+    sourceEvent,
+    subject,
+    target,
+    identifier,
+    active,
+    x, y, dx, dy,
+    dispatch
+  }) {
+    Object.defineProperties(this, {
+      type: {value: type, enumerable: true, configurable: true},
+      sourceEvent: {value: sourceEvent, enumerable: true, configurable: true},
+      subject: {value: subject, enumerable: true, configurable: true},
+      target: {value: target, enumerable: true, configurable: true},
+      identifier: {value: identifier, enumerable: true, configurable: true},
+      active: {value: active, enumerable: true, configurable: true},
+      x: {value: x, enumerable: true, configurable: true},
+      y: {value: y, enumerable: true, configurable: true},
+      dx: {value: dx, enumerable: true, configurable: true},
+      dy: {value: dy, enumerable: true, configurable: true},
+      _: {value: dispatch}
+    });
+  }
+
+  DragEvent.prototype.on = function() {
+    var value = this._.on.apply(this._, arguments);
+    return value === this._ ? this : value;
+  };
+
+  // Ignore right-click, since that should open the context menu.
+  function defaultFilter$1(event) {
+    return !event.ctrlKey && !event.button;
+  }
+
+  function defaultContainer() {
+    return this.parentNode;
+  }
+
+  function defaultSubject(event, d) {
+    return d == null ? {x: event.x, y: event.y} : d;
+  }
+
+  function defaultTouchable$1() {
+    return navigator.maxTouchPoints || ("ontouchstart" in this);
+  }
+
+  function drag() {
+    var filter = defaultFilter$1,
+        container = defaultContainer,
+        subject = defaultSubject,
+        touchable = defaultTouchable$1,
+        gestures = {},
+        listeners = dispatch("start", "drag", "end"),
+        active = 0,
+        mousedownx,
+        mousedowny,
+        mousemoving,
+        touchending,
+        clickDistance2 = 0;
+
+    function drag(selection) {
+      selection
+          .on("mousedown.drag", mousedowned)
+        .filter(touchable)
+          .on("touchstart.drag", touchstarted)
+          .on("touchmove.drag", touchmoved, nonpassive)
+          .on("touchend.drag touchcancel.drag", touchended)
+          .style("touch-action", "none")
+          .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
+    }
+
+    function mousedowned(event, d) {
+      if (touchending || !filter.call(this, event, d)) return;
+      var gesture = beforestart(this, container.call(this, event, d), event, d, "mouse");
+      if (!gesture) return;
+      select(event.view)
+        .on("mousemove.drag", mousemoved, nonpassivecapture)
+        .on("mouseup.drag", mouseupped, nonpassivecapture);
+      dragDisable(event.view);
+      nopropagation$1(event);
+      mousemoving = false;
+      mousedownx = event.clientX;
+      mousedowny = event.clientY;
+      gesture("start", event);
+    }
+
+    function mousemoved(event) {
+      noevent$1(event);
+      if (!mousemoving) {
+        var dx = event.clientX - mousedownx, dy = event.clientY - mousedowny;
+        mousemoving = dx * dx + dy * dy > clickDistance2;
+      }
+      gestures.mouse("drag", event);
+    }
+
+    function mouseupped(event) {
+      select(event.view).on("mousemove.drag mouseup.drag", null);
+      yesdrag(event.view, mousemoving);
+      noevent$1(event);
+      gestures.mouse("end", event);
+    }
+
+    function touchstarted(event, d) {
+      if (!filter.call(this, event, d)) return;
+      var touches = event.changedTouches,
+          c = container.call(this, event, d),
+          n = touches.length, i, gesture;
+
+      for (i = 0; i < n; ++i) {
+        if (gesture = beforestart(this, c, event, d, touches[i].identifier, touches[i])) {
+          nopropagation$1(event);
+          gesture("start", event, touches[i]);
+        }
+      }
+    }
+
+    function touchmoved(event) {
+      var touches = event.changedTouches,
+          n = touches.length, i, gesture;
+
+      for (i = 0; i < n; ++i) {
+        if (gesture = gestures[touches[i].identifier]) {
+          noevent$1(event);
+          gesture("drag", event, touches[i]);
+        }
+      }
+    }
+
+    function touchended(event) {
+      var touches = event.changedTouches,
+          n = touches.length, i, gesture;
+
+      if (touchending) clearTimeout(touchending);
+      touchending = setTimeout(function() { touchending = null; }, 500); // Ghost clicks are delayed!
+      for (i = 0; i < n; ++i) {
+        if (gesture = gestures[touches[i].identifier]) {
+          nopropagation$1(event);
+          gesture("end", event, touches[i]);
+        }
+      }
+    }
+
+    function beforestart(that, container, event, d, identifier, touch) {
+      var dispatch = listeners.copy(),
+          p = pointer(touch || event, container), dx, dy,
+          s;
+
+      if ((s = subject.call(that, new DragEvent("beforestart", {
+          sourceEvent: event,
+          target: drag,
+          identifier,
+          active,
+          x: p[0],
+          y: p[1],
+          dx: 0,
+          dy: 0,
+          dispatch
+        }), d)) == null) return;
+
+      dx = s.x - p[0] || 0;
+      dy = s.y - p[1] || 0;
+
+      return function gesture(type, event, touch) {
+        var p0 = p, n;
+        switch (type) {
+          case "start": gestures[identifier] = gesture, n = active++; break;
+          case "end": delete gestures[identifier], --active; // falls through
+          case "drag": p = pointer(touch || event, container), n = active; break;
+        }
+        dispatch.call(
+          type,
+          that,
+          new DragEvent(type, {
+            sourceEvent: event,
+            subject: s,
+            target: drag,
+            identifier,
+            active: n,
+            x: p[0] + dx,
+            y: p[1] + dy,
+            dx: p[0] - p0[0],
+            dy: p[1] - p0[1],
+            dispatch
+          }),
+          d
+        );
+      };
+    }
+
+    drag.filter = function(_) {
+      return arguments.length ? (filter = typeof _ === "function" ? _ : constant$2(!!_), drag) : filter;
+    };
+
+    drag.container = function(_) {
+      return arguments.length ? (container = typeof _ === "function" ? _ : constant$2(_), drag) : container;
+    };
+
+    drag.subject = function(_) {
+      return arguments.length ? (subject = typeof _ === "function" ? _ : constant$2(_), drag) : subject;
+    };
+
+    drag.touchable = function(_) {
+      return arguments.length ? (touchable = typeof _ === "function" ? _ : constant$2(!!_), drag) : touchable;
+    };
+
+    drag.on = function() {
+      var value = listeners.on.apply(listeners, arguments);
+      return value === listeners ? drag : value;
+    };
+
+    drag.clickDistance = function(_) {
+      return arguments.length ? (clickDistance2 = (_ = +_) * _, drag) : Math.sqrt(clickDistance2);
+    };
+
+    return drag;
+  }
+
+  function define(constructor, factory, prototype) {
+    constructor.prototype = factory.prototype = prototype;
+    prototype.constructor = constructor;
+  }
+
+  function extend(parent, definition) {
+    var prototype = Object.create(parent.prototype);
+    for (var key in definition) prototype[key] = definition[key];
+    return prototype;
+  }
+
+  function Color() {}
+
+  var darker = 0.7;
+  var brighter = 1 / darker;
+
+  var reI = "\\s*([+-]?\\d+)\\s*",
+      reN = "\\s*([+-]?(?:\\d*\\.)?\\d+(?:[eE][+-]?\\d+)?)\\s*",
+      reP = "\\s*([+-]?(?:\\d*\\.)?\\d+(?:[eE][+-]?\\d+)?)%\\s*",
+      reHex = /^#([0-9a-f]{3,8})$/,
+      reRgbInteger = new RegExp(`^rgb\\(${reI},${reI},${reI}\\)$`),
+      reRgbPercent = new RegExp(`^rgb\\(${reP},${reP},${reP}\\)$`),
+      reRgbaInteger = new RegExp(`^rgba\\(${reI},${reI},${reI},${reN}\\)$`),
+      reRgbaPercent = new RegExp(`^rgba\\(${reP},${reP},${reP},${reN}\\)$`),
+      reHslPercent = new RegExp(`^hsl\\(${reN},${reP},${reP}\\)$`),
+      reHslaPercent = new RegExp(`^hsla\\(${reN},${reP},${reP},${reN}\\)$`);
+
+  var named = {
+    aliceblue: 0xf0f8ff,
+    antiquewhite: 0xfaebd7,
+    aqua: 0x00ffff,
+    aquamarine: 0x7fffd4,
+    azure: 0xf0ffff,
+    beige: 0xf5f5dc,
+    bisque: 0xffe4c4,
+    black: 0x000000,
+    blanchedalmond: 0xffebcd,
+    blue: 0x0000ff,
+    blueviolet: 0x8a2be2,
+    brown: 0xa52a2a,
+    burlywood: 0xdeb887,
+    cadetblue: 0x5f9ea0,
+    chartreuse: 0x7fff00,
+    chocolate: 0xd2691e,
+    coral: 0xff7f50,
+    cornflowerblue: 0x6495ed,
+    cornsilk: 0xfff8dc,
+    crimson: 0xdc143c,
+    cyan: 0x00ffff,
+    darkblue: 0x00008b,
+    darkcyan: 0x008b8b,
+    darkgoldenrod: 0xb8860b,
+    darkgray: 0xa9a9a9,
+    darkgreen: 0x006400,
+    darkgrey: 0xa9a9a9,
+    darkkhaki: 0xbdb76b,
+    darkmagenta: 0x8b008b,
+    darkolivegreen: 0x556b2f,
+    darkorange: 0xff8c00,
+    darkorchid: 0x9932cc,
+    darkred: 0x8b0000,
+    darksalmon: 0xe9967a,
+    darkseagreen: 0x8fbc8f,
+    darkslateblue: 0x483d8b,
+    darkslategray: 0x2f4f4f,
+    darkslategrey: 0x2f4f4f,
+    darkturquoise: 0x00ced1,
+    darkviolet: 0x9400d3,
+    deeppink: 0xff1493,
+    deepskyblue: 0x00bfff,
+    dimgray: 0x696969,
+    dimgrey: 0x696969,
+    dodgerblue: 0x1e90ff,
+    firebrick: 0xb22222,
+    floralwhite: 0xfffaf0,
+    forestgreen: 0x228b22,
+    fuchsia: 0xff00ff,
+    gainsboro: 0xdcdcdc,
+    ghostwhite: 0xf8f8ff,
+    gold: 0xffd700,
+    goldenrod: 0xdaa520,
+    gray: 0x808080,
+    green: 0x008000,
+    greenyellow: 0xadff2f,
+    grey: 0x808080,
+    honeydew: 0xf0fff0,
+    hotpink: 0xff69b4,
+    indianred: 0xcd5c5c,
+    indigo: 0x4b0082,
+    ivory: 0xfffff0,
+    khaki: 0xf0e68c,
+    lavender: 0xe6e6fa,
+    lavenderblush: 0xfff0f5,
+    lawngreen: 0x7cfc00,
+    lemonchiffon: 0xfffacd,
+    lightblue: 0xadd8e6,
+    lightcoral: 0xf08080,
+    lightcyan: 0xe0ffff,
+    lightgoldenrodyellow: 0xfafad2,
+    lightgray: 0xd3d3d3,
+    lightgreen: 0x90ee90,
+    lightgrey: 0xd3d3d3,
+    lightpink: 0xffb6c1,
+    lightsalmon: 0xffa07a,
+    lightseagreen: 0x20b2aa,
+    lightskyblue: 0x87cefa,
+    lightslategray: 0x778899,
+    lightslategrey: 0x778899,
+    lightsteelblue: 0xb0c4de,
+    lightyellow: 0xffffe0,
+    lime: 0x00ff00,
+    limegreen: 0x32cd32,
+    linen: 0xfaf0e6,
+    magenta: 0xff00ff,
+    maroon: 0x800000,
+    mediumaquamarine: 0x66cdaa,
+    mediumblue: 0x0000cd,
+    mediumorchid: 0xba55d3,
+    mediumpurple: 0x9370db,
+    mediumseagreen: 0x3cb371,
+    mediumslateblue: 0x7b68ee,
+    mediumspringgreen: 0x00fa9a,
+    mediumturquoise: 0x48d1cc,
+    mediumvioletred: 0xc71585,
+    midnightblue: 0x191970,
+    mintcream: 0xf5fffa,
+    mistyrose: 0xffe4e1,
+    moccasin: 0xffe4b5,
+    navajowhite: 0xffdead,
+    navy: 0x000080,
+    oldlace: 0xfdf5e6,
+    olive: 0x808000,
+    olivedrab: 0x6b8e23,
+    orange: 0xffa500,
+    orangered: 0xff4500,
+    orchid: 0xda70d6,
+    palegoldenrod: 0xeee8aa,
+    palegreen: 0x98fb98,
+    paleturquoise: 0xafeeee,
+    palevioletred: 0xdb7093,
+    papayawhip: 0xffefd5,
+    peachpuff: 0xffdab9,
+    peru: 0xcd853f,
+    pink: 0xffc0cb,
+    plum: 0xdda0dd,
+    powderblue: 0xb0e0e6,
+    purple: 0x800080,
+    rebeccapurple: 0x663399,
+    red: 0xff0000,
+    rosybrown: 0xbc8f8f,
+    royalblue: 0x4169e1,
+    saddlebrown: 0x8b4513,
+    salmon: 0xfa8072,
+    sandybrown: 0xf4a460,
+    seagreen: 0x2e8b57,
+    seashell: 0xfff5ee,
+    sienna: 0xa0522d,
+    silver: 0xc0c0c0,
+    skyblue: 0x87ceeb,
+    slateblue: 0x6a5acd,
+    slategray: 0x708090,
+    slategrey: 0x708090,
+    snow: 0xfffafa,
+    springgreen: 0x00ff7f,
+    steelblue: 0x4682b4,
+    tan: 0xd2b48c,
+    teal: 0x008080,
+    thistle: 0xd8bfd8,
+    tomato: 0xff6347,
+    turquoise: 0x40e0d0,
+    violet: 0xee82ee,
+    wheat: 0xf5deb3,
+    white: 0xffffff,
+    whitesmoke: 0xf5f5f5,
+    yellow: 0xffff00,
+    yellowgreen: 0x9acd32
+  };
+
+  define(Color, color, {
+    copy(channels) {
+      return Object.assign(new this.constructor, this, channels);
+    },
+    displayable() {
+      return this.rgb().displayable();
+    },
+    hex: color_formatHex, // Deprecated! Use color.formatHex.
+    formatHex: color_formatHex,
+    formatHex8: color_formatHex8,
+    formatHsl: color_formatHsl,
+    formatRgb: color_formatRgb,
+    toString: color_formatRgb
+  });
+
+  function color_formatHex() {
+    return this.rgb().formatHex();
+  }
+
+  function color_formatHex8() {
+    return this.rgb().formatHex8();
+  }
+
+  function color_formatHsl() {
+    return hslConvert(this).formatHsl();
+  }
+
+  function color_formatRgb() {
+    return this.rgb().formatRgb();
+  }
+
+  function color(format) {
+    var m, l;
+    format = (format + "").trim().toLowerCase();
+    return (m = reHex.exec(format)) ? (l = m[1].length, m = parseInt(m[1], 16), l === 6 ? rgbn(m) // #ff0000
+        : l === 3 ? new Rgb((m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1) // #f00
+        : l === 8 ? rgba(m >> 24 & 0xff, m >> 16 & 0xff, m >> 8 & 0xff, (m & 0xff) / 0xff) // #ff000000
+        : l === 4 ? rgba((m >> 12 & 0xf) | (m >> 8 & 0xf0), (m >> 8 & 0xf) | (m >> 4 & 0xf0), (m >> 4 & 0xf) | (m & 0xf0), (((m & 0xf) << 4) | (m & 0xf)) / 0xff) // #f000
+        : null) // invalid hex
+        : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
+        : (m = reRgbPercent.exec(format)) ? new Rgb(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
+        : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
+        : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
+        : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
+        : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
+        : named.hasOwnProperty(format) ? rgbn(named[format]) // eslint-disable-line no-prototype-builtins
+        : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)
+        : null;
+  }
+
+  function rgbn(n) {
+    return new Rgb(n >> 16 & 0xff, n >> 8 & 0xff, n & 0xff, 1);
+  }
+
+  function rgba(r, g, b, a) {
+    if (a <= 0) r = g = b = NaN;
+    return new Rgb(r, g, b, a);
+  }
+
+  function rgbConvert(o) {
+    if (!(o instanceof Color)) o = color(o);
+    if (!o) return new Rgb;
+    o = o.rgb();
+    return new Rgb(o.r, o.g, o.b, o.opacity);
+  }
+
+  function rgb(r, g, b, opacity) {
+    return arguments.length === 1 ? rgbConvert(r) : new Rgb(r, g, b, opacity == null ? 1 : opacity);
+  }
+
+  function Rgb(r, g, b, opacity) {
+    this.r = +r;
+    this.g = +g;
+    this.b = +b;
+    this.opacity = +opacity;
+  }
+
+  define(Rgb, rgb, extend(Color, {
+    brighter(k) {
+      k = k == null ? brighter : Math.pow(brighter, k);
+      return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
+    },
+    darker(k) {
+      k = k == null ? darker : Math.pow(darker, k);
+      return new Rgb(this.r * k, this.g * k, this.b * k, this.opacity);
+    },
+    rgb() {
+      return this;
+    },
+    clamp() {
+      return new Rgb(clampi(this.r), clampi(this.g), clampi(this.b), clampa(this.opacity));
+    },
+    displayable() {
+      return (-0.5 <= this.r && this.r < 255.5)
+          && (-0.5 <= this.g && this.g < 255.5)
+          && (-0.5 <= this.b && this.b < 255.5)
+          && (0 <= this.opacity && this.opacity <= 1);
+    },
+    hex: rgb_formatHex, // Deprecated! Use color.formatHex.
+    formatHex: rgb_formatHex,
+    formatHex8: rgb_formatHex8,
+    formatRgb: rgb_formatRgb,
+    toString: rgb_formatRgb
+  }));
+
+  function rgb_formatHex() {
+    return `#${hex(this.r)}${hex(this.g)}${hex(this.b)}`;
+  }
+
+  function rgb_formatHex8() {
+    return `#${hex(this.r)}${hex(this.g)}${hex(this.b)}${hex((isNaN(this.opacity) ? 1 : this.opacity) * 255)}`;
+  }
+
+  function rgb_formatRgb() {
+    const a = clampa(this.opacity);
+    return `${a === 1 ? "rgb(" : "rgba("}${clampi(this.r)}, ${clampi(this.g)}, ${clampi(this.b)}${a === 1 ? ")" : `, ${a})`}`;
+  }
+
+  function clampa(opacity) {
+    return isNaN(opacity) ? 1 : Math.max(0, Math.min(1, opacity));
+  }
+
+  function clampi(value) {
+    return Math.max(0, Math.min(255, Math.round(value) || 0));
+  }
+
+  function hex(value) {
+    value = clampi(value);
+    return (value < 16 ? "0" : "") + value.toString(16);
+  }
+
+  function hsla(h, s, l, a) {
+    if (a <= 0) h = s = l = NaN;
+    else if (l <= 0 || l >= 1) h = s = NaN;
+    else if (s <= 0) h = NaN;
+    return new Hsl(h, s, l, a);
+  }
+
+  function hslConvert(o) {
+    if (o instanceof Hsl) return new Hsl(o.h, o.s, o.l, o.opacity);
+    if (!(o instanceof Color)) o = color(o);
+    if (!o) return new Hsl;
+    if (o instanceof Hsl) return o;
+    o = o.rgb();
+    var r = o.r / 255,
+        g = o.g / 255,
+        b = o.b / 255,
+        min = Math.min(r, g, b),
+        max = Math.max(r, g, b),
+        h = NaN,
+        s = max - min,
+        l = (max + min) / 2;
+    if (s) {
+      if (r === max) h = (g - b) / s + (g < b) * 6;
+      else if (g === max) h = (b - r) / s + 2;
+      else h = (r - g) / s + 4;
+      s /= l < 0.5 ? max + min : 2 - max - min;
+      h *= 60;
+    } else {
+      s = l > 0 && l < 1 ? 0 : h;
+    }
+    return new Hsl(h, s, l, o.opacity);
+  }
+
+  function hsl(h, s, l, opacity) {
+    return arguments.length === 1 ? hslConvert(h) : new Hsl(h, s, l, opacity == null ? 1 : opacity);
+  }
+
+  function Hsl(h, s, l, opacity) {
+    this.h = +h;
+    this.s = +s;
+    this.l = +l;
+    this.opacity = +opacity;
+  }
+
+  define(Hsl, hsl, extend(Color, {
+    brighter(k) {
+      k = k == null ? brighter : Math.pow(brighter, k);
+      return new Hsl(this.h, this.s, this.l * k, this.opacity);
+    },
+    darker(k) {
+      k = k == null ? darker : Math.pow(darker, k);
+      return new Hsl(this.h, this.s, this.l * k, this.opacity);
+    },
+    rgb() {
+      var h = this.h % 360 + (this.h < 0) * 360,
+          s = isNaN(h) || isNaN(this.s) ? 0 : this.s,
+          l = this.l,
+          m2 = l + (l < 0.5 ? l : 1 - l) * s,
+          m1 = 2 * l - m2;
+      return new Rgb(
+        hsl2rgb(h >= 240 ? h - 240 : h + 120, m1, m2),
+        hsl2rgb(h, m1, m2),
+        hsl2rgb(h < 120 ? h + 240 : h - 120, m1, m2),
+        this.opacity
+      );
+    },
+    clamp() {
+      return new Hsl(clamph(this.h), clampt(this.s), clampt(this.l), clampa(this.opacity));
+    },
+    displayable() {
+      return (0 <= this.s && this.s <= 1 || isNaN(this.s))
+          && (0 <= this.l && this.l <= 1)
+          && (0 <= this.opacity && this.opacity <= 1);
+    },
+    formatHsl() {
+      const a = clampa(this.opacity);
+      return `${a === 1 ? "hsl(" : "hsla("}${clamph(this.h)}, ${clampt(this.s) * 100}%, ${clampt(this.l) * 100}%${a === 1 ? ")" : `, ${a})`}`;
+    }
+  }));
+
+  function clamph(value) {
+    value = (value || 0) % 360;
+    return value < 0 ? value + 360 : value;
+  }
+
+  function clampt(value) {
+    return Math.max(0, Math.min(1, value || 0));
+  }
+
+  /* From FvD 13.37, CSS Color Module Level 3 */
+  function hsl2rgb(h, m1, m2) {
+    return (h < 60 ? m1 + (m2 - m1) * h / 60
+        : h < 180 ? m2
+        : h < 240 ? m1 + (m2 - m1) * (240 - h) / 60
+        : m1) * 255;
+  }
+
+  var constant$1 = x => () => x;
+
+  function linear(a, d) {
+    return function(t) {
+      return a + t * d;
+    };
+  }
+
+  function exponential(a, b, y) {
+    return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {
+      return Math.pow(a + t * b, y);
+    };
+  }
+
+  function gamma(y) {
+    return (y = +y) === 1 ? nogamma : function(a, b) {
+      return b - a ? exponential(a, b, y) : constant$1(isNaN(a) ? b : a);
+    };
+  }
+
+  function nogamma(a, b) {
+    var d = b - a;
+    return d ? linear(a, d) : constant$1(isNaN(a) ? b : a);
+  }
+
+  var interpolateRgb = (function rgbGamma(y) {
+    var color = gamma(y);
+
+    function rgb$1(start, end) {
+      var r = color((start = rgb(start)).r, (end = rgb(end)).r),
+          g = color(start.g, end.g),
+          b = color(start.b, end.b),
+          opacity = nogamma(start.opacity, end.opacity);
+      return function(t) {
+        start.r = r(t);
+        start.g = g(t);
+        start.b = b(t);
+        start.opacity = opacity(t);
+        return start + "";
+      };
+    }
+
+    rgb$1.gamma = rgbGamma;
+
+    return rgb$1;
+  })(1);
+
+  function interpolateNumber(a, b) {
+    return a = +a, b = +b, function(t) {
+      return a * (1 - t) + b * t;
+    };
+  }
+
+  var reA = /[-+]?(?:\d+\.?\d*|\.?\d+)(?:[eE][-+]?\d+)?/g,
+      reB = new RegExp(reA.source, "g");
+
+  function zero(b) {
+    return function() {
+      return b;
+    };
+  }
+
+  function one(b) {
+    return function(t) {
+      return b(t) + "";
+    };
+  }
+
+  function interpolateString(a, b) {
+    var bi = reA.lastIndex = reB.lastIndex = 0, // scan index for next number in b
+        am, // current match in a
+        bm, // current match in b
+        bs, // string preceding current number in b, if any
+        i = -1, // index in s
+        s = [], // string constants and placeholders
+        q = []; // number interpolators
+
+    // Coerce inputs to strings.
+    a = a + "", b = b + "";
+
+    // Interpolate pairs of numbers in a & b.
+    while ((am = reA.exec(a))
+        && (bm = reB.exec(b))) {
+      if ((bs = bm.index) > bi) { // a string precedes the next number in b
+        bs = b.slice(bi, bs);
+        if (s[i]) s[i] += bs; // coalesce with previous string
+        else s[++i] = bs;
+      }
+      if ((am = am[0]) === (bm = bm[0])) { // numbers in a & b match
+        if (s[i]) s[i] += bm; // coalesce with previous string
+        else s[++i] = bm;
+      } else { // interpolate non-matching numbers
+        s[++i] = null;
+        q.push({i: i, x: interpolateNumber(am, bm)});
+      }
+      bi = reB.lastIndex;
+    }
+
+    // Add remains of b.
+    if (bi < b.length) {
+      bs = b.slice(bi);
+      if (s[i]) s[i] += bs; // coalesce with previous string
+      else s[++i] = bs;
+    }
+
+    // Special optimization for only a single match.
+    // Otherwise, interpolate each of the numbers and rejoin the string.
+    return s.length < 2 ? (q[0]
+        ? one(q[0].x)
+        : zero(b))
+        : (b = q.length, function(t) {
+            for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
+            return s.join("");
+          });
+  }
+
+  var degrees = 180 / Math.PI;
+
+  var identity$1 = {
+    translateX: 0,
+    translateY: 0,
+    rotate: 0,
+    skewX: 0,
+    scaleX: 1,
+    scaleY: 1
+  };
+
+  function decompose(a, b, c, d, e, f) {
+    var scaleX, scaleY, skewX;
+    if (scaleX = Math.sqrt(a * a + b * b)) a /= scaleX, b /= scaleX;
+    if (skewX = a * c + b * d) c -= a * skewX, d -= b * skewX;
+    if (scaleY = Math.sqrt(c * c + d * d)) c /= scaleY, d /= scaleY, skewX /= scaleY;
+    if (a * d < b * c) a = -a, b = -b, skewX = -skewX, scaleX = -scaleX;
+    return {
+      translateX: e,
+      translateY: f,
+      rotate: Math.atan2(b, a) * degrees,
+      skewX: Math.atan(skewX) * degrees,
+      scaleX: scaleX,
+      scaleY: scaleY
+    };
+  }
+
+  var svgNode;
+
+  /* eslint-disable no-undef */
+  function parseCss(value) {
+    const m = new (typeof DOMMatrix === "function" ? DOMMatrix : WebKitCSSMatrix)(value + "");
+    return m.isIdentity ? identity$1 : decompose(m.a, m.b, m.c, m.d, m.e, m.f);
+  }
+
+  function parseSvg(value) {
+    if (value == null) return identity$1;
+    if (!svgNode) svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    svgNode.setAttribute("transform", value);
+    if (!(value = svgNode.transform.baseVal.consolidate())) return identity$1;
+    value = value.matrix;
+    return decompose(value.a, value.b, value.c, value.d, value.e, value.f);
+  }
+
+  function interpolateTransform(parse, pxComma, pxParen, degParen) {
+
+    function pop(s) {
+      return s.length ? s.pop() + " " : "";
+    }
+
+    function translate(xa, ya, xb, yb, s, q) {
+      if (xa !== xb || ya !== yb) {
+        var i = s.push("translate(", null, pxComma, null, pxParen);
+        q.push({i: i - 4, x: interpolateNumber(xa, xb)}, {i: i - 2, x: interpolateNumber(ya, yb)});
+      } else if (xb || yb) {
+        s.push("translate(" + xb + pxComma + yb + pxParen);
+      }
+    }
+
+    function rotate(a, b, s, q) {
+      if (a !== b) {
+        if (a - b > 180) b += 360; else if (b - a > 180) a += 360; // shortest path
+        q.push({i: s.push(pop(s) + "rotate(", null, degParen) - 2, x: interpolateNumber(a, b)});
+      } else if (b) {
+        s.push(pop(s) + "rotate(" + b + degParen);
+      }
+    }
+
+    function skewX(a, b, s, q) {
+      if (a !== b) {
+        q.push({i: s.push(pop(s) + "skewX(", null, degParen) - 2, x: interpolateNumber(a, b)});
+      } else if (b) {
+        s.push(pop(s) + "skewX(" + b + degParen);
+      }
+    }
+
+    function scale(xa, ya, xb, yb, s, q) {
+      if (xa !== xb || ya !== yb) {
+        var i = s.push(pop(s) + "scale(", null, ",", null, ")");
+        q.push({i: i - 4, x: interpolateNumber(xa, xb)}, {i: i - 2, x: interpolateNumber(ya, yb)});
+      } else if (xb !== 1 || yb !== 1) {
+        s.push(pop(s) + "scale(" + xb + "," + yb + ")");
+      }
+    }
+
+    return function(a, b) {
+      var s = [], // string constants and placeholders
+          q = []; // number interpolators
+      a = parse(a), b = parse(b);
+      translate(a.translateX, a.translateY, b.translateX, b.translateY, s, q);
+      rotate(a.rotate, b.rotate, s, q);
+      skewX(a.skewX, b.skewX, s, q);
+      scale(a.scaleX, a.scaleY, b.scaleX, b.scaleY, s, q);
+      a = b = null; // gc
+      return function(t) {
+        var i = -1, n = q.length, o;
+        while (++i < n) s[(o = q[i]).i] = o.x(t);
+        return s.join("");
+      };
+    };
+  }
+
+  var interpolateTransformCss = interpolateTransform(parseCss, "px, ", "px)", "deg)");
+  var interpolateTransformSvg = interpolateTransform(parseSvg, ", ", ")", ")");
+
+  var epsilon2 = 1e-12;
+
+  function cosh(x) {
+    return ((x = Math.exp(x)) + 1 / x) / 2;
+  }
+
+  function sinh(x) {
+    return ((x = Math.exp(x)) - 1 / x) / 2;
+  }
+
+  function tanh(x) {
+    return ((x = Math.exp(2 * x)) - 1) / (x + 1);
+  }
+
+  var interpolateZoom = (function zoomRho(rho, rho2, rho4) {
+
+    // p0 = [ux0, uy0, w0]
+    // p1 = [ux1, uy1, w1]
+    function zoom(p0, p1) {
+      var ux0 = p0[0], uy0 = p0[1], w0 = p0[2],
+          ux1 = p1[0], uy1 = p1[1], w1 = p1[2],
+          dx = ux1 - ux0,
+          dy = uy1 - uy0,
+          d2 = dx * dx + dy * dy,
+          i,
+          S;
+
+      // Special case for u0 ≅ u1.
+      if (d2 < epsilon2) {
+        S = Math.log(w1 / w0) / rho;
+        i = function(t) {
+          return [
+            ux0 + t * dx,
+            uy0 + t * dy,
+            w0 * Math.exp(rho * t * S)
+          ];
+        };
+      }
+
+      // General case.
+      else {
+        var d1 = Math.sqrt(d2),
+            b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),
+            b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),
+            r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),
+            r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
+        S = (r1 - r0) / rho;
+        i = function(t) {
+          var s = t * S,
+              coshr0 = cosh(r0),
+              u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));
+          return [
+            ux0 + u * dx,
+            uy0 + u * dy,
+            w0 * coshr0 / cosh(rho * s + r0)
+          ];
+        };
+      }
+
+      i.duration = S * 1000 * rho / Math.SQRT2;
+
+      return i;
+    }
+
+    zoom.rho = function(_) {
+      var _1 = Math.max(1e-3, +_), _2 = _1 * _1, _4 = _2 * _2;
+      return zoomRho(_1, _2, _4);
+    };
+
+    return zoom;
+  })(Math.SQRT2, 2, 4);
+
+  var frame = 0, // is an animation frame pending?
+      timeout$1 = 0, // is a timeout pending?
+      interval = 0, // are any timers active?
+      pokeDelay = 1000, // how frequently we check for clock skew
+      taskHead,
+      taskTail,
+      clockLast = 0,
+      clockNow = 0,
+      clockSkew = 0,
+      clock = typeof performance === "object" && performance.now ? performance : Date,
+      setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function(f) { setTimeout(f, 17); };
+
+  function now() {
+    return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
+  }
+
+  function clearNow() {
+    clockNow = 0;
+  }
+
+  function Timer() {
+    this._call =
+    this._time =
+    this._next = null;
+  }
+
+  Timer.prototype = timer.prototype = {
+    constructor: Timer,
+    restart: function(callback, delay, time) {
+      if (typeof callback !== "function") throw new TypeError("callback is not a function");
+      time = (time == null ? now() : +time) + (delay == null ? 0 : +delay);
+      if (!this._next && taskTail !== this) {
+        if (taskTail) taskTail._next = this;
+        else taskHead = this;
+        taskTail = this;
+      }
+      this._call = callback;
+      this._time = time;
+      sleep();
+    },
+    stop: function() {
+      if (this._call) {
+        this._call = null;
+        this._time = Infinity;
+        sleep();
+      }
+    }
+  };
+
+  function timer(callback, delay, time) {
+    var t = new Timer;
+    t.restart(callback, delay, time);
+    return t;
+  }
+
+  function timerFlush() {
+    now(); // Get the current time, if not already set.
+    ++frame; // Pretend we’ve set an alarm, if we haven’t already.
+    var t = taskHead, e;
+    while (t) {
+      if ((e = clockNow - t._time) >= 0) t._call.call(undefined, e);
+      t = t._next;
+    }
+    --frame;
+  }
+
+  function wake() {
+    clockNow = (clockLast = clock.now()) + clockSkew;
+    frame = timeout$1 = 0;
+    try {
+      timerFlush();
+    } finally {
+      frame = 0;
+      nap();
+      clockNow = 0;
+    }
+  }
+
+  function poke() {
+    var now = clock.now(), delay = now - clockLast;
+    if (delay > pokeDelay) clockSkew -= delay, clockLast = now;
+  }
+
+  function nap() {
+    var t0, t1 = taskHead, t2, time = Infinity;
+    while (t1) {
+      if (t1._call) {
+        if (time > t1._time) time = t1._time;
+        t0 = t1, t1 = t1._next;
+      } else {
+        t2 = t1._next, t1._next = null;
+        t1 = t0 ? t0._next = t2 : taskHead = t2;
+      }
+    }
+    taskTail = t0;
+    sleep(time);
+  }
+
+  function sleep(time) {
+    if (frame) return; // Soonest alarm already set, or will be.
+    if (timeout$1) timeout$1 = clearTimeout(timeout$1);
+    var delay = time - clockNow; // Strictly less than if we recomputed clockNow.
+    if (delay > 24) {
+      if (time < Infinity) timeout$1 = setTimeout(wake, time - clock.now() - clockSkew);
+      if (interval) interval = clearInterval(interval);
+    } else {
+      if (!interval) clockLast = clock.now(), interval = setInterval(poke, pokeDelay);
+      frame = 1, setFrame(wake);
+    }
+  }
+
+  function timeout(callback, delay, time) {
+    var t = new Timer;
+    delay = delay == null ? 0 : +delay;
+    t.restart(elapsed => {
+      t.stop();
+      callback(elapsed + delay);
+    }, delay, time);
+    return t;
+  }
+
+  var emptyOn = dispatch("start", "end", "cancel", "interrupt");
+  var emptyTween = [];
+
+  var CREATED = 0;
+  var SCHEDULED = 1;
+  var STARTING = 2;
+  var STARTED = 3;
+  var RUNNING = 4;
+  var ENDING = 5;
+  var ENDED = 6;
+
+  function schedule(node, name, id, index, group, timing) {
+    var schedules = node.__transition;
+    if (!schedules) node.__transition = {};
+    else if (id in schedules) return;
+    create(node, id, {
+      name: name,
+      index: index, // For context during callback.
+      group: group, // For context during callback.
+      on: emptyOn,
+      tween: emptyTween,
+      time: timing.time,
+      delay: timing.delay,
+      duration: timing.duration,
+      ease: timing.ease,
+      timer: null,
+      state: CREATED
+    });
+  }
+
+  function init(node, id) {
+    var schedule = get(node, id);
+    if (schedule.state > CREATED) throw new Error("too late; already scheduled");
+    return schedule;
+  }
+
+  function set(node, id) {
+    var schedule = get(node, id);
+    if (schedule.state > STARTED) throw new Error("too late; already running");
+    return schedule;
+  }
+
+  function get(node, id) {
+    var schedule = node.__transition;
+    if (!schedule || !(schedule = schedule[id])) throw new Error("transition not found");
+    return schedule;
+  }
+
+  function create(node, id, self) {
+    var schedules = node.__transition,
+        tween;
+
+    // Initialize the self timer when the transition is created.
+    // Note the actual delay is not known until the first callback!
+    schedules[id] = self;
+    self.timer = timer(schedule, 0, self.time);
+
+    function schedule(elapsed) {
+      self.state = SCHEDULED;
+      self.timer.restart(start, self.delay, self.time);
+
+      // If the elapsed delay is less than our first sleep, start immediately.
+      if (self.delay <= elapsed) start(elapsed - self.delay);
+    }
+
+    function start(elapsed) {
+      var i, j, n, o;
+
+      // If the state is not SCHEDULED, then we previously errored on start.
+      if (self.state !== SCHEDULED) return stop();
+
+      for (i in schedules) {
+        o = schedules[i];
+        if (o.name !== self.name) continue;
+
+        // While this element already has a starting transition during this frame,
+        // defer starting an interrupting transition until that transition has a
+        // chance to tick (and possibly end); see d3/d3-transition#54!
+        if (o.state === STARTED) return timeout(start);
+
+        // Interrupt the active transition, if any.
+        if (o.state === RUNNING) {
+          o.state = ENDED;
+          o.timer.stop();
+          o.on.call("interrupt", node, node.__data__, o.index, o.group);
+          delete schedules[i];
+        }
+
+        // Cancel any pre-empted transitions.
+        else if (+i < id) {
+          o.state = ENDED;
+          o.timer.stop();
+          o.on.call("cancel", node, node.__data__, o.index, o.group);
+          delete schedules[i];
+        }
+      }
+
+      // Defer the first tick to end of the current frame; see d3/d3#1576.
+      // Note the transition may be canceled after start and before the first tick!
+      // Note this must be scheduled before the start event; see d3/d3-transition#16!
+      // Assuming this is successful, subsequent callbacks go straight to tick.
+      timeout(function() {
+        if (self.state === STARTED) {
+          self.state = RUNNING;
+          self.timer.restart(tick, self.delay, self.time);
+          tick(elapsed);
+        }
+      });
+
+      // Dispatch the start event.
+      // Note this must be done before the tween are initialized.
+      self.state = STARTING;
+      self.on.call("start", node, node.__data__, self.index, self.group);
+      if (self.state !== STARTING) return; // interrupted
+      self.state = STARTED;
+
+      // Initialize the tween, deleting null tween.
+      tween = new Array(n = self.tween.length);
+      for (i = 0, j = -1; i < n; ++i) {
+        if (o = self.tween[i].value.call(node, node.__data__, self.index, self.group)) {
+          tween[++j] = o;
+        }
+      }
+      tween.length = j + 1;
+    }
+
+    function tick(elapsed) {
+      var t = elapsed < self.duration ? self.ease.call(null, elapsed / self.duration) : (self.timer.restart(stop), self.state = ENDING, 1),
+          i = -1,
+          n = tween.length;
+
+      while (++i < n) {
+        tween[i].call(node, t);
+      }
+
+      // Dispatch the end event.
+      if (self.state === ENDING) {
+        self.on.call("end", node, node.__data__, self.index, self.group);
+        stop();
+      }
+    }
+
+    function stop() {
+      self.state = ENDED;
+      self.timer.stop();
+      delete schedules[id];
+      for (var i in schedules) return; // eslint-disable-line no-unused-vars
+      delete node.__transition;
+    }
+  }
+
+  function interrupt(node, name) {
+    var schedules = node.__transition,
+        schedule,
+        active,
+        empty = true,
+        i;
+
+    if (!schedules) return;
+
+    name = name == null ? null : name + "";
+
+    for (i in schedules) {
+      if ((schedule = schedules[i]).name !== name) { empty = false; continue; }
+      active = schedule.state > STARTING && schedule.state < ENDING;
+      schedule.state = ENDED;
+      schedule.timer.stop();
+      schedule.on.call(active ? "interrupt" : "cancel", node, node.__data__, schedule.index, schedule.group);
+      delete schedules[i];
+    }
+
+    if (empty) delete node.__transition;
+  }
+
+  function selection_interrupt(name) {
+    return this.each(function() {
+      interrupt(this, name);
+    });
+  }
+
+  function tweenRemove(id, name) {
+    var tween0, tween1;
+    return function() {
+      var schedule = set(this, id),
+          tween = schedule.tween;
+
+      // If this node shared tween with the previous node,
+      // just assign the updated shared tween and we’re done!
+      // Otherwise, copy-on-write.
+      if (tween !== tween0) {
+        tween1 = tween0 = tween;
+        for (var i = 0, n = tween1.length; i < n; ++i) {
+          if (tween1[i].name === name) {
+            tween1 = tween1.slice();
+            tween1.splice(i, 1);
+            break;
+          }
+        }
+      }
+
+      schedule.tween = tween1;
+    };
+  }
+
+  function tweenFunction(id, name, value) {
+    var tween0, tween1;
+    if (typeof value !== "function") throw new Error;
+    return function() {
+      var schedule = set(this, id),
+          tween = schedule.tween;
+
+      // If this node shared tween with the previous node,
+      // just assign the updated shared tween and we’re done!
+      // Otherwise, copy-on-write.
+      if (tween !== tween0) {
+        tween1 = (tween0 = tween).slice();
+        for (var t = {name: name, value: value}, i = 0, n = tween1.length; i < n; ++i) {
+          if (tween1[i].name === name) {
+            tween1[i] = t;
+            break;
+          }
+        }
+        if (i === n) tween1.push(t);
+      }
+
+      schedule.tween = tween1;
+    };
+  }
+
+  function transition_tween(name, value) {
+    var id = this._id;
+
+    name += "";
+
+    if (arguments.length < 2) {
+      var tween = get(this.node(), id).tween;
+      for (var i = 0, n = tween.length, t; i < n; ++i) {
+        if ((t = tween[i]).name === name) {
+          return t.value;
+        }
+      }
+      return null;
+    }
+
+    return this.each((value == null ? tweenRemove : tweenFunction)(id, name, value));
+  }
+
+  function tweenValue(transition, name, value) {
+    var id = transition._id;
+
+    transition.each(function() {
+      var schedule = set(this, id);
+      (schedule.value || (schedule.value = {}))[name] = value.apply(this, arguments);
+    });
+
+    return function(node) {
+      return get(node, id).value[name];
+    };
+  }
+
+  function interpolate(a, b) {
+    var c;
+    return (typeof b === "number" ? interpolateNumber
+        : b instanceof color ? interpolateRgb
+        : (c = color(b)) ? (b = c, interpolateRgb)
+        : interpolateString)(a, b);
+  }
+
+  function attrRemove(name) {
+    return function() {
+      this.removeAttribute(name);
+    };
+  }
+
+  function attrRemoveNS(fullname) {
+    return function() {
+      this.removeAttributeNS(fullname.space, fullname.local);
+    };
+  }
+
+  function attrConstant(name, interpolate, value1) {
+    var string00,
+        string1 = value1 + "",
+        interpolate0;
+    return function() {
+      var string0 = this.getAttribute(name);
+      return string0 === string1 ? null
+          : string0 === string00 ? interpolate0
+          : interpolate0 = interpolate(string00 = string0, value1);
+    };
+  }
+
+  function attrConstantNS(fullname, interpolate, value1) {
+    var string00,
+        string1 = value1 + "",
+        interpolate0;
+    return function() {
+      var string0 = this.getAttributeNS(fullname.space, fullname.local);
+      return string0 === string1 ? null
+          : string0 === string00 ? interpolate0
+          : interpolate0 = interpolate(string00 = string0, value1);
+    };
+  }
+
+  function attrFunction(name, interpolate, value) {
+    var string00,
+        string10,
+        interpolate0;
+    return function() {
+      var string0, value1 = value(this), string1;
+      if (value1 == null) return void this.removeAttribute(name);
+      string0 = this.getAttribute(name);
+      string1 = value1 + "";
+      return string0 === string1 ? null
+          : string0 === string00 && string1 === string10 ? interpolate0
+          : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
+    };
+  }
+
+  function attrFunctionNS(fullname, interpolate, value) {
+    var string00,
+        string10,
+        interpolate0;
+    return function() {
+      var string0, value1 = value(this), string1;
+      if (value1 == null) return void this.removeAttributeNS(fullname.space, fullname.local);
+      string0 = this.getAttributeNS(fullname.space, fullname.local);
+      string1 = value1 + "";
+      return string0 === string1 ? null
+          : string0 === string00 && string1 === string10 ? interpolate0
+          : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
+    };
+  }
+
+  function transition_attr(name, value) {
+    var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg : interpolate;
+    return this.attrTween(name, typeof value === "function"
+        ? (fullname.local ? attrFunctionNS : attrFunction)(fullname, i, tweenValue(this, "attr." + name, value))
+        : value == null ? (fullname.local ? attrRemoveNS : attrRemove)(fullname)
+        : (fullname.local ? attrConstantNS : attrConstant)(fullname, i, value));
+  }
+
+  function attrInterpolate(name, i) {
+    return function(t) {
+      this.setAttribute(name, i.call(this, t));
+    };
+  }
+
+  function attrInterpolateNS(fullname, i) {
+    return function(t) {
+      this.setAttributeNS(fullname.space, fullname.local, i.call(this, t));
+    };
+  }
+
+  function attrTweenNS(fullname, value) {
+    var t0, i0;
+    function tween() {
+      var i = value.apply(this, arguments);
+      if (i !== i0) t0 = (i0 = i) && attrInterpolateNS(fullname, i);
+      return t0;
+    }
+    tween._value = value;
+    return tween;
+  }
+
+  function attrTween(name, value) {
+    var t0, i0;
+    function tween() {
+      var i = value.apply(this, arguments);
+      if (i !== i0) t0 = (i0 = i) && attrInterpolate(name, i);
+      return t0;
+    }
+    tween._value = value;
+    return tween;
+  }
+
+  function transition_attrTween(name, value) {
+    var key = "attr." + name;
+    if (arguments.length < 2) return (key = this.tween(key)) && key._value;
+    if (value == null) return this.tween(key, null);
+    if (typeof value !== "function") throw new Error;
+    var fullname = namespace(name);
+    return this.tween(key, (fullname.local ? attrTweenNS : attrTween)(fullname, value));
+  }
+
+  function delayFunction(id, value) {
+    return function() {
+      init(this, id).delay = +value.apply(this, arguments);
+    };
+  }
+
+  function delayConstant(id, value) {
+    return value = +value, function() {
+      init(this, id).delay = value;
+    };
+  }
+
+  function transition_delay(value) {
+    var id = this._id;
+
+    return arguments.length
+        ? this.each((typeof value === "function"
+            ? delayFunction
+            : delayConstant)(id, value))
+        : get(this.node(), id).delay;
+  }
+
+  function durationFunction(id, value) {
+    return function() {
+      set(this, id).duration = +value.apply(this, arguments);
+    };
+  }
+
+  function durationConstant(id, value) {
+    return value = +value, function() {
+      set(this, id).duration = value;
+    };
+  }
+
+  function transition_duration(value) {
+    var id = this._id;
+
+    return arguments.length
+        ? this.each((typeof value === "function"
+            ? durationFunction
+            : durationConstant)(id, value))
+        : get(this.node(), id).duration;
+  }
+
+  function easeConstant(id, value) {
+    if (typeof value !== "function") throw new Error;
+    return function() {
+      set(this, id).ease = value;
+    };
+  }
+
+  function transition_ease(value) {
+    var id = this._id;
+
+    return arguments.length
+        ? this.each(easeConstant(id, value))
+        : get(this.node(), id).ease;
+  }
+
+  function easeVarying(id, value) {
+    return function() {
+      var v = value.apply(this, arguments);
+      if (typeof v !== "function") throw new Error;
+      set(this, id).ease = v;
+    };
+  }
+
+  function transition_easeVarying(value) {
+    if (typeof value !== "function") throw new Error;
+    return this.each(easeVarying(this._id, value));
+  }
+
+  function transition_filter(match) {
+    if (typeof match !== "function") match = matcher(match);
+
+    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
+        if ((node = group[i]) && match.call(node, node.__data__, i, group)) {
+          subgroup.push(node);
+        }
+      }
+    }
+
+    return new Transition(subgroups, this._parents, this._name, this._id);
+  }
+
+  function transition_merge(transition) {
+    if (transition._id !== this._id) throw new Error;
+
+    for (var groups0 = this._groups, groups1 = transition._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
+      for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
+        if (node = group0[i] || group1[i]) {
+          merge[i] = node;
+        }
+      }
+    }
+
+    for (; j < m0; ++j) {
+      merges[j] = groups0[j];
+    }
+
+    return new Transition(merges, this._parents, this._name, this._id);
+  }
+
+  function start(name) {
+    return (name + "").trim().split(/^|\s+/).every(function(t) {
+      var i = t.indexOf(".");
+      if (i >= 0) t = t.slice(0, i);
+      return !t || t === "start";
+    });
+  }
+
+  function onFunction(id, name, listener) {
+    var on0, on1, sit = start(name) ? init : set;
+    return function() {
+      var schedule = sit(this, id),
+          on = schedule.on;
+
+      // If this node shared a dispatch with the previous node,
+      // just assign the updated shared dispatch and we’re done!
+      // Otherwise, copy-on-write.
+      if (on !== on0) (on1 = (on0 = on).copy()).on(name, listener);
+
+      schedule.on = on1;
+    };
+  }
+
+  function transition_on(name, listener) {
+    var id = this._id;
+
+    return arguments.length < 2
+        ? get(this.node(), id).on.on(name)
+        : this.each(onFunction(id, name, listener));
+  }
+
+  function removeFunction(id) {
+    return function() {
+      var parent = this.parentNode;
+      for (var i in this.__transition) if (+i !== id) return;
+      if (parent) parent.removeChild(this);
+    };
+  }
+
+  function transition_remove() {
+    return this.on("end.remove", removeFunction(this._id));
+  }
+
+  function transition_select(select) {
+    var name = this._name,
+        id = this._id;
+
+    if (typeof select !== "function") select = selector$1(select);
+
+    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
+        if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {
+          if ("__data__" in node) subnode.__data__ = node.__data__;
+          subgroup[i] = subnode;
+          schedule(subgroup[i], name, id, i, subgroup, get(node, id));
+        }
+      }
+    }
+
+    return new Transition(subgroups, this._parents, name, id);
+  }
+
+  function transition_selectAll(select) {
+    var name = this._name,
+        id = this._id;
+
+    if (typeof select !== "function") select = selectorAll(select);
+
+    for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
+        if (node = group[i]) {
+          for (var children = select.call(node, node.__data__, i, group), child, inherit = get(node, id), k = 0, l = children.length; k < l; ++k) {
+            if (child = children[k]) {
+              schedule(child, name, id, k, children, inherit);
+            }
+          }
+          subgroups.push(children);
+          parents.push(node);
+        }
+      }
+    }
+
+    return new Transition(subgroups, parents, name, id);
+  }
+
+  var Selection = selection.prototype.constructor;
+
+  function transition_selection() {
+    return new Selection(this._groups, this._parents);
+  }
+
+  function styleNull(name, interpolate) {
+    var string00,
+        string10,
+        interpolate0;
+    return function() {
+      var string0 = styleValue(this, name),
+          string1 = (this.style.removeProperty(name), styleValue(this, name));
+      return string0 === string1 ? null
+          : string0 === string00 && string1 === string10 ? interpolate0
+          : interpolate0 = interpolate(string00 = string0, string10 = string1);
+    };
+  }
+
+  function styleRemove(name) {
+    return function() {
+      this.style.removeProperty(name);
+    };
+  }
+
+  function styleConstant(name, interpolate, value1) {
+    var string00,
+        string1 = value1 + "",
+        interpolate0;
+    return function() {
+      var string0 = styleValue(this, name);
+      return string0 === string1 ? null
+          : string0 === string00 ? interpolate0
+          : interpolate0 = interpolate(string00 = string0, value1);
+    };
+  }
+
+  function styleFunction(name, interpolate, value) {
+    var string00,
+        string10,
+        interpolate0;
+    return function() {
+      var string0 = styleValue(this, name),
+          value1 = value(this),
+          string1 = value1 + "";
+      if (value1 == null) string1 = value1 = (this.style.removeProperty(name), styleValue(this, name));
+      return string0 === string1 ? null
+          : string0 === string00 && string1 === string10 ? interpolate0
+          : (string10 = string1, interpolate0 = interpolate(string00 = string0, value1));
+    };
+  }
+
+  function styleMaybeRemove(id, name) {
+    var on0, on1, listener0, key = "style." + name, event = "end." + key, remove;
+    return function() {
+      var schedule = set(this, id),
+          on = schedule.on,
+          listener = schedule.value[key] == null ? remove || (remove = styleRemove(name)) : undefined;
+
+      // If this node shared a dispatch with the previous node,
+      // just assign the updated shared dispatch and we’re done!
+      // Otherwise, copy-on-write.
+      if (on !== on0 || listener0 !== listener) (on1 = (on0 = on).copy()).on(event, listener0 = listener);
+
+      schedule.on = on1;
+    };
+  }
+
+  function transition_style(name, value, priority) {
+    var i = (name += "") === "transform" ? interpolateTransformCss : interpolate;
+    return value == null ? this
+        .styleTween(name, styleNull(name, i))
+        .on("end.style." + name, styleRemove(name))
+      : typeof value === "function" ? this
+        .styleTween(name, styleFunction(name, i, tweenValue(this, "style." + name, value)))
+        .each(styleMaybeRemove(this._id, name))
+      : this
+        .styleTween(name, styleConstant(name, i, value), priority)
+        .on("end.style." + name, null);
+  }
+
+  function styleInterpolate(name, i, priority) {
+    return function(t) {
+      this.style.setProperty(name, i.call(this, t), priority);
+    };
+  }
+
+  function styleTween(name, value, priority) {
+    var t, i0;
+    function tween() {
+      var i = value.apply(this, arguments);
+      if (i !== i0) t = (i0 = i) && styleInterpolate(name, i, priority);
+      return t;
+    }
+    tween._value = value;
+    return tween;
+  }
+
+  function transition_styleTween(name, value, priority) {
+    var key = "style." + (name += "");
+    if (arguments.length < 2) return (key = this.tween(key)) && key._value;
+    if (value == null) return this.tween(key, null);
+    if (typeof value !== "function") throw new Error;
+    return this.tween(key, styleTween(name, value, priority == null ? "" : priority));
+  }
+
+  function textConstant(value) {
+    return function() {
+      this.textContent = value;
+    };
+  }
+
+  function textFunction(value) {
+    return function() {
+      var value1 = value(this);
+      this.textContent = value1 == null ? "" : value1;
+    };
+  }
+
+  function transition_text(value) {
+    return this.tween("text", typeof value === "function"
+        ? textFunction(tweenValue(this, "text", value))
+        : textConstant(value == null ? "" : value + ""));
+  }
+
+  function textInterpolate(i) {
+    return function(t) {
+      this.textContent = i.call(this, t);
+    };
+  }
+
+  function textTween(value) {
+    var t0, i0;
+    function tween() {
+      var i = value.apply(this, arguments);
+      if (i !== i0) t0 = (i0 = i) && textInterpolate(i);
+      return t0;
+    }
+    tween._value = value;
+    return tween;
+  }
+
+  function transition_textTween(value) {
+    var key = "text";
+    if (arguments.length < 1) return (key = this.tween(key)) && key._value;
+    if (value == null) return this.tween(key, null);
+    if (typeof value !== "function") throw new Error;
+    return this.tween(key, textTween(value));
+  }
+
+  function transition_transition() {
+    var name = this._name,
+        id0 = this._id,
+        id1 = newId();
+
+    for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
+        if (node = group[i]) {
+          var inherit = get(node, id0);
+          schedule(node, name, id1, i, group, {
+            time: inherit.time + inherit.delay + inherit.duration,
+            delay: 0,
+            duration: inherit.duration,
+            ease: inherit.ease
+          });
+        }
+      }
+    }
+
+    return new Transition(groups, this._parents, name, id1);
+  }
+
+  function transition_end() {
+    var on0, on1, that = this, id = that._id, size = that.size();
+    return new Promise(function(resolve, reject) {
+      var cancel = {value: reject},
+          end = {value: function() { if (--size === 0) resolve(); }};
+
+      that.each(function() {
+        var schedule = set(this, id),
+            on = schedule.on;
+
+        // If this node shared a dispatch with the previous node,
+        // just assign the updated shared dispatch and we’re done!
+        // Otherwise, copy-on-write.
+        if (on !== on0) {
+          on1 = (on0 = on).copy();
+          on1._.cancel.push(cancel);
+          on1._.interrupt.push(cancel);
+          on1._.end.push(end);
+        }
+
+        schedule.on = on1;
+      });
+
+      // The selection was empty, resolve end immediately
+      if (size === 0) resolve();
+    });
+  }
+
+  var id = 0;
+
+  function Transition(groups, parents, name, id) {
+    this._groups = groups;
+    this._parents = parents;
+    this._name = name;
+    this._id = id;
+  }
+
+  function newId() {
+    return ++id;
+  }
+
+  var selection_prototype = selection.prototype;
+
+  Transition.prototype = {
+    constructor: Transition,
+    select: transition_select,
+    selectAll: transition_selectAll,
+    selectChild: selection_prototype.selectChild,
+    selectChildren: selection_prototype.selectChildren,
+    filter: transition_filter,
+    merge: transition_merge,
+    selection: transition_selection,
+    transition: transition_transition,
+    call: selection_prototype.call,
+    nodes: selection_prototype.nodes,
+    node: selection_prototype.node,
+    size: selection_prototype.size,
+    empty: selection_prototype.empty,
+    each: selection_prototype.each,
+    on: transition_on,
+    attr: transition_attr,
+    attrTween: transition_attrTween,
+    style: transition_style,
+    styleTween: transition_styleTween,
+    text: transition_text,
+    textTween: transition_textTween,
+    remove: transition_remove,
+    tween: transition_tween,
+    delay: transition_delay,
+    duration: transition_duration,
+    ease: transition_ease,
+    easeVarying: transition_easeVarying,
+    end: transition_end,
+    [Symbol.iterator]: selection_prototype[Symbol.iterator]
+  };
+
+  function cubicInOut(t) {
+    return ((t *= 2) <= 1 ? t * t * t : (t -= 2) * t * t + 2) / 2;
+  }
+
+  var defaultTiming = {
+    time: null, // Set on use.
+    delay: 0,
+    duration: 250,
+    ease: cubicInOut
+  };
+
+  function inherit(node, id) {
+    var timing;
+    while (!(timing = node.__transition) || !(timing = timing[id])) {
+      if (!(node = node.parentNode)) {
+        throw new Error(`transition ${id} not found`);
+      }
+    }
+    return timing;
+  }
+
+  function selection_transition(name) {
+    var id,
+        timing;
+
+    if (name instanceof Transition) {
+      id = name._id, name = name._name;
+    } else {
+      id = newId(), (timing = defaultTiming).time = now(), name = name == null ? null : name + "";
+    }
+
+    for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {
+      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
+        if (node = group[i]) {
+          schedule(node, name, id, i, group, timing || inherit(node, id));
+        }
+      }
+    }
+
+    return new Transition(groups, this._parents, name, id);
+  }
+
+  selection.prototype.interrupt = selection_interrupt;
+  selection.prototype.transition = selection_transition;
+
+  var constant = x => () => x;
+
+  function ZoomEvent(type, {
+    sourceEvent,
+    target,
+    transform,
+    dispatch
+  }) {
+    Object.defineProperties(this, {
+      type: {value: type, enumerable: true, configurable: true},
+      sourceEvent: {value: sourceEvent, enumerable: true, configurable: true},
+      target: {value: target, enumerable: true, configurable: true},
+      transform: {value: transform, enumerable: true, configurable: true},
+      _: {value: dispatch}
+    });
+  }
+
+  function Transform(k, x, y) {
+    this.k = k;
+    this.x = x;
+    this.y = y;
+  }
+
+  Transform.prototype = {
+    constructor: Transform,
+    scale: function(k) {
+      return k === 1 ? this : new Transform(this.k * k, this.x, this.y);
+    },
+    translate: function(x, y) {
+      return x === 0 & y === 0 ? this : new Transform(this.k, this.x + this.k * x, this.y + this.k * y);
+    },
+    apply: function(point) {
+      return [point[0] * this.k + this.x, point[1] * this.k + this.y];
+    },
+    applyX: function(x) {
+      return x * this.k + this.x;
+    },
+    applyY: function(y) {
+      return y * this.k + this.y;
+    },
+    invert: function(location) {
+      return [(location[0] - this.x) / this.k, (location[1] - this.y) / this.k];
+    },
+    invertX: function(x) {
+      return (x - this.x) / this.k;
+    },
+    invertY: function(y) {
+      return (y - this.y) / this.k;
+    },
+    rescaleX: function(x) {
+      return x.copy().domain(x.range().map(this.invertX, this).map(x.invert, x));
+    },
+    rescaleY: function(y) {
+      return y.copy().domain(y.range().map(this.invertY, this).map(y.invert, y));
+    },
+    toString: function() {
+      return "translate(" + this.x + "," + this.y + ") scale(" + this.k + ")";
+    }
+  };
+
+  var identity = new Transform(1, 0, 0);
+
+  Transform.prototype;
+
+  function nopropagation(event) {
+    event.stopImmediatePropagation();
+  }
+
+  function noevent(event) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+
+  // Ignore right-click, since that should open the context menu.
+  // except for pinch-to-zoom, which is sent as a wheel+ctrlKey event
+  function defaultFilter(event) {
+    return (!event.ctrlKey || event.type === 'wheel') && !event.button;
+  }
+
+  function defaultExtent() {
+    var e = this;
+    if (e instanceof SVGElement) {
+      e = e.ownerSVGElement || e;
+      if (e.hasAttribute("viewBox")) {
+        e = e.viewBox.baseVal;
+        return [[e.x, e.y], [e.x + e.width, e.y + e.height]];
+      }
+      return [[0, 0], [e.width.baseVal.value, e.height.baseVal.value]];
+    }
+    return [[0, 0], [e.clientWidth, e.clientHeight]];
+  }
+
+  function defaultTransform() {
+    return this.__zoom || identity;
+  }
+
+  function defaultWheelDelta(event) {
+    return -event.deltaY * (event.deltaMode === 1 ? 0.05 : event.deltaMode ? 1 : 0.002) * (event.ctrlKey ? 10 : 1);
+  }
+
+  function defaultTouchable() {
+    return navigator.maxTouchPoints || ("ontouchstart" in this);
+  }
+
+  function defaultConstrain(transform, extent, translateExtent) {
+    var dx0 = transform.invertX(extent[0][0]) - translateExtent[0][0],
+        dx1 = transform.invertX(extent[1][0]) - translateExtent[1][0],
+        dy0 = transform.invertY(extent[0][1]) - translateExtent[0][1],
+        dy1 = transform.invertY(extent[1][1]) - translateExtent[1][1];
+    return transform.translate(
+      dx1 > dx0 ? (dx0 + dx1) / 2 : Math.min(0, dx0) || Math.max(0, dx1),
+      dy1 > dy0 ? (dy0 + dy1) / 2 : Math.min(0, dy0) || Math.max(0, dy1)
+    );
+  }
+
+  function zoom() {
+    var filter = defaultFilter,
+        extent = defaultExtent,
+        constrain = defaultConstrain,
+        wheelDelta = defaultWheelDelta,
+        touchable = defaultTouchable,
+        scaleExtent = [0, Infinity],
+        translateExtent = [[-Infinity, -Infinity], [Infinity, Infinity]],
+        duration = 250,
+        interpolate = interpolateZoom,
+        listeners = dispatch("start", "zoom", "end"),
+        touchstarting,
+        touchfirst,
+        touchending,
+        touchDelay = 500,
+        wheelDelay = 150,
+        clickDistance2 = 0,
+        tapDistance = 10;
+
+    function zoom(selection) {
+      selection
+          .property("__zoom", defaultTransform)
+          .on("wheel.zoom", wheeled, {passive: false})
+          .on("mousedown.zoom", mousedowned)
+          .on("dblclick.zoom", dblclicked)
+        .filter(touchable)
+          .on("touchstart.zoom", touchstarted)
+          .on("touchmove.zoom", touchmoved)
+          .on("touchend.zoom touchcancel.zoom", touchended)
+          .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
+    }
+
+    zoom.transform = function(collection, transform, point, event) {
+      var selection = collection.selection ? collection.selection() : collection;
+      selection.property("__zoom", defaultTransform);
+      if (collection !== selection) {
+        schedule(collection, transform, point, event);
+      } else {
+        selection.interrupt().each(function() {
+          gesture(this, arguments)
+            .event(event)
+            .start()
+            .zoom(null, typeof transform === "function" ? transform.apply(this, arguments) : transform)
+            .end();
+        });
+      }
+    };
+
+    zoom.scaleBy = function(selection, k, p, event) {
+      zoom.scaleTo(selection, function() {
+        var k0 = this.__zoom.k,
+            k1 = typeof k === "function" ? k.apply(this, arguments) : k;
+        return k0 * k1;
+      }, p, event);
+    };
+
+    zoom.scaleTo = function(selection, k, p, event) {
+      zoom.transform(selection, function() {
+        var e = extent.apply(this, arguments),
+            t0 = this.__zoom,
+            p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p,
+            p1 = t0.invert(p0),
+            k1 = typeof k === "function" ? k.apply(this, arguments) : k;
+        return constrain(translate(scale(t0, k1), p0, p1), e, translateExtent);
+      }, p, event);
+    };
+
+    zoom.translateBy = function(selection, x, y, event) {
+      zoom.transform(selection, function() {
+        return constrain(this.__zoom.translate(
+          typeof x === "function" ? x.apply(this, arguments) : x,
+          typeof y === "function" ? y.apply(this, arguments) : y
+        ), extent.apply(this, arguments), translateExtent);
+      }, null, event);
+    };
+
+    zoom.translateTo = function(selection, x, y, p, event) {
+      zoom.transform(selection, function() {
+        var e = extent.apply(this, arguments),
+            t = this.__zoom,
+            p0 = p == null ? centroid(e) : typeof p === "function" ? p.apply(this, arguments) : p;
+        return constrain(identity.translate(p0[0], p0[1]).scale(t.k).translate(
+          typeof x === "function" ? -x.apply(this, arguments) : -x,
+          typeof y === "function" ? -y.apply(this, arguments) : -y
+        ), e, translateExtent);
+      }, p, event);
+    };
+
+    function scale(transform, k) {
+      k = Math.max(scaleExtent[0], Math.min(scaleExtent[1], k));
+      return k === transform.k ? transform : new Transform(k, transform.x, transform.y);
+    }
+
+    function translate(transform, p0, p1) {
+      var x = p0[0] - p1[0] * transform.k, y = p0[1] - p1[1] * transform.k;
+      return x === transform.x && y === transform.y ? transform : new Transform(transform.k, x, y);
+    }
+
+    function centroid(extent) {
+      return [(+extent[0][0] + +extent[1][0]) / 2, (+extent[0][1] + +extent[1][1]) / 2];
+    }
+
+    function schedule(transition, transform, point, event) {
+      transition
+          .on("start.zoom", function() { gesture(this, arguments).event(event).start(); })
+          .on("interrupt.zoom end.zoom", function() { gesture(this, arguments).event(event).end(); })
+          .tween("zoom", function() {
+            var that = this,
+                args = arguments,
+                g = gesture(that, args).event(event),
+                e = extent.apply(that, args),
+                p = point == null ? centroid(e) : typeof point === "function" ? point.apply(that, args) : point,
+                w = Math.max(e[1][0] - e[0][0], e[1][1] - e[0][1]),
+                a = that.__zoom,
+                b = typeof transform === "function" ? transform.apply(that, args) : transform,
+                i = interpolate(a.invert(p).concat(w / a.k), b.invert(p).concat(w / b.k));
+            return function(t) {
+              if (t === 1) t = b; // Avoid rounding error on end.
+              else { var l = i(t), k = w / l[2]; t = new Transform(k, p[0] - l[0] * k, p[1] - l[1] * k); }
+              g.zoom(null, t);
+            };
+          });
+    }
+
+    function gesture(that, args, clean) {
+      return (!clean && that.__zooming) || new Gesture(that, args);
+    }
+
+    function Gesture(that, args) {
+      this.that = that;
+      this.args = args;
+      this.active = 0;
+      this.sourceEvent = null;
+      this.extent = extent.apply(that, args);
+      this.taps = 0;
+    }
+
+    Gesture.prototype = {
+      event: function(event) {
+        if (event) this.sourceEvent = event;
+        return this;
+      },
+      start: function() {
+        if (++this.active === 1) {
+          this.that.__zooming = this;
+          this.emit("start");
+        }
+        return this;
+      },
+      zoom: function(key, transform) {
+        if (this.mouse && key !== "mouse") this.mouse[1] = transform.invert(this.mouse[0]);
+        if (this.touch0 && key !== "touch") this.touch0[1] = transform.invert(this.touch0[0]);
+        if (this.touch1 && key !== "touch") this.touch1[1] = transform.invert(this.touch1[0]);
+        this.that.__zoom = transform;
+        this.emit("zoom");
+        return this;
+      },
+      end: function() {
+        if (--this.active === 0) {
+          delete this.that.__zooming;
+          this.emit("end");
+        }
+        return this;
+      },
+      emit: function(type) {
+        var d = select(this.that).datum();
+        listeners.call(
+          type,
+          this.that,
+          new ZoomEvent(type, {
+            sourceEvent: this.sourceEvent,
+            target: zoom,
+            type,
+            transform: this.that.__zoom,
+            dispatch: listeners
+          }),
+          d
+        );
+      }
+    };
+
+    function wheeled(event, ...args) {
+      if (!filter.apply(this, arguments)) return;
+      var g = gesture(this, args).event(event),
+          t = this.__zoom,
+          k = Math.max(scaleExtent[0], Math.min(scaleExtent[1], t.k * Math.pow(2, wheelDelta.apply(this, arguments)))),
+          p = pointer(event);
+
+      // If the mouse is in the same location as before, reuse it.
+      // If there were recent wheel events, reset the wheel idle timeout.
+      if (g.wheel) {
+        if (g.mouse[0][0] !== p[0] || g.mouse[0][1] !== p[1]) {
+          g.mouse[1] = t.invert(g.mouse[0] = p);
+        }
+        clearTimeout(g.wheel);
+      }
+
+      // If this wheel event won’t trigger a transform change, ignore it.
+      else if (t.k === k) return;
+
+      // Otherwise, capture the mouse point and location at the start.
+      else {
+        g.mouse = [p, t.invert(p)];
+        interrupt(this);
+        g.start();
+      }
+
+      noevent(event);
+      g.wheel = setTimeout(wheelidled, wheelDelay);
+      g.zoom("mouse", constrain(translate(scale(t, k), g.mouse[0], g.mouse[1]), g.extent, translateExtent));
+
+      function wheelidled() {
+        g.wheel = null;
+        g.end();
+      }
+    }
+
+    function mousedowned(event, ...args) {
+      if (touchending || !filter.apply(this, arguments)) return;
+      var currentTarget = event.currentTarget,
+          g = gesture(this, args, true).event(event),
+          v = select(event.view).on("mousemove.zoom", mousemoved, true).on("mouseup.zoom", mouseupped, true),
+          p = pointer(event, currentTarget),
+          x0 = event.clientX,
+          y0 = event.clientY;
+
+      dragDisable(event.view);
+      nopropagation(event);
+      g.mouse = [p, this.__zoom.invert(p)];
+      interrupt(this);
+      g.start();
+
+      function mousemoved(event) {
+        noevent(event);
+        if (!g.moved) {
+          var dx = event.clientX - x0, dy = event.clientY - y0;
+          g.moved = dx * dx + dy * dy > clickDistance2;
+        }
+        g.event(event)
+         .zoom("mouse", constrain(translate(g.that.__zoom, g.mouse[0] = pointer(event, currentTarget), g.mouse[1]), g.extent, translateExtent));
+      }
+
+      function mouseupped(event) {
+        v.on("mousemove.zoom mouseup.zoom", null);
+        yesdrag(event.view, g.moved);
+        noevent(event);
+        g.event(event).end();
+      }
+    }
+
+    function dblclicked(event, ...args) {
+      if (!filter.apply(this, arguments)) return;
+      var t0 = this.__zoom,
+          p0 = pointer(event.changedTouches ? event.changedTouches[0] : event, this),
+          p1 = t0.invert(p0),
+          k1 = t0.k * (event.shiftKey ? 0.5 : 2),
+          t1 = constrain(translate(scale(t0, k1), p0, p1), extent.apply(this, args), translateExtent);
+
+      noevent(event);
+      if (duration > 0) select(this).transition().duration(duration).call(schedule, t1, p0, event);
+      else select(this).call(zoom.transform, t1, p0, event);
+    }
+
+    function touchstarted(event, ...args) {
+      if (!filter.apply(this, arguments)) return;
+      var touches = event.touches,
+          n = touches.length,
+          g = gesture(this, args, event.changedTouches.length === n).event(event),
+          started, i, t, p;
+
+      nopropagation(event);
+      for (i = 0; i < n; ++i) {
+        t = touches[i], p = pointer(t, this);
+        p = [p, this.__zoom.invert(p), t.identifier];
+        if (!g.touch0) g.touch0 = p, started = true, g.taps = 1 + !!touchstarting;
+        else if (!g.touch1 && g.touch0[2] !== p[2]) g.touch1 = p, g.taps = 0;
+      }
+
+      if (touchstarting) touchstarting = clearTimeout(touchstarting);
+
+      if (started) {
+        if (g.taps < 2) touchfirst = p[0], touchstarting = setTimeout(function() { touchstarting = null; }, touchDelay);
+        interrupt(this);
+        g.start();
+      }
+    }
+
+    function touchmoved(event, ...args) {
+      if (!this.__zooming) return;
+      var g = gesture(this, args).event(event),
+          touches = event.changedTouches,
+          n = touches.length, i, t, p, l;
+
+      noevent(event);
+      for (i = 0; i < n; ++i) {
+        t = touches[i], p = pointer(t, this);
+        if (g.touch0 && g.touch0[2] === t.identifier) g.touch0[0] = p;
+        else if (g.touch1 && g.touch1[2] === t.identifier) g.touch1[0] = p;
+      }
+      t = g.that.__zoom;
+      if (g.touch1) {
+        var p0 = g.touch0[0], l0 = g.touch0[1],
+            p1 = g.touch1[0], l1 = g.touch1[1],
+            dp = (dp = p1[0] - p0[0]) * dp + (dp = p1[1] - p0[1]) * dp,
+            dl = (dl = l1[0] - l0[0]) * dl + (dl = l1[1] - l0[1]) * dl;
+        t = scale(t, Math.sqrt(dp / dl));
+        p = [(p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2];
+        l = [(l0[0] + l1[0]) / 2, (l0[1] + l1[1]) / 2];
+      }
+      else if (g.touch0) p = g.touch0[0], l = g.touch0[1];
+      else return;
+
+      g.zoom("touch", constrain(translate(t, p, l), g.extent, translateExtent));
+    }
+
+    function touchended(event, ...args) {
+      if (!this.__zooming) return;
+      var g = gesture(this, args).event(event),
+          touches = event.changedTouches,
+          n = touches.length, i, t;
+
+      nopropagation(event);
+      if (touchending) clearTimeout(touchending);
+      touchending = setTimeout(function() { touchending = null; }, touchDelay);
+      for (i = 0; i < n; ++i) {
+        t = touches[i];
+        if (g.touch0 && g.touch0[2] === t.identifier) delete g.touch0;
+        else if (g.touch1 && g.touch1[2] === t.identifier) delete g.touch1;
+      }
+      if (g.touch1 && !g.touch0) g.touch0 = g.touch1, delete g.touch1;
+      if (g.touch0) g.touch0[1] = this.__zoom.invert(g.touch0[0]);
+      else {
+        g.end();
+        // If this was a dbltap, reroute to the (optional) dblclick.zoom handler.
+        if (g.taps === 2) {
+          t = pointer(t, this);
+          if (Math.hypot(touchfirst[0] - t[0], touchfirst[1] - t[1]) < tapDistance) {
+            var p = select(this).on("dblclick.zoom");
+            if (p) p.apply(this, arguments);
+          }
+        }
+      }
+    }
+
+    zoom.wheelDelta = function(_) {
+      return arguments.length ? (wheelDelta = typeof _ === "function" ? _ : constant(+_), zoom) : wheelDelta;
+    };
+
+    zoom.filter = function(_) {
+      return arguments.length ? (filter = typeof _ === "function" ? _ : constant(!!_), zoom) : filter;
+    };
+
+    zoom.touchable = function(_) {
+      return arguments.length ? (touchable = typeof _ === "function" ? _ : constant(!!_), zoom) : touchable;
+    };
+
+    zoom.extent = function(_) {
+      return arguments.length ? (extent = typeof _ === "function" ? _ : constant([[+_[0][0], +_[0][1]], [+_[1][0], +_[1][1]]]), zoom) : extent;
+    };
+
+    zoom.scaleExtent = function(_) {
+      return arguments.length ? (scaleExtent[0] = +_[0], scaleExtent[1] = +_[1], zoom) : [scaleExtent[0], scaleExtent[1]];
+    };
+
+    zoom.translateExtent = function(_) {
+      return arguments.length ? (translateExtent[0][0] = +_[0][0], translateExtent[1][0] = +_[1][0], translateExtent[0][1] = +_[0][1], translateExtent[1][1] = +_[1][1], zoom) : [[translateExtent[0][0], translateExtent[0][1]], [translateExtent[1][0], translateExtent[1][1]]];
+    };
+
+    zoom.constrain = function(_) {
+      return arguments.length ? (constrain = _, zoom) : constrain;
+    };
+
+    zoom.duration = function(_) {
+      return arguments.length ? (duration = +_, zoom) : duration;
+    };
+
+    zoom.interpolate = function(_) {
+      return arguments.length ? (interpolate = _, zoom) : interpolate;
+    };
+
+    zoom.on = function() {
+      var value = listeners.on.apply(listeners, arguments);
+      return value === listeners ? zoom : value;
+    };
+
+    zoom.clickDistance = function(_) {
+      return arguments.length ? (clickDistance2 = (_ = +_) * _, zoom) : Math.sqrt(clickDistance2);
+    };
+
+    zoom.tapDistance = function(_) {
+      return arguments.length ? (tapDistance = +_, zoom) : tapDistance;
+    };
+
+    return zoom;
+  }
+
+  const StoreContext = React.createContext(null);
+  const Provider$1 = StoreContext.Provider;
+
+  const errorMessages = {
+      error001: () => '[React Flow]: Seems like you have not used zustand provider as an ancestor. Help: https://reactflow.dev/error#001',
+      error002: () => "It looks like you've created a new nodeTypes or edgeTypes object. If this wasn't on purpose please define the nodeTypes/edgeTypes outside of the component or memoize them.",
+      error003: (nodeType) => `Node type "${nodeType}" not found. Using fallback type "default".`,
+      error004: () => 'The React Flow parent container needs a width and a height to render the graph.',
+      error005: () => 'Only child nodes can use a parent extent.',
+      error006: () => "Can't create edge. An edge needs a source and a target.",
+      error007: (id) => `The old edge with id=${id} does not exist.`,
+      error009: (type) => `Marker type "${type}" doesn't exist.`,
+      error008: (sourceHandle, edge) => `Couldn't create edge for ${!sourceHandle ? 'source' : 'target'} handle id: "${!sourceHandle ? edge.sourceHandle : edge.targetHandle}", edge id: ${edge.id}.`,
+      error010: () => 'Handle: No node id found. Make sure to only use a Handle inside a custom Node.',
+      error011: (edgeType) => `Edge type "${edgeType}" not found. Using fallback type "default".`,
+      error012: (id) => `Node with id "${id}" does not exist, it may have been removed. This can happen when a node is deleted before the "onNodeClick" handler is called.`,
+  };
+
+  const zustandErrorMessage = errorMessages['error001']();
+  function useStore(selector, equalityFn) {
+      const store = React.useContext(StoreContext);
+      if (store === null) {
+          throw new Error(zustandErrorMessage);
+      }
+      return useStoreWithEqualityFn(store, selector, equalityFn);
+  }
+  const useStoreApi = () => {
+      const store = React.useContext(StoreContext);
+      if (store === null) {
+          throw new Error(zustandErrorMessage);
+      }
+      return React.useMemo(() => ({
+          getState: store.getState,
+          setState: store.setState,
+          subscribe: store.subscribe,
+          destroy: store.destroy,
+      }), [store]);
+  };
+
+  const selector$g = (s) => (s.userSelectionActive ? 'none' : 'all');
+  function Panel({ position, children, className, style, ...rest }) {
+      const pointerEvents = useStore(selector$g);
+      const positionClasses = `${position}`.split('-');
+      return (React.createElement("div", { className: cc(['react-flow__panel', className, ...positionClasses]), style: { ...style, pointerEvents }, ...rest }, children));
+  }
+
+  function Attribution({ proOptions, position = 'bottom-right' }) {
+      if (proOptions?.hideAttribution) {
+          return null;
+      }
+      return (React.createElement(Panel, { position: position, className: "react-flow__attribution", "data-message": "Please only hide this attribution when you are subscribed to React Flow Pro: https://reactflow.dev/pro" },
+          React.createElement("a", { href: "https://reactflow.dev", target: "_blank", rel: "noopener noreferrer", "aria-label": "React Flow attribution" }, "React Flow")));
+  }
+
+  const EdgeText = ({ x, y, label, labelStyle = {}, labelShowBg = true, labelBgStyle = {}, labelBgPadding = [2, 4], labelBgBorderRadius = 2, children, className, ...rest }) => {
+      const edgeRef = React.useRef(null);
+      const [edgeTextBbox, setEdgeTextBbox] = React.useState({ x: 0, y: 0, width: 0, height: 0 });
+      const edgeTextClasses = cc(['react-flow__edge-textwrapper', className]);
+      React.useEffect(() => {
+          if (edgeRef.current) {
+              const textBbox = edgeRef.current.getBBox();
+              setEdgeTextBbox({
+                  x: textBbox.x,
+                  y: textBbox.y,
+                  width: textBbox.width,
+                  height: textBbox.height,
+              });
+          }
+      }, [label]);
+      if (typeof label === 'undefined' || !label) {
+          return null;
+      }
+      return (React.createElement("g", { transform: `translate(${x - edgeTextBbox.width / 2} ${y - edgeTextBbox.height / 2})`, className: edgeTextClasses, visibility: edgeTextBbox.width ? 'visible' : 'hidden', ...rest },
+          labelShowBg && (React.createElement("rect", { width: edgeTextBbox.width + 2 * labelBgPadding[0], x: -labelBgPadding[0], y: -labelBgPadding[1], height: edgeTextBbox.height + 2 * labelBgPadding[1], className: "react-flow__edge-textbg", style: labelBgStyle, rx: labelBgBorderRadius, ry: labelBgBorderRadius })),
+          React.createElement("text", { className: "react-flow__edge-text", y: edgeTextBbox.height / 2, dy: "0.3em", ref: edgeRef, style: labelStyle }, label),
+          children));
+  };
+  var EdgeText$1 = React.memo(EdgeText);
+
+  const getDimensions = (node) => ({
+      width: node.offsetWidth,
+      height: node.offsetHeight,
+  });
+  const clamp = (val, min = 0, max = 1) => Math.min(Math.max(val, min), max);
+  const clampPosition = (position = { x: 0, y: 0 }, extent) => ({
+      x: clamp(position.x, extent[0][0], extent[1][0]),
+      y: clamp(position.y, extent[0][1], extent[1][1]),
+  });
+  // returns a number between 0 and 1 that represents the velocity of the movement
+  // when the mouse is close to the edge of the canvas
+  const calcAutoPanVelocity = (value, min, max) => {
+      if (value < min) {
+          return clamp(Math.abs(value - min), 1, 50) / 50;
+      }
+      else if (value > max) {
+          return -clamp(Math.abs(value - max), 1, 50) / 50;
+      }
+      return 0;
+  };
+  const calcAutoPan = (pos, bounds) => {
+      const xMovement = calcAutoPanVelocity(pos.x, 35, bounds.width - 35) * 20;
+      const yMovement = calcAutoPanVelocity(pos.y, 35, bounds.height - 35) * 20;
+      return [xMovement, yMovement];
+  };
+  const getHostForElement = (element) => element.getRootNode?.() || window?.document;
+  const getBoundsOfBoxes = (box1, box2) => ({
+      x: Math.min(box1.x, box2.x),
+      y: Math.min(box1.y, box2.y),
+      x2: Math.max(box1.x2, box2.x2),
+      y2: Math.max(box1.y2, box2.y2),
+  });
+  const rectToBox = ({ x, y, width, height }) => ({
+      x,
+      y,
+      x2: x + width,
+      y2: y + height,
+  });
+  const boxToRect = ({ x, y, x2, y2 }) => ({
+      x,
+      y,
+      width: x2 - x,
+      height: y2 - y,
+  });
+  const nodeToRect = (node) => ({
+      ...(node.positionAbsolute || { x: 0, y: 0 }),
+      width: node.width || 0,
+      height: node.height || 0,
+  });
+  const getOverlappingArea = (rectA, rectB) => {
+      const xOverlap = Math.max(0, Math.min(rectA.x + rectA.width, rectB.x + rectB.width) - Math.max(rectA.x, rectB.x));
+      const yOverlap = Math.max(0, Math.min(rectA.y + rectA.height, rectB.y + rectB.height) - Math.max(rectA.y, rectB.y));
+      return Math.ceil(xOverlap * yOverlap);
+  };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const isRectObject = (obj) => isNumeric(obj.width) && isNumeric(obj.height) && isNumeric(obj.x) && isNumeric(obj.y);
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  const isNumeric = (n) => !isNaN(n) && isFinite(n);
+  const internalsSymbol = Symbol.for('internals');
+  // used for a11y key board controls for nodes and edges
+  const elementSelectionKeys = ['Enter', ' ', 'Escape'];
+  const devWarn = (id, message) => {
+  };
+  const isReactKeyboardEvent = (event) => 'nativeEvent' in event;
+  function isInputDOMNode(event) {
+      const kbEvent = isReactKeyboardEvent(event) ? event.nativeEvent : event;
+      // using composed path for handling shadow dom
+      const target = (kbEvent.composedPath?.()?.[0] || event.target);
+      const isInput = ['INPUT', 'SELECT', 'TEXTAREA'].includes(target?.nodeName) || target?.hasAttribute('contenteditable');
+      // when an input field is focused we don't want to trigger deletion or movement of nodes
+      return isInput || !!target?.closest('.nokey');
+  }
+  const isMouseEvent = (event) => 'clientX' in event;
+  const getEventPosition = (event, bounds) => {
+      const isMouseTriggered = isMouseEvent(event);
+      const evtX = isMouseTriggered ? event.clientX : event.touches?.[0].clientX;
+      const evtY = isMouseTriggered ? event.clientY : event.touches?.[0].clientY;
+      return {
+          x: evtX - (bounds?.left ?? 0),
+          y: evtY - (bounds?.top ?? 0),
+      };
+  };
+  const isMacOs = () => typeof navigator !== 'undefined' && navigator?.userAgent?.indexOf('Mac') >= 0;
+
+  const BaseEdge = ({ id, path, labelX, labelY, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, markerEnd, markerStart, interactionWidth = 20, }) => {
+      return (React.createElement(React.Fragment, null,
+          React.createElement("path", { id: id, style: style, d: path, fill: "none", className: "react-flow__edge-path", markerEnd: markerEnd, markerStart: markerStart }),
+          interactionWidth && (React.createElement("path", { d: path, fill: "none", strokeOpacity: 0, strokeWidth: interactionWidth, className: "react-flow__edge-interaction" })),
+          label && isNumeric(labelX) && isNumeric(labelY) ? (React.createElement(EdgeText$1, { x: labelX, y: labelY, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius })) : null));
+  };
+  BaseEdge.displayName = 'BaseEdge';
+  function getMouseHandler$1(id, getState, handler) {
+      return handler === undefined
+          ? handler
+          : (event) => {
+              const edge = getState().edges.find((e) => e.id === id);
+              if (edge) {
+                  handler(event, { ...edge });
+              }
+          };
+  }
+  // this is used for straight edges and simple smoothstep edges (LTR, RTL, BTT, TTB)
+  function getEdgeCenter({ sourceX, sourceY, targetX, targetY, }) {
+      const xOffset = Math.abs(targetX - sourceX) / 2;
+      const centerX = targetX < sourceX ? targetX + xOffset : targetX - xOffset;
+      const yOffset = Math.abs(targetY - sourceY) / 2;
+      const centerY = targetY < sourceY ? targetY + yOffset : targetY - yOffset;
+      return [centerX, centerY, xOffset, yOffset];
+  }
+  function getBezierEdgeCenter({ sourceX, sourceY, targetX, targetY, sourceControlX, sourceControlY, targetControlX, targetControlY, }) {
+      // cubic bezier t=0.5 mid point, not the actual mid point, but easy to calculate
+      // https://stackoverflow.com/questions/67516101/how-to-find-distance-mid-point-of-bezier-curve
+      const centerX = sourceX * 0.125 + sourceControlX * 0.375 + targetControlX * 0.375 + targetX * 0.125;
+      const centerY = sourceY * 0.125 + sourceControlY * 0.375 + targetControlY * 0.375 + targetY * 0.125;
+      const offsetX = Math.abs(centerX - sourceX);
+      const offsetY = Math.abs(centerY - sourceY);
+      return [centerX, centerY, offsetX, offsetY];
+  }
+
+  var ConnectionMode;
+  (function (ConnectionMode) {
+      ConnectionMode["Strict"] = "strict";
+      ConnectionMode["Loose"] = "loose";
+  })(ConnectionMode || (ConnectionMode = {}));
+  var PanOnScrollMode;
+  (function (PanOnScrollMode) {
+      PanOnScrollMode["Free"] = "free";
+      PanOnScrollMode["Vertical"] = "vertical";
+      PanOnScrollMode["Horizontal"] = "horizontal";
+  })(PanOnScrollMode || (PanOnScrollMode = {}));
+  var SelectionMode;
+  (function (SelectionMode) {
+      SelectionMode["Partial"] = "partial";
+      SelectionMode["Full"] = "full";
+  })(SelectionMode || (SelectionMode = {}));
+
+  var ConnectionLineType;
+  (function (ConnectionLineType) {
+      ConnectionLineType["Bezier"] = "default";
+      ConnectionLineType["Straight"] = "straight";
+      ConnectionLineType["Step"] = "step";
+      ConnectionLineType["SmoothStep"] = "smoothstep";
+      ConnectionLineType["SimpleBezier"] = "simplebezier";
+  })(ConnectionLineType || (ConnectionLineType = {}));
+  var MarkerType;
+  (function (MarkerType) {
+      MarkerType["Arrow"] = "arrow";
+      MarkerType["ArrowClosed"] = "arrowclosed";
+  })(MarkerType || (MarkerType = {}));
+
+  var Position;
+  (function (Position) {
+      Position["Left"] = "left";
+      Position["Top"] = "top";
+      Position["Right"] = "right";
+      Position["Bottom"] = "bottom";
+  })(Position || (Position = {}));
+
+  function getControl({ pos, x1, y1, x2, y2 }) {
+      if (pos === Position.Left || pos === Position.Right) {
+          return [0.5 * (x1 + x2), y1];
+      }
+      return [x1, 0.5 * (y1 + y2)];
+  }
+  function getSimpleBezierPath({ sourceX, sourceY, sourcePosition = Position.Bottom, targetX, targetY, targetPosition = Position.Top, }) {
+      const [sourceControlX, sourceControlY] = getControl({
+          pos: sourcePosition,
+          x1: sourceX,
+          y1: sourceY,
+          x2: targetX,
+          y2: targetY,
+      });
+      const [targetControlX, targetControlY] = getControl({
+          pos: targetPosition,
+          x1: targetX,
+          y1: targetY,
+          x2: sourceX,
+          y2: sourceY,
+      });
+      const [labelX, labelY, offsetX, offsetY] = getBezierEdgeCenter({
+          sourceX,
+          sourceY,
+          targetX,
+          targetY,
+          sourceControlX,
+          sourceControlY,
+          targetControlX,
+          targetControlY,
+      });
+      return [
+          `M${sourceX},${sourceY} C${sourceControlX},${sourceControlY} ${targetControlX},${targetControlY} ${targetX},${targetY}`,
+          labelX,
+          labelY,
+          offsetX,
+          offsetY,
+      ];
+  }
+  const SimpleBezierEdge = React.memo(({ sourceX, sourceY, targetX, targetY, sourcePosition = Position.Bottom, targetPosition = Position.Top, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, markerEnd, markerStart, interactionWidth, }) => {
+      const [path, labelX, labelY] = getSimpleBezierPath({
+          sourceX,
+          sourceY,
+          sourcePosition,
+          targetX,
+          targetY,
+          targetPosition,
+      });
+      return (React.createElement(BaseEdge, { path: path, labelX: labelX, labelY: labelY, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius, style: style, markerEnd: markerEnd, markerStart: markerStart, interactionWidth: interactionWidth }));
+  });
+  SimpleBezierEdge.displayName = 'SimpleBezierEdge';
+
+  const handleDirections = {
+      [Position.Left]: { x: -1, y: 0 },
+      [Position.Right]: { x: 1, y: 0 },
+      [Position.Top]: { x: 0, y: -1 },
+      [Position.Bottom]: { x: 0, y: 1 },
+  };
+  const getDirection = ({ source, sourcePosition = Position.Bottom, target, }) => {
+      if (sourcePosition === Position.Left || sourcePosition === Position.Right) {
+          return source.x < target.x ? { x: 1, y: 0 } : { x: -1, y: 0 };
+      }
+      return source.y < target.y ? { x: 0, y: 1 } : { x: 0, y: -1 };
+  };
+  const distance = (a, b) => Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
+  // ith this function we try to mimic a orthogonal edge routing behaviour
+  // It's not as good as a real orthogonal edge routing but it's faster and good enough as a default for step and smooth step edges
+  function getPoints({ source, sourcePosition = Position.Bottom, target, targetPosition = Position.Top, center, offset, }) {
+      const sourceDir = handleDirections[sourcePosition];
+      const targetDir = handleDirections[targetPosition];
+      const sourceGapped = { x: source.x + sourceDir.x * offset, y: source.y + sourceDir.y * offset };
+      const targetGapped = { x: target.x + targetDir.x * offset, y: target.y + targetDir.y * offset };
+      const dir = getDirection({
+          source: sourceGapped,
+          sourcePosition,
+          target: targetGapped,
+      });
+      const dirAccessor = dir.x !== 0 ? 'x' : 'y';
+      const currDir = dir[dirAccessor];
+      let points = [];
+      let centerX, centerY;
+      const sourceGapOffset = { x: 0, y: 0 };
+      const targetGapOffset = { x: 0, y: 0 };
+      const [defaultCenterX, defaultCenterY, defaultOffsetX, defaultOffsetY] = getEdgeCenter({
+          sourceX: source.x,
+          sourceY: source.y,
+          targetX: target.x,
+          targetY: target.y,
+      });
+      // opposite handle positions, default case
+      if (sourceDir[dirAccessor] * targetDir[dirAccessor] === -1) {
+          centerX = center.x ?? defaultCenterX;
+          centerY = center.y ?? defaultCenterY;
+          //    --->
+          //    |
+          // >---
+          const verticalSplit = [
+              { x: centerX, y: sourceGapped.y },
+              { x: centerX, y: targetGapped.y },
+          ];
+          //    |
+          //  ---
+          //  |
+          const horizontalSplit = [
+              { x: sourceGapped.x, y: centerY },
+              { x: targetGapped.x, y: centerY },
+          ];
+          if (sourceDir[dirAccessor] === currDir) {
+              points = dirAccessor === 'x' ? verticalSplit : horizontalSplit;
+          }
+          else {
+              points = dirAccessor === 'x' ? horizontalSplit : verticalSplit;
+          }
+      }
+      else {
+          // sourceTarget means we take x from source and y from target, targetSource is the opposite
+          const sourceTarget = [{ x: sourceGapped.x, y: targetGapped.y }];
+          const targetSource = [{ x: targetGapped.x, y: sourceGapped.y }];
+          // this handles edges with same handle positions
+          if (dirAccessor === 'x') {
+              points = sourceDir.x === currDir ? targetSource : sourceTarget;
+          }
+          else {
+              points = sourceDir.y === currDir ? sourceTarget : targetSource;
+          }
+          if (sourcePosition === targetPosition) {
+              const diff = Math.abs(source[dirAccessor] - target[dirAccessor]);
+              // if an edge goes from right to right for example (sourcePosition === targetPosition) and the distance between source.x and target.x is less than the offset, the added point and the gapped source/target will overlap. This leads to a weird edge path. To avoid this we add a gapOffset to the source/target
+              if (diff <= offset) {
+                  const gapOffset = Math.min(offset - 1, offset - diff);
+                  if (sourceDir[dirAccessor] === currDir) {
+                      sourceGapOffset[dirAccessor] = (sourceGapped[dirAccessor] > source[dirAccessor] ? -1 : 1) * gapOffset;
+                  }
+                  else {
+                      targetGapOffset[dirAccessor] = (targetGapped[dirAccessor] > target[dirAccessor] ? -1 : 1) * gapOffset;
+                  }
+              }
+          }
+          // these are conditions for handling mixed handle positions like Right -> Bottom for example
+          if (sourcePosition !== targetPosition) {
+              const dirAccessorOpposite = dirAccessor === 'x' ? 'y' : 'x';
+              const isSameDir = sourceDir[dirAccessor] === targetDir[dirAccessorOpposite];
+              const sourceGtTargetOppo = sourceGapped[dirAccessorOpposite] > targetGapped[dirAccessorOpposite];
+              const sourceLtTargetOppo = sourceGapped[dirAccessorOpposite] < targetGapped[dirAccessorOpposite];
+              const flipSourceTarget = (sourceDir[dirAccessor] === 1 && ((!isSameDir && sourceGtTargetOppo) || (isSameDir && sourceLtTargetOppo))) ||
+                  (sourceDir[dirAccessor] !== 1 && ((!isSameDir && sourceLtTargetOppo) || (isSameDir && sourceGtTargetOppo)));
+              if (flipSourceTarget) {
+                  points = dirAccessor === 'x' ? sourceTarget : targetSource;
+              }
+          }
+          const sourceGapPoint = { x: sourceGapped.x + sourceGapOffset.x, y: sourceGapped.y + sourceGapOffset.y };
+          const targetGapPoint = { x: targetGapped.x + targetGapOffset.x, y: targetGapped.y + targetGapOffset.y };
+          const maxXDistance = Math.max(Math.abs(sourceGapPoint.x - points[0].x), Math.abs(targetGapPoint.x - points[0].x));
+          const maxYDistance = Math.max(Math.abs(sourceGapPoint.y - points[0].y), Math.abs(targetGapPoint.y - points[0].y));
+          // we want to place the label on the longest segment of the edge
+          if (maxXDistance >= maxYDistance) {
+              centerX = (sourceGapPoint.x + targetGapPoint.x) / 2;
+              centerY = points[0].y;
+          }
+          else {
+              centerX = points[0].x;
+              centerY = (sourceGapPoint.y + targetGapPoint.y) / 2;
+          }
+      }
+      const pathPoints = [
+          source,
+          { x: sourceGapped.x + sourceGapOffset.x, y: sourceGapped.y + sourceGapOffset.y },
+          ...points,
+          { x: targetGapped.x + targetGapOffset.x, y: targetGapped.y + targetGapOffset.y },
+          target,
+      ];
+      return [pathPoints, centerX, centerY, defaultOffsetX, defaultOffsetY];
+  }
+  function getBend(a, b, c, size) {
+      const bendSize = Math.min(distance(a, b) / 2, distance(b, c) / 2, size);
+      const { x, y } = b;
+      // no bend
+      if ((a.x === x && x === c.x) || (a.y === y && y === c.y)) {
+          return `L${x} ${y}`;
+      }
+      // first segment is horizontal
+      if (a.y === y) {
+          const xDir = a.x < c.x ? -1 : 1;
+          const yDir = a.y < c.y ? 1 : -1;
+          return `L ${x + bendSize * xDir},${y}Q ${x},${y} ${x},${y + bendSize * yDir}`;
+      }
+      const xDir = a.x < c.x ? 1 : -1;
+      const yDir = a.y < c.y ? -1 : 1;
+      return `L ${x},${y + bendSize * yDir}Q ${x},${y} ${x + bendSize * xDir},${y}`;
+  }
+  function getSmoothStepPath({ sourceX, sourceY, sourcePosition = Position.Bottom, targetX, targetY, targetPosition = Position.Top, borderRadius = 5, centerX, centerY, offset = 20, }) {
+      const [points, labelX, labelY, offsetX, offsetY] = getPoints({
+          source: { x: sourceX, y: sourceY },
+          sourcePosition,
+          target: { x: targetX, y: targetY },
+          targetPosition,
+          center: { x: centerX, y: centerY },
+          offset,
+      });
+      const path = points.reduce((res, p, i) => {
+          let segment = '';
+          if (i > 0 && i < points.length - 1) {
+              segment = getBend(points[i - 1], p, points[i + 1], borderRadius);
+          }
+          else {
+              segment = `${i === 0 ? 'M' : 'L'}${p.x} ${p.y}`;
+          }
+          res += segment;
+          return res;
+      }, '');
+      return [path, labelX, labelY, offsetX, offsetY];
+  }
+  const SmoothStepEdge = React.memo(({ sourceX, sourceY, targetX, targetY, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, sourcePosition = Position.Bottom, targetPosition = Position.Top, markerEnd, markerStart, pathOptions, interactionWidth, }) => {
+      const [path, labelX, labelY] = getSmoothStepPath({
+          sourceX,
+          sourceY,
+          sourcePosition,
+          targetX,
+          targetY,
+          targetPosition,
+          borderRadius: pathOptions?.borderRadius,
+          offset: pathOptions?.offset,
+      });
+      return (React.createElement(BaseEdge, { path: path, labelX: labelX, labelY: labelY, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius, style: style, markerEnd: markerEnd, markerStart: markerStart, interactionWidth: interactionWidth }));
+  });
+  SmoothStepEdge.displayName = 'SmoothStepEdge';
+
+  const StepEdge = React.memo((props) => (React.createElement(SmoothStepEdge, { ...props, pathOptions: React.useMemo(() => ({ borderRadius: 0, offset: props.pathOptions?.offset }), [props.pathOptions?.offset]) })));
+  StepEdge.displayName = 'StepEdge';
+
+  function getStraightPath({ sourceX, sourceY, targetX, targetY, }) {
+      const [labelX, labelY, offsetX, offsetY] = getEdgeCenter({
+          sourceX,
+          sourceY,
+          targetX,
+          targetY,
+      });
+      return [`M ${sourceX},${sourceY}L ${targetX},${targetY}`, labelX, labelY, offsetX, offsetY];
+  }
+  const StraightEdge = React.memo(({ sourceX, sourceY, targetX, targetY, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, markerEnd, markerStart, interactionWidth, }) => {
+      const [path, labelX, labelY] = getStraightPath({ sourceX, sourceY, targetX, targetY });
+      return (React.createElement(BaseEdge, { path: path, labelX: labelX, labelY: labelY, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius, style: style, markerEnd: markerEnd, markerStart: markerStart, interactionWidth: interactionWidth }));
+  });
+  StraightEdge.displayName = 'StraightEdge';
+
+  function calculateControlOffset(distance, curvature) {
+      if (distance >= 0) {
+          return 0.5 * distance;
+      }
+      return curvature * 25 * Math.sqrt(-distance);
+  }
+  function getControlWithCurvature({ pos, x1, y1, x2, y2, c }) {
+      switch (pos) {
+          case Position.Left:
+              return [x1 - calculateControlOffset(x1 - x2, c), y1];
+          case Position.Right:
+              return [x1 + calculateControlOffset(x2 - x1, c), y1];
+          case Position.Top:
+              return [x1, y1 - calculateControlOffset(y1 - y2, c)];
+          case Position.Bottom:
+              return [x1, y1 + calculateControlOffset(y2 - y1, c)];
+      }
+  }
+  function getBezierPath({ sourceX, sourceY, sourcePosition = Position.Bottom, targetX, targetY, targetPosition = Position.Top, curvature = 0.25, }) {
+      const [sourceControlX, sourceControlY] = getControlWithCurvature({
+          pos: sourcePosition,
+          x1: sourceX,
+          y1: sourceY,
+          x2: targetX,
+          y2: targetY,
+          c: curvature,
+      });
+      const [targetControlX, targetControlY] = getControlWithCurvature({
+          pos: targetPosition,
+          x1: targetX,
+          y1: targetY,
+          x2: sourceX,
+          y2: sourceY,
+          c: curvature,
+      });
+      const [labelX, labelY, offsetX, offsetY] = getBezierEdgeCenter({
+          sourceX,
+          sourceY,
+          targetX,
+          targetY,
+          sourceControlX,
+          sourceControlY,
+          targetControlX,
+          targetControlY,
+      });
+      return [
+          `M${sourceX},${sourceY} C${sourceControlX},${sourceControlY} ${targetControlX},${targetControlY} ${targetX},${targetY}`,
+          labelX,
+          labelY,
+          offsetX,
+          offsetY,
+      ];
+  }
+  const BezierEdge = React.memo(({ sourceX, sourceY, targetX, targetY, sourcePosition = Position.Bottom, targetPosition = Position.Top, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, markerEnd, markerStart, pathOptions, interactionWidth, }) => {
+      const [path, labelX, labelY] = getBezierPath({
+          sourceX,
+          sourceY,
+          sourcePosition,
+          targetX,
+          targetY,
+          targetPosition,
+          curvature: pathOptions?.curvature,
+      });
+      return (React.createElement(BaseEdge, { path: path, labelX: labelX, labelY: labelY, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius, style: style, markerEnd: markerEnd, markerStart: markerStart, interactionWidth: interactionWidth }));
+  });
+  BezierEdge.displayName = 'BezierEdge';
+
+  const NodeIdContext = React.createContext(null);
+  const Provider = NodeIdContext.Provider;
+  NodeIdContext.Consumer;
+  const useNodeId = () => {
+      const nodeId = React.useContext(NodeIdContext);
+      return nodeId;
+  };
+
+  const isEdge = (element) => 'id' in element && 'source' in element && 'target' in element;
+  const getEdgeId = ({ source, sourceHandle, target, targetHandle }) => `reactflow__edge-${source}${sourceHandle || ''}-${target}${targetHandle || ''}`;
+  const getMarkerId = (marker, rfId) => {
+      if (typeof marker === 'undefined') {
+          return '';
+      }
+      if (typeof marker === 'string') {
+          return marker;
+      }
+      const idPrefix = rfId ? `${rfId}__` : '';
+      return `${idPrefix}${Object.keys(marker)
+        .sort()
+        .map((key) => `${key}=${marker[key]}`)
+        .join('&')}`;
+  };
+  const connectionExists = (edge, edges) => {
+      return edges.some((el) => el.source === edge.source &&
+          el.target === edge.target &&
+          (el.sourceHandle === edge.sourceHandle || (!el.sourceHandle && !edge.sourceHandle)) &&
+          (el.targetHandle === edge.targetHandle || (!el.targetHandle && !edge.targetHandle)));
+  };
+  const addEdge = (edgeParams, edges) => {
+      if (!edgeParams.source || !edgeParams.target) {
+          return edges;
+      }
+      let edge;
+      if (isEdge(edgeParams)) {
+          edge = { ...edgeParams };
+      }
+      else {
+          edge = {
+              ...edgeParams,
+              id: getEdgeId(edgeParams),
+          };
+      }
+      if (connectionExists(edge, edges)) {
+          return edges;
+      }
+      return edges.concat(edge);
+  };
+  const pointToRendererPoint = ({ x, y }, [tx, ty, tScale], snapToGrid, [snapX, snapY]) => {
+      const position = {
+          x: (x - tx) / tScale,
+          y: (y - ty) / tScale,
+      };
+      if (snapToGrid) {
+          return {
+              x: snapX * Math.round(position.x / snapX),
+              y: snapY * Math.round(position.y / snapY),
+          };
+      }
+      return position;
+  };
+  const rendererPointToPoint = ({ x, y }, [tx, ty, tScale]) => {
+      return {
+          x: x * tScale + tx,
+          y: y * tScale + ty,
+      };
+  };
+  const getNodePositionWithOrigin = (node, nodeOrigin = [0, 0]) => {
+      if (!node) {
+          return {
+              x: 0,
+              y: 0,
+              positionAbsolute: {
+                  x: 0,
+                  y: 0,
+              },
+          };
+      }
+      const offsetX = (node.width ?? 0) * nodeOrigin[0];
+      const offsetY = (node.height ?? 0) * nodeOrigin[1];
+      const position = {
+          x: node.position.x - offsetX,
+          y: node.position.y - offsetY,
+      };
+      return {
+          ...position,
+          positionAbsolute: node.positionAbsolute
+              ? {
+                  x: node.positionAbsolute.x - offsetX,
+                  y: node.positionAbsolute.y - offsetY,
+              }
+              : position,
+      };
+  };
+  const getNodesBounds = (nodes, nodeOrigin = [0, 0]) => {
+      if (nodes.length === 0) {
+          return { x: 0, y: 0, width: 0, height: 0 };
+      }
+      const box = nodes.reduce((currBox, node) => {
+          const { x, y } = getNodePositionWithOrigin(node, nodeOrigin).positionAbsolute;
+          return getBoundsOfBoxes(currBox, rectToBox({
+              x,
+              y,
+              width: node.width || 0,
+              height: node.height || 0,
+          }));
+      }, { x: Infinity, y: Infinity, x2: -Infinity, y2: -Infinity });
+      return boxToRect(box);
+  };
+  const getNodesInside = (nodeInternals, rect, [tx, ty, tScale] = [0, 0, 1], partially = false, 
+  // set excludeNonSelectableNodes if you want to pay attention to the nodes "selectable" attribute
+  excludeNonSelectableNodes = false, nodeOrigin = [0, 0]) => {
+      const paneRect = {
+          x: (rect.x - tx) / tScale,
+          y: (rect.y - ty) / tScale,
+          width: rect.width / tScale,
+          height: rect.height / tScale,
+      };
+      const visibleNodes = [];
+      nodeInternals.forEach((node) => {
+          const { width, height, selectable = true, hidden = false } = node;
+          if ((excludeNonSelectableNodes && !selectable) || hidden) {
+              return false;
+          }
+          const { positionAbsolute } = getNodePositionWithOrigin(node, nodeOrigin);
+          const nodeRect = {
+              x: positionAbsolute.x,
+              y: positionAbsolute.y,
+              width: width || 0,
+              height: height || 0,
+          };
+          const overlappingArea = getOverlappingArea(paneRect, nodeRect);
+          const notInitialized = typeof width === 'undefined' || typeof height === 'undefined' || width === null || height === null;
+          const partiallyVisible = partially && overlappingArea > 0;
+          const area = (width || 0) * (height || 0);
+          const isVisible = notInitialized || partiallyVisible || overlappingArea >= area;
+          if (isVisible || node.dragging) {
+              visibleNodes.push(node);
+          }
+      });
+      return visibleNodes;
+  };
+  const getConnectedEdges = (nodes, edges) => {
+      const nodeIds = nodes.map((node) => node.id);
+      return edges.filter((edge) => nodeIds.includes(edge.source) || nodeIds.includes(edge.target));
+  };
+  const getViewportForBounds = (bounds, width, height, minZoom, maxZoom, padding = 0.1) => {
+      const xZoom = width / (bounds.width * (1 + padding));
+      const yZoom = height / (bounds.height * (1 + padding));
+      const zoom = Math.min(xZoom, yZoom);
+      const clampedZoom = clamp(zoom, minZoom, maxZoom);
+      const boundsCenterX = bounds.x + bounds.width / 2;
+      const boundsCenterY = bounds.y + bounds.height / 2;
+      const x = width / 2 - boundsCenterX * clampedZoom;
+      const y = height / 2 - boundsCenterY * clampedZoom;
+      return { x, y, zoom: clampedZoom };
+  };
+  const getD3Transition = (selection, duration = 0) => {
+      return selection.transition().duration(duration);
+  };
+
+  // this functions collects all handles and adds an absolute position
+  // so that we can later find the closest handle to the mouse position
+  function getHandles(node, handleBounds, type, currentHandle) {
+      return (handleBounds[type] || []).reduce((res, h) => {
+          if (`${node.id}-${h.id}-${type}` !== currentHandle) {
+              res.push({
+                  id: h.id || null,
+                  type,
+                  nodeId: node.id,
+                  x: (node.positionAbsolute?.x ?? 0) + h.x + h.width / 2,
+                  y: (node.positionAbsolute?.y ?? 0) + h.y + h.height / 2,
+              });
+          }
+          return res;
+      }, []);
+  }
+  function getClosestHandle(event, doc, pos, connectionRadius, handles, validator) {
+      // we always want to prioritize the handle below the mouse cursor over the closest distance handle,
+      // because it could be that the center of another handle is closer to the mouse pointer than the handle below the cursor
+      const { x, y } = getEventPosition(event);
+      const domNodes = doc.elementsFromPoint(x, y);
+      const handleBelow = domNodes.find((el) => el.classList.contains('react-flow__handle'));
+      if (handleBelow) {
+          const handleNodeId = handleBelow.getAttribute('data-nodeid');
+          if (handleNodeId) {
+              const handleType = getHandleType(undefined, handleBelow);
+              const handleId = handleBelow.getAttribute('data-handleid');
+              const validHandleResult = validator({ nodeId: handleNodeId, id: handleId, type: handleType });
+              if (validHandleResult) {
+                  const handle = handles.find((h) => h.nodeId === handleNodeId && h.type === handleType && h.id === handleId);
+                  return {
+                      handle: {
+                          id: handleId,
+                          type: handleType,
+                          nodeId: handleNodeId,
+                          x: handle?.x || pos.x,
+                          y: handle?.y || pos.y,
+                      },
+                      validHandleResult,
+                  };
+              }
+          }
+      }
+      // if we couldn't find a handle below the mouse cursor we look for the closest distance based on the connectionRadius
+      let closestHandles = [];
+      let minDistance = Infinity;
+      handles.forEach((handle) => {
+          const distance = Math.sqrt((handle.x - pos.x) ** 2 + (handle.y - pos.y) ** 2);
+          if (distance <= connectionRadius) {
+              const validHandleResult = validator(handle);
+              if (distance <= minDistance) {
+                  if (distance < minDistance) {
+                      closestHandles = [{ handle, validHandleResult }];
+                  }
+                  else if (distance === minDistance) {
+                      // when multiple handles are on the same distance we collect all of them
+                      closestHandles.push({
+                          handle,
+                          validHandleResult,
+                      });
+                  }
+                  minDistance = distance;
+              }
+          }
+      });
+      if (!closestHandles.length) {
+          return { handle: null, validHandleResult: defaultResult() };
+      }
+      if (closestHandles.length === 1) {
+          return closestHandles[0];
+      }
+      const hasValidHandle = closestHandles.some(({ validHandleResult }) => validHandleResult.isValid);
+      const hasTargetHandle = closestHandles.some(({ handle }) => handle.type === 'target');
+      // if multiple handles are layouted on top of each other we prefer the one with type = target and the one that is valid
+      return (closestHandles.find(({ handle, validHandleResult }) => hasTargetHandle ? handle.type === 'target' : (hasValidHandle ? validHandleResult.isValid : true)) || closestHandles[0]);
+  }
+  const nullConnection = { source: null, target: null, sourceHandle: null, targetHandle: null };
+  const defaultResult = () => ({
+      handleDomNode: null,
+      isValid: false,
+      connection: nullConnection,
+      endHandle: null,
+  });
+  // checks if  and returns connection in fom of an object { source: 123, target: 312 }
+  function isValidHandle(handle, connectionMode, fromNodeId, fromHandleId, fromType, isValidConnection, doc) {
+      const isTarget = fromType === 'target';
+      const handleToCheck = doc.querySelector(`.react-flow__handle[data-id="${handle?.nodeId}-${handle?.id}-${handle?.type}"]`);
+      const result = {
+          ...defaultResult(),
+          handleDomNode: handleToCheck,
+      };
+      if (handleToCheck) {
+          const handleType = getHandleType(undefined, handleToCheck);
+          const handleNodeId = handleToCheck.getAttribute('data-nodeid');
+          const handleId = handleToCheck.getAttribute('data-handleid');
+          const connectable = handleToCheck.classList.contains('connectable');
+          const connectableEnd = handleToCheck.classList.contains('connectableend');
+          const connection = {
+              source: isTarget ? handleNodeId : fromNodeId,
+              sourceHandle: isTarget ? handleId : fromHandleId,
+              target: isTarget ? fromNodeId : handleNodeId,
+              targetHandle: isTarget ? fromHandleId : handleId,
+          };
+          result.connection = connection;
+          const isConnectable = connectable && connectableEnd;
+          // in strict mode we don't allow target to target or source to source connections
+          const isValid = isConnectable &&
+              (connectionMode === ConnectionMode.Strict
+                  ? (isTarget && handleType === 'source') || (!isTarget && handleType === 'target')
+                  : handleNodeId !== fromNodeId || handleId !== fromHandleId);
+          if (isValid) {
+              result.endHandle = {
+                  nodeId: handleNodeId,
+                  handleId,
+                  type: handleType,
+              };
+              result.isValid = isValidConnection(connection);
+          }
+      }
+      return result;
+  }
+  function getHandleLookup({ nodes, nodeId, handleId, handleType }) {
+      return nodes.reduce((res, node) => {
+          if (node[internalsSymbol]) {
+              const { handleBounds } = node[internalsSymbol];
+              let sourceHandles = [];
+              let targetHandles = [];
+              if (handleBounds) {
+                  sourceHandles = getHandles(node, handleBounds, 'source', `${nodeId}-${handleId}-${handleType}`);
+                  targetHandles = getHandles(node, handleBounds, 'target', `${nodeId}-${handleId}-${handleType}`);
+              }
+              res.push(...sourceHandles, ...targetHandles);
+          }
+          return res;
+      }, []);
+  }
+  function getHandleType(edgeUpdaterType, handleDomNode) {
+      if (edgeUpdaterType) {
+          return edgeUpdaterType;
+      }
+      else if (handleDomNode?.classList.contains('target')) {
+          return 'target';
+      }
+      else if (handleDomNode?.classList.contains('source')) {
+          return 'source';
+      }
+      return null;
+  }
+  function resetRecentHandle(handleDomNode) {
+      handleDomNode?.classList.remove('valid', 'connecting', 'react-flow__handle-valid', 'react-flow__handle-connecting');
+  }
+  function getConnectionStatus(isInsideConnectionRadius, isHandleValid) {
+      let connectionStatus = null;
+      if (isHandleValid) {
+          connectionStatus = 'valid';
+      }
+      else if (isInsideConnectionRadius && !isHandleValid) {
+          connectionStatus = 'invalid';
+      }
+      return connectionStatus;
+  }
+
+  function handlePointerDown({ event, handleId, nodeId, onConnect, isTarget, getState, setState, isValidConnection, edgeUpdaterType, onReconnectEnd, }) {
+      // when react-flow is used inside a shadow root we can't use document
+      const doc = getHostForElement(event.target);
+      const { connectionMode, domNode, autoPanOnConnect, connectionRadius, onConnectStart, panBy, getNodes, cancelConnection, } = getState();
+      let autoPanId = 0;
+      let closestHandle;
+      const { x, y } = getEventPosition(event);
+      const clickedHandle = doc?.elementFromPoint(x, y);
+      const handleType = getHandleType(edgeUpdaterType, clickedHandle);
+      const containerBounds = domNode?.getBoundingClientRect();
+      if (!containerBounds || !handleType) {
+          return;
+      }
+      let prevActiveHandle;
+      let connectionPosition = getEventPosition(event, containerBounds);
+      let autoPanStarted = false;
+      let connection = null;
+      let isValid = false;
+      let handleDomNode = null;
+      const handleLookup = getHandleLookup({
+          nodes: getNodes(),
+          nodeId,
+          handleId,
+          handleType,
+      });
+      // when the user is moving the mouse close to the edge of the canvas while connecting we move the canvas
+      const autoPan = () => {
+          if (!autoPanOnConnect) {
+              return;
+          }
+          const [xMovement, yMovement] = calcAutoPan(connectionPosition, containerBounds);
+          panBy({ x: xMovement, y: yMovement });
+          autoPanId = requestAnimationFrame(autoPan);
+      };
+      setState({
+          connectionPosition,
+          connectionStatus: null,
+          // connectionNodeId etc will be removed in the next major in favor of connectionStartHandle
+          connectionNodeId: nodeId,
+          connectionHandleId: handleId,
+          connectionHandleType: handleType,
+          connectionStartHandle: {
+              nodeId,
+              handleId,
+              type: handleType,
+          },
+          connectionEndHandle: null,
+      });
+      onConnectStart?.(event, { nodeId, handleId, handleType });
+      function onPointerMove(event) {
+          const { transform } = getState();
+          connectionPosition = getEventPosition(event, containerBounds);
+          const { handle, validHandleResult } = getClosestHandle(event, doc, pointToRendererPoint(connectionPosition, transform, false, [1, 1]), connectionRadius, handleLookup, (handle) => isValidHandle(handle, connectionMode, nodeId, handleId, isTarget ? 'target' : 'source', isValidConnection, doc));
+          closestHandle = handle;
+          if (!autoPanStarted) {
+              autoPan();
+              autoPanStarted = true;
+          }
+          handleDomNode = validHandleResult.handleDomNode;
+          connection = validHandleResult.connection;
+          isValid = validHandleResult.isValid;
+          setState({
+              connectionPosition: closestHandle && isValid
+                  ? rendererPointToPoint({
+                      x: closestHandle.x,
+                      y: closestHandle.y,
+                  }, transform)
+                  : connectionPosition,
+              connectionStatus: getConnectionStatus(!!closestHandle, isValid),
+              connectionEndHandle: validHandleResult.endHandle,
+          });
+          if (!closestHandle && !isValid && !handleDomNode) {
+              return resetRecentHandle(prevActiveHandle);
+          }
+          if (connection.source !== connection.target && handleDomNode) {
+              resetRecentHandle(prevActiveHandle);
+              prevActiveHandle = handleDomNode;
+              // @todo: remove the old class names "react-flow__handle-" in the next major version
+              handleDomNode.classList.add('connecting', 'react-flow__handle-connecting');
+              handleDomNode.classList.toggle('valid', isValid);
+              handleDomNode.classList.toggle('react-flow__handle-valid', isValid);
+          }
+      }
+      function onPointerUp(event) {
+          if ((closestHandle || handleDomNode) && connection && isValid) {
+              onConnect?.(connection);
+          }
+          // it's important to get a fresh reference from the store here
+          // in order to get the latest state of onConnectEnd
+          getState().onConnectEnd?.(event);
+          if (edgeUpdaterType) {
+              onReconnectEnd?.(event);
+          }
+          resetRecentHandle(prevActiveHandle);
+          cancelConnection();
+          cancelAnimationFrame(autoPanId);
+          autoPanStarted = false;
+          isValid = false;
+          connection = null;
+          handleDomNode = null;
+          doc.removeEventListener('mousemove', onPointerMove);
+          doc.removeEventListener('mouseup', onPointerUp);
+          doc.removeEventListener('touchmove', onPointerMove);
+          doc.removeEventListener('touchend', onPointerUp);
+      }
+      doc.addEventListener('mousemove', onPointerMove);
+      doc.addEventListener('mouseup', onPointerUp);
+      doc.addEventListener('touchmove', onPointerMove);
+      doc.addEventListener('touchend', onPointerUp);
+  }
+
+  const alwaysValid = () => true;
+  const selector$f = (s) => ({
+      connectionStartHandle: s.connectionStartHandle,
+      connectOnClick: s.connectOnClick,
+      noPanClassName: s.noPanClassName,
+  });
+  const connectingSelector = (nodeId, handleId, type) => (state) => {
+      const { connectionStartHandle: startHandle, connectionEndHandle: endHandle, connectionClickStartHandle: clickHandle, } = state;
+      return {
+          connecting: (startHandle?.nodeId === nodeId && startHandle?.handleId === handleId && startHandle?.type === type) ||
+              (endHandle?.nodeId === nodeId && endHandle?.handleId === handleId && endHandle?.type === type),
+          clickConnecting: clickHandle?.nodeId === nodeId && clickHandle?.handleId === handleId && clickHandle?.type === type,
+      };
+  };
+  const Handle = React.forwardRef(({ type = 'source', position = Position.Top, isValidConnection, isConnectable = true, isConnectableStart = true, isConnectableEnd = true, id, onConnect, children, className, onMouseDown, onTouchStart, ...rest }, ref) => {
+      const handleId = id || null;
+      const isTarget = type === 'target';
+      const store = useStoreApi();
+      const nodeId = useNodeId();
+      const { connectOnClick, noPanClassName } = useStore(selector$f, shallow);
+      const { connecting, clickConnecting } = useStore(connectingSelector(nodeId, handleId, type), shallow);
+      if (!nodeId) {
+          store.getState().onError?.('010', errorMessages['error010']());
+      }
+      const onConnectExtended = (params) => {
+          const { defaultEdgeOptions, onConnect: onConnectAction, hasDefaultEdges } = store.getState();
+          const edgeParams = {
+              ...defaultEdgeOptions,
+              ...params,
+          };
+          if (hasDefaultEdges) {
+              const { edges, setEdges } = store.getState();
+              setEdges(addEdge(edgeParams, edges));
+          }
+          onConnectAction?.(edgeParams);
+          onConnect?.(edgeParams);
+      };
+      const onPointerDown = (event) => {
+          if (!nodeId) {
+              return;
+          }
+          const isMouseTriggered = isMouseEvent(event);
+          if (isConnectableStart && ((isMouseTriggered && event.button === 0) || !isMouseTriggered)) {
+              handlePointerDown({
+                  event,
+                  handleId,
+                  nodeId,
+                  onConnect: onConnectExtended,
+                  isTarget,
+                  getState: store.getState,
+                  setState: store.setState,
+                  isValidConnection: isValidConnection || store.getState().isValidConnection || alwaysValid,
+              });
+          }
+          if (isMouseTriggered) {
+              onMouseDown?.(event);
+          }
+          else {
+              onTouchStart?.(event);
+          }
+      };
+      const onClick = (event) => {
+          const { onClickConnectStart, onClickConnectEnd, connectionClickStartHandle, connectionMode, isValidConnection: isValidConnectionStore, } = store.getState();
+          if (!nodeId || (!connectionClickStartHandle && !isConnectableStart)) {
+              return;
+          }
+          if (!connectionClickStartHandle) {
+              onClickConnectStart?.(event, { nodeId, handleId, handleType: type });
+              store.setState({ connectionClickStartHandle: { nodeId, type, handleId } });
+              return;
+          }
+          const doc = getHostForElement(event.target);
+          const isValidConnectionHandler = isValidConnection || isValidConnectionStore || alwaysValid;
+          const { connection, isValid } = isValidHandle({
+              nodeId,
+              id: handleId,
+              type,
+          }, connectionMode, connectionClickStartHandle.nodeId, connectionClickStartHandle.handleId || null, connectionClickStartHandle.type, isValidConnectionHandler, doc);
+          if (isValid) {
+              onConnectExtended(connection);
+          }
+          onClickConnectEnd?.(event);
+          store.setState({ connectionClickStartHandle: null });
+      };
+      return (React.createElement("div", { "data-handleid": handleId, "data-nodeid": nodeId, "data-handlepos": position, "data-id": `${nodeId}-${handleId}-${type}`, className: cc([
+              'react-flow__handle',
+              `react-flow__handle-${position}`,
+              'nodrag',
+              noPanClassName,
+              className,
+              {
+                  source: !isTarget,
+                  target: isTarget,
+                  connectable: isConnectable,
+                  connectablestart: isConnectableStart,
+                  connectableend: isConnectableEnd,
+                  connecting: clickConnecting,
+                  // this class is used to style the handle when the user is connecting
+                  connectionindicator: isConnectable && ((isConnectableStart && !connecting) || (isConnectableEnd && connecting)),
+              },
+          ]), onMouseDown: onPointerDown, onTouchStart: onPointerDown, onClick: connectOnClick ? onClick : undefined, ref: ref, ...rest }, children));
+  });
+  Handle.displayName = 'Handle';
+  var Handle$1 = React.memo(Handle);
+
+  const DefaultNode = ({ data, isConnectable, targetPosition = Position.Top, sourcePosition = Position.Bottom, }) => {
+      return (React.createElement(React.Fragment, null,
+          React.createElement(Handle$1, { type: "target", position: targetPosition, isConnectable: isConnectable }),
+          data?.label,
+          React.createElement(Handle$1, { type: "source", position: sourcePosition, isConnectable: isConnectable })));
+  };
+  DefaultNode.displayName = 'DefaultNode';
+  var DefaultNode$1 = React.memo(DefaultNode);
+
+  const InputNode = ({ data, isConnectable, sourcePosition = Position.Bottom }) => (React.createElement(React.Fragment, null,
+      data?.label,
+      React.createElement(Handle$1, { type: "source", position: sourcePosition, isConnectable: isConnectable })));
+  InputNode.displayName = 'InputNode';
+  var InputNode$1 = React.memo(InputNode);
+
+  const OutputNode = ({ data, isConnectable, targetPosition = Position.Top }) => (React.createElement(React.Fragment, null,
+      React.createElement(Handle$1, { type: "target", position: targetPosition, isConnectable: isConnectable }),
+      data?.label));
+  OutputNode.displayName = 'OutputNode';
+  var OutputNode$1 = React.memo(OutputNode);
+
+  const GroupNode = () => null;
+  GroupNode.displayName = 'GroupNode';
+
+  const selector$e = (s) => ({
+      selectedNodes: s.getNodes().filter((n) => n.selected),
+      selectedEdges: s.edges.filter((e) => e.selected).map((e) => ({ ...e })),
+  });
+  const selectId = (obj) => obj.id;
+  function areEqual(a, b) {
+      return (shallow(a.selectedNodes.map(selectId), b.selectedNodes.map(selectId)) &&
+          shallow(a.selectedEdges.map(selectId), b.selectedEdges.map(selectId)));
+  }
+  // This is just a helper component for calling the onSelectionChange listener.
+  // @TODO: Now that we have the onNodesChange and on EdgesChange listeners, do we still need this component?
+  const SelectionListener = React.memo(({ onSelectionChange }) => {
+      const store = useStoreApi();
+      const { selectedNodes, selectedEdges } = useStore(selector$e, areEqual);
+      React.useEffect(() => {
+          const params = { nodes: selectedNodes, edges: selectedEdges };
+          onSelectionChange?.(params);
+          store.getState().onSelectionChange.forEach((fn) => fn(params));
+      }, [selectedNodes, selectedEdges, onSelectionChange]);
+      return null;
+  });
+  SelectionListener.displayName = 'SelectionListener';
+  const changeSelector = (s) => !!s.onSelectionChange;
+  function Wrapper$1({ onSelectionChange }) {
+      const storeHasSelectionChange = useStore(changeSelector);
+      if (onSelectionChange || storeHasSelectionChange) {
+          return React.createElement(SelectionListener, { onSelectionChange: onSelectionChange });
+      }
+      return null;
+  }
+
+  const selector$d = (s) => ({
+      setNodes: s.setNodes,
+      setEdges: s.setEdges,
+      setDefaultNodesAndEdges: s.setDefaultNodesAndEdges,
+      setMinZoom: s.setMinZoom,
+      setMaxZoom: s.setMaxZoom,
+      setTranslateExtent: s.setTranslateExtent,
+      setNodeExtent: s.setNodeExtent,
+      reset: s.reset,
+  });
+  function useStoreUpdater(value, setStoreState) {
+      React.useEffect(() => {
+          if (typeof value !== 'undefined') {
+              setStoreState(value);
+          }
+      }, [value]);
+  }
+  // updates with values in store that don't have a dedicated setter function
+  function useDirectStoreUpdater(key, value, setState) {
+      React.useEffect(() => {
+          if (typeof value !== 'undefined') {
+              setState({ [key]: value });
+          }
+      }, [value]);
+  }
+  const StoreUpdater = ({ nodes, edges, defaultNodes, defaultEdges, onConnect, onConnectStart, onConnectEnd, onClickConnectStart, onClickConnectEnd, nodesDraggable, nodesConnectable, nodesFocusable, edgesFocusable, edgesUpdatable, elevateNodesOnSelect, minZoom, maxZoom, nodeExtent, onNodesChange, onEdgesChange, elementsSelectable, connectionMode, snapGrid, snapToGrid, translateExtent, connectOnClick, defaultEdgeOptions, fitView, fitViewOptions, onNodesDelete, onEdgesDelete, onNodeDrag, onNodeDragStart, onNodeDragStop, onSelectionDrag, onSelectionDragStart, onSelectionDragStop, noPanClassName, nodeOrigin, rfId, autoPanOnConnect, autoPanOnNodeDrag, onError, connectionRadius, isValidConnection, nodeDragThreshold, }) => {
+      const { setNodes, setEdges, setDefaultNodesAndEdges, setMinZoom, setMaxZoom, setTranslateExtent, setNodeExtent, reset, } = useStore(selector$d, shallow);
+      const store = useStoreApi();
+      React.useEffect(() => {
+          const edgesWithDefaults = defaultEdges?.map((e) => ({ ...e, ...defaultEdgeOptions }));
+          setDefaultNodesAndEdges(defaultNodes, edgesWithDefaults);
+          return () => {
+              reset();
+          };
+      }, []);
+      useDirectStoreUpdater('defaultEdgeOptions', defaultEdgeOptions, store.setState);
+      useDirectStoreUpdater('connectionMode', connectionMode, store.setState);
+      useDirectStoreUpdater('onConnect', onConnect, store.setState);
+      useDirectStoreUpdater('onConnectStart', onConnectStart, store.setState);
+      useDirectStoreUpdater('onConnectEnd', onConnectEnd, store.setState);
+      useDirectStoreUpdater('onClickConnectStart', onClickConnectStart, store.setState);
+      useDirectStoreUpdater('onClickConnectEnd', onClickConnectEnd, store.setState);
+      useDirectStoreUpdater('nodesDraggable', nodesDraggable, store.setState);
+      useDirectStoreUpdater('nodesConnectable', nodesConnectable, store.setState);
+      useDirectStoreUpdater('nodesFocusable', nodesFocusable, store.setState);
+      useDirectStoreUpdater('edgesFocusable', edgesFocusable, store.setState);
+      useDirectStoreUpdater('edgesUpdatable', edgesUpdatable, store.setState);
+      useDirectStoreUpdater('elementsSelectable', elementsSelectable, store.setState);
+      useDirectStoreUpdater('elevateNodesOnSelect', elevateNodesOnSelect, store.setState);
+      useDirectStoreUpdater('snapToGrid', snapToGrid, store.setState);
+      useDirectStoreUpdater('snapGrid', snapGrid, store.setState);
+      useDirectStoreUpdater('onNodesChange', onNodesChange, store.setState);
+      useDirectStoreUpdater('onEdgesChange', onEdgesChange, store.setState);
+      useDirectStoreUpdater('connectOnClick', connectOnClick, store.setState);
+      useDirectStoreUpdater('fitViewOnInit', fitView, store.setState);
+      useDirectStoreUpdater('fitViewOnInitOptions', fitViewOptions, store.setState);
+      useDirectStoreUpdater('onNodesDelete', onNodesDelete, store.setState);
+      useDirectStoreUpdater('onEdgesDelete', onEdgesDelete, store.setState);
+      useDirectStoreUpdater('onNodeDrag', onNodeDrag, store.setState);
+      useDirectStoreUpdater('onNodeDragStart', onNodeDragStart, store.setState);
+      useDirectStoreUpdater('onNodeDragStop', onNodeDragStop, store.setState);
+      useDirectStoreUpdater('onSelectionDrag', onSelectionDrag, store.setState);
+      useDirectStoreUpdater('onSelectionDragStart', onSelectionDragStart, store.setState);
+      useDirectStoreUpdater('onSelectionDragStop', onSelectionDragStop, store.setState);
+      useDirectStoreUpdater('noPanClassName', noPanClassName, store.setState);
+      useDirectStoreUpdater('nodeOrigin', nodeOrigin, store.setState);
+      useDirectStoreUpdater('rfId', rfId, store.setState);
+      useDirectStoreUpdater('autoPanOnConnect', autoPanOnConnect, store.setState);
+      useDirectStoreUpdater('autoPanOnNodeDrag', autoPanOnNodeDrag, store.setState);
+      useDirectStoreUpdater('onError', onError, store.setState);
+      useDirectStoreUpdater('connectionRadius', connectionRadius, store.setState);
+      useDirectStoreUpdater('isValidConnection', isValidConnection, store.setState);
+      useDirectStoreUpdater('nodeDragThreshold', nodeDragThreshold, store.setState);
+      useStoreUpdater(nodes, setNodes);
+      useStoreUpdater(edges, setEdges);
+      useStoreUpdater(minZoom, setMinZoom);
+      useStoreUpdater(maxZoom, setMaxZoom);
+      useStoreUpdater(translateExtent, setTranslateExtent);
+      useStoreUpdater(nodeExtent, setNodeExtent);
+      return null;
+  };
+
+  const style = { display: 'none' };
+  const ariaLiveStyle = {
+      position: 'absolute',
+      width: 1,
+      height: 1,
+      margin: -1,
+      border: 0,
+      padding: 0,
+      overflow: 'hidden',
+      clip: 'rect(0px, 0px, 0px, 0px)',
+      clipPath: 'inset(100%)',
+  };
+  const ARIA_NODE_DESC_KEY = 'react-flow__node-desc';
+  const ARIA_EDGE_DESC_KEY = 'react-flow__edge-desc';
+  const ARIA_LIVE_MESSAGE = 'react-flow__aria-live';
+  const selector$c = (s) => s.ariaLiveMessage;
+  function AriaLiveMessage({ rfId }) {
+      const ariaLiveMessage = useStore(selector$c);
+      return (React.createElement("div", { id: `${ARIA_LIVE_MESSAGE}-${rfId}`, "aria-live": "assertive", "aria-atomic": "true", style: ariaLiveStyle }, ariaLiveMessage));
+  }
+  function A11yDescriptions({ rfId, disableKeyboardA11y }) {
+      return (React.createElement(React.Fragment, null,
+          React.createElement("div", { id: `${ARIA_NODE_DESC_KEY}-${rfId}`, style: style },
+              "Press enter or space to select a node.",
+              !disableKeyboardA11y && 'You can then use the arrow keys to move the node around.',
+              " Press delete to remove it and escape to cancel.",
+              ' '),
+          React.createElement("div", { id: `${ARIA_EDGE_DESC_KEY}-${rfId}`, style: style }, "Press enter or space to select an edge. You can then press delete to remove it or escape to cancel."),
+          !disableKeyboardA11y && React.createElement(AriaLiveMessage, { rfId: rfId })));
+  }
+
+  // the keycode can be a string 'a' or an array of strings ['a', 'a+d']
+  // a string means a single key 'a' or a combination when '+' is used 'a+d'
+  // an array means different possibilities. Explainer: ['a', 'd+s'] here the
+  // user can use the single key 'a' or the combination 'd' + 's'
+  var useKeyPress = (keyCode = null, options = { actInsideInputWithModifier: true }) => {
+      const [keyPressed, setKeyPressed] = React.useState(false);
+      // we need to remember if a modifier key is pressed in order to track it
+      const modifierPressed = React.useRef(false);
+      // we need to remember the pressed keys in order to support combinations
+      const pressedKeys = React.useRef(new Set([]));
+      // keyCodes = array with single keys [['a']] or key combinations [['a', 's']]
+      // keysToWatch = array with all keys flattened ['a', 'd', 'ShiftLeft']
+      // used to check if we store event.code or event.key. When the code is in the list of keysToWatch
+      // we use the code otherwise the key. Explainer: When you press the left "command" key, the code is "MetaLeft"
+      // and the key is "Meta". We want users to be able to pass keys and codes so we assume that the key is meant when
+      // we can't find it in the list of keysToWatch.
+      const [keyCodes, keysToWatch] = React.useMemo(() => {
+          if (keyCode !== null) {
+              const keyCodeArr = Array.isArray(keyCode) ? keyCode : [keyCode];
+              const keys = keyCodeArr.filter((kc) => typeof kc === 'string').map((kc) => kc.split('+'));
+              const keysFlat = keys.reduce((res, item) => res.concat(...item), []);
+              return [keys, keysFlat];
+          }
+          return [[], []];
+      }, [keyCode]);
+      React.useEffect(() => {
+          const doc = typeof document !== 'undefined' ? document : null;
+          const target = options?.target || doc;
+          if (keyCode !== null) {
+              const downHandler = (event) => {
+                  modifierPressed.current = event.ctrlKey || event.metaKey || event.shiftKey;
+                  const preventAction = (!modifierPressed.current || (modifierPressed.current && !options.actInsideInputWithModifier)) &&
+                      isInputDOMNode(event);
+                  if (preventAction) {
+                      return false;
+                  }
+                  const keyOrCode = useKeyOrCode(event.code, keysToWatch);
+                  pressedKeys.current.add(event[keyOrCode]);
+                  if (isMatchingKey(keyCodes, pressedKeys.current, false)) {
+                      event.preventDefault();
+                      setKeyPressed(true);
+                  }
+              };
+              const upHandler = (event) => {
+                  const preventAction = (!modifierPressed.current || (modifierPressed.current && !options.actInsideInputWithModifier)) &&
+                      isInputDOMNode(event);
+                  if (preventAction) {
+                      return false;
+                  }
+                  const keyOrCode = useKeyOrCode(event.code, keysToWatch);
+                  if (isMatchingKey(keyCodes, pressedKeys.current, true)) {
+                      setKeyPressed(false);
+                      pressedKeys.current.clear();
+                  }
+                  else {
+                      pressedKeys.current.delete(event[keyOrCode]);
+                  }
+                  // fix for Mac: when cmd key is pressed, keyup is not triggered for any other key, see: https://stackoverflow.com/questions/27380018/when-cmd-key-is-kept-pressed-keyup-is-not-triggered-for-any-other-key
+                  if (event.key === 'Meta') {
+                      pressedKeys.current.clear();
+                  }
+                  modifierPressed.current = false;
+              };
+              const resetHandler = () => {
+                  pressedKeys.current.clear();
+                  setKeyPressed(false);
+              };
+              target?.addEventListener('keydown', downHandler);
+              target?.addEventListener('keyup', upHandler);
+              window.addEventListener('blur', resetHandler);
+              return () => {
+                  target?.removeEventListener('keydown', downHandler);
+                  target?.removeEventListener('keyup', upHandler);
+                  window.removeEventListener('blur', resetHandler);
+              };
+          }
+      }, [keyCode, setKeyPressed]);
+      return keyPressed;
+  };
+  // utils
+  function isMatchingKey(keyCodes, pressedKeys, isUp) {
+      return (keyCodes
+          // we only want to compare same sizes of keyCode definitions
+          // and pressed keys. When the user specified 'Meta' as a key somewhere
+          // this would also be truthy without this filter when user presses 'Meta' + 'r'
+          .filter((keys) => isUp || keys.length === pressedKeys.size)
+          // since we want to support multiple possibilities only one of the
+          // combinations need to be part of the pressed keys
+          .some((keys) => keys.every((k) => pressedKeys.has(k))));
+  }
+  function useKeyOrCode(eventCode, keysToWatch) {
+      return keysToWatch.includes(eventCode) ? 'code' : 'key';
+  }
+
+  function calculateXYZPosition(node, nodeInternals, result, nodeOrigin) {
+      const parentId = node.parentNode || node.parentId;
+      if (!parentId) {
+          return result;
+      }
+      const parentNode = nodeInternals.get(parentId);
+      const parentNodePosition = getNodePositionWithOrigin(parentNode, nodeOrigin);
+      return calculateXYZPosition(parentNode, nodeInternals, {
+          x: (result.x ?? 0) + parentNodePosition.x,
+          y: (result.y ?? 0) + parentNodePosition.y,
+          z: (parentNode[internalsSymbol]?.z ?? 0) > (result.z ?? 0) ? parentNode[internalsSymbol]?.z ?? 0 : result.z ?? 0,
+      }, nodeOrigin);
+  }
+  function updateAbsoluteNodePositions(nodeInternals, nodeOrigin, parentNodes) {
+      nodeInternals.forEach((node) => {
+          const parentId = node.parentNode || node.parentId;
+          if (parentId && !nodeInternals.has(parentId)) {
+              throw new Error(`Parent node ${parentId} not found`);
+          }
+          if (parentId || parentNodes?.[node.id]) {
+              const { x, y, z } = calculateXYZPosition(node, nodeInternals, {
+                  ...node.position,
+                  z: node[internalsSymbol]?.z ?? 0,
+              }, nodeOrigin);
+              node.positionAbsolute = {
+                  x,
+                  y,
+              };
+              node[internalsSymbol].z = z;
+              if (parentNodes?.[node.id]) {
+                  node[internalsSymbol].isParent = true;
+              }
+          }
+      });
+  }
+  function createNodeInternals(nodes, nodeInternals, nodeOrigin, elevateNodesOnSelect) {
+      const nextNodeInternals = new Map();
+      const parentNodes = {};
+      const selectedNodeZ = elevateNodesOnSelect ? 1000 : 0;
+      nodes.forEach((node) => {
+          const z = (isNumeric(node.zIndex) ? node.zIndex : 0) + (node.selected ? selectedNodeZ : 0);
+          const currInternals = nodeInternals.get(node.id);
+          const internals = {
+              ...node,
+              positionAbsolute: {
+                  x: node.position.x,
+                  y: node.position.y,
+              },
+          };
+          const parentId = node.parentNode || node.parentId;
+          if (parentId) {
+              parentNodes[parentId] = true;
+          }
+          const resetHandleBounds = currInternals?.type && currInternals?.type !== node.type;
+          Object.defineProperty(internals, internalsSymbol, {
+              enumerable: false,
+              value: {
+                  handleBounds: resetHandleBounds ? undefined : currInternals?.[internalsSymbol]?.handleBounds,
+                  z,
+              },
+          });
+          nextNodeInternals.set(node.id, internals);
+      });
+      updateAbsoluteNodePositions(nextNodeInternals, nodeOrigin, parentNodes);
+      return nextNodeInternals;
+  }
+  function fitView(get, options = {}) {
+      const { getNodes, width, height, minZoom, maxZoom, d3Zoom, d3Selection, fitViewOnInitDone, fitViewOnInit, nodeOrigin, } = get();
+      const isInitialFitView = options.initial && !fitViewOnInitDone && fitViewOnInit;
+      const d3initialized = d3Zoom && d3Selection;
+      if (d3initialized && (isInitialFitView || !options.initial)) {
+          const nodes = getNodes().filter((n) => {
+              const isVisible = options.includeHiddenNodes ? n.width && n.height : !n.hidden;
+              if (options.nodes?.length) {
+                  return isVisible && options.nodes.some((optionNode) => optionNode.id === n.id);
+              }
+              return isVisible;
+          });
+          const nodesInitialized = nodes.every((n) => n.width && n.height);
+          if (nodes.length > 0 && nodesInitialized) {
+              const bounds = getNodesBounds(nodes, nodeOrigin);
+              const { x, y, zoom } = getViewportForBounds(bounds, width, height, options.minZoom ?? minZoom, options.maxZoom ?? maxZoom, options.padding ?? 0.1);
+              const nextTransform = identity.translate(x, y).scale(zoom);
+              if (typeof options.duration === 'number' && options.duration > 0) {
+                  d3Zoom.transform(getD3Transition(d3Selection, options.duration), nextTransform);
+              }
+              else {
+                  d3Zoom.transform(d3Selection, nextTransform);
+              }
+              return true;
+          }
+      }
+      return false;
+  }
+  function handleControlledNodeSelectionChange(nodeChanges, nodeInternals) {
+      nodeChanges.forEach((change) => {
+          const node = nodeInternals.get(change.id);
+          if (node) {
+              nodeInternals.set(node.id, {
+                  ...node,
+                  [internalsSymbol]: node[internalsSymbol],
+                  selected: change.selected,
+              });
+          }
+      });
+      return new Map(nodeInternals);
+  }
+  function handleControlledEdgeSelectionChange(edgeChanges, edges) {
+      return edges.map((e) => {
+          const change = edgeChanges.find((change) => change.id === e.id);
+          if (change) {
+              e.selected = change.selected;
+          }
+          return e;
+      });
+  }
+  function updateNodesAndEdgesSelections({ changedNodes, changedEdges, get, set }) {
+      const { nodeInternals, edges, onNodesChange, onEdgesChange, hasDefaultNodes, hasDefaultEdges } = get();
+      if (changedNodes?.length) {
+          if (hasDefaultNodes) {
+              set({ nodeInternals: handleControlledNodeSelectionChange(changedNodes, nodeInternals) });
+          }
+          onNodesChange?.(changedNodes);
+      }
+      if (changedEdges?.length) {
+          if (hasDefaultEdges) {
+              set({ edges: handleControlledEdgeSelectionChange(changedEdges, edges) });
+          }
+          onEdgesChange?.(changedEdges);
+      }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const noop = () => { };
+  const initialViewportHelper = {
+      zoomIn: noop,
+      zoomOut: noop,
+      zoomTo: noop,
+      getZoom: () => 1,
+      setViewport: noop,
+      getViewport: () => ({ x: 0, y: 0, zoom: 1 }),
+      fitView: () => false,
+      setCenter: noop,
+      fitBounds: noop,
+      project: (position) => position,
+      screenToFlowPosition: (position) => position,
+      flowToScreenPosition: (position) => position,
+      viewportInitialized: false,
+  };
+  const selector$b = (s) => ({
+      d3Zoom: s.d3Zoom,
+      d3Selection: s.d3Selection,
+  });
+  const useViewportHelper = () => {
+      const store = useStoreApi();
+      const { d3Zoom, d3Selection } = useStore(selector$b, shallow);
+      const viewportHelperFunctions = React.useMemo(() => {
+          if (d3Selection && d3Zoom) {
+              return {
+                  zoomIn: (options) => d3Zoom.scaleBy(getD3Transition(d3Selection, options?.duration), 1.2),
+                  zoomOut: (options) => d3Zoom.scaleBy(getD3Transition(d3Selection, options?.duration), 1 / 1.2),
+                  zoomTo: (zoomLevel, options) => d3Zoom.scaleTo(getD3Transition(d3Selection, options?.duration), zoomLevel),
+                  getZoom: () => store.getState().transform[2],
+                  setViewport: (transform, options) => {
+                      const [x, y, zoom] = store.getState().transform;
+                      const nextTransform = identity
+                          .translate(transform.x ?? x, transform.y ?? y)
+                          .scale(transform.zoom ?? zoom);
+                      d3Zoom.transform(getD3Transition(d3Selection, options?.duration), nextTransform);
+                  },
+                  getViewport: () => {
+                      const [x, y, zoom] = store.getState().transform;
+                      return { x, y, zoom };
+                  },
+                  fitView: (options) => fitView(store.getState, options),
+                  setCenter: (x, y, options) => {
+                      const { width, height, maxZoom } = store.getState();
+                      const nextZoom = typeof options?.zoom !== 'undefined' ? options.zoom : maxZoom;
+                      const centerX = width / 2 - x * nextZoom;
+                      const centerY = height / 2 - y * nextZoom;
+                      const transform = identity.translate(centerX, centerY).scale(nextZoom);
+                      d3Zoom.transform(getD3Transition(d3Selection, options?.duration), transform);
+                  },
+                  fitBounds: (bounds, options) => {
+                      const { width, height, minZoom, maxZoom } = store.getState();
+                      const { x, y, zoom } = getViewportForBounds(bounds, width, height, minZoom, maxZoom, options?.padding ?? 0.1);
+                      const transform = identity.translate(x, y).scale(zoom);
+                      d3Zoom.transform(getD3Transition(d3Selection, options?.duration), transform);
+                  },
+                  // @deprecated Use `screenToFlowPosition`.
+                  project: (position) => {
+                      const { transform, snapToGrid, snapGrid } = store.getState();
+                      console.warn('[DEPRECATED] `project` is deprecated. Instead use `screenToFlowPosition`. There is no need to subtract the react flow bounds anymore! https://reactflow.dev/api-reference/types/react-flow-instance#screen-to-flow-position');
+                      return pointToRendererPoint(position, transform, snapToGrid, snapGrid);
+                  },
+                  screenToFlowPosition: (position) => {
+                      const { transform, snapToGrid, snapGrid, domNode } = store.getState();
+                      if (!domNode) {
+                          return position;
+                      }
+                      const { x: domX, y: domY } = domNode.getBoundingClientRect();
+                      const relativePosition = {
+                          x: position.x - domX,
+                          y: position.y - domY,
+                      };
+                      return pointToRendererPoint(relativePosition, transform, snapToGrid, snapGrid);
+                  },
+                  flowToScreenPosition: (position) => {
+                      const { transform, domNode } = store.getState();
+                      if (!domNode) {
+                          return position;
+                      }
+                      const { x: domX, y: domY } = domNode.getBoundingClientRect();
+                      const rendererPosition = rendererPointToPoint(position, transform);
+                      return {
+                          x: rendererPosition.x + domX,
+                          y: rendererPosition.y + domY,
+                      };
+                  },
+                  viewportInitialized: true,
+              };
+          }
+          return initialViewportHelper;
+      }, [d3Zoom, d3Selection]);
+      return viewportHelperFunctions;
+  };
+
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  function useReactFlow() {
+      const viewportHelper = useViewportHelper();
+      const store = useStoreApi();
+      const getNodes = React.useCallback(() => {
+          return store
+              .getState()
+              .getNodes()
+              .map((n) => ({ ...n }));
+      }, []);
+      const getNode = React.useCallback((id) => {
+          return store.getState().nodeInternals.get(id);
+      }, []);
+      const getEdges = React.useCallback(() => {
+          const { edges = [] } = store.getState();
+          return edges.map((e) => ({ ...e }));
+      }, []);
+      const getEdge = React.useCallback((id) => {
+          const { edges = [] } = store.getState();
+          return edges.find((e) => e.id === id);
+      }, []);
+      const setNodes = React.useCallback((payload) => {
+          const { getNodes, setNodes, hasDefaultNodes, onNodesChange } = store.getState();
+          const nodes = getNodes();
+          const nextNodes = typeof payload === 'function' ? payload(nodes) : payload;
+          if (hasDefaultNodes) {
+              setNodes(nextNodes);
+          }
+          else if (onNodesChange) {
+              const changes = nextNodes.length === 0
+                  ? nodes.map((node) => ({ type: 'remove', id: node.id }))
+                  : nextNodes.map((node) => ({ item: node, type: 'reset' }));
+              onNodesChange(changes);
+          }
+      }, []);
+      const setEdges = React.useCallback((payload) => {
+          const { edges = [], setEdges, hasDefaultEdges, onEdgesChange } = store.getState();
+          const nextEdges = typeof payload === 'function' ? payload(edges) : payload;
+          if (hasDefaultEdges) {
+              setEdges(nextEdges);
+          }
+          else if (onEdgesChange) {
+              const changes = nextEdges.length === 0
+                  ? edges.map((edge) => ({ type: 'remove', id: edge.id }))
+                  : nextEdges.map((edge) => ({ item: edge, type: 'reset' }));
+              onEdgesChange(changes);
+          }
+      }, []);
+      const addNodes = React.useCallback((payload) => {
+          const nodes = Array.isArray(payload) ? payload : [payload];
+          const { getNodes, setNodes, hasDefaultNodes, onNodesChange } = store.getState();
+          if (hasDefaultNodes) {
+              const currentNodes = getNodes();
+              const nextNodes = [...currentNodes, ...nodes];
+              setNodes(nextNodes);
+          }
+          else if (onNodesChange) {
+              const changes = nodes.map((node) => ({ item: node, type: 'add' }));
+              onNodesChange(changes);
+          }
+      }, []);
+      const addEdges = React.useCallback((payload) => {
+          const nextEdges = Array.isArray(payload) ? payload : [payload];
+          const { edges = [], setEdges, hasDefaultEdges, onEdgesChange } = store.getState();
+          if (hasDefaultEdges) {
+              setEdges([...edges, ...nextEdges]);
+          }
+          else if (onEdgesChange) {
+              const changes = nextEdges.map((edge) => ({ item: edge, type: 'add' }));
+              onEdgesChange(changes);
+          }
+      }, []);
+      const toObject = React.useCallback(() => {
+          const { getNodes, edges = [], transform } = store.getState();
+          const [x, y, zoom] = transform;
+          return {
+              nodes: getNodes().map((n) => ({ ...n })),
+              edges: edges.map((e) => ({ ...e })),
+              viewport: {
+                  x,
+                  y,
+                  zoom,
+              },
+          };
+      }, []);
+      const deleteElements = React.useCallback(({ nodes: nodesDeleted, edges: edgesDeleted }) => {
+          const { nodeInternals, getNodes, edges, hasDefaultNodes, hasDefaultEdges, onNodesDelete, onEdgesDelete, onNodesChange, onEdgesChange, } = store.getState();
+          const nodeIds = (nodesDeleted || []).map((node) => node.id);
+          const edgeIds = (edgesDeleted || []).map((edge) => edge.id);
+          const nodesToRemove = getNodes().reduce((res, node) => {
+              const parentId = node.parentNode || node.parentId;
+              const parentHit = !nodeIds.includes(node.id) && parentId && res.find((n) => n.id === parentId);
+              const deletable = typeof node.deletable === 'boolean' ? node.deletable : true;
+              if (deletable && (nodeIds.includes(node.id) || parentHit)) {
+                  res.push(node);
+              }
+              return res;
+          }, []);
+          const deletableEdges = edges.filter((e) => (typeof e.deletable === 'boolean' ? e.deletable : true));
+          const initialHitEdges = deletableEdges.filter((e) => edgeIds.includes(e.id));
+          if (nodesToRemove || initialHitEdges) {
+              const connectedEdges = getConnectedEdges(nodesToRemove, deletableEdges);
+              const edgesToRemove = [...initialHitEdges, ...connectedEdges];
+              const edgeIdsToRemove = edgesToRemove.reduce((res, edge) => {
+                  if (!res.includes(edge.id)) {
+                      res.push(edge.id);
+                  }
+                  return res;
+              }, []);
+              if (hasDefaultEdges || hasDefaultNodes) {
+                  if (hasDefaultEdges) {
+                      store.setState({
+                          edges: edges.filter((e) => !edgeIdsToRemove.includes(e.id)),
+                      });
+                  }
+                  if (hasDefaultNodes) {
+                      nodesToRemove.forEach((node) => {
+                          nodeInternals.delete(node.id);
+                      });
+                      store.setState({
+                          nodeInternals: new Map(nodeInternals),
+                      });
+                  }
+              }
+              if (edgeIdsToRemove.length > 0) {
+                  onEdgesDelete?.(edgesToRemove);
+                  if (onEdgesChange) {
+                      onEdgesChange(edgeIdsToRemove.map((id) => ({
+                          id,
+                          type: 'remove',
+                      })));
+                  }
+              }
+              if (nodesToRemove.length > 0) {
+                  onNodesDelete?.(nodesToRemove);
+                  if (onNodesChange) {
+                      const nodeChanges = nodesToRemove.map((n) => ({ id: n.id, type: 'remove' }));
+                      onNodesChange(nodeChanges);
+                  }
+              }
+          }
+      }, []);
+      const getNodeRect = React.useCallback((nodeOrRect) => {
+          const isRect = isRectObject(nodeOrRect);
+          const node = isRect ? null : store.getState().nodeInternals.get(nodeOrRect.id);
+          if (!isRect && !node) {
+              return [null, null, isRect];
+          }
+          const nodeRect = isRect ? nodeOrRect : nodeToRect(node);
+          return [nodeRect, node, isRect];
+      }, []);
+      const getIntersectingNodes = React.useCallback((nodeOrRect, partially = true, nodes) => {
+          const [nodeRect, node, isRect] = getNodeRect(nodeOrRect);
+          if (!nodeRect) {
+              return [];
+          }
+          return (nodes || store.getState().getNodes()).filter((n) => {
+              if (!isRect && (n.id === node.id || !n.positionAbsolute)) {
+                  return false;
+              }
+              const currNodeRect = nodeToRect(n);
+              const overlappingArea = getOverlappingArea(currNodeRect, nodeRect);
+              const partiallyVisible = partially && overlappingArea > 0;
+              return partiallyVisible || overlappingArea >= nodeRect.width * nodeRect.height;
+          });
+      }, []);
+      const isNodeIntersecting = React.useCallback((nodeOrRect, area, partially = true) => {
+          const [nodeRect] = getNodeRect(nodeOrRect);
+          if (!nodeRect) {
+              return false;
+          }
+          const overlappingArea = getOverlappingArea(nodeRect, area);
+          const partiallyVisible = partially && overlappingArea > 0;
+          return partiallyVisible || overlappingArea >= nodeRect.width * nodeRect.height;
+      }, []);
+      return React.useMemo(() => {
+          return {
+              ...viewportHelper,
+              getNodes,
+              getNode,
+              getEdges,
+              getEdge,
+              setNodes,
+              setEdges,
+              addNodes,
+              addEdges,
+              toObject,
+              deleteElements,
+              getIntersectingNodes,
+              isNodeIntersecting,
+          };
+      }, [
+          viewportHelper,
+          getNodes,
+          getNode,
+          getEdges,
+          getEdge,
+          setNodes,
+          setEdges,
+          addNodes,
+          addEdges,
+          toObject,
+          deleteElements,
+          getIntersectingNodes,
+          isNodeIntersecting,
+      ]);
+  }
+
+  const deleteKeyOptions = { actInsideInputWithModifier: false };
+  var useGlobalKeyHandler = ({ deleteKeyCode, multiSelectionKeyCode }) => {
+      const store = useStoreApi();
+      const { deleteElements } = useReactFlow();
+      const deleteKeyPressed = useKeyPress(deleteKeyCode, deleteKeyOptions);
+      const multiSelectionKeyPressed = useKeyPress(multiSelectionKeyCode);
+      React.useEffect(() => {
+          if (deleteKeyPressed) {
+              const { edges, getNodes } = store.getState();
+              const selectedNodes = getNodes().filter((node) => node.selected);
+              const selectedEdges = edges.filter((edge) => edge.selected);
+              deleteElements({ nodes: selectedNodes, edges: selectedEdges });
+              store.setState({ nodesSelectionActive: false });
+          }
+      }, [deleteKeyPressed]);
+      React.useEffect(() => {
+          store.setState({ multiSelectionActive: multiSelectionKeyPressed });
+      }, [multiSelectionKeyPressed]);
+  };
+
+  function useResizeHandler(rendererNode) {
+      const store = useStoreApi();
+      React.useEffect(() => {
+          let resizeObserver;
+          const updateDimensions = () => {
+              if (!rendererNode.current) {
+                  return;
+              }
+              const size = getDimensions(rendererNode.current);
+              if (size.height === 0 || size.width === 0) {
+                  store.getState().onError?.('004', errorMessages['error004']());
+              }
+              store.setState({ width: size.width || 500, height: size.height || 500 });
+          };
+          updateDimensions();
+          window.addEventListener('resize', updateDimensions);
+          if (rendererNode.current) {
+              resizeObserver = new ResizeObserver(() => updateDimensions());
+              resizeObserver.observe(rendererNode.current);
+          }
+          return () => {
+              window.removeEventListener('resize', updateDimensions);
+              if (resizeObserver && rendererNode.current) {
+                  resizeObserver.unobserve(rendererNode.current);
+              }
+          };
+      }, []);
+  }
+
+  const containerStyle = {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+  };
+
+  /* eslint-disable @typescript-eslint/ban-ts-comment */
+  const viewChanged = (prevViewport, eventTransform) => prevViewport.x !== eventTransform.x || prevViewport.y !== eventTransform.y || prevViewport.zoom !== eventTransform.k;
+  const eventToFlowTransform = (eventTransform) => ({
+      x: eventTransform.x,
+      y: eventTransform.y,
+      zoom: eventTransform.k,
+  });
+  const isWrappedWithClass = (event, className) => event.target.closest(`.${className}`);
+  const isRightClickPan = (panOnDrag, usedButton) => usedButton === 2 && Array.isArray(panOnDrag) && panOnDrag.includes(2);
+  const wheelDelta = (event) => {
+      const factor = event.ctrlKey && isMacOs() ? 10 : 1;
+      return -event.deltaY * (event.deltaMode === 1 ? 0.05 : event.deltaMode ? 1 : 0.002) * factor;
+  };
+  const selector$a = (s) => ({
+      d3Zoom: s.d3Zoom,
+      d3Selection: s.d3Selection,
+      d3ZoomHandler: s.d3ZoomHandler,
+      userSelectionActive: s.userSelectionActive,
+  });
+  const ZoomPane = ({ onMove, onMoveStart, onMoveEnd, onPaneContextMenu, zoomOnScroll = true, zoomOnPinch = true, panOnScroll = false, panOnScrollSpeed = 0.5, panOnScrollMode = PanOnScrollMode.Free, zoomOnDoubleClick = true, elementsSelectable, panOnDrag = true, defaultViewport, translateExtent, minZoom, maxZoom, zoomActivationKeyCode, preventScrolling = true, children, noWheelClassName, noPanClassName, }) => {
+      const timerId = React.useRef();
+      const store = useStoreApi();
+      const isZoomingOrPanning = React.useRef(false);
+      const zoomedWithRightMouseButton = React.useRef(false);
+      const zoomPane = React.useRef(null);
+      const prevTransform = React.useRef({ x: 0, y: 0, zoom: 0 });
+      const { d3Zoom, d3Selection, d3ZoomHandler, userSelectionActive } = useStore(selector$a, shallow);
+      const zoomActivationKeyPressed = useKeyPress(zoomActivationKeyCode);
+      const mouseButton = React.useRef(0);
+      const isPanScrolling = React.useRef(false);
+      const panScrollTimeout = React.useRef();
+      useResizeHandler(zoomPane);
+      React.useEffect(() => {
+          if (zoomPane.current) {
+              const bbox = zoomPane.current.getBoundingClientRect();
+              const d3ZoomInstance = zoom().scaleExtent([minZoom, maxZoom]).translateExtent(translateExtent);
+              const selection = select(zoomPane.current).call(d3ZoomInstance);
+              const updatedTransform = identity
+                  .translate(defaultViewport.x, defaultViewport.y)
+                  .scale(clamp(defaultViewport.zoom, minZoom, maxZoom));
+              const extent = [
+                  [0, 0],
+                  [bbox.width, bbox.height],
+              ];
+              const constrainedTransform = d3ZoomInstance.constrain()(updatedTransform, extent, translateExtent);
+              d3ZoomInstance.transform(selection, constrainedTransform);
+              d3ZoomInstance.wheelDelta(wheelDelta);
+              store.setState({
+                  d3Zoom: d3ZoomInstance,
+                  d3Selection: selection,
+                  d3ZoomHandler: selection.on('wheel.zoom'),
+                  // we need to pass transform because zoom handler is not registered when we set the initial transform
+                  transform: [constrainedTransform.x, constrainedTransform.y, constrainedTransform.k],
+                  domNode: zoomPane.current.closest('.react-flow'),
+              });
+          }
+      }, []);
+      React.useEffect(() => {
+          if (d3Selection && d3Zoom) {
+              if (panOnScroll && !zoomActivationKeyPressed && !userSelectionActive) {
+                  d3Selection.on('wheel.zoom', (event) => {
+                      if (isWrappedWithClass(event, noWheelClassName)) {
+                          return false;
+                      }
+                      event.preventDefault();
+                      event.stopImmediatePropagation();
+                      const currentZoom = d3Selection.property('__zoom').k || 1;
+                      // macos and win set ctrlKey=true for pinch gesture on a trackpad
+                      if (event.ctrlKey && zoomOnPinch) {
+                          const point = pointer(event);
+                          const pinchDelta = wheelDelta(event);
+                          const zoom = currentZoom * Math.pow(2, pinchDelta);
+                          // @ts-ignore
+                          d3Zoom.scaleTo(d3Selection, zoom, point, event);
+                          return;
+                      }
+                      // increase scroll speed in firefox
+                      // firefox: deltaMode === 1; chrome: deltaMode === 0
+                      const deltaNormalize = event.deltaMode === 1 ? 20 : 1;
+                      let deltaX = panOnScrollMode === PanOnScrollMode.Vertical ? 0 : event.deltaX * deltaNormalize;
+                      let deltaY = panOnScrollMode === PanOnScrollMode.Horizontal ? 0 : event.deltaY * deltaNormalize;
+                      // this enables vertical scrolling with shift + scroll on windows
+                      if (!isMacOs() && event.shiftKey && panOnScrollMode !== PanOnScrollMode.Vertical) {
+                          deltaX = event.deltaY * deltaNormalize;
+                          deltaY = 0;
+                      }
+                      d3Zoom.translateBy(d3Selection, -(deltaX / currentZoom) * panOnScrollSpeed, -(deltaY / currentZoom) * panOnScrollSpeed, 
+                      // @ts-ignore
+                      { internal: true });
+                      const nextViewport = eventToFlowTransform(d3Selection.property('__zoom'));
+                      const { onViewportChangeStart, onViewportChange, onViewportChangeEnd } = store.getState();
+                      clearTimeout(panScrollTimeout.current);
+                      // for pan on scroll we need to handle the event calls on our own
+                      // we can't use the start, zoom and end events from d3-zoom
+                      // because start and move gets called on every scroll event and not once at the beginning
+                      if (!isPanScrolling.current) {
+                          isPanScrolling.current = true;
+                          onMoveStart?.(event, nextViewport);
+                          onViewportChangeStart?.(nextViewport);
+                      }
+                      if (isPanScrolling.current) {
+                          onMove?.(event, nextViewport);
+                          onViewportChange?.(nextViewport);
+                          panScrollTimeout.current = setTimeout(() => {
+                              onMoveEnd?.(event, nextViewport);
+                              onViewportChangeEnd?.(nextViewport);
+                              isPanScrolling.current = false;
+                          }, 150);
+                      }
+                  }, { passive: false });
+              }
+              else if (typeof d3ZoomHandler !== 'undefined') {
+                  d3Selection.on('wheel.zoom', function (event, d) {
+                      // we still want to enable pinch zooming even if preventScrolling is set to false
+                      const invalidEvent = !preventScrolling && event.type === 'wheel' && !event.ctrlKey;
+                      if (invalidEvent || isWrappedWithClass(event, noWheelClassName)) {
+                          return null;
+                      }
+                      event.preventDefault();
+                      d3ZoomHandler.call(this, event, d);
+                  }, { passive: false });
+              }
+          }
+      }, [
+          userSelectionActive,
+          panOnScroll,
+          panOnScrollMode,
+          d3Selection,
+          d3Zoom,
+          d3ZoomHandler,
+          zoomActivationKeyPressed,
+          zoomOnPinch,
+          preventScrolling,
+          noWheelClassName,
+          onMoveStart,
+          onMove,
+          onMoveEnd,
+      ]);
+      React.useEffect(() => {
+          if (d3Zoom) {
+              d3Zoom.on('start', (event) => {
+                  if (!event.sourceEvent || event.sourceEvent.internal) {
+                      return null;
+                  }
+                  // we need to remember it here, because it's always 0 in the "zoom" event
+                  mouseButton.current = event.sourceEvent?.button;
+                  const { onViewportChangeStart } = store.getState();
+                  const flowTransform = eventToFlowTransform(event.transform);
+                  isZoomingOrPanning.current = true;
+                  prevTransform.current = flowTransform;
+                  if (event.sourceEvent?.type === 'mousedown') {
+                      store.setState({ paneDragging: true });
+                  }
+                  onViewportChangeStart?.(flowTransform);
+                  onMoveStart?.(event.sourceEvent, flowTransform);
+              });
+          }
+      }, [d3Zoom, onMoveStart]);
+      React.useEffect(() => {
+          if (d3Zoom) {
+              if (userSelectionActive && !isZoomingOrPanning.current) {
+                  d3Zoom.on('zoom', null);
+              }
+              else if (!userSelectionActive) {
+                  d3Zoom.on('zoom', (event) => {
+                      const { onViewportChange } = store.getState();
+                      store.setState({ transform: [event.transform.x, event.transform.y, event.transform.k] });
+                      zoomedWithRightMouseButton.current = !!(onPaneContextMenu && isRightClickPan(panOnDrag, mouseButton.current ?? 0));
+                      if ((onMove || onViewportChange) && !event.sourceEvent?.internal) {
+                          const flowTransform = eventToFlowTransform(event.transform);
+                          onViewportChange?.(flowTransform);
+                          onMove?.(event.sourceEvent, flowTransform);
+                      }
+                  });
+              }
+          }
+      }, [userSelectionActive, d3Zoom, onMove, panOnDrag, onPaneContextMenu]);
+      React.useEffect(() => {
+          if (d3Zoom) {
+              d3Zoom.on('end', (event) => {
+                  if (!event.sourceEvent || event.sourceEvent.internal) {
+                      return null;
+                  }
+                  const { onViewportChangeEnd } = store.getState();
+                  isZoomingOrPanning.current = false;
+                  store.setState({ paneDragging: false });
+                  if (onPaneContextMenu &&
+                      isRightClickPan(panOnDrag, mouseButton.current ?? 0) &&
+                      !zoomedWithRightMouseButton.current) {
+                      onPaneContextMenu(event.sourceEvent);
+                  }
+                  zoomedWithRightMouseButton.current = false;
+                  if ((onMoveEnd || onViewportChangeEnd) && viewChanged(prevTransform.current, event.transform)) {
+                      const flowTransform = eventToFlowTransform(event.transform);
+                      prevTransform.current = flowTransform;
+                      clearTimeout(timerId.current);
+                      timerId.current = setTimeout(() => {
+                          onViewportChangeEnd?.(flowTransform);
+                          onMoveEnd?.(event.sourceEvent, flowTransform);
+                      }, panOnScroll ? 150 : 0);
+                  }
+              });
+          }
+      }, [d3Zoom, panOnScroll, panOnDrag, onMoveEnd, onPaneContextMenu]);
+      React.useEffect(() => {
+          if (d3Zoom) {
+              d3Zoom.filter((event) => {
+                  const zoomScroll = zoomActivationKeyPressed || zoomOnScroll;
+                  const pinchZoom = zoomOnPinch && event.ctrlKey;
+                  if ((panOnDrag === true || (Array.isArray(panOnDrag) && panOnDrag.includes(1))) &&
+                      event.button === 1 &&
+                      event.type === 'mousedown' &&
+                      (isWrappedWithClass(event, 'react-flow__node') || isWrappedWithClass(event, 'react-flow__edge'))) {
+                      return true;
+                  }
+                  // if all interactions are disabled, we prevent all zoom events
+                  if (!panOnDrag && !zoomScroll && !panOnScroll && !zoomOnDoubleClick && !zoomOnPinch) {
+                      return false;
+                  }
+                  // during a selection we prevent all other interactions
+                  if (userSelectionActive) {
+                      return false;
+                  }
+                  // if zoom on double click is disabled, we prevent the double click event
+                  if (!zoomOnDoubleClick && event.type === 'dblclick') {
+                      return false;
+                  }
+                  // if the target element is inside an element with the nowheel class, we prevent zooming
+                  if (isWrappedWithClass(event, noWheelClassName) && event.type === 'wheel') {
+                      return false;
+                  }
+                  // if the target element is inside an element with the nopan class, we prevent panning
+                  if (isWrappedWithClass(event, noPanClassName) &&
+                      (event.type !== 'wheel' || (panOnScroll && event.type === 'wheel' && !zoomActivationKeyPressed))) {
+                      return false;
+                  }
+                  if (!zoomOnPinch && event.ctrlKey && event.type === 'wheel') {
+                      return false;
+                  }
+                  // when there is no scroll handling enabled, we prevent all wheel events
+                  if (!zoomScroll && !panOnScroll && !pinchZoom && event.type === 'wheel') {
+                      return false;
+                  }
+                  // if the pane is not movable, we prevent dragging it with mousestart or touchstart
+                  if (!panOnDrag && (event.type === 'mousedown' || event.type === 'touchstart')) {
+                      return false;
+                  }
+                  // if the pane is only movable using allowed clicks
+                  if (Array.isArray(panOnDrag) && !panOnDrag.includes(event.button) && event.type === 'mousedown') {
+                      return false;
+                  }
+                  // We only allow right clicks if pan on drag is set to right click
+                  const buttonAllowed = (Array.isArray(panOnDrag) && panOnDrag.includes(event.button)) || !event.button || event.button <= 1;
+                  // default filter for d3-zoom
+                  return (!event.ctrlKey || event.type === 'wheel') && buttonAllowed;
+              });
+          }
+      }, [
+          userSelectionActive,
+          d3Zoom,
+          zoomOnScroll,
+          zoomOnPinch,
+          panOnScroll,
+          zoomOnDoubleClick,
+          panOnDrag,
+          elementsSelectable,
+          zoomActivationKeyPressed,
+      ]);
+      return (React.createElement("div", { className: "react-flow__renderer", ref: zoomPane, style: containerStyle }, children));
+  };
+
+  const selector$9 = (s) => ({
+      userSelectionActive: s.userSelectionActive,
+      userSelectionRect: s.userSelectionRect,
+  });
+  function UserSelection() {
+      const { userSelectionActive, userSelectionRect } = useStore(selector$9, shallow);
+      const isActive = userSelectionActive && userSelectionRect;
+      if (!isActive) {
+          return null;
+      }
+      return (React.createElement("div", { className: "react-flow__selection react-flow__container", style: {
+              width: userSelectionRect.width,
+              height: userSelectionRect.height,
+              transform: `translate(${userSelectionRect.x}px, ${userSelectionRect.y}px)`,
+          } }));
+  }
+
+  function handleParentExpand(res, updateItem) {
+      const parentId = updateItem.parentNode || updateItem.parentId;
+      const parent = res.find((e) => e.id === parentId);
+      if (parent) {
+          const extendWidth = updateItem.position.x + updateItem.width - parent.width;
+          const extendHeight = updateItem.position.y + updateItem.height - parent.height;
+          if (extendWidth > 0 || extendHeight > 0 || updateItem.position.x < 0 || updateItem.position.y < 0) {
+              parent.style = { ...parent.style } || {};
+              parent.style.width = parent.style.width ?? parent.width;
+              parent.style.height = parent.style.height ?? parent.height;
+              if (extendWidth > 0) {
+                  parent.style.width += extendWidth;
+              }
+              if (extendHeight > 0) {
+                  parent.style.height += extendHeight;
+              }
+              if (updateItem.position.x < 0) {
+                  const xDiff = Math.abs(updateItem.position.x);
+                  parent.position.x = parent.position.x - xDiff;
+                  parent.style.width += xDiff;
+                  updateItem.position.x = 0;
+              }
+              if (updateItem.position.y < 0) {
+                  const yDiff = Math.abs(updateItem.position.y);
+                  parent.position.y = parent.position.y - yDiff;
+                  parent.style.height += yDiff;
+                  updateItem.position.y = 0;
+              }
+              parent.width = parent.style.width;
+              parent.height = parent.style.height;
+          }
+      }
+  }
+  function applyChanges(changes, elements) {
+      // we need this hack to handle the setNodes and setEdges function of the useReactFlow hook for controlled flows
+      if (changes.some((c) => c.type === 'reset')) {
+          return changes.filter((c) => c.type === 'reset').map((c) => c.item);
+      }
+      const initElements = changes.filter((c) => c.type === 'add').map((c) => c.item);
+      return elements.reduce((res, item) => {
+          const currentChanges = changes.filter((c) => c.id === item.id);
+          if (currentChanges.length === 0) {
+              res.push(item);
+              return res;
+          }
+          const updateItem = { ...item };
+          for (const currentChange of currentChanges) {
+              if (currentChange) {
+                  switch (currentChange.type) {
+                      case 'select': {
+                          updateItem.selected = currentChange.selected;
+                          break;
+                      }
+                      case 'position': {
+                          if (typeof currentChange.position !== 'undefined') {
+                              updateItem.position = currentChange.position;
+                          }
+                          if (typeof currentChange.positionAbsolute !== 'undefined') {
+                              updateItem.positionAbsolute = currentChange.positionAbsolute;
+                          }
+                          if (typeof currentChange.dragging !== 'undefined') {
+                              updateItem.dragging = currentChange.dragging;
+                          }
+                          if (updateItem.expandParent) {
+                              handleParentExpand(res, updateItem);
+                          }
+                          break;
+                      }
+                      case 'dimensions': {
+                          if (typeof currentChange.dimensions !== 'undefined') {
+                              updateItem.width = currentChange.dimensions.width;
+                              updateItem.height = currentChange.dimensions.height;
+                          }
+                          if (typeof currentChange.updateStyle !== 'undefined') {
+                              updateItem.style = { ...(updateItem.style || {}), ...currentChange.dimensions };
+                          }
+                          if (typeof currentChange.resizing === 'boolean') {
+                              updateItem.resizing = currentChange.resizing;
+                          }
+                          if (updateItem.expandParent) {
+                              handleParentExpand(res, updateItem);
+                          }
+                          break;
+                      }
+                      case 'remove': {
+                          return res;
+                      }
+                  }
+              }
+          }
+          res.push(updateItem);
+          return res;
+      }, initElements);
+  }
+  function applyNodeChanges(changes, nodes) {
+      return applyChanges(changes, nodes);
+  }
+  const createSelectionChange = (id, selected) => ({
+      id,
+      type: 'select',
+      selected,
+  });
+  function getSelectionChanges(items, selectedIds) {
+      return items.reduce((res, item) => {
+          const willBeSelected = selectedIds.includes(item.id);
+          if (!item.selected && willBeSelected) {
+              item.selected = true;
+              res.push(createSelectionChange(item.id, true));
+          }
+          else if (item.selected && !willBeSelected) {
+              item.selected = false;
+              res.push(createSelectionChange(item.id, false));
+          }
+          return res;
+      }, []);
+  }
+
+  /**
+   * The user selection rectangle gets displayed when a user drags the mouse while pressing shift
+   */
+  const wrapHandler = (handler, containerRef) => {
+      return (event) => {
+          if (event.target !== containerRef.current) {
+              return;
+          }
+          handler?.(event);
+      };
+  };
+  const selector$8 = (s) => ({
+      userSelectionActive: s.userSelectionActive,
+      elementsSelectable: s.elementsSelectable,
+      dragging: s.paneDragging,
+  });
+  const Pane = React.memo(({ isSelecting, selectionMode = SelectionMode.Full, panOnDrag, onSelectionStart, onSelectionEnd, onPaneClick, onPaneContextMenu, onPaneScroll, onPaneMouseEnter, onPaneMouseMove, onPaneMouseLeave, children, }) => {
+      const container = React.useRef(null);
+      const store = useStoreApi();
+      const prevSelectedNodesCount = React.useRef(0);
+      const prevSelectedEdgesCount = React.useRef(0);
+      const containerBounds = React.useRef();
+      const { userSelectionActive, elementsSelectable, dragging } = useStore(selector$8, shallow);
+      const resetUserSelection = () => {
+          store.setState({ userSelectionActive: false, userSelectionRect: null });
+          prevSelectedNodesCount.current = 0;
+          prevSelectedEdgesCount.current = 0;
+      };
+      const onClick = (event) => {
+          onPaneClick?.(event);
+          store.getState().resetSelectedElements();
+          store.setState({ nodesSelectionActive: false });
+      };
+      const onContextMenu = (event) => {
+          if (Array.isArray(panOnDrag) && panOnDrag?.includes(2)) {
+              event.preventDefault();
+              return;
+          }
+          onPaneContextMenu?.(event);
+      };
+      const onWheel = onPaneScroll ? (event) => onPaneScroll(event) : undefined;
+      const onMouseDown = (event) => {
+          const { resetSelectedElements, domNode } = store.getState();
+          containerBounds.current = domNode?.getBoundingClientRect();
+          if (!elementsSelectable ||
+              !isSelecting ||
+              event.button !== 0 ||
+              event.target !== container.current ||
+              !containerBounds.current) {
+              return;
+          }
+          const { x, y } = getEventPosition(event, containerBounds.current);
+          resetSelectedElements();
+          store.setState({
+              userSelectionRect: {
+                  width: 0,
+                  height: 0,
+                  startX: x,
+                  startY: y,
+                  x,
+                  y,
+              },
+          });
+          onSelectionStart?.(event);
+      };
+      const onMouseMove = (event) => {
+          const { userSelectionRect, nodeInternals, edges, transform, onNodesChange, onEdgesChange, nodeOrigin, getNodes } = store.getState();
+          if (!isSelecting || !containerBounds.current || !userSelectionRect) {
+              return;
+          }
+          store.setState({ userSelectionActive: true, nodesSelectionActive: false });
+          const mousePos = getEventPosition(event, containerBounds.current);
+          const startX = userSelectionRect.startX ?? 0;
+          const startY = userSelectionRect.startY ?? 0;
+          const nextUserSelectRect = {
+              ...userSelectionRect,
+              x: mousePos.x < startX ? mousePos.x : startX,
+              y: mousePos.y < startY ? mousePos.y : startY,
+              width: Math.abs(mousePos.x - startX),
+              height: Math.abs(mousePos.y - startY),
+          };
+          const nodes = getNodes();
+          const selectedNodes = getNodesInside(nodeInternals, nextUserSelectRect, transform, selectionMode === SelectionMode.Partial, true, nodeOrigin);
+          const selectedEdgeIds = getConnectedEdges(selectedNodes, edges).map((e) => e.id);
+          const selectedNodeIds = selectedNodes.map((n) => n.id);
+          if (prevSelectedNodesCount.current !== selectedNodeIds.length) {
+              prevSelectedNodesCount.current = selectedNodeIds.length;
+              const changes = getSelectionChanges(nodes, selectedNodeIds);
+              if (changes.length) {
+                  onNodesChange?.(changes);
+              }
+          }
+          if (prevSelectedEdgesCount.current !== selectedEdgeIds.length) {
+              prevSelectedEdgesCount.current = selectedEdgeIds.length;
+              const changes = getSelectionChanges(edges, selectedEdgeIds);
+              if (changes.length) {
+                  onEdgesChange?.(changes);
+              }
+          }
+          store.setState({
+              userSelectionRect: nextUserSelectRect,
+          });
+      };
+      const onMouseUp = (event) => {
+          if (event.button !== 0) {
+              return;
+          }
+          const { userSelectionRect } = store.getState();
+          // We only want to trigger click functions when in selection mode if
+          // the user did not move the mouse.
+          if (!userSelectionActive && userSelectionRect && event.target === container.current) {
+              onClick?.(event);
+          }
+          store.setState({ nodesSelectionActive: prevSelectedNodesCount.current > 0 });
+          resetUserSelection();
+          onSelectionEnd?.(event);
+      };
+      const onMouseLeave = (event) => {
+          if (userSelectionActive) {
+              store.setState({ nodesSelectionActive: prevSelectedNodesCount.current > 0 });
+              onSelectionEnd?.(event);
+          }
+          resetUserSelection();
+      };
+      const hasActiveSelection = elementsSelectable && (isSelecting || userSelectionActive);
+      return (React.createElement("div", { className: cc(['react-flow__pane', { dragging, selection: isSelecting }]), onClick: hasActiveSelection ? undefined : wrapHandler(onClick, container), onContextMenu: wrapHandler(onContextMenu, container), onWheel: wrapHandler(onWheel, container), onMouseEnter: hasActiveSelection ? undefined : onPaneMouseEnter, onMouseDown: hasActiveSelection ? onMouseDown : undefined, onMouseMove: hasActiveSelection ? onMouseMove : onPaneMouseMove, onMouseUp: hasActiveSelection ? onMouseUp : undefined, onMouseLeave: hasActiveSelection ? onMouseLeave : onPaneMouseLeave, ref: container, style: containerStyle },
+          children,
+          React.createElement(UserSelection, null)));
+  });
+  Pane.displayName = 'Pane';
+
+  function isParentSelected(node, nodeInternals) {
+      const parentId = node.parentNode || node.parentId;
+      if (!parentId) {
+          return false;
+      }
+      const parentNode = nodeInternals.get(parentId);
+      if (!parentNode) {
+          return false;
+      }
+      if (parentNode.selected) {
+          return true;
+      }
+      return isParentSelected(parentNode, nodeInternals);
+  }
+  function hasSelector(target, selector, nodeRef) {
+      let current = target;
+      do {
+          if (current?.matches(selector))
+              return true;
+          if (current === nodeRef.current)
+              return false;
+          current = current.parentElement;
+      } while (current);
+      return false;
+  }
+  // looks for all selected nodes and created a NodeDragItem for each of them
+  function getDragItems(nodeInternals, nodesDraggable, mousePos, nodeId) {
+      return Array.from(nodeInternals.values())
+          .filter((n) => (n.selected || n.id === nodeId) &&
+          (!n.parentNode || n.parentId || !isParentSelected(n, nodeInternals)) &&
+          (n.draggable || (nodesDraggable && typeof n.draggable === 'undefined')))
+          .map((n) => ({
+          id: n.id,
+          position: n.position || { x: 0, y: 0 },
+          positionAbsolute: n.positionAbsolute || { x: 0, y: 0 },
+          distance: {
+              x: mousePos.x - (n.positionAbsolute?.x ?? 0),
+              y: mousePos.y - (n.positionAbsolute?.y ?? 0),
+          },
+          delta: {
+              x: 0,
+              y: 0,
+          },
+          extent: n.extent,
+          parentNode: n.parentNode || n.parentId,
+          parentId: n.parentNode || n.parentId,
+          width: n.width,
+          height: n.height,
+          expandParent: n.expandParent,
+      }));
+  }
+  function clampNodeExtent(node, extent) {
+      if (!extent || extent === 'parent') {
+          return extent;
+      }
+      return [extent[0], [extent[1][0] - (node.width || 0), extent[1][1] - (node.height || 0)]];
+  }
+  function calcNextPosition(node, nextPosition, nodeInternals, nodeExtent, nodeOrigin = [0, 0], onError) {
+      const clampedNodeExtent = clampNodeExtent(node, node.extent || nodeExtent);
+      let currentExtent = clampedNodeExtent;
+      const parentId = node.parentNode || node.parentId;
+      if (node.extent === 'parent' && !node.expandParent) {
+          if (parentId && node.width && node.height) {
+              const parent = nodeInternals.get(parentId);
+              const { x: parentX, y: parentY } = getNodePositionWithOrigin(parent, nodeOrigin).positionAbsolute;
+              currentExtent =
+                  parent && isNumeric(parentX) && isNumeric(parentY) && isNumeric(parent.width) && isNumeric(parent.height)
+                      ? [
+                          [parentX + node.width * nodeOrigin[0], parentY + node.height * nodeOrigin[1]],
+                          [
+                              parentX + parent.width - node.width + node.width * nodeOrigin[0],
+                              parentY + parent.height - node.height + node.height * nodeOrigin[1],
+                          ],
+                      ]
+                      : currentExtent;
+          }
+          else {
+              onError?.('005', errorMessages['error005']());
+              currentExtent = clampedNodeExtent;
+          }
+      }
+      else if (node.extent && parentId && node.extent !== 'parent') {
+          const parent = nodeInternals.get(parentId);
+          const { x: parentX, y: parentY } = getNodePositionWithOrigin(parent, nodeOrigin).positionAbsolute;
+          currentExtent = [
+              [node.extent[0][0] + parentX, node.extent[0][1] + parentY],
+              [node.extent[1][0] + parentX, node.extent[1][1] + parentY],
+          ];
+      }
+      let parentPosition = { x: 0, y: 0 };
+      if (parentId) {
+          const parentNode = nodeInternals.get(parentId);
+          parentPosition = getNodePositionWithOrigin(parentNode, nodeOrigin).positionAbsolute;
+      }
+      const positionAbsolute = currentExtent && currentExtent !== 'parent'
+          ? clampPosition(nextPosition, currentExtent)
+          : nextPosition;
+      return {
+          position: {
+              x: positionAbsolute.x - parentPosition.x,
+              y: positionAbsolute.y - parentPosition.y,
+          },
+          positionAbsolute,
+      };
+  }
+  // returns two params:
+  // 1. the dragged node (or the first of the list, if we are dragging a node selection)
+  // 2. array of selected nodes (for multi selections)
+  function getEventHandlerParams({ nodeId, dragItems, nodeInternals, }) {
+      const extentedDragItems = dragItems.map((n) => {
+          const node = nodeInternals.get(n.id);
+          return {
+              ...node,
+              position: n.position,
+              positionAbsolute: n.positionAbsolute,
+          };
+      });
+      return [nodeId ? extentedDragItems.find((n) => n.id === nodeId) : extentedDragItems[0], extentedDragItems];
+  }
+
+  const getHandleBounds = (selector, nodeElement, zoom, nodeOrigin) => {
+      const handles = nodeElement.querySelectorAll(selector);
+      if (!handles || !handles.length) {
+          return null;
+      }
+      const handlesArray = Array.from(handles);
+      const nodeBounds = nodeElement.getBoundingClientRect();
+      const nodeOffset = {
+          x: nodeBounds.width * nodeOrigin[0],
+          y: nodeBounds.height * nodeOrigin[1],
+      };
+      return handlesArray.map((handle) => {
+          const handleBounds = handle.getBoundingClientRect();
+          return {
+              id: handle.getAttribute('data-handleid'),
+              position: handle.getAttribute('data-handlepos'),
+              x: (handleBounds.left - nodeBounds.left - nodeOffset.x) / zoom,
+              y: (handleBounds.top - nodeBounds.top - nodeOffset.y) / zoom,
+              ...getDimensions(handle),
+          };
+      });
+  };
+  function getMouseHandler(id, getState, handler) {
+      return handler === undefined
+          ? handler
+          : (event) => {
+              const node = getState().nodeInternals.get(id);
+              if (node) {
+                  handler(event, { ...node });
+              }
+          };
+  }
+  // this handler is called by
+  // 1. the click handler when node is not draggable or selectNodesOnDrag = false
+  // or
+  // 2. the on drag start handler when node is draggable and selectNodesOnDrag = true
+  function handleNodeClick({ id, store, unselect = false, nodeRef, }) {
+      const { addSelectedNodes, unselectNodesAndEdges, multiSelectionActive, nodeInternals, onError } = store.getState();
+      const node = nodeInternals.get(id);
+      if (!node) {
+          onError?.('012', errorMessages['error012'](id));
+          return;
+      }
+      store.setState({ nodesSelectionActive: false });
+      if (!node.selected) {
+          addSelectedNodes([id]);
+      }
+      else if (unselect || (node.selected && multiSelectionActive)) {
+          unselectNodesAndEdges({ nodes: [node], edges: [] });
+          requestAnimationFrame(() => nodeRef?.current?.blur());
+      }
+  }
+
+  function useGetPointerPosition() {
+      const store = useStoreApi();
+      // returns the pointer position projected to the RF coordinate system
+      const getPointerPosition = React.useCallback(({ sourceEvent }) => {
+          const { transform, snapGrid, snapToGrid } = store.getState();
+          const x = sourceEvent.touches ? sourceEvent.touches[0].clientX : sourceEvent.clientX;
+          const y = sourceEvent.touches ? sourceEvent.touches[0].clientY : sourceEvent.clientY;
+          const pointerPos = {
+              x: (x - transform[0]) / transform[2],
+              y: (y - transform[1]) / transform[2],
+          };
+          // we need the snapped position in order to be able to skip unnecessary drag events
+          return {
+              xSnapped: snapToGrid ? snapGrid[0] * Math.round(pointerPos.x / snapGrid[0]) : pointerPos.x,
+              ySnapped: snapToGrid ? snapGrid[1] * Math.round(pointerPos.y / snapGrid[1]) : pointerPos.y,
+              ...pointerPos,
+          };
+      }, []);
+      return getPointerPosition;
+  }
+
+  function wrapSelectionDragFunc(selectionFunc) {
+      return (event, _, nodes) => selectionFunc?.(event, nodes);
+  }
+  function useDrag({ nodeRef, disabled = false, noDragClassName, handleSelector, nodeId, isSelectable, selectNodesOnDrag, }) {
+      const store = useStoreApi();
+      const [dragging, setDragging] = React.useState(false);
+      const dragItems = React.useRef([]);
+      const lastPos = React.useRef({ x: null, y: null });
+      const autoPanId = React.useRef(0);
+      const containerBounds = React.useRef(null);
+      const mousePosition = React.useRef({ x: 0, y: 0 });
+      const dragEvent = React.useRef(null);
+      const autoPanStarted = React.useRef(false);
+      const dragStarted = React.useRef(false);
+      const abortDrag = React.useRef(false);
+      const getPointerPosition = useGetPointerPosition();
+      React.useEffect(() => {
+          if (nodeRef?.current) {
+              const selection = select(nodeRef.current);
+              const updateNodes = ({ x, y }) => {
+                  const { nodeInternals, onNodeDrag, onSelectionDrag, updateNodePositions, nodeExtent, snapGrid, snapToGrid, nodeOrigin, onError, } = store.getState();
+                  lastPos.current = { x, y };
+                  let hasChange = false;
+                  let nodesBox = { x: 0, y: 0, x2: 0, y2: 0 };
+                  if (dragItems.current.length > 1 && nodeExtent) {
+                      const rect = getNodesBounds(dragItems.current, nodeOrigin);
+                      nodesBox = rectToBox(rect);
+                  }
+                  dragItems.current = dragItems.current.map((n) => {
+                      const nextPosition = { x: x - n.distance.x, y: y - n.distance.y };
+                      if (snapToGrid) {
+                          nextPosition.x = snapGrid[0] * Math.round(nextPosition.x / snapGrid[0]);
+                          nextPosition.y = snapGrid[1] * Math.round(nextPosition.y / snapGrid[1]);
+                      }
+                      // if there is selection with multiple nodes and a node extent is set, we need to adjust the node extent for each node
+                      // based on its position so that the node stays at it's position relative to the selection.
+                      const adjustedNodeExtent = [
+                          [nodeExtent[0][0], nodeExtent[0][1]],
+                          [nodeExtent[1][0], nodeExtent[1][1]],
+                      ];
+                      if (dragItems.current.length > 1 && nodeExtent && !n.extent) {
+                          adjustedNodeExtent[0][0] = n.positionAbsolute.x - nodesBox.x + nodeExtent[0][0];
+                          adjustedNodeExtent[1][0] = n.positionAbsolute.x + (n.width ?? 0) - nodesBox.x2 + nodeExtent[1][0];
+                          adjustedNodeExtent[0][1] = n.positionAbsolute.y - nodesBox.y + nodeExtent[0][1];
+                          adjustedNodeExtent[1][1] = n.positionAbsolute.y + (n.height ?? 0) - nodesBox.y2 + nodeExtent[1][1];
+                      }
+                      const updatedPos = calcNextPosition(n, nextPosition, nodeInternals, adjustedNodeExtent, nodeOrigin, onError);
+                      // we want to make sure that we only fire a change event when there is a change
+                      hasChange = hasChange || n.position.x !== updatedPos.position.x || n.position.y !== updatedPos.position.y;
+                      n.position = updatedPos.position;
+                      n.positionAbsolute = updatedPos.positionAbsolute;
+                      return n;
+                  });
+                  if (!hasChange) {
+                      return;
+                  }
+                  updateNodePositions(dragItems.current, true, true);
+                  setDragging(true);
+                  const onDrag = nodeId ? onNodeDrag : wrapSelectionDragFunc(onSelectionDrag);
+                  if (onDrag && dragEvent.current) {
+                      const [currentNode, nodes] = getEventHandlerParams({
+                          nodeId,
+                          dragItems: dragItems.current,
+                          nodeInternals,
+                      });
+                      onDrag(dragEvent.current, currentNode, nodes);
+                  }
+              };
+              const autoPan = () => {
+                  if (!containerBounds.current) {
+                      return;
+                  }
+                  const [xMovement, yMovement] = calcAutoPan(mousePosition.current, containerBounds.current);
+                  if (xMovement !== 0 || yMovement !== 0) {
+                      const { transform, panBy } = store.getState();
+                      lastPos.current.x = (lastPos.current.x ?? 0) - xMovement / transform[2];
+                      lastPos.current.y = (lastPos.current.y ?? 0) - yMovement / transform[2];
+                      if (panBy({ x: xMovement, y: yMovement })) {
+                          updateNodes(lastPos.current);
+                      }
+                  }
+                  autoPanId.current = requestAnimationFrame(autoPan);
+              };
+              const startDrag = (event) => {
+                  const { nodeInternals, multiSelectionActive, nodesDraggable, unselectNodesAndEdges, onNodeDragStart, onSelectionDragStart, } = store.getState();
+                  dragStarted.current = true;
+                  const onStart = nodeId ? onNodeDragStart : wrapSelectionDragFunc(onSelectionDragStart);
+                  if ((!selectNodesOnDrag || !isSelectable) && !multiSelectionActive && nodeId) {
+                      if (!nodeInternals.get(nodeId)?.selected) {
+                          // we need to reset selected nodes when selectNodesOnDrag=false
+                          unselectNodesAndEdges();
+                      }
+                  }
+                  if (nodeId && isSelectable && selectNodesOnDrag) {
+                      handleNodeClick({
+                          id: nodeId,
+                          store,
+                          nodeRef: nodeRef,
+                      });
+                  }
+                  const pointerPos = getPointerPosition(event);
+                  lastPos.current = pointerPos;
+                  dragItems.current = getDragItems(nodeInternals, nodesDraggable, pointerPos, nodeId);
+                  if (onStart && dragItems.current) {
+                      const [currentNode, nodes] = getEventHandlerParams({
+                          nodeId,
+                          dragItems: dragItems.current,
+                          nodeInternals,
+                      });
+                      onStart(event.sourceEvent, currentNode, nodes);
+                  }
+              };
+              if (disabled) {
+                  selection.on('.drag', null);
+              }
+              else {
+                  const dragHandler = drag()
+                      .on('start', (event) => {
+                      const { domNode, nodeDragThreshold } = store.getState();
+                      if (nodeDragThreshold === 0) {
+                          startDrag(event);
+                      }
+                      abortDrag.current = false;
+                      const pointerPos = getPointerPosition(event);
+                      lastPos.current = pointerPos;
+                      containerBounds.current = domNode?.getBoundingClientRect() || null;
+                      mousePosition.current = getEventPosition(event.sourceEvent, containerBounds.current);
+                  })
+                      .on('drag', (event) => {
+                      const pointerPos = getPointerPosition(event);
+                      const { autoPanOnNodeDrag, nodeDragThreshold } = store.getState();
+                      if (event.sourceEvent.type === 'touchmove' && event.sourceEvent.touches.length > 1) {
+                          abortDrag.current = true;
+                      }
+                      if (abortDrag.current) {
+                          return;
+                      }
+                      if (!autoPanStarted.current && dragStarted.current && autoPanOnNodeDrag) {
+                          autoPanStarted.current = true;
+                          autoPan();
+                      }
+                      if (!dragStarted.current) {
+                          const x = pointerPos.xSnapped - (lastPos?.current?.x ?? 0);
+                          const y = pointerPos.ySnapped - (lastPos?.current?.y ?? 0);
+                          const distance = Math.sqrt(x * x + y * y);
+                          if (distance > nodeDragThreshold) {
+                              startDrag(event);
+                          }
+                      }
+                      // skip events without movement
+                      if ((lastPos.current.x !== pointerPos.xSnapped || lastPos.current.y !== pointerPos.ySnapped) &&
+                          dragItems.current &&
+                          dragStarted.current) {
+                          dragEvent.current = event.sourceEvent;
+                          mousePosition.current = getEventPosition(event.sourceEvent, containerBounds.current);
+                          updateNodes(pointerPos);
+                      }
+                  })
+                      .on('end', (event) => {
+                      if (!dragStarted.current || abortDrag.current) {
+                          return;
+                      }
+                      setDragging(false);
+                      autoPanStarted.current = false;
+                      dragStarted.current = false;
+                      cancelAnimationFrame(autoPanId.current);
+                      if (dragItems.current) {
+                          const { updateNodePositions, nodeInternals, onNodeDragStop, onSelectionDragStop } = store.getState();
+                          const onStop = nodeId ? onNodeDragStop : wrapSelectionDragFunc(onSelectionDragStop);
+                          updateNodePositions(dragItems.current, false, false);
+                          if (onStop) {
+                              const [currentNode, nodes] = getEventHandlerParams({
+                                  nodeId,
+                                  dragItems: dragItems.current,
+                                  nodeInternals,
+                              });
+                              onStop(event.sourceEvent, currentNode, nodes);
+                          }
+                      }
+                  })
+                      .filter((event) => {
+                      const target = event.target;
+                      const isDraggable = !event.button &&
+                          (!noDragClassName || !hasSelector(target, `.${noDragClassName}`, nodeRef)) &&
+                          (!handleSelector || hasSelector(target, handleSelector, nodeRef));
+                      return isDraggable;
+                  });
+                  selection.call(dragHandler);
+                  return () => {
+                      selection.on('.drag', null);
+                  };
+              }
+          }
+      }, [
+          nodeRef,
+          disabled,
+          noDragClassName,
+          handleSelector,
+          isSelectable,
+          store,
+          nodeId,
+          selectNodesOnDrag,
+          getPointerPosition,
+      ]);
+      return dragging;
+  }
+
+  function useUpdateNodePositions() {
+      const store = useStoreApi();
+      const updatePositions = React.useCallback((params) => {
+          const { nodeInternals, nodeExtent, updateNodePositions, getNodes, snapToGrid, snapGrid, onError, nodesDraggable } = store.getState();
+          const selectedNodes = getNodes().filter((n) => n.selected && (n.draggable || (nodesDraggable && typeof n.draggable === 'undefined')));
+          // by default a node moves 5px on each key press, or 20px if shift is pressed
+          // if snap grid is enabled, we use that for the velocity.
+          const xVelo = snapToGrid ? snapGrid[0] : 5;
+          const yVelo = snapToGrid ? snapGrid[1] : 5;
+          const factor = params.isShiftPressed ? 4 : 1;
+          const positionDiffX = params.x * xVelo * factor;
+          const positionDiffY = params.y * yVelo * factor;
+          const nodeUpdates = selectedNodes.map((n) => {
+              if (n.positionAbsolute) {
+                  const nextPosition = { x: n.positionAbsolute.x + positionDiffX, y: n.positionAbsolute.y + positionDiffY };
+                  if (snapToGrid) {
+                      nextPosition.x = snapGrid[0] * Math.round(nextPosition.x / snapGrid[0]);
+                      nextPosition.y = snapGrid[1] * Math.round(nextPosition.y / snapGrid[1]);
+                  }
+                  const { positionAbsolute, position } = calcNextPosition(n, nextPosition, nodeInternals, nodeExtent, undefined, onError);
+                  n.position = position;
+                  n.positionAbsolute = positionAbsolute;
+              }
+              return n;
+          });
+          updateNodePositions(nodeUpdates, true, false);
+      }, []);
+      return updatePositions;
+  }
+
+  const arrowKeyDiffs = {
+      ArrowUp: { x: 0, y: -1 },
+      ArrowDown: { x: 0, y: 1 },
+      ArrowLeft: { x: -1, y: 0 },
+      ArrowRight: { x: 1, y: 0 },
+  };
+  var wrapNode = (NodeComponent) => {
+      const NodeWrapper = ({ id, type, data, xPos, yPos, xPosOrigin, yPosOrigin, selected, onClick, onMouseEnter, onMouseMove, onMouseLeave, onContextMenu, onDoubleClick, style, className, isDraggable, isSelectable, isConnectable, isFocusable, selectNodesOnDrag, sourcePosition, targetPosition, hidden, resizeObserver, dragHandle, zIndex, isParent, noDragClassName, noPanClassName, initialized, disableKeyboardA11y, ariaLabel, rfId, hasHandleBounds, }) => {
+          const store = useStoreApi();
+          const nodeRef = React.useRef(null);
+          const prevNodeRef = React.useRef(null);
+          const prevSourcePosition = React.useRef(sourcePosition);
+          const prevTargetPosition = React.useRef(targetPosition);
+          const prevType = React.useRef(type);
+          const hasPointerEvents = isSelectable || isDraggable || onClick || onMouseEnter || onMouseMove || onMouseLeave;
+          const updatePositions = useUpdateNodePositions();
+          const onMouseEnterHandler = getMouseHandler(id, store.getState, onMouseEnter);
+          const onMouseMoveHandler = getMouseHandler(id, store.getState, onMouseMove);
+          const onMouseLeaveHandler = getMouseHandler(id, store.getState, onMouseLeave);
+          const onContextMenuHandler = getMouseHandler(id, store.getState, onContextMenu);
+          const onDoubleClickHandler = getMouseHandler(id, store.getState, onDoubleClick);
+          const onSelectNodeHandler = (event) => {
+              const { nodeDragThreshold, preventNodeClick } = store.getState();
+              console.log("internal node click", preventNodeClick);
+              if (preventNodeClick) {
+                  return;
+              }
+              if (isSelectable && (!selectNodesOnDrag || !isDraggable || nodeDragThreshold > 0)) {
+                  // this handler gets called within the drag start event when selectNodesOnDrag=true
+                  handleNodeClick({
+                      id,
+                      store,
+                      nodeRef,
+                  });
+              }
+              if (onClick) {
+                  const node = store.getState().nodeInternals.get(id);
+                  if (node) {
+                      onClick(event, { ...node });
+                  }
+              }
+          };
+          const onKeyDown = (event) => {
+              if (isInputDOMNode(event)) {
+                  return;
+              }
+              if (disableKeyboardA11y) {
+                  return;
+              }
+              if (elementSelectionKeys.includes(event.key) && isSelectable) {
+                  const unselect = event.key === 'Escape';
+                  handleNodeClick({
+                      id,
+                      store,
+                      unselect,
+                      nodeRef,
+                  });
+              }
+              else if (isDraggable && selected && Object.prototype.hasOwnProperty.call(arrowKeyDiffs, event.key)) {
+                  store.setState({
+                      ariaLiveMessage: `Moved selected node ${event.key
+                        .replace('Arrow', '')
+                        .toLowerCase()}. New position, x: ${~~xPos}, y: ${~~yPos}`,
+                  });
+                  updatePositions({
+                      x: arrowKeyDiffs[event.key].x,
+                      y: arrowKeyDiffs[event.key].y,
+                      isShiftPressed: event.shiftKey,
+                  });
+              }
+          };
+          React.useEffect(() => {
+              return () => {
+                  if (prevNodeRef.current) {
+                      resizeObserver?.unobserve(prevNodeRef.current);
+                      prevNodeRef.current = null;
+                  }
+              };
+          }, []);
+          React.useEffect(() => {
+              if (nodeRef.current && !hidden) {
+                  const currNode = nodeRef.current;
+                  if (!initialized || !hasHandleBounds || prevNodeRef.current !== currNode) {
+                      // At this point we always want to make sure that the node gets re-measured / re-initialized.
+                      // We need to unobserve it first in case it is still observed
+                      if (prevNodeRef.current) {
+                          resizeObserver?.unobserve(prevNodeRef.current);
+                      }
+                      resizeObserver?.observe(currNode);
+                      prevNodeRef.current = currNode;
+                  }
+              }
+          }, [hidden, initialized, hasHandleBounds]);
+          React.useEffect(() => {
+              // when the user programmatically changes the source or handle position, we re-initialize the node
+              const typeChanged = prevType.current !== type;
+              const sourcePosChanged = prevSourcePosition.current !== sourcePosition;
+              const targetPosChanged = prevTargetPosition.current !== targetPosition;
+              if (nodeRef.current && (typeChanged || sourcePosChanged || targetPosChanged)) {
+                  if (typeChanged) {
+                      prevType.current = type;
+                  }
+                  if (sourcePosChanged) {
+                      prevSourcePosition.current = sourcePosition;
+                  }
+                  if (targetPosChanged) {
+                      prevTargetPosition.current = targetPosition;
+                  }
+                  store.getState().updateNodeDimensions([{ id, nodeElement: nodeRef.current, forceUpdate: true }]);
+              }
+          }, [id, type, sourcePosition, targetPosition]);
+          const dragging = useDrag({
+              nodeRef,
+              disabled: hidden || !isDraggable,
+              noDragClassName,
+              handleSelector: dragHandle,
+              nodeId: id,
+              isSelectable,
+              selectNodesOnDrag,
+          });
+          if (hidden) {
+              return null;
+          }
+          return (React.createElement("div", { className: cc([
+                  'react-flow__node',
+                  `react-flow__node-${type}`,
+                  {
+                      // this is overwritable by passing `nopan` as a class name
+                      [noPanClassName]: isDraggable,
+                  },
+                  className,
+                  {
+                      selected,
+                      selectable: isSelectable,
+                      parent: isParent,
+                      dragging,
+                  },
+              ]), ref: nodeRef, style: {
+                  zIndex,
+                  transform: `translate(${xPosOrigin}px,${yPosOrigin}px)`,
+                  pointerEvents: hasPointerEvents ? 'all' : 'none',
+                  visibility: initialized ? 'visible' : 'hidden',
+                  ...style,
+              }, "data-id": id, "data-testid": `rf__node-${id}`, onMouseEnter: onMouseEnterHandler, onMouseMove: onMouseMoveHandler, onMouseLeave: onMouseLeaveHandler, onContextMenu: onContextMenuHandler, onClick: onSelectNodeHandler, onDoubleClick: onDoubleClickHandler, onKeyDown: isFocusable ? onKeyDown : undefined, tabIndex: isFocusable ? 0 : undefined, role: isFocusable ? 'button' : undefined, "aria-describedby": disableKeyboardA11y ? undefined : `${ARIA_NODE_DESC_KEY}-${rfId}`, "aria-label": ariaLabel },
+              React.createElement(Provider, { value: id },
+                  React.createElement(NodeComponent, { id: id, data: data, type: type, xPos: xPos, yPos: yPos, selected: selected, isConnectable: isConnectable, sourcePosition: sourcePosition, targetPosition: targetPosition, dragging: dragging, dragHandle: dragHandle, zIndex: zIndex }))));
+      };
+      NodeWrapper.displayName = 'NodeWrapper';
+      return React.memo(NodeWrapper);
+  };
+
+  /**
+   * The nodes selection rectangle gets displayed when a user
+   * made a selection with on or several nodes
+   */
+  const selector$7 = (s) => {
+      const selectedNodes = s.getNodes().filter((n) => n.selected);
+      return {
+          ...getNodesBounds(selectedNodes, s.nodeOrigin),
+          transformString: `translate(${s.transform[0]}px,${s.transform[1]}px) scale(${s.transform[2]})`,
+          userSelectionActive: s.userSelectionActive,
+      };
+  };
+  function NodesSelection({ onSelectionContextMenu, noPanClassName, disableKeyboardA11y }) {
+      const store = useStoreApi();
+      const { width, height, x: left, y: top, transformString, userSelectionActive } = useStore(selector$7, shallow);
+      const updatePositions = useUpdateNodePositions();
+      const nodeRef = React.useRef(null);
+      React.useEffect(() => {
+          if (!disableKeyboardA11y) {
+              nodeRef.current?.focus({
+                  preventScroll: true,
+              });
+          }
+      }, [disableKeyboardA11y]);
+      useDrag({
+          nodeRef,
+      });
+      if (userSelectionActive || !width || !height) {
+          return null;
+      }
+      const onContextMenu = onSelectionContextMenu
+          ? (event) => {
+              const selectedNodes = store
+                  .getState()
+                  .getNodes()
+                  .filter((n) => n.selected);
+              onSelectionContextMenu(event, selectedNodes);
+          }
+          : undefined;
+      const onKeyDown = (event) => {
+          if (Object.prototype.hasOwnProperty.call(arrowKeyDiffs, event.key)) {
+              updatePositions({
+                  x: arrowKeyDiffs[event.key].x,
+                  y: arrowKeyDiffs[event.key].y,
+                  isShiftPressed: event.shiftKey,
+              });
+          }
+      };
+      return (React.createElement("div", { className: cc(['react-flow__nodesselection', 'react-flow__container', noPanClassName]), style: {
+              transform: transformString,
+          } },
+          React.createElement("div", { ref: nodeRef, className: "react-flow__nodesselection-rect", onContextMenu: onContextMenu, tabIndex: disableKeyboardA11y ? undefined : -1, onKeyDown: disableKeyboardA11y ? undefined : onKeyDown, style: {
+                  width,
+                  height,
+                  top,
+                  left,
+              } })));
+  }
+  var NodesSelection$1 = React.memo(NodesSelection);
+
+  const selector$6 = (s) => s.nodesSelectionActive;
+  const FlowRenderer = ({ children, onPaneClick, onPaneMouseEnter, onPaneMouseMove, onPaneMouseLeave, onPaneContextMenu, onPaneScroll, deleteKeyCode, onMove, onMoveStart, onMoveEnd, selectionKeyCode, selectionOnDrag, selectionMode, onSelectionStart, onSelectionEnd, multiSelectionKeyCode, panActivationKeyCode, zoomActivationKeyCode, elementsSelectable, zoomOnScroll, zoomOnPinch, panOnScroll: _panOnScroll, panOnScrollSpeed, panOnScrollMode, zoomOnDoubleClick, panOnDrag: _panOnDrag, defaultViewport, translateExtent, minZoom, maxZoom, preventScrolling, onSelectionContextMenu, noWheelClassName, noPanClassName, disableKeyboardA11y, }) => {
+      const nodesSelectionActive = useStore(selector$6);
+      const selectionKeyPressed = useKeyPress(selectionKeyCode);
+      const panActivationKeyPressed = useKeyPress(panActivationKeyCode);
+      const panOnDrag = panActivationKeyPressed || _panOnDrag;
+      const panOnScroll = panActivationKeyPressed || _panOnScroll;
+      const isSelecting = selectionKeyPressed || (selectionOnDrag && panOnDrag !== true);
+      useGlobalKeyHandler({ deleteKeyCode, multiSelectionKeyCode });
+      return (React.createElement(ZoomPane, { onMove: onMove, onMoveStart: onMoveStart, onMoveEnd: onMoveEnd, onPaneContextMenu: onPaneContextMenu, elementsSelectable: elementsSelectable, zoomOnScroll: zoomOnScroll, zoomOnPinch: zoomOnPinch, panOnScroll: panOnScroll, panOnScrollSpeed: panOnScrollSpeed, panOnScrollMode: panOnScrollMode, zoomOnDoubleClick: zoomOnDoubleClick, panOnDrag: !selectionKeyPressed && panOnDrag, defaultViewport: defaultViewport, translateExtent: translateExtent, minZoom: minZoom, maxZoom: maxZoom, zoomActivationKeyCode: zoomActivationKeyCode, preventScrolling: preventScrolling, noWheelClassName: noWheelClassName, noPanClassName: noPanClassName },
+          React.createElement(Pane, { onSelectionStart: onSelectionStart, onSelectionEnd: onSelectionEnd, onPaneClick: onPaneClick, onPaneMouseEnter: onPaneMouseEnter, onPaneMouseMove: onPaneMouseMove, onPaneMouseLeave: onPaneMouseLeave, onPaneContextMenu: onPaneContextMenu, onPaneScroll: onPaneScroll, panOnDrag: panOnDrag, isSelecting: !!isSelecting, selectionMode: selectionMode },
+              children,
+              nodesSelectionActive && (React.createElement(NodesSelection$1, { onSelectionContextMenu: onSelectionContextMenu, noPanClassName: noPanClassName, disableKeyboardA11y: disableKeyboardA11y })))));
+  };
+  FlowRenderer.displayName = 'FlowRenderer';
+  var FlowRenderer$1 = React.memo(FlowRenderer);
+
+  function useVisibleNodes(onlyRenderVisible) {
+      const nodes = useStore(React.useCallback((s) => onlyRenderVisible
+          ? getNodesInside(s.nodeInternals, { x: 0, y: 0, width: s.width, height: s.height }, s.transform, true)
+          : s.getNodes(), [onlyRenderVisible]));
+      return nodes;
+  }
+
+  function createNodeTypes(nodeTypes) {
+      const standardTypes = {
+          input: wrapNode((nodeTypes.input || InputNode$1)),
+          default: wrapNode((nodeTypes.default || DefaultNode$1)),
+          output: wrapNode((nodeTypes.output || OutputNode$1)),
+          group: wrapNode((nodeTypes.group || GroupNode)),
+      };
+      const wrappedTypes = {};
+      const specialTypes = Object.keys(nodeTypes)
+          .filter((k) => !['input', 'default', 'output', 'group'].includes(k))
+          .reduce((res, key) => {
+          res[key] = wrapNode((nodeTypes[key] || DefaultNode$1));
+          return res;
+      }, wrappedTypes);
+      return {
+          ...standardTypes,
+          ...specialTypes,
+      };
+  }
+  const getPositionWithOrigin = ({ x, y, width, height, origin, }) => {
+      if (!width || !height) {
+          return { x, y };
+      }
+      if (origin[0] < 0 || origin[1] < 0 || origin[0] > 1 || origin[1] > 1) {
+          return { x, y };
+      }
+      return {
+          x: x - width * origin[0],
+          y: y - height * origin[1],
+      };
+  };
+
+  const selector$5 = (s) => ({
+      nodesDraggable: s.nodesDraggable,
+      nodesConnectable: s.nodesConnectable,
+      nodesFocusable: s.nodesFocusable,
+      elementsSelectable: s.elementsSelectable,
+      updateNodeDimensions: s.updateNodeDimensions,
+      onError: s.onError,
+  });
+  const NodeRenderer = (props) => {
+      const { nodesDraggable, nodesConnectable, nodesFocusable, elementsSelectable, updateNodeDimensions, onError } = useStore(selector$5, shallow);
+      const nodes = useVisibleNodes(props.onlyRenderVisibleElements);
+      const resizeObserverRef = React.useRef();
+      const resizeObserver = React.useMemo(() => {
+          if (typeof ResizeObserver === 'undefined') {
+              return null;
+          }
+          const observer = new ResizeObserver((entries) => {
+              const updates = entries.map((entry) => ({
+                  id: entry.target.getAttribute('data-id'),
+                  nodeElement: entry.target,
+                  forceUpdate: true,
+              }));
+              updateNodeDimensions(updates);
+          });
+          resizeObserverRef.current = observer;
+          return observer;
+      }, []);
+      React.useEffect(() => {
+          return () => {
+              resizeObserverRef?.current?.disconnect();
+          };
+      }, []);
+      return (React.createElement("div", { className: "react-flow__nodes", style: containerStyle }, nodes.map((node) => {
+          let nodeType = node.type || 'default';
+          if (!props.nodeTypes[nodeType]) {
+              onError?.('003', errorMessages['error003'](nodeType));
+              nodeType = 'default';
+          }
+          const NodeComponent = (props.nodeTypes[nodeType] || props.nodeTypes.default);
+          const isDraggable = !!(node.draggable || (nodesDraggable && typeof node.draggable === 'undefined'));
+          const isSelectable = !!(node.selectable || (elementsSelectable && typeof node.selectable === 'undefined'));
+          const isConnectable = !!(node.connectable || (nodesConnectable && typeof node.connectable === 'undefined'));
+          const isFocusable = !!(node.focusable || (nodesFocusable && typeof node.focusable === 'undefined'));
+          const clampedPosition = props.nodeExtent
+              ? clampPosition(node.positionAbsolute, props.nodeExtent)
+              : node.positionAbsolute;
+          const posX = clampedPosition?.x ?? 0;
+          const posY = clampedPosition?.y ?? 0;
+          const posOrigin = getPositionWithOrigin({
+              x: posX,
+              y: posY,
+              width: node.width ?? 0,
+              height: node.height ?? 0,
+              origin: props.nodeOrigin,
+          });
+          return (React.createElement(NodeComponent, { key: node.id, id: node.id, className: node.className, style: node.style, type: nodeType, data: node.data, sourcePosition: node.sourcePosition || Position.Bottom, targetPosition: node.targetPosition || Position.Top, hidden: node.hidden, xPos: posX, yPos: posY, xPosOrigin: posOrigin.x, yPosOrigin: posOrigin.y, selectNodesOnDrag: props.selectNodesOnDrag, onClick: props.onNodeClick, onMouseEnter: props.onNodeMouseEnter, onMouseMove: props.onNodeMouseMove, onMouseLeave: props.onNodeMouseLeave, onContextMenu: props.onNodeContextMenu, onDoubleClick: props.onNodeDoubleClick, selected: !!node.selected, isDraggable: isDraggable, isSelectable: isSelectable, isConnectable: isConnectable, isFocusable: isFocusable, resizeObserver: resizeObserver, dragHandle: node.dragHandle, zIndex: node[internalsSymbol]?.z ?? 0, isParent: !!node[internalsSymbol]?.isParent, noDragClassName: props.noDragClassName, noPanClassName: props.noPanClassName, initialized: !!node.width && !!node.height, rfId: props.rfId, disableKeyboardA11y: props.disableKeyboardA11y, ariaLabel: node.ariaLabel, hasHandleBounds: !!node[internalsSymbol]?.handleBounds }));
+      })));
+  };
+  NodeRenderer.displayName = 'NodeRenderer';
+  var NodeRenderer$1 = React.memo(NodeRenderer);
+
+  const shiftX = (x, shift, position) => {
+      if (position === Position.Left)
+          return x - shift;
+      if (position === Position.Right)
+          return x + shift;
+      return x;
+  };
+  const shiftY = (y, shift, position) => {
+      if (position === Position.Top)
+          return y - shift;
+      if (position === Position.Bottom)
+          return y + shift;
+      return y;
+  };
+  const EdgeUpdaterClassName = 'react-flow__edgeupdater';
+  const EdgeAnchor = ({ position, centerX, centerY, radius = 10, onMouseDown, onMouseEnter, onMouseOut, type, }) => (React.createElement("circle", { onMouseDown: onMouseDown, onMouseEnter: onMouseEnter, onMouseOut: onMouseOut, className: cc([EdgeUpdaterClassName, `${EdgeUpdaterClassName}-${type}`]), cx: shiftX(centerX, radius, position), cy: shiftY(centerY, radius, position), r: radius, stroke: "transparent", fill: "transparent" }));
+
+  const alwaysValidConnection = () => true;
+  var wrapEdge = (EdgeComponent) => {
+      const EdgeWrapper = ({ id, className, type, data, onClick, onEdgeDoubleClick, selected, animated, label, labelStyle, labelShowBg, labelBgStyle, labelBgPadding, labelBgBorderRadius, style, source, target, sourceX, sourceY, targetX, targetY, sourcePosition, targetPosition, elementsSelectable, hidden, sourceHandleId, targetHandleId, onContextMenu, onMouseEnter, onMouseMove, onMouseLeave, reconnectRadius, onReconnect, onReconnectStart, onReconnectEnd, markerEnd, markerStart, rfId, ariaLabel, isFocusable, isReconnectable, pathOptions, interactionWidth, disableKeyboardA11y, }) => {
+          const edgeRef = React.useRef(null);
+          const [updateHover, setUpdateHover] = React.useState(false);
+          const [updating, setUpdating] = React.useState(false);
+          const store = useStoreApi();
+          const markerStartUrl = React.useMemo(() => `url('#${getMarkerId(markerStart, rfId)}')`, [markerStart, rfId]);
+          const markerEndUrl = React.useMemo(() => `url('#${getMarkerId(markerEnd, rfId)}')`, [markerEnd, rfId]);
+          if (hidden) {
+              return null;
+          }
+          const onEdgeClick = (event) => {
+              const { edges, addSelectedEdges, unselectNodesAndEdges, multiSelectionActive } = store.getState();
+              const edge = edges.find((e) => e.id === id);
+              if (!edge) {
+                  return;
+              }
+              if (elementsSelectable) {
+                  store.setState({ nodesSelectionActive: false });
+                  if (edge.selected && multiSelectionActive) {
+                      unselectNodesAndEdges({ nodes: [], edges: [edge] });
+                      edgeRef.current?.blur();
+                  }
+                  else {
+                      addSelectedEdges([id]);
+                  }
+              }
+              if (onClick) {
+                  onClick(event, edge);
+              }
+          };
+          const onEdgeDoubleClickHandler = getMouseHandler$1(id, store.getState, onEdgeDoubleClick);
+          const onEdgeContextMenu = getMouseHandler$1(id, store.getState, onContextMenu);
+          const onEdgeMouseEnter = getMouseHandler$1(id, store.getState, onMouseEnter);
+          const onEdgeMouseMove = getMouseHandler$1(id, store.getState, onMouseMove);
+          const onEdgeMouseLeave = getMouseHandler$1(id, store.getState, onMouseLeave);
+          const handleEdgeUpdater = (event, isSourceHandle) => {
+              // avoid triggering edge updater if mouse btn is not left
+              if (event.button !== 0) {
+                  return;
+              }
+              const { edges, isValidConnection: isValidConnectionStore } = store.getState();
+              const nodeId = isSourceHandle ? target : source;
+              const handleId = (isSourceHandle ? targetHandleId : sourceHandleId) || null;
+              const handleType = isSourceHandle ? 'target' : 'source';
+              const isValidConnection = isValidConnectionStore || alwaysValidConnection;
+              const isTarget = isSourceHandle;
+              const edge = edges.find((e) => e.id === id);
+              setUpdating(true);
+              onReconnectStart?.(event, edge, handleType);
+              const _onReconnectEnd = (evt) => {
+                  setUpdating(false);
+                  onReconnectEnd?.(evt, edge, handleType);
+              };
+              const onConnectEdge = (connection) => onReconnect?.(edge, connection);
+              handlePointerDown({
+                  event,
+                  handleId,
+                  nodeId,
+                  onConnect: onConnectEdge,
+                  isTarget,
+                  getState: store.getState,
+                  setState: store.setState,
+                  isValidConnection,
+                  edgeUpdaterType: handleType,
+                  onReconnectEnd: _onReconnectEnd,
+              });
+          };
+          const onEdgeUpdaterSourceMouseDown = (event) => handleEdgeUpdater(event, true);
+          const onEdgeUpdaterTargetMouseDown = (event) => handleEdgeUpdater(event, false);
+          const onEdgeUpdaterMouseEnter = () => setUpdateHover(true);
+          const onEdgeUpdaterMouseOut = () => setUpdateHover(false);
+          const inactive = !elementsSelectable && !onClick;
+          const onKeyDown = (event) => {
+              if (!disableKeyboardA11y && elementSelectionKeys.includes(event.key) && elementsSelectable) {
+                  const { unselectNodesAndEdges, addSelectedEdges, edges } = store.getState();
+                  const unselect = event.key === 'Escape';
+                  if (unselect) {
+                      edgeRef.current?.blur();
+                      unselectNodesAndEdges({ edges: [edges.find((e) => e.id === id)] });
+                  }
+                  else {
+                      addSelectedEdges([id]);
+                  }
+              }
+          };
+          return (React.createElement("g", { className: cc([
+                  'react-flow__edge',
+                  `react-flow__edge-${type}`,
+                  className,
+                  { selected, animated, inactive, updating: updateHover },
+              ]), onClick: onEdgeClick, onDoubleClick: onEdgeDoubleClickHandler, onContextMenu: onEdgeContextMenu, onMouseEnter: onEdgeMouseEnter, onMouseMove: onEdgeMouseMove, onMouseLeave: onEdgeMouseLeave, onKeyDown: isFocusable ? onKeyDown : undefined, tabIndex: isFocusable ? 0 : undefined, role: isFocusable ? 'button' : 'img', "data-testid": `rf__edge-${id}`, "aria-label": ariaLabel === null ? undefined : ariaLabel ? ariaLabel : `Edge from ${source} to ${target}`, "aria-describedby": isFocusable ? `${ARIA_EDGE_DESC_KEY}-${rfId}` : undefined, ref: edgeRef },
+              !updating && (React.createElement(EdgeComponent, { id: id, source: source, target: target, selected: selected, animated: animated, label: label, labelStyle: labelStyle, labelShowBg: labelShowBg, labelBgStyle: labelBgStyle, labelBgPadding: labelBgPadding, labelBgBorderRadius: labelBgBorderRadius, data: data, style: style, sourceX: sourceX, sourceY: sourceY, targetX: targetX, targetY: targetY, sourcePosition: sourcePosition, targetPosition: targetPosition, sourceHandleId: sourceHandleId, targetHandleId: targetHandleId, markerStart: markerStartUrl, markerEnd: markerEndUrl, pathOptions: pathOptions, interactionWidth: interactionWidth })),
+              isReconnectable && (React.createElement(React.Fragment, null,
+                  (isReconnectable === 'source' || isReconnectable === true) && (React.createElement(EdgeAnchor, { position: sourcePosition, centerX: sourceX, centerY: sourceY, radius: reconnectRadius, onMouseDown: onEdgeUpdaterSourceMouseDown, onMouseEnter: onEdgeUpdaterMouseEnter, onMouseOut: onEdgeUpdaterMouseOut, type: "source" })),
+                  (isReconnectable === 'target' || isReconnectable === true) && (React.createElement(EdgeAnchor, { position: targetPosition, centerX: targetX, centerY: targetY, radius: reconnectRadius, onMouseDown: onEdgeUpdaterTargetMouseDown, onMouseEnter: onEdgeUpdaterMouseEnter, onMouseOut: onEdgeUpdaterMouseOut, type: "target" }))))));
+      };
+      EdgeWrapper.displayName = 'EdgeWrapper';
+      return React.memo(EdgeWrapper);
+  };
+
+  function createEdgeTypes(edgeTypes) {
+      const standardTypes = {
+          default: wrapEdge((edgeTypes.default || BezierEdge)),
+          straight: wrapEdge((edgeTypes.bezier || StraightEdge)),
+          step: wrapEdge((edgeTypes.step || StepEdge)),
+          smoothstep: wrapEdge((edgeTypes.step || SmoothStepEdge)),
+          simplebezier: wrapEdge((edgeTypes.simplebezier || SimpleBezierEdge)),
+      };
+      const wrappedTypes = {};
+      const specialTypes = Object.keys(edgeTypes)
+          .filter((k) => !['default', 'bezier'].includes(k))
+          .reduce((res, key) => {
+          res[key] = wrapEdge((edgeTypes[key] || BezierEdge));
+          return res;
+      }, wrappedTypes);
+      return {
+          ...standardTypes,
+          ...specialTypes,
+      };
+  }
+  function getHandlePosition(position, nodeRect, handle = null) {
+      const x = (handle?.x || 0) + nodeRect.x;
+      const y = (handle?.y || 0) + nodeRect.y;
+      const width = handle?.width || nodeRect.width;
+      const height = handle?.height || nodeRect.height;
+      switch (position) {
+          case Position.Top:
+              return {
+                  x: x + width / 2,
+                  y,
+              };
+          case Position.Right:
+              return {
+                  x: x + width,
+                  y: y + height / 2,
+              };
+          case Position.Bottom:
+              return {
+                  x: x + width / 2,
+                  y: y + height,
+              };
+          case Position.Left:
+              return {
+                  x,
+                  y: y + height / 2,
+              };
+      }
+  }
+  function getHandle(bounds, handleId) {
+      if (!bounds) {
+          return null;
+      }
+      if (bounds.length === 1 || !handleId) {
+          return bounds[0];
+      }
+      else if (handleId) {
+          return bounds.find((d) => d.id === handleId) || null;
+      }
+      return null;
+  }
+  const getEdgePositions = (sourceNodeRect, sourceHandle, sourcePosition, targetNodeRect, targetHandle, targetPosition) => {
+      const sourceHandlePos = getHandlePosition(sourcePosition, sourceNodeRect, sourceHandle);
+      const targetHandlePos = getHandlePosition(targetPosition, targetNodeRect, targetHandle);
+      return {
+          sourceX: sourceHandlePos.x,
+          sourceY: sourceHandlePos.y,
+          targetX: targetHandlePos.x,
+          targetY: targetHandlePos.y,
+      };
+  };
+  function isEdgeVisible({ sourcePos, targetPos, sourceWidth, sourceHeight, targetWidth, targetHeight, width, height, transform, }) {
+      const edgeBox = {
+          x: Math.min(sourcePos.x, targetPos.x),
+          y: Math.min(sourcePos.y, targetPos.y),
+          x2: Math.max(sourcePos.x + sourceWidth, targetPos.x + targetWidth),
+          y2: Math.max(sourcePos.y + sourceHeight, targetPos.y + targetHeight),
+      };
+      if (edgeBox.x === edgeBox.x2) {
+          edgeBox.x2 += 1;
+      }
+      if (edgeBox.y === edgeBox.y2) {
+          edgeBox.y2 += 1;
+      }
+      const viewBox = rectToBox({
+          x: (0 - transform[0]) / transform[2],
+          y: (0 - transform[1]) / transform[2],
+          width: width / transform[2],
+          height: height / transform[2],
+      });
+      const xOverlap = Math.max(0, Math.min(viewBox.x2, edgeBox.x2) - Math.max(viewBox.x, edgeBox.x));
+      const yOverlap = Math.max(0, Math.min(viewBox.y2, edgeBox.y2) - Math.max(viewBox.y, edgeBox.y));
+      const overlappingArea = Math.ceil(xOverlap * yOverlap);
+      return overlappingArea > 0;
+  }
+  function getNodeData(node) {
+      const handleBounds = node?.[internalsSymbol]?.handleBounds || null;
+      const isValid = handleBounds &&
+          node?.width &&
+          node?.height &&
+          typeof node?.positionAbsolute?.x !== 'undefined' &&
+          typeof node?.positionAbsolute?.y !== 'undefined';
+      return [
+          {
+              x: node?.positionAbsolute?.x || 0,
+              y: node?.positionAbsolute?.y || 0,
+              width: node?.width || 0,
+              height: node?.height || 0,
+          },
+          handleBounds,
+          !!isValid,
+      ];
+  }
+
+  const defaultEdgeTree = [{ level: 0, isMaxLevel: true, edges: [] }];
+  function groupEdgesByZLevel(edges, nodeInternals, elevateEdgesOnSelect = false) {
+      let maxLevel = -1;
+      const levelLookup = edges.reduce((tree, edge) => {
+          const hasZIndex = isNumeric(edge.zIndex);
+          let z = hasZIndex ? edge.zIndex : 0;
+          if (elevateEdgesOnSelect) {
+              const targetNode = nodeInternals.get(edge.target);
+              const sourceNode = nodeInternals.get(edge.source);
+              const edgeOrConnectedNodeSelected = edge.selected || targetNode?.selected || sourceNode?.selected;
+              const selectedZIndex = Math.max(sourceNode?.[internalsSymbol]?.z || 0, targetNode?.[internalsSymbol]?.z || 0, 1000);
+              z = (hasZIndex ? edge.zIndex : 0) + (edgeOrConnectedNodeSelected ? selectedZIndex : 0);
+          }
+          if (tree[z]) {
+              tree[z].push(edge);
+          }
+          else {
+              tree[z] = [edge];
+          }
+          maxLevel = z > maxLevel ? z : maxLevel;
+          return tree;
+      }, {});
+      const edgeTree = Object.entries(levelLookup).map(([key, edges]) => {
+          const level = +key;
+          return {
+              edges,
+              level,
+              isMaxLevel: level === maxLevel,
+          };
+      });
+      if (edgeTree.length === 0) {
+          return defaultEdgeTree;
+      }
+      return edgeTree;
+  }
+  function useVisibleEdges(onlyRenderVisible, nodeInternals, elevateEdgesOnSelect) {
+      const edges = useStore(React.useCallback((s) => {
+          if (!onlyRenderVisible) {
+              return s.edges;
+          }
+          return s.edges.filter((e) => {
+              const sourceNode = nodeInternals.get(e.source);
+              const targetNode = nodeInternals.get(e.target);
+              return (sourceNode?.width &&
+                  sourceNode?.height &&
+                  targetNode?.width &&
+                  targetNode?.height &&
+                  isEdgeVisible({
+                      sourcePos: sourceNode.positionAbsolute || { x: 0, y: 0 },
+                      targetPos: targetNode.positionAbsolute || { x: 0, y: 0 },
+                      sourceWidth: sourceNode.width,
+                      sourceHeight: sourceNode.height,
+                      targetWidth: targetNode.width,
+                      targetHeight: targetNode.height,
+                      width: s.width,
+                      height: s.height,
+                      transform: s.transform,
+                  }));
+          });
+      }, [onlyRenderVisible, nodeInternals]));
+      return groupEdgesByZLevel(edges, nodeInternals, elevateEdgesOnSelect);
+  }
+
+  const ArrowSymbol = ({ color = 'none', strokeWidth = 1 }) => {
+      return (React.createElement("polyline", { style: {
+              stroke: color,
+              strokeWidth,
+          }, strokeLinecap: "round", strokeLinejoin: "round", fill: "none", points: "-5,-4 0,0 -5,4" }));
+  };
+  const ArrowClosedSymbol = ({ color = 'none', strokeWidth = 1 }) => {
+      return (React.createElement("polyline", { style: {
+              stroke: color,
+              fill: color,
+              strokeWidth,
+          }, strokeLinecap: "round", strokeLinejoin: "round", points: "-5,-4 0,0 -5,4 -5,-4" }));
+  };
+  const MarkerSymbols = {
+      [MarkerType.Arrow]: ArrowSymbol,
+      [MarkerType.ArrowClosed]: ArrowClosedSymbol,
+  };
+  function useMarkerSymbol(type) {
+      const store = useStoreApi();
+      const symbol = React.useMemo(() => {
+          const symbolExists = Object.prototype.hasOwnProperty.call(MarkerSymbols, type);
+          if (!symbolExists) {
+              store.getState().onError?.('009', errorMessages['error009'](type));
+              return null;
+          }
+          return MarkerSymbols[type];
+      }, [type]);
+      return symbol;
+  }
+
+  const Marker = ({ id, type, color, width = 12.5, height = 12.5, markerUnits = 'strokeWidth', strokeWidth, orient = 'auto-start-reverse', }) => {
+      const Symbol = useMarkerSymbol(type);
+      if (!Symbol) {
+          return null;
+      }
+      return (React.createElement("marker", { className: "react-flow__arrowhead", id: id, markerWidth: `${width}`, markerHeight: `${height}`, viewBox: "-10 -10 20 20", markerUnits: markerUnits, orient: orient, refX: "0", refY: "0" },
+          React.createElement(Symbol, { color: color, strokeWidth: strokeWidth })));
+  };
+  const markerSelector = ({ defaultColor, rfId }) => (s) => {
+      const ids = [];
+      return s.edges
+          .reduce((markers, edge) => {
+          [edge.markerStart, edge.markerEnd].forEach((marker) => {
+              if (marker && typeof marker === 'object') {
+                  const markerId = getMarkerId(marker, rfId);
+                  if (!ids.includes(markerId)) {
+                      markers.push({ id: markerId, color: marker.color || defaultColor, ...marker });
+                      ids.push(markerId);
+                  }
+              }
+          });
+          return markers;
+      }, [])
+          .sort((a, b) => a.id.localeCompare(b.id));
+  };
+  // when you have multiple flows on a page and you hide the first one, the other ones have no markers anymore
+  // when they do have markers with the same ids. To prevent this the user can pass a unique id to the react flow wrapper
+  // that we can then use for creating our unique marker ids
+  const MarkerDefinitions = ({ defaultColor, rfId }) => {
+      const markers = useStore(React.useCallback(markerSelector({ defaultColor, rfId }), [defaultColor, rfId]), 
+      // the id includes all marker options, so we just need to look at that part of the marker
+      (a, b) => !(a.length !== b.length || a.some((m, i) => m.id !== b[i].id)));
+      return (React.createElement("defs", null, markers.map((marker) => (React.createElement(Marker, { id: marker.id, key: marker.id, type: marker.type, color: marker.color, width: marker.width, height: marker.height, markerUnits: marker.markerUnits, strokeWidth: marker.strokeWidth, orient: marker.orient })))));
+  };
+  MarkerDefinitions.displayName = 'MarkerDefinitions';
+  var MarkerDefinitions$1 = React.memo(MarkerDefinitions);
+
+  const selector$4 = (s) => ({
+      nodesConnectable: s.nodesConnectable,
+      edgesFocusable: s.edgesFocusable,
+      edgesUpdatable: s.edgesUpdatable,
+      elementsSelectable: s.elementsSelectable,
+      width: s.width,
+      height: s.height,
+      connectionMode: s.connectionMode,
+      nodeInternals: s.nodeInternals,
+      onError: s.onError,
+  });
+  const EdgeRenderer = ({ defaultMarkerColor, onlyRenderVisibleElements, elevateEdgesOnSelect, rfId, edgeTypes, noPanClassName, onEdgeContextMenu, onEdgeMouseEnter, onEdgeMouseMove, onEdgeMouseLeave, onEdgeClick, onEdgeDoubleClick, onReconnect, onReconnectStart, onReconnectEnd, reconnectRadius, children, disableKeyboardA11y, }) => {
+      const { edgesFocusable, edgesUpdatable, elementsSelectable, width, height, connectionMode, nodeInternals, onError } = useStore(selector$4, shallow);
+      const edgeTree = useVisibleEdges(onlyRenderVisibleElements, nodeInternals, elevateEdgesOnSelect);
+      if (!width) {
+          return null;
+      }
+      return (React.createElement(React.Fragment, null,
+          edgeTree.map(({ level, edges, isMaxLevel }) => (React.createElement("svg", { key: level, style: { zIndex: level }, width: width, height: height, className: "react-flow__edges react-flow__container" },
+              isMaxLevel && React.createElement(MarkerDefinitions$1, { defaultColor: defaultMarkerColor, rfId: rfId }),
+              React.createElement("g", null, edges.map((edge) => {
+                  const [sourceNodeRect, sourceHandleBounds, sourceIsValid] = getNodeData(nodeInternals.get(edge.source));
+                  const [targetNodeRect, targetHandleBounds, targetIsValid] = getNodeData(nodeInternals.get(edge.target));
+                  if (!sourceIsValid || !targetIsValid) {
+                      return null;
+                  }
+                  let edgeType = edge.type || 'default';
+                  if (!edgeTypes[edgeType]) {
+                      onError?.('011', errorMessages['error011'](edgeType));
+                      edgeType = 'default';
+                  }
+                  const EdgeComponent = edgeTypes[edgeType] || edgeTypes.default;
+                  // when connection type is loose we can define all handles as sources and connect source -> source
+                  const targetNodeHandles = connectionMode === ConnectionMode.Strict
+                      ? targetHandleBounds.target
+                      : (targetHandleBounds.target ?? []).concat(targetHandleBounds.source ?? []);
+                  const sourceHandle = getHandle(sourceHandleBounds.source, edge.sourceHandle);
+                  const targetHandle = getHandle(targetNodeHandles, edge.targetHandle);
+                  const sourcePosition = sourceHandle?.position || Position.Bottom;
+                  const targetPosition = targetHandle?.position || Position.Top;
+                  const isFocusable = !!(edge.focusable || (edgesFocusable && typeof edge.focusable === 'undefined'));
+                  const edgeReconnectable = edge.reconnectable || edge.updatable;
+                  const isReconnectable = typeof onReconnect !== 'undefined' &&
+                      (edgeReconnectable || (edgesUpdatable && typeof edgeReconnectable === 'undefined'));
+                  if (!sourceHandle || !targetHandle) {
+                      onError?.('008', errorMessages['error008'](sourceHandle, edge));
+                      return null;
+                  }
+                  const { sourceX, sourceY, targetX, targetY } = getEdgePositions(sourceNodeRect, sourceHandle, sourcePosition, targetNodeRect, targetHandle, targetPosition);
+                  return (React.createElement(EdgeComponent, { key: edge.id, id: edge.id, className: cc([edge.className, noPanClassName]), type: edgeType, data: edge.data, selected: !!edge.selected, animated: !!edge.animated, hidden: !!edge.hidden, label: edge.label, labelStyle: edge.labelStyle, labelShowBg: edge.labelShowBg, labelBgStyle: edge.labelBgStyle, labelBgPadding: edge.labelBgPadding, labelBgBorderRadius: edge.labelBgBorderRadius, style: edge.style, source: edge.source, target: edge.target, sourceHandleId: edge.sourceHandle, targetHandleId: edge.targetHandle, markerEnd: edge.markerEnd, markerStart: edge.markerStart, sourceX: sourceX, sourceY: sourceY, targetX: targetX, targetY: targetY, sourcePosition: sourcePosition, targetPosition: targetPosition, elementsSelectable: elementsSelectable, onContextMenu: onEdgeContextMenu, onMouseEnter: onEdgeMouseEnter, onMouseMove: onEdgeMouseMove, onMouseLeave: onEdgeMouseLeave, onClick: onEdgeClick, onEdgeDoubleClick: onEdgeDoubleClick, onReconnect: onReconnect, onReconnectStart: onReconnectStart, onReconnectEnd: onReconnectEnd, reconnectRadius: reconnectRadius, rfId: rfId, ariaLabel: edge.ariaLabel, isFocusable: isFocusable, isReconnectable: isReconnectable, pathOptions: 'pathOptions' in edge ? edge.pathOptions : undefined, interactionWidth: edge.interactionWidth, disableKeyboardA11y: disableKeyboardA11y }));
+              }))))),
+          children));
+  };
+  EdgeRenderer.displayName = 'EdgeRenderer';
+  var EdgeRenderer$1 = React.memo(EdgeRenderer);
+
+  const selector$3 = (s) => `translate(${s.transform[0]}px,${s.transform[1]}px) scale(${s.transform[2]})`;
+  function Viewport({ children }) {
+      const transform = useStore(selector$3);
+      return (React.createElement("div", { className: "react-flow__viewport react-flow__container", style: { transform } }, children));
+  }
+
+  function useOnInitHandler(onInit) {
+      const rfInstance = useReactFlow();
+      const isInitialized = React.useRef(false);
+      React.useEffect(() => {
+          if (!isInitialized.current && rfInstance.viewportInitialized && onInit) {
+              setTimeout(() => onInit(rfInstance), 1);
+              isInitialized.current = true;
+          }
+      }, [onInit, rfInstance.viewportInitialized]);
+  }
+
+  const oppositePosition = {
+      [Position.Left]: Position.Right,
+      [Position.Right]: Position.Left,
+      [Position.Top]: Position.Bottom,
+      [Position.Bottom]: Position.Top,
+  };
+  const ConnectionLine = ({ nodeId, handleType, style, type = ConnectionLineType.Bezier, CustomComponent, connectionStatus, }) => {
+      const { fromNode, handleId, toX, toY, connectionMode } = useStore(React.useCallback((s) => ({
+          fromNode: s.nodeInternals.get(nodeId),
+          handleId: s.connectionHandleId,
+          toX: (s.connectionPosition.x - s.transform[0]) / s.transform[2],
+          toY: (s.connectionPosition.y - s.transform[1]) / s.transform[2],
+          connectionMode: s.connectionMode,
+      }), [nodeId]), shallow);
+      const fromHandleBounds = fromNode?.[internalsSymbol]?.handleBounds;
+      let handleBounds = fromHandleBounds?.[handleType];
+      if (connectionMode === ConnectionMode.Loose) {
+          handleBounds = handleBounds ? handleBounds : fromHandleBounds?.[handleType === 'source' ? 'target' : 'source'];
+      }
+      if (!fromNode || !handleBounds) {
+          return null;
+      }
+      const fromHandle = handleId ? handleBounds.find((d) => d.id === handleId) : handleBounds[0];
+      const fromHandleX = fromHandle ? fromHandle.x + fromHandle.width / 2 : (fromNode.width ?? 0) / 2;
+      const fromHandleY = fromHandle ? fromHandle.y + fromHandle.height / 2 : fromNode.height ?? 0;
+      const fromX = (fromNode.positionAbsolute?.x ?? 0) + fromHandleX;
+      const fromY = (fromNode.positionAbsolute?.y ?? 0) + fromHandleY;
+      const fromPosition = fromHandle?.position;
+      const toPosition = fromPosition ? oppositePosition[fromPosition] : null;
+      if (!fromPosition || !toPosition) {
+          return null;
+      }
+      if (CustomComponent) {
+          return (React.createElement(CustomComponent, { connectionLineType: type, connectionLineStyle: style, fromNode: fromNode, fromHandle: fromHandle, fromX: fromX, fromY: fromY, toX: toX, toY: toY, fromPosition: fromPosition, toPosition: toPosition, connectionStatus: connectionStatus }));
+      }
+      let dAttr = '';
+      const pathParams = {
+          sourceX: fromX,
+          sourceY: fromY,
+          sourcePosition: fromPosition,
+          targetX: toX,
+          targetY: toY,
+          targetPosition: toPosition,
+      };
+      if (type === ConnectionLineType.Bezier) {
+          // we assume the destination position is opposite to the source position
+          [dAttr] = getBezierPath(pathParams);
+      }
+      else if (type === ConnectionLineType.Step) {
+          [dAttr] = getSmoothStepPath({
+              ...pathParams,
+              borderRadius: 0,
+          });
+      }
+      else if (type === ConnectionLineType.SmoothStep) {
+          [dAttr] = getSmoothStepPath(pathParams);
+      }
+      else if (type === ConnectionLineType.SimpleBezier) {
+          [dAttr] = getSimpleBezierPath(pathParams);
+      }
+      else {
+          dAttr = `M${fromX},${fromY} ${toX},${toY}`;
+      }
+      return React.createElement("path", { d: dAttr, fill: "none", className: "react-flow__connection-path", style: style });
+  };
+  ConnectionLine.displayName = 'ConnectionLine';
+  const selector$2 = (s) => ({
+      nodeId: s.connectionNodeId,
+      handleType: s.connectionHandleType,
+      nodesConnectable: s.nodesConnectable,
+      connectionStatus: s.connectionStatus,
+      width: s.width,
+      height: s.height,
+  });
+  function ConnectionLineWrapper({ containerStyle, style, type, component }) {
+      const { nodeId, handleType, nodesConnectable, width, height, connectionStatus } = useStore(selector$2, shallow);
+      const isValid = !!(nodeId && handleType && width && nodesConnectable);
+      if (!isValid) {
+          return null;
+      }
+      return (React.createElement("svg", { style: containerStyle, width: width, height: height, className: "react-flow__edges react-flow__connectionline react-flow__container" },
+          React.createElement("g", { className: cc(['react-flow__connection', connectionStatus]) },
+              React.createElement(ConnectionLine, { nodeId: nodeId, handleType: handleType, style: style, type: type, CustomComponent: component, connectionStatus: connectionStatus }))));
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function useNodeOrEdgeTypes(nodeOrEdgeTypes, createTypes) {
+      React.useRef(null);
+      useStoreApi();
+      const typesParsed = React.useMemo(() => {
+          return createTypes(nodeOrEdgeTypes);
+      }, [nodeOrEdgeTypes]);
+      return typesParsed;
+  }
+
+  const GraphView = ({ nodeTypes, edgeTypes, onMove, onMoveStart, onMoveEnd, onInit, onNodeClick, onEdgeClick, onNodeDoubleClick, onEdgeDoubleClick, onNodeMouseEnter, onNodeMouseMove, onNodeMouseLeave, onNodeContextMenu, onSelectionContextMenu, onSelectionStart, onSelectionEnd, connectionLineType, connectionLineStyle, connectionLineComponent, connectionLineContainerStyle, selectionKeyCode, selectionOnDrag, selectionMode, multiSelectionKeyCode, panActivationKeyCode, zoomActivationKeyCode, deleteKeyCode, onlyRenderVisibleElements, elementsSelectable, selectNodesOnDrag, defaultViewport, translateExtent, minZoom, maxZoom, preventScrolling, defaultMarkerColor, zoomOnScroll, zoomOnPinch, panOnScroll, panOnScrollSpeed, panOnScrollMode, zoomOnDoubleClick, panOnDrag, onPaneClick, onPaneMouseEnter, onPaneMouseMove, onPaneMouseLeave, onPaneScroll, onPaneContextMenu, onEdgeContextMenu, onEdgeMouseEnter, onEdgeMouseMove, onEdgeMouseLeave, onReconnect, onReconnectStart, onReconnectEnd, reconnectRadius, noDragClassName, noWheelClassName, noPanClassName, elevateEdgesOnSelect, disableKeyboardA11y, nodeOrigin, nodeExtent, rfId, }) => {
+      const nodeTypesWrapped = useNodeOrEdgeTypes(nodeTypes, createNodeTypes);
+      const edgeTypesWrapped = useNodeOrEdgeTypes(edgeTypes, createEdgeTypes);
+      useOnInitHandler(onInit);
+      return (React.createElement(FlowRenderer$1, { onPaneClick: onPaneClick, onPaneMouseEnter: onPaneMouseEnter, onPaneMouseMove: onPaneMouseMove, onPaneMouseLeave: onPaneMouseLeave, onPaneContextMenu: onPaneContextMenu, onPaneScroll: onPaneScroll, deleteKeyCode: deleteKeyCode, selectionKeyCode: selectionKeyCode, selectionOnDrag: selectionOnDrag, selectionMode: selectionMode, onSelectionStart: onSelectionStart, onSelectionEnd: onSelectionEnd, multiSelectionKeyCode: multiSelectionKeyCode, panActivationKeyCode: panActivationKeyCode, zoomActivationKeyCode: zoomActivationKeyCode, elementsSelectable: elementsSelectable, onMove: onMove, onMoveStart: onMoveStart, onMoveEnd: onMoveEnd, zoomOnScroll: zoomOnScroll, zoomOnPinch: zoomOnPinch, zoomOnDoubleClick: zoomOnDoubleClick, panOnScroll: panOnScroll, panOnScrollSpeed: panOnScrollSpeed, panOnScrollMode: panOnScrollMode, panOnDrag: panOnDrag, defaultViewport: defaultViewport, translateExtent: translateExtent, minZoom: minZoom, maxZoom: maxZoom, onSelectionContextMenu: onSelectionContextMenu, preventScrolling: preventScrolling, noDragClassName: noDragClassName, noWheelClassName: noWheelClassName, noPanClassName: noPanClassName, disableKeyboardA11y: disableKeyboardA11y },
+          React.createElement(Viewport, null,
+              React.createElement(EdgeRenderer$1, { edgeTypes: edgeTypesWrapped, onEdgeClick: onEdgeClick, onEdgeDoubleClick: onEdgeDoubleClick, onlyRenderVisibleElements: onlyRenderVisibleElements, onEdgeContextMenu: onEdgeContextMenu, onEdgeMouseEnter: onEdgeMouseEnter, onEdgeMouseMove: onEdgeMouseMove, onEdgeMouseLeave: onEdgeMouseLeave, onReconnect: onReconnect, onReconnectStart: onReconnectStart, onReconnectEnd: onReconnectEnd, reconnectRadius: reconnectRadius, defaultMarkerColor: defaultMarkerColor, noPanClassName: noPanClassName, elevateEdgesOnSelect: !!elevateEdgesOnSelect, disableKeyboardA11y: disableKeyboardA11y, rfId: rfId },
+                  React.createElement(ConnectionLineWrapper, { style: connectionLineStyle, type: connectionLineType, component: connectionLineComponent, containerStyle: connectionLineContainerStyle })),
+              React.createElement("div", { className: "react-flow__edgelabel-renderer" }),
+              React.createElement(NodeRenderer$1, { nodeTypes: nodeTypesWrapped, onNodeClick: onNodeClick, onNodeDoubleClick: onNodeDoubleClick, onNodeMouseEnter: onNodeMouseEnter, onNodeMouseMove: onNodeMouseMove, onNodeMouseLeave: onNodeMouseLeave, onNodeContextMenu: onNodeContextMenu, selectNodesOnDrag: selectNodesOnDrag, onlyRenderVisibleElements: onlyRenderVisibleElements, noPanClassName: noPanClassName, noDragClassName: noDragClassName, disableKeyboardA11y: disableKeyboardA11y, nodeOrigin: nodeOrigin, nodeExtent: nodeExtent, rfId: rfId }))));
+  };
+  GraphView.displayName = 'GraphView';
+  var GraphView$1 = React.memo(GraphView);
+
+  const infiniteExtent = [
+      [Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY],
+      [Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY],
+  ];
+  const initialState = {
+      preventNodeClick: false,
+      rfId: '1',
+      width: 0,
+      height: 0,
+      transform: [0, 0, 1],
+      nodeInternals: new Map(),
+      edges: [],
+      onNodesChange: null,
+      onEdgesChange: null,
+      hasDefaultNodes: false,
+      hasDefaultEdges: false,
+      d3Zoom: null,
+      d3Selection: null,
+      d3ZoomHandler: undefined,
+      minZoom: 0.5,
+      maxZoom: 2,
+      translateExtent: infiniteExtent,
+      nodeExtent: infiniteExtent,
+      nodesSelectionActive: false,
+      userSelectionActive: false,
+      userSelectionRect: null,
+      connectionNodeId: null,
+      connectionHandleId: null,
+      connectionHandleType: 'source',
+      connectionPosition: { x: 0, y: 0 },
+      connectionStatus: null,
+      connectionMode: ConnectionMode.Strict,
+      domNode: null,
+      paneDragging: false,
+      noPanClassName: 'nopan',
+      nodeOrigin: [0, 0],
+      nodeDragThreshold: 0,
+      snapGrid: [15, 15],
+      snapToGrid: false,
+      nodesDraggable: true,
+      nodesConnectable: true,
+      nodesFocusable: true,
+      edgesFocusable: true,
+      edgesUpdatable: true,
+      elementsSelectable: true,
+      elevateNodesOnSelect: true,
+      fitViewOnInit: false,
+      fitViewOnInitDone: false,
+      fitViewOnInitOptions: undefined,
+      onSelectionChange: [],
+      multiSelectionActive: false,
+      connectionStartHandle: null,
+      connectionEndHandle: null,
+      connectionClickStartHandle: null,
+      connectOnClick: true,
+      ariaLiveMessage: '',
+      autoPanOnConnect: true,
+      autoPanOnNodeDrag: true,
+      connectionRadius: 20,
+      onError: devWarn,
+      isValidConnection: undefined,
+  };
+
+  const createRFStore = () => createWithEqualityFn((set, get) => ({
+      ...initialState,
+      setNodes: (nodes) => {
+          const { nodeInternals, nodeOrigin, elevateNodesOnSelect } = get();
+          set({ nodeInternals: createNodeInternals(nodes, nodeInternals, nodeOrigin, elevateNodesOnSelect) });
+      },
+      getNodes: () => {
+          return Array.from(get().nodeInternals.values());
+      },
+      setEdges: (edges) => {
+          const { defaultEdgeOptions = {} } = get();
+          set({ edges: edges.map((e) => ({ ...defaultEdgeOptions, ...e })) });
+      },
+      setDefaultNodesAndEdges: (nodes, edges) => {
+          const hasDefaultNodes = typeof nodes !== 'undefined';
+          const hasDefaultEdges = typeof edges !== 'undefined';
+          const nodeInternals = hasDefaultNodes
+              ? createNodeInternals(nodes, new Map(), get().nodeOrigin, get().elevateNodesOnSelect)
+              : new Map();
+          const nextEdges = hasDefaultEdges ? edges : [];
+          set({ nodeInternals, edges: nextEdges, hasDefaultNodes, hasDefaultEdges });
+      },
+      updateNodeDimensions: (updates) => {
+          const { onNodesChange, nodeInternals, fitViewOnInit, fitViewOnInitDone, fitViewOnInitOptions, domNode, nodeOrigin, } = get();
+          const viewportNode = domNode?.querySelector('.react-flow__viewport');
+          if (!viewportNode) {
+              return;
+          }
+          const style = window.getComputedStyle(viewportNode);
+          const { m22: zoom } = new window.DOMMatrixReadOnly(style.transform);
+          const changes = updates.reduce((res, update) => {
+              const node = nodeInternals.get(update.id);
+              if (node?.hidden) {
+                  nodeInternals.set(node.id, {
+                      ...node,
+                      [internalsSymbol]: {
+                          ...node[internalsSymbol],
+                          // we need to reset the handle bounds when the node is hidden
+                          // in order to force a new observation when the node is shown again
+                          handleBounds: undefined,
+                      },
+                  });
+              }
+              else if (node) {
+                  const dimensions = getDimensions(update.nodeElement);
+                  const doUpdate = !!(dimensions.width &&
+                      dimensions.height &&
+                      (node.width !== dimensions.width || node.height !== dimensions.height || update.forceUpdate));
+                  if (doUpdate) {
+                      nodeInternals.set(node.id, {
+                          ...node,
+                          [internalsSymbol]: {
+                              ...node[internalsSymbol],
+                              handleBounds: {
+                                  source: getHandleBounds('.source', update.nodeElement, zoom, nodeOrigin),
+                                  target: getHandleBounds('.target', update.nodeElement, zoom, nodeOrigin),
+                              },
+                          },
+                          ...dimensions,
+                      });
+                      res.push({
+                          id: node.id,
+                          type: 'dimensions',
+                          dimensions,
+                      });
+                  }
+              }
+              return res;
+          }, []);
+          updateAbsoluteNodePositions(nodeInternals, nodeOrigin);
+          const nextFitViewOnInitDone = fitViewOnInitDone ||
+              (fitViewOnInit && !fitViewOnInitDone && fitView(get, { initial: true, ...fitViewOnInitOptions }));
+          set({ nodeInternals: new Map(nodeInternals), fitViewOnInitDone: nextFitViewOnInitDone });
+          if (changes?.length > 0) {
+              onNodesChange?.(changes);
+          }
+      },
+      updateNodePositions: (nodeDragItems, positionChanged = true, dragging = false) => {
+          const { triggerNodeChanges } = get();
+          const changes = nodeDragItems.map((node) => {
+              const change = {
+                  id: node.id,
+                  type: 'position',
+                  dragging,
+              };
+              if (positionChanged) {
+                  change.positionAbsolute = node.positionAbsolute;
+                  change.position = node.position;
+              }
+              return change;
+          });
+          triggerNodeChanges(changes);
+      },
+      triggerNodeChanges: (changes) => {
+          const { onNodesChange, nodeInternals, hasDefaultNodes, nodeOrigin, getNodes, elevateNodesOnSelect } = get();
+          if (changes?.length) {
+              if (hasDefaultNodes) {
+                  const nodes = applyNodeChanges(changes, getNodes());
+                  const nextNodeInternals = createNodeInternals(nodes, nodeInternals, nodeOrigin, elevateNodesOnSelect);
+                  set({ nodeInternals: nextNodeInternals });
+              }
+              onNodesChange?.(changes);
+          }
+      },
+      addSelectedNodes: (selectedNodeIds) => {
+          const { multiSelectionActive, edges, getNodes } = get();
+          let changedNodes;
+          let changedEdges = null;
+          if (multiSelectionActive) {
+              changedNodes = selectedNodeIds.map((nodeId) => createSelectionChange(nodeId, true));
+          }
+          else {
+              changedNodes = getSelectionChanges(getNodes(), selectedNodeIds);
+              changedEdges = getSelectionChanges(edges, []);
+          }
+          updateNodesAndEdgesSelections({
+              changedNodes,
+              changedEdges,
+              get,
+              set,
+          });
+      },
+      addSelectedEdges: (selectedEdgeIds) => {
+          const { multiSelectionActive, edges, getNodes } = get();
+          let changedEdges;
+          let changedNodes = null;
+          if (multiSelectionActive) {
+              changedEdges = selectedEdgeIds.map((edgeId) => createSelectionChange(edgeId, true));
+          }
+          else {
+              changedEdges = getSelectionChanges(edges, selectedEdgeIds);
+              changedNodes = getSelectionChanges(getNodes(), []);
+          }
+          updateNodesAndEdgesSelections({
+              changedNodes,
+              changedEdges,
+              get,
+              set,
+          });
+      },
+      unselectNodesAndEdges: ({ nodes, edges } = {}) => {
+          const { edges: storeEdges, getNodes } = get();
+          const nodesToUnselect = nodes ? nodes : getNodes();
+          const edgesToUnselect = edges ? edges : storeEdges;
+          const changedNodes = nodesToUnselect.map((n) => {
+              n.selected = false;
+              return createSelectionChange(n.id, false);
+          });
+          const changedEdges = edgesToUnselect.map((edge) => createSelectionChange(edge.id, false));
+          updateNodesAndEdgesSelections({
+              changedNodes,
+              changedEdges,
+              get,
+              set,
+          });
+      },
+      setMinZoom: (minZoom) => {
+          const { d3Zoom, maxZoom } = get();
+          d3Zoom?.scaleExtent([minZoom, maxZoom]);
+          set({ minZoom });
+      },
+      setMaxZoom: (maxZoom) => {
+          const { d3Zoom, minZoom } = get();
+          d3Zoom?.scaleExtent([minZoom, maxZoom]);
+          set({ maxZoom });
+      },
+      setTranslateExtent: (translateExtent) => {
+          get().d3Zoom?.translateExtent(translateExtent);
+          set({ translateExtent });
+      },
+      resetSelectedElements: () => {
+          const { edges, getNodes } = get();
+          const nodes = getNodes();
+          const nodesToUnselect = nodes
+              .filter((e) => e.selected)
+              .map((n) => createSelectionChange(n.id, false));
+          const edgesToUnselect = edges
+              .filter((e) => e.selected)
+              .map((e) => createSelectionChange(e.id, false));
+          updateNodesAndEdgesSelections({
+              changedNodes: nodesToUnselect,
+              changedEdges: edgesToUnselect,
+              get,
+              set,
+          });
+      },
+      setNodeExtent: (nodeExtent) => {
+          const { nodeInternals } = get();
+          nodeInternals.forEach((node) => {
+              node.positionAbsolute = clampPosition(node.position, nodeExtent);
+          });
+          set({
+              nodeExtent,
+              nodeInternals: new Map(nodeInternals),
+          });
+      },
+      panBy: (delta) => {
+          const { transform, width, height, d3Zoom, d3Selection, translateExtent } = get();
+          if (!d3Zoom || !d3Selection || (!delta.x && !delta.y)) {
+              return false;
+          }
+          const nextTransform = identity
+              .translate(transform[0] + delta.x, transform[1] + delta.y)
+              .scale(transform[2]);
+          const extent = [
+              [0, 0],
+              [width, height],
+          ];
+          const constrainedTransform = d3Zoom?.constrain()(nextTransform, extent, translateExtent);
+          d3Zoom.transform(d3Selection, constrainedTransform);
+          const transformChanged = transform[0] !== constrainedTransform.x ||
+              transform[1] !== constrainedTransform.y ||
+              transform[2] !== constrainedTransform.k;
+          return transformChanged;
+      },
+      cancelConnection: () => set({
+          connectionNodeId: initialState.connectionNodeId,
+          connectionHandleId: initialState.connectionHandleId,
+          connectionHandleType: initialState.connectionHandleType,
+          connectionStatus: initialState.connectionStatus,
+          connectionStartHandle: initialState.connectionStartHandle,
+          connectionEndHandle: initialState.connectionEndHandle,
+      }),
+      reset: () => set({ ...initialState }),
+  }), Object.is);
+
+  const ReactFlowProvider = ({ children }) => {
+      const storeRef = React.useRef(null);
+      if (!storeRef.current) {
+          storeRef.current = createRFStore();
+      }
+      return React.createElement(Provider$1, { value: storeRef.current }, children);
+  };
+  ReactFlowProvider.displayName = 'ReactFlowProvider';
+
+  const Wrapper = ({ children }) => {
+      const isWrapped = React.useContext(StoreContext);
+      if (isWrapped) {
+          // we need to wrap it with a fragment because it's not allowed for children to be a ReactNode
+          // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/18051
+          return React.createElement(React.Fragment, null, children);
+      }
+      return React.createElement(ReactFlowProvider, null, children);
+  };
+  Wrapper.displayName = 'ReactFlowWrapper';
+
+  const defaultNodeTypes = {
+      input: InputNode$1,
+      default: DefaultNode$1,
+      output: OutputNode$1,
+      group: GroupNode,
+  };
+  const defaultEdgeTypes = {
+      default: BezierEdge,
+      straight: StraightEdge,
+      step: StepEdge,
+      smoothstep: SmoothStepEdge,
+      simplebezier: SimpleBezierEdge,
+  };
+  const initNodeOrigin = [0, 0];
+  const initSnapGrid = [15, 15];
+  const initDefaultViewport = { x: 0, y: 0, zoom: 1 };
+  const wrapperStyle = {
+      width: '100%',
+      height: '100%',
+      overflow: 'hidden',
+      position: 'relative',
+      zIndex: 0,
+  };
+  const ReactFlow = React.forwardRef(({ nodes, edges, defaultNodes, defaultEdges, className, nodeTypes = defaultNodeTypes, edgeTypes = defaultEdgeTypes, onNodeClick, onEdgeClick, onInit, onMove, onMoveStart, onMoveEnd, onConnect, onConnectStart, onConnectEnd, onClickConnectStart, onClickConnectEnd, onNodeMouseEnter, onNodeMouseMove, onNodeMouseLeave, onNodeContextMenu, onNodeDoubleClick, onNodeDragStart, onNodeDrag, onNodeDragStop, onNodesDelete, onEdgesDelete, onSelectionChange, onSelectionDragStart, onSelectionDrag, onSelectionDragStop, onSelectionContextMenu, onSelectionStart, onSelectionEnd, connectionMode = ConnectionMode.Strict, connectionLineType = ConnectionLineType.Bezier, connectionLineStyle, connectionLineComponent, connectionLineContainerStyle, deleteKeyCode = 'Backspace', selectionKeyCode = 'Shift', selectionOnDrag = false, selectionMode = SelectionMode.Full, panActivationKeyCode = 'Space', multiSelectionKeyCode = isMacOs() ? 'Meta' : 'Control', zoomActivationKeyCode = isMacOs() ? 'Meta' : 'Control', snapToGrid = false, snapGrid = initSnapGrid, onlyRenderVisibleElements = false, selectNodesOnDrag = true, nodesDraggable, nodesConnectable, nodesFocusable, nodeOrigin = initNodeOrigin, edgesFocusable, edgesUpdatable, elementsSelectable, defaultViewport = initDefaultViewport, minZoom = 0.5, maxZoom = 2, translateExtent = infiniteExtent, preventScrolling = true, nodeExtent, defaultMarkerColor = '#b1b1b7', zoomOnScroll = true, zoomOnPinch = true, panOnScroll = false, panOnScrollSpeed = 0.5, panOnScrollMode = PanOnScrollMode.Free, zoomOnDoubleClick = true, panOnDrag = true, onPaneClick, onPaneMouseEnter, onPaneMouseMove, onPaneMouseLeave, onPaneScroll, onPaneContextMenu, children, onEdgeContextMenu, onEdgeDoubleClick, onEdgeMouseEnter, onEdgeMouseMove, onEdgeMouseLeave, onEdgeUpdate, onEdgeUpdateStart, onEdgeUpdateEnd, onReconnect, onReconnectStart, onReconnectEnd, reconnectRadius = 10, edgeUpdaterRadius = 10, onNodesChange, onEdgesChange, noDragClassName = 'nodrag', noWheelClassName = 'nowheel', noPanClassName = 'nopan', fitView = false, fitViewOptions, connectOnClick = true, attributionPosition, proOptions, defaultEdgeOptions, elevateNodesOnSelect = true, elevateEdgesOnSelect = false, disableKeyboardA11y = false, autoPanOnConnect = true, autoPanOnNodeDrag = true, connectionRadius = 20, isValidConnection, onError, style, id, nodeDragThreshold, ...rest }, ref) => {
+      const rfId = id || '1';
+      return (React.createElement("div", { ...rest, style: { ...style, ...wrapperStyle }, ref: ref, className: cc(['react-flow', className]), "data-testid": "rf__wrapper", id: id },
+          React.createElement(Wrapper, null,
+              React.createElement(GraphView$1, { onInit: onInit, onMove: onMove, onMoveStart: onMoveStart, onMoveEnd: onMoveEnd, onNodeClick: onNodeClick, onEdgeClick: onEdgeClick, onNodeMouseEnter: onNodeMouseEnter, onNodeMouseMove: onNodeMouseMove, onNodeMouseLeave: onNodeMouseLeave, onNodeContextMenu: onNodeContextMenu, onNodeDoubleClick: onNodeDoubleClick, nodeTypes: nodeTypes, edgeTypes: edgeTypes, connectionLineType: connectionLineType, connectionLineStyle: connectionLineStyle, connectionLineComponent: connectionLineComponent, connectionLineContainerStyle: connectionLineContainerStyle, selectionKeyCode: selectionKeyCode, selectionOnDrag: selectionOnDrag, selectionMode: selectionMode, deleteKeyCode: deleteKeyCode, multiSelectionKeyCode: multiSelectionKeyCode, panActivationKeyCode: panActivationKeyCode, zoomActivationKeyCode: zoomActivationKeyCode, onlyRenderVisibleElements: onlyRenderVisibleElements, selectNodesOnDrag: selectNodesOnDrag, defaultViewport: defaultViewport, translateExtent: translateExtent, minZoom: minZoom, maxZoom: maxZoom, preventScrolling: preventScrolling, zoomOnScroll: zoomOnScroll, zoomOnPinch: zoomOnPinch, zoomOnDoubleClick: zoomOnDoubleClick, panOnScroll: panOnScroll, panOnScrollSpeed: panOnScrollSpeed, panOnScrollMode: panOnScrollMode, panOnDrag: panOnDrag, onPaneClick: onPaneClick, onPaneMouseEnter: onPaneMouseEnter, onPaneMouseMove: onPaneMouseMove, onPaneMouseLeave: onPaneMouseLeave, onPaneScroll: onPaneScroll, onPaneContextMenu: onPaneContextMenu, onSelectionContextMenu: onSelectionContextMenu, onSelectionStart: onSelectionStart, onSelectionEnd: onSelectionEnd, onEdgeContextMenu: onEdgeContextMenu, onEdgeDoubleClick: onEdgeDoubleClick, onEdgeMouseEnter: onEdgeMouseEnter, onEdgeMouseMove: onEdgeMouseMove, onEdgeMouseLeave: onEdgeMouseLeave, onReconnect: onReconnect ?? onEdgeUpdate, onReconnectStart: onReconnectStart ?? onEdgeUpdateStart, onReconnectEnd: onReconnectEnd ?? onEdgeUpdateEnd, reconnectRadius: reconnectRadius ?? edgeUpdaterRadius, defaultMarkerColor: defaultMarkerColor, noDragClassName: noDragClassName, noWheelClassName: noWheelClassName, noPanClassName: noPanClassName, elevateEdgesOnSelect: elevateEdgesOnSelect, rfId: rfId, disableKeyboardA11y: disableKeyboardA11y, nodeOrigin: nodeOrigin, nodeExtent: nodeExtent }),
+              React.createElement(StoreUpdater, { nodes: nodes, edges: edges, defaultNodes: defaultNodes, defaultEdges: defaultEdges, onConnect: onConnect, onConnectStart: onConnectStart, onConnectEnd: onConnectEnd, onClickConnectStart: onClickConnectStart, onClickConnectEnd: onClickConnectEnd, nodesDraggable: nodesDraggable, nodesConnectable: nodesConnectable, nodesFocusable: nodesFocusable, edgesFocusable: edgesFocusable, edgesUpdatable: edgesUpdatable, elementsSelectable: elementsSelectable, elevateNodesOnSelect: elevateNodesOnSelect, minZoom: minZoom, maxZoom: maxZoom, nodeExtent: nodeExtent, onNodesChange: onNodesChange, onEdgesChange: onEdgesChange, snapToGrid: snapToGrid, snapGrid: snapGrid, connectionMode: connectionMode, translateExtent: translateExtent, connectOnClick: connectOnClick, defaultEdgeOptions: defaultEdgeOptions, fitView: fitView, fitViewOptions: fitViewOptions, onNodesDelete: onNodesDelete, onEdgesDelete: onEdgesDelete, onNodeDragStart: onNodeDragStart, onNodeDrag: onNodeDrag, onNodeDragStop: onNodeDragStop, onSelectionDrag: onSelectionDrag, onSelectionDragStart: onSelectionDragStart, onSelectionDragStop: onSelectionDragStop, noPanClassName: noPanClassName, nodeOrigin: nodeOrigin, rfId: rfId, autoPanOnConnect: autoPanOnConnect, autoPanOnNodeDrag: autoPanOnNodeDrag, onError: onError, connectionRadius: connectionRadius, isValidConnection: isValidConnection, nodeDragThreshold: nodeDragThreshold }),
+              React.createElement(Wrapper$1, { onSelectionChange: onSelectionChange }),
+              children,
+              React.createElement(Attribution, { proOptions: proOptions, position: attributionPosition }),
+              React.createElement(A11yDescriptions, { rfId: rfId, disableKeyboardA11y: disableKeyboardA11y }))));
+  });
+  ReactFlow.displayName = 'ReactFlow';
+
+  const selector = (state) => state.domNode?.querySelector('.react-flow__renderer');
+  function NodeToolbarPortal({ children }) {
+      const wrapperRef = useStore(selector);
+      if (!wrapperRef) {
+          return null;
+      }
+      return reactDom.createPortal(children, wrapperRef);
+  }
+
+  const nodeEqualityFn = (a, b) => a?.positionAbsolute?.x === b?.positionAbsolute?.x &&
+      a?.positionAbsolute?.y === b?.positionAbsolute?.y &&
+      a?.width === b?.width &&
+      a?.height === b?.height &&
+      a?.selected === b?.selected &&
+      a?.[internalsSymbol]?.z === b?.[internalsSymbol]?.z;
+  const nodesEqualityFn = (a, b) => {
+      return a.length === b.length && a.every((node, i) => nodeEqualityFn(node, b[i]));
+  };
+  const storeSelector = (state) => ({
+      transform: state.transform,
+      nodeOrigin: state.nodeOrigin,
+      selectedNodesCount: state.getNodes().filter((node) => node.selected).length,
+  });
+  function getTransform(nodeRect, transform, position, offset, align) {
+      let alignmentOffset = 0.5;
+      if (align === 'start') {
+          alignmentOffset = 0;
+      }
+      else if (align === 'end') {
+          alignmentOffset = 1;
+      }
+      // position === Position.Top
+      // we set the x any y position of the toolbar based on the nodes position
+      let pos = [
+          (nodeRect.x + nodeRect.width * alignmentOffset) * transform[2] + transform[0],
+          nodeRect.y * transform[2] + transform[1] - offset,
+      ];
+      // and than shift it based on the alignment. The shift values are in %.
+      let shift = [-100 * alignmentOffset, -100];
+      switch (position) {
+          case Position.Right:
+              pos = [
+                  (nodeRect.x + nodeRect.width) * transform[2] + transform[0] + offset,
+                  (nodeRect.y + nodeRect.height * alignmentOffset) * transform[2] + transform[1],
+              ];
+              shift = [0, -100 * alignmentOffset];
+              break;
+          case Position.Bottom:
+              pos[1] = (nodeRect.y + nodeRect.height) * transform[2] + transform[1] + offset;
+              shift[1] = 0;
+              break;
+          case Position.Left:
+              pos = [
+                  nodeRect.x * transform[2] + transform[0] - offset,
+                  (nodeRect.y + nodeRect.height * alignmentOffset) * transform[2] + transform[1],
+              ];
+              shift = [-100, -100 * alignmentOffset];
+              break;
+      }
+      return `translate(${pos[0]}px, ${pos[1]}px) translate(${shift[0]}%, ${shift[1]}%)`;
+  }
+  function NodeToolbar({ nodeId, children, className, style, isVisible, position = Position.Top, offset = 10, align = 'center', ...rest }) {
+      const contextNodeId = useNodeId();
+      const nodesSelector = React.useCallback((state) => {
+          const nodeIds = Array.isArray(nodeId) ? nodeId : [nodeId || contextNodeId || ''];
+          return nodeIds.reduce((acc, id) => {
+              const node = state.nodeInternals.get(id);
+              if (node) {
+                  acc.push(node);
+              }
+              return acc;
+          }, []);
+      }, [nodeId, contextNodeId]);
+      const nodes = useStore(nodesSelector, nodesEqualityFn);
+      const { transform, nodeOrigin, selectedNodesCount } = useStore(storeSelector, shallow);
+      const isActive = typeof isVisible === 'boolean' ? isVisible : nodes.length === 1 && nodes[0].selected && selectedNodesCount === 1;
+      if (!isActive || !nodes.length) {
+          return null;
+      }
+      const nodeRect = getNodesBounds(nodes, nodeOrigin);
+      const zIndex = Math.max(...nodes.map((node) => (node[internalsSymbol]?.z || 1) + 1));
+      const wrapperStyle = {
+          position: 'absolute',
+          transform: getTransform(nodeRect, transform, position, offset, align),
+          zIndex,
+          ...style,
+      };
+      return (React.createElement(NodeToolbarPortal, null,
+          React.createElement("div", { style: wrapperStyle, className: cc(['react-flow__node-toolbar', className]), ...rest }, children)));
+  }
+
+  exports.NodeToolbar = NodeToolbar;
+
+}));

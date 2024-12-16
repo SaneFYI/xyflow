@@ -46,7 +46,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@reactflow/core": "workspace:*",
+    "@reactflow/core": "https://gitpkg.vercel.app/SaneFYI/xyflow/packages/core?v11",
     "classcat": "^5.0.4",
     "d3-drag": "^3.0.0",
     "d3-selection": "^3.0.0",
