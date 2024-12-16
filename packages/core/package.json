@@ -38,14 +38,6 @@
     "url": "https://github.com/xyflow/xyflow.git",
     "directory": "packages/core"
   },
-  "scripts": {
-    "dev": "concurrently \"rollup --config node:@reactflow/rollup-config --watch\" pnpm:css-watch",
-    "build": "rollup --config node:@reactflow/rollup-config --environment NODE_ENV:production && npm run css",
-    "css": "postcss src/styles/{base,style}.css --config ./../../tooling/postcss-config/postcss.config.js --dir dist",
-    "css-watch": "pnpm css --watch",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
-    "typecheck": "tsc --noEmit"
-  },
   "dependencies": {
     "@types/d3": "^7.4.0",
     "@types/d3-drag": "^3.0.1",
@@ -62,14 +54,14 @@
     "react-dom": ">=17"
   },
   "devDependencies": {
-    "@reactflow/eslint-config": "workspace:*",
-    "@reactflow/rollup-config": "workspace:*",
-    "@reactflow/tsconfig": "workspace:*",
     "@types/node": "^18.7.16",
     "@types/react": ">=17",
     "@types/react-dom": ">=17",
     "react": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "@reactflow/rollup-config": "0.0.0",
+    "@reactflow/tsconfig": "0.0.0",
+    "@reactflow/eslint-config": "0.0.0"
   },
   "rollup": {
     "globals": {
@@ -81,5 +73,13 @@
       "zustand/shallow": "zustandShallow"
     },
     "name": "ReactFlowCore"
+  },
+  "scripts": {
+    "dev": "concurrently \"rollup --config node:@reactflow/rollup-config --watch\" pnpm:css-watch",
+    "build": "rollup --config node:@reactflow/rollup-config --environment NODE_ENV:production && npm run css",
+    "css": "postcss src/styles/{base,style}.css --config ./../../tooling/postcss-config/postcss.config.js --dir dist",
+    "css-watch": "pnpm css --watch",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "typecheck": "tsc --noEmit"
   }
 }
