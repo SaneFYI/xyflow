@@ -71,7 +71,11 @@ export default (NodeComponent: ComponentType<NodeProps>) => {
     const onContextMenuHandler = getMouseHandler(id, store.getState, onContextMenu);
     const onDoubleClickHandler = getMouseHandler(id, store.getState, onDoubleClick);
     const onSelectNodeHandler = (event: MouseEvent) => {
-      const { nodeDragThreshold } = store.getState();
+      const { nodeDragThreshold, preventNodeClick } = store.getState();
+
+      if (preventNodeClick) {
+        return;
+      }
 
       if (isSelectable && (!selectNodesOnDrag || !isDraggable || nodeDragThreshold > 0)) {
         // this handler gets called within the drag start event when selectNodesOnDrag=true

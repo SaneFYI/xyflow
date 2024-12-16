@@ -8,6 +8,8 @@ export const infiniteExtent: CoordinateExtent = [
 ];
 
 const initialState: ReactFlowStore = {
+  preventNodeClick: false,
+  
   rfId: '1',
   width: 0,
   height: 0,

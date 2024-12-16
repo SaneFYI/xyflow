@@ -142,6 +142,8 @@ export type ViewportHelperFunctions = {
 };
 
 export type ReactFlowStore = {
+  preventNodeClick: boolean;
+
   rfId: string;
   width: number;
   height: number;
